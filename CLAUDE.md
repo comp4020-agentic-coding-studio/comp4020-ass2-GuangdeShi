@@ -499,25 +499,30 @@ STUDENT TRANSFORMATION:   instruction-following owner -> observer ->
                           interpreter -> adaptive lifelong caregiver
 AUDIENCE:                 Broad public, not an idealised owner — see §18
 EVIDENCE TRANSPARENCY:    DIRECT vs SYNTHESIS disclosure rule — see §19
-CURRICULUM:               Structure reserved in docs/CURRICULUM.md; twelve
-                          chapters NOT finalised (Chapters 1-3 drafted,
-                          Chapters 4-12 NOT started)
-CHAPTERS 1-3:             Scripted in docs/chapters/chapter-0{1,2,3}.md.
-                          Chapter 1 status: PROPOSED REVISION (supersedes
-                          prior approved draft). Chapters 2-3 status:
-                          PROPOSED (new chapters). All pending Part I
-                          content-audit sign-off.
-SOURCE REGISTER:          docs/SOURCES.md — Part I sources (S1-S7) plus a
-                          whole-course source pack for Parts II-IV under
-                          active verification (see docs/SOURCES.md coverage
-                          map and gap analysis)
+CURRICULUM:               Structure in docs/CURRICULUM.md; all twelve
+                          chapters CONTENT DRAFTED (Parts I-IV). Each Part
+                          has been individually reviewed and repaired
+                          (Part I content-audit sign-off; Parts II, III, IV
+                          each reviewed+repaired+committed as their own
+                          stage), and a whole-course cross-Part progression
+                          audit has also been completed and repaired.
+CHAPTERS 1-12:            Scripted in docs/chapters/chapter-01.md through
+                          chapter-12.md. All twelve chapters drafted and
+                          reviewed; no chapter remains PROPOSED/pending.
+SOURCE REGISTER:          docs/SOURCES.md — full Claim Register (CH1-01
+                          through CH12-06 plus CH9-08) covering all twelve
+                          chapters, backed by the Part I sources (S1-S7)
+                          and the whole-course source pack (S8 onward),
+                          verified per `CLAUDE.md` §21
 ASSESSMENTS:              NOT DESIGNED
 VISUAL DIRECTION:         Slide grammar reserved in docs/LESSON_SYSTEM.md;
                           final CSS NOT designed
 ```
 
 Topic, thesis and transformation are approved as a *working* direction only.
-Curriculum, visual language and final thesis remain subject to validation
-through the Part I content audit. Do not treat anything above as final,
-and do not fill in ASSESSMENTS or VISUAL DIRECTION beyond what is reserved
-above without explicit human approval.
+The twelve-chapter curriculum backbone has been approved by the human (see
+the HUMAN DECISION record in project history) and all twelve chapters have
+been drafted, reviewed, and repaired per-Part and whole-course. Visual
+language and final thesis presentation remain undesigned. Do not fill in
+ASSESSMENTS or VISUAL DIRECTION beyond what is reserved above without
+explicit human approval — content remains first, form second.

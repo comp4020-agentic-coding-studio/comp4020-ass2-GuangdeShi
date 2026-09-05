@@ -371,7 +371,10 @@ household to consider.
 depends on the same baseline-extension and careful-observation habits
 this chapter reinforces (checking in on Momo's actual state rather than
 assuming), applied to signs even easier to miss than a lifestyle
-mismatch would be.
+mismatch would be. Later, Chapter 10 directly reapplies this chapter's
+lifestyle-decision process (`CH8-01`, `CH8-03`) to Momo's aging: the
+controlled outdoor arrangement built here is revisited, not assumed to
+remain appropriate unchanged, once mobility becomes a factor (`CH10-03`).
 
 ## Placement justification
 

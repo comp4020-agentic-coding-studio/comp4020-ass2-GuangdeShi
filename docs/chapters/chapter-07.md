@@ -388,21 +388,22 @@ adult — old enough that a full year of logged baseline data now exists
 to compare against, which is what makes a genuine physical-condition
 trend detectable for the first time.
 
-**What becomes possible next:** Part III continues to depend on this
-chapter. Chapter 8's indoor/outdoor decision assumes the student can
-already read this chapter's household-lifestyle framing (the same
-"accurate lifestyle picture" concept from `CH7-04` reappears there as an
-input to a welfare/risk trade-off); Chapter 9's subtle-signs content
-depends on the same baseline-extension reasoning applied to signs even
-easier to miss than a body-condition trend.
+**What becomes possible next:** Chapter 9's subtle-signs content depends
+on the same baseline-extension reasoning applied to signs even easier to
+miss than a body-condition trend. Later, Chapter 10 directly reapplies
+this chapter's individualised-risk-conversation pattern (`CH7-03`) to
+senior-cat vet-visit cadence (`CH10-06`). Chapter 8's indoor/outdoor
+decision does not depend on this chapter — it draws only on Chapters 1
+and 2, as Chapter 8's own Prerequisite section and Placement
+justification state.
 
 ## Placement justification
 
 **Why here:** This chapter must come first in Part III because it is
 the direct extension of Part II's capstone method (`CH6-01`) into a new
-observation category, and because its `CH7-04` medical-scope framing
-(accurate lifestyle information → vet decides the protocol) is reused as
-a supporting concept in Chapter 8.
+observation category, and because it establishes the body/muscle-
+condition baseline-extension habit that Chapter 9 directly reuses
+(`CH9-06`) and Chapter 10 reapplies again in a new form (`CH10-04`).
 
 **Progression-swap test:** If this chapter were moved before Chapter 6,
 `CH7-06` would have no method to extend — it exists specifically to

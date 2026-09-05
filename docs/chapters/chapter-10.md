@@ -55,7 +55,7 @@ what a symptom checklist recommends.
 
 ## Prerequisite capability
 
-This chapter reapplies three earlier capabilities to a new life stage,
+This chapter reapplies four earlier capabilities to a new life stage,
 and does not introduce a new observation method of its own:
 
 - **Chapter 6** (`CH6-01`, `CH6-02`): the baseline-comparison method is
@@ -66,6 +66,12 @@ and does not introduce a new observation method of its own:
   time is the same practice extended across years instead of months, and
   is now one of the main ways a gradual mobility or weight change becomes
   visible at all.
+- **Chapter 8** (`CH8-01`, `CH8-03`): the indoor/outdoor lifestyle-
+  weighing process — no lifestyle is universally correct, only one that
+  fits a specific cat and situation — is reused directly, not merely
+  cited: `CH10-03` reopens whatever lifestyle/access decision the
+  household made in Chapter 8 and asks whether it still fits as Momo's
+  mobility changes.
 - **Chapter 9** (`CH9-01`, `CH9-07`): pain-recognition reasoning is
   reapplied here, with an explicit scope correction — the Feline Grimace
   Scale Action Units taught in Chapter 9 are validated for *acute* pain
@@ -75,7 +81,7 @@ and does not introduce a new observation method of its own:
 
 ### Cluster A — Reframing "slowing down"
 
-- **`CH10-01`** *(SYNTHESIS, S15+S21)*: Reduced activity, reluctance to
+- **`CH10-01`** *(SYNTHESIS, S15)*: Reduced activity, reluctance to
   jump, or stiffness in an aging cat is frequently a sign of joint pain
   (degenerative joint disease), not simply an inevitable, unaddressable
   fact of getting older — a pattern common enough that it is often
@@ -114,17 +120,33 @@ and does not introduce a new observation method of its own:
   social/vocal behaviour) is useful for knowing *what to watch for*, but
   which environmental or routine adaptations a household actually
   implements — low-sided litter boxes, ramps, softer bedding, adjusted
-  feeding, more frequent vet conversations — should be selected and
-  scaled to that household's real budgets of care, not treated as a
-  fixed checklist every caregiver must fully complete.
+  feeding, more frequent vet conversations, and reassessing an existing
+  lifestyle/access arrangement — should be selected and scaled to that
+  household's real budgets of care, not treated as a fixed checklist
+  every caregiver must fully complete. A lifestyle decision made earlier
+  in the cat's life (Chapter 8's indoor/outdoor weighing, `CH8-01`) is
+  not a one-time, permanent settlement: a controlled outdoor arrangement
+  that suited a confident, mobile young adult (e.g. supervised harness
+  time in a fenced garden, `CH8-03`/`CH8-07`) should be revisited using
+  the same weighing process, not assumed to remain equally appropriate
+  once reduced mobility or joint pain becomes a factor.
   - *Owner relevance:* Turns Cluster B's principle into a concrete
-    decision process the student can actually run.
+    decision process the student can actually run, and gives the student
+    a concrete reason to reopen a decision (Chapter 8's) they might
+    otherwise treat as already settled for good.
   - *Misconception corrected:* "Good senior care means doing everything a
-    checklist says, for every cat, all the time."
+    checklist says, for every cat, all the time," extended to a new
+    implicit form: that a lifestyle decision, once made, does not need
+    revisiting as the cat changes.
+  - *Callback:* Directly reapplies `CH8-01`'s "no universally correct
+    answer, only a fit to reassess" framing and `CH8-03`'s controlled-
+    access safety reasoning to the aging context.
   - *Scope note:* `docs/SOURCES.md` explicitly flags that `S20` alone
     assumes essentially unlimited owner capacity and must be paired with
     `S15`'s budgets language — this claim is that disclosed pairing, not
-    a claim either source states alone. Disclosed per `CLAUDE.md` §19.
+    a claim either source states alone. The Chapter 8 lifestyle-revisit
+    extension is this course's own cross-chapter integration; no source
+    states it. Disclosed per `CLAUDE.md` §19.
 
 ### Cluster D — Reapplying the baseline method to slow change
 

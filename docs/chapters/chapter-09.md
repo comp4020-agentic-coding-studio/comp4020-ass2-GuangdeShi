@@ -77,7 +77,7 @@ directly exercised, not merely cited:
 
 ### Cluster A — Why these signs are the easiest of all to miss
 
-- **`CH9-05`** *(DIRECT)*: Animals — including cats — usually conceal
+- **`CH9-05`** *(SYNTHESIS, S30+S32)*: Animals — including cats — usually conceal
   discomfort, so clinical signs of pain and dental disease "can be very
   subtle" even when the underlying condition is severe and painful.
   - *Owner relevance:* Directly explains why "she's still eating and
@@ -150,7 +150,7 @@ directly exercised, not merely cited:
     rarely inspect closely and cats actively resist having examined.
   - *Misconception corrected:* That dental problems would be obvious
     (visible broken teeth, refusing food outright) rather than subtle.
-- **`CH9-05` (continued)** *(DIRECT)*: A definitive dental diagnosis
+- **`CH9-08`** *(DIRECT)*: A definitive dental diagnosis
   requires general anesthesia, with dental probing/charting and
   full-mouth x-rays as the standard of care — meaning an owner-observed
   warning sign is a prompt to seek veterinary assessment, not something
@@ -253,7 +253,7 @@ with these small, individually ambiguous observations?
 | 6 | TEACH | "Five things her face can tell you." | `CH9-01` in full | Diagram: ear/eye/muzzle/whisker/head, two states each | — | None | CH9-01 | |
 | 7 | TEACH | "This isn't guesswork — it's a tested scale. But it was tested a specific way." | `CH9-02` | Simplified validation summary panel | — | None | CH9-02 | |
 | 8 | TEACH | "Your job is to notice and describe it — not to score her and decide alone." | `CH9-03` | Two-column: "owner does" vs. "vet does" | — | None | CH9-03 | |
-| 9 | TEACH | "The same rule applies to a part of her you almost never look at closely." | `CH9-04`, `CH9-05` (dental) | Diagram: six dental warning signs | — | None | CH9-04, CH9-05 | |
+| 9 | TEACH | "The same rule applies to a part of her you almost never look at closely." | `CH9-04`, `CH9-08` (dental) | Diagram: six dental warning signs | — | None | CH9-04, CH9-08 | |
 | 10 | TEACH | "Add this to the log you already keep." | `CH9-06` | Chapter 7's log, now with a facial/dental row added | — | None | CH9-06 | Reuses Chapter 7's own log visual |
 | 11 | TEACH | "One squint means almost nothing. One squint that won't go away, alongside two other changes, means something." | `CH9-07`, reconnecting explicitly to `CH6-01`/`CH6-02` and `CH4-04` | Chapter 6's four-step flowchart, re-shown with pain/dental examples slotted into each step | — | None | CH9-07 | Deliberately reuses Chapter 6's own flowchart visual |
 | 12 | PRACTICE | Worked example: applying all four steps to Momo's own opening scenario | Walks the four-step method through Beat 2's specific observations to reach option C's conclusion | Step-through of the flowchart with Momo's actual data filled in | — | Step through | CH9-07 | |
