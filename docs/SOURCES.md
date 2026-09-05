@@ -51,13 +51,27 @@ sufficiently sourced.
 | CH3-05 | Owners should know specific, concrete "contact the vet" signs rather than a vague sense that "something seems off": dull/patchy coat, appetite loss, persistent vomiting/diarrhoea, nasal/eye discharge or sneezing, unexplained weight change, urinary straining or blood in urine, excessive thirst, breathing difficulty, lethargy, or unexplained swelling | 03 | S5 | DIRECT | High | |
 | CH3-06 | Certain observable presentations — repeated unproductive straining to urinate, crying/vocalising while trying to eliminate, a firm and painful abdomen, or producing no urine at all — warrant an immediate same-day or emergency vet visit, not a wait-and-observe approach, because some causes (most notably urethral obstruction, which especially affects male cats) can become life-threatening within hours | 03 | S7 | DIRECT (for the clinical facts); framing of "recognise the behavioural signature, not the diagnosis" is this course's SYNTHESIS | High for the underlying facts; the course's documented, honest reasoning is separately below | S7 documents peak reported risk in young adult male cats (1–5 years), not 10-week-old kittens — the claim register does **not** assert Momo herself is at elevated statistical risk at her current age. The chapter teaches the owner to recognise this *behavioural signature* and escalate regardless of the eventual diagnosis, rather than teaching a diagnosis-specific age-risk statistic Momo does not yet fit. |
 
+| CH4-01 | Feline vocal communication falls into three broad categories: murmur/closed-mouth sounds (purring across contexts from nursing to adult greeting/allogrooming; the trill/chirrup greeting call, also a mother's kitten-contact call); meowing (an extensive, variable range, produced mainly toward people and "rarely heard during adult cat–cat interactions," likely shaped by human responses over time); and hostile open-mouth sounds (growls, yowls, snarls, hisses, spits, shrieks, wails) in offensive or defensive encounters | 04 | S28 | DIRECT | Moderate-High | Descriptive vocabulary from an owner-facing ISFM-affiliated source; not a peer-reviewed guideline, but consistent with general feline-ethology understanding and not a contested claim. |
+| CH4-02 | Cats communicate via scent as well as sound: skin-gland deposits made by rubbing on people and objects ("bunting") occur mainly in the cat's core territory and relate to comfort/reassurance; paw sebaceous glands mean scratching leaves a chemical mark alongside the visible one, typically along frequently travelled routes rather than territorial boundaries; and the placement of urine/faeces (buried within core territory vs. left exposed at territorial edges) can signal territorial claims, identity, or reproductive status | 04 | S28 | DIRECT | Moderate-High | Corroborates `S26`'s (Cornell) identical reframing of scratching as scent/identity marking. |
+| CH4-03 | Adult humans, including experienced cat owners, have only a limited ability to correctly identify the specific situational context of an isolated meow from sound alone — in one peer-reviewed study, classification accuracy never rose meaningfully above chance even for the most representative recordings — although listeners could often still sense broad emotional valence (positive vs. negative) even without correctly identifying the specific cause; cat owners were modestly more accurate than non-owners | 04 | S29 | DIRECT | High | Must be taught carefully: this shows sound-alone interpretation is unreliable, not that vocalisation carries no information (see `S29`'s Important Limitations). |
+| CH4-04 | Because single vocal or scent cues are individually ambiguous, reliably interpreting what a cat is communicating requires combining several channels at once — body-language signal family (Chapter 2's positive/inhibition/avoidance/repelling framework), vocal tone and type, scent-related behaviour, and situational context (time of day, recent events, location) — rather than treating any one cue as a fixed, one-to-one translation | 04 | S28, S29, S3 | SYNTHESIS | Moderate | This integrated combined-reading method is this course's own construction, assembled from `S28`'s vocabulary, `S29`'s single-cue-unreliability finding, and Chapter 2's already-established body-language framework (`CH2-05`); no single source states this combined method itself. Disclosed per `CLAUDE.md` §19. |
+
+| CH5-01 | Scratching is a normal, species-typical territorial/identity marking behaviour (scent-gland deposition via paw glands, plus claw-sheath removal) — not spite, revenge, or disobedience. Punishment does not work, because the cat does not link the punishment to the act, and can add stress that worsens the behaviour. The effective response is: identify the cat's preferred surface/orientation, provide a matching alternative (at least as tall as the cat standing on hind legs, placed near the existing site, then gradually relocated), and reduce the appeal of the off-limits surface (blocking access, deterrent texture, scent-neutralising). Declawing is a last-resort, invasive, amputation-equivalent procedure, not a proportionate first response | 05 | S26 | DIRECT | High | Corroborated by `S28`'s independent scent-marking framing (`CH4-02`). Directly extends the no-punishment principle already taught for house-soiling (`CH3-04`). |
+| CH5-02 | Cats retain a strong drive to perform the predatory sequence (locate, stalk, chase, pounce, "kill," eat) regardless of hunger or how well-fed they are. Owners should let the cat express this via wand/rod-toy play that mimics prey and simulates a capture, food-foraging methods (hiding food in multiple locations, scatter-feeding, puzzle/timed feeders), and toy rotation to prevent habituation — and should avoid using hands/feet as play objects | 05 | S1 | DIRECT | High | `S1`'s own Pillar 3 text, independently verified via its PMC mirror ahead of this chapter (see "Re-verification of S1–S4"). Corroborated by `S11` (foraging/puzzle-feeding as a behavioural need) and gives the underlying motivational reason for the hands/feet redirection rule already taught in Chapter 2 (`CH2-07`). |
+| CH5-03 | Overgrooming requires medical-first, diagnostic-elimination reasoning: physical/medical causes (e.g. a localised pain source such as disc disease or anal-sac impaction, or a more widespread cause such as parasites, allergies, or a neurological condition) must be ruled out by a veterinarian before treating the behaviour as stress/displacement-driven; pain-related licking tends to stay localised to one spot, itch-related licking is more widespread. The behaviour can become self-reinforcing (licking damages skin, which can become infected, which drives more licking) and can persist as a habit even after the original trigger resolves. Once medical causes are ruled out, owner-level responses include reducing stress via gradual transitions and familiar bedding, adding vertical retreat space, and ~10–15 minutes/day of interactive play; medication is a vet-led decision only, never an owner-initiated one | 05 | S27 | DIRECT | High | Deliberately reuses Chapter 3's medical-first reasoning pattern (`CH3-03`) applied to a new presenting behaviour, per the human-approved instruction that later chapters explicitly transfer earlier reasoning rather than re-deriving it from scratch. The "discuss medication with a vet" content is taught strictly as a vet-led option, consistent with this course's medical scope boundary. |
+| CH5-04 | Across scratching, predatory-play frustration, and overgrooming, one pattern recurs: what looks to an owner like a "problem" is very often an unmet species-typical need expressed the only way the cat has available (or, in overgrooming's case, may be masking a medical cause) — and the effective response is to identify and meet the need in an acceptable form (or rule out a medical cause first), not to suppress or punish the behaviour directly | 05 | S26, S1, S27, S4 | SYNTHESIS | Moderate | This cross-domain umbrella principle is this course's own construction — no single source states scratching, predatory play, and overgrooming together as one general "need, not naughtiness" pattern. It is assembled from `S26`, `S1`'s Pillar 3, and `S27`, and deliberately echoes the no-punishment/medical-first reasoning already established for house-soiling (`CH3-03`, `CH3-04`, sourced from `S4`). Disclosed per `CLAUDE.md` §19. |
+
+| CH6-01 | A general baseline-comparison method for judging whether a behaviour change is meaningful: (1) recall the personal baseline from the observation log; (2) identify specifically what changed — frequency, intensity, duration, a new behaviour, or the absence of a usual one; (3) check whether the change matches a known urgent-escalation signature (e.g. the obstruction-risk pattern from `CH3-06`) — if so, escalate immediately regardless of any apparent explanation; (4) if not urgent, ask whether an identifiable, benign cause accounts for it (a schedule disruption, a new household stressor, an environmental change) — if so, and the change resolves once the cause passes, log and keep observing; if no explanation exists, or the change persists or worsens, treat it as a "raise it with the vet" tier change, not indefinite wait-and-see | 06 | S1, S2, S3, S4 | SYNTHESIS | Moderate | No single guideline states this exact four-step procedure; it is this course's own formalisation of the "observer → interpreter" reasoning already practised across Chapters 1, 3, 4, and 5, built from the shared principle across `S1`–`S4` that meaningful change is judged against what is normal for that individual cat. Disclosed per `CLAUDE.md` §19. |
+| CH6-02 | Two symmetrical failure modes threaten this method in practice: **normalisation drift**, where a real, gradual change is explained away as "she's always been a bit like that" because the baseline itself quietly shifted along with the cat; and **over-escalation**, where every ordinary day-to-day variation is treated as cause for alarm, which is exhausting to sustain and erodes an owner's ability to notice a change that actually matters. Neither a permanently cautious "wait and see" stance nor a permanently anxious "escalate everything" stance is the correct application of the method | 06 | — | SYNTHESIS | Moderate | This is a pedagogical caution drawn from the practical experience of applying `CH6-01`'s method, not a claim from any veterinary guideline. Included specifically to satisfy the Autonomous Production Loop's requirement for realistic ambiguity rather than an obvious-answer method with no genuine judgment call. |
+
 No claim in this register has been fabricated or extrapolated beyond what
-is noted above. `CH1-06`, `CH1-09`, and `CH2-03` are deliberately marked
-`SYNTHESIS`, not `DIRECT`, per the instruction not to claim guidelines say
-things they do not; `CH3-06` is DIRECT for its clinical content but is
-explicit about the one place this course reasons beyond a source (applying
-an adult-cat risk presentation to a kitten-age chapter) rather than
-silently overstating Momo's personal risk.
+is noted above. `CH1-06`, `CH1-09`, `CH2-03`, `CH4-04`, `CH5-04`, `CH6-01`,
+and `CH6-02` are deliberately marked `SYNTHESIS`, not `DIRECT`, per the
+instruction not to claim guidelines say things they do not; `CH3-06` is
+DIRECT for its clinical content but is explicit about the one place this
+course reasons beyond a source (applying an adult-cat risk presentation to
+a kitten-age chapter) rather than silently overstating Momo's personal
+risk.
 
 ---
 
@@ -465,9 +479,63 @@ claim should be built on a detail that is flagged below as unread.
 | Possible SYNTHESIS opportunities | Connecting this source's medical-then-behavioural elimination logic to the identical structure already used for house-soiling (`CH3-03`) — another instance of one recurring diagnostic-reasoning principle applied across different presenting behaviours |
 | Notes/conflicts | None. Grooming remains only *partially* filled: this closes overgrooming specifically, but general/routine grooming practice (brushing, mat prevention, shedding) is still only covered at TOC level in `S9`/`S10` — see updated gap analysis below. |
 
+### S28 — International Cat Care (ISFM): Cat Communication
+
+| Field | Value |
+|---|---|
+| Full title | "Cat Communication" |
+| Year | Undated (no publication/update date visible on the page) |
+| Organisation | International Cat Care (the charity affiliated with ISFM — International Society of Feline Medicine) |
+| Type | Charity/veterinary-affiliated owner-education article |
+| Canonical URL | https://icatcare.org/articles/cat-communication |
+| Access status | Direct WebFetch was blocked by the site (HTTP 403). Full text was retrieved and read via a text-extraction reader proxy rendering the same public page — this is a full read of the article's actual content, not a search-snippet summary. |
+| Main content coverage | **Vocal communication:** three categories — (1) murmur/closed-mouth sounds (purring, used from kitten-nursing through adult greeting/allogrooming contexts; the trill/chirrup "ppprrrrrrp" greeting call, also used by mothers as a kitten contact call); (2) meowing — an extensive, variable range, produced mainly in cat-to-human contexts and "rarely heard during adult cat–cat interactions," with human responses likely reinforcing and diversifying the sound over time; (3) hostile/open-mouth sounds (growls, yowls, snarls, hisses, spits, shrieks, wails) in offensive or defensive encounters. **Scent/olfactory communication:** two detection systems — the olfactory system and the vomeronasal (Jacobson's) organ for pheromones, allowing chemical signals to persist over time and travel across distance for territory-marking and colony recognition. Urine/faeces: buried within core territory, left uncovered at territorial edges as a marker; spraying can signal territorial claims, colony identity, health status, or reproductive readiness. Skin glands (chin, cheeks/mouth, forehead, tail base) deposit scent through rubbing; cat-to-human leg-rubbing is functionally the same greeting ritual cats use with each other, redirected because a person's face is inaccessible; head-rubbing on objects ("bunting") occurs mainly in core-territory zones and relates to comfort/reassurance/friendly social interaction. Paw sebaceous glands mean scratching carries a dual chemical-plus-visual marking function, typically along frequently travelled paths rather than territory boundaries. |
+| Important limitations | No visible publication or last-updated date. Owner-facing generalist tone rather than a peer-reviewed guideline; some claims (e.g. that human attention reinforces and diversifies meowing) are stated as settled behavioural-science understanding without a specific in-line citation. Use for descriptive vocabulary/mechanism content, not as a substitute for a peer-reviewed source where precision matters. |
+| Owner- vs clinician-facing | Owner-facing |
+| Potential future Parts | Part II ("Learn to Read Her") |
+| Potential chapter themes | Fills Chapter 4's previously-flagged vocal/scent-communication `SOURCE GAP` — gives a full descriptive vocabulary for vocal categories and scent-marking channels beyond what `S3` covers (which is handling-context communication, not general vocal/scent vocabulary) |
+| DIRECT claims available | The three vocal categories and their typical contexts; the two scent-detection systems; urine/faeces marking locations and meanings; skin-gland locations and bunting; scratching's dual chemical/visual marking function |
+| Possible SYNTHESIS opportunities | Connecting this source's scent-marking-as-normal-communication framing to `S26`'s (Cornell) identical reframing of scratching as territorial/identity marking rather than misbehaviour — two independently-sourced accounts converging on the same underlying mechanism, worth naming as one reinforced principle rather than two separate facts |
+| Notes/conflicts | None. Corroborates rather than duplicates `S26`: `S26` is Cornell's owner-facing scratching-specific management guide; `S28` gives the broader vocal-plus-scent vocabulary `S26` does not attempt to cover. |
+
+### S29 — Prato-Previde et al. (2020), peer-reviewed: human interpretation of cat meows
+
+| Field | Value |
+|---|---|
+| Full title | "What's in a Meow? A Study on Human Classification and Interpretation of Domestic Cat Vocalizations" |
+| Year | 2020 (published 14 December 2020) |
+| Organisation / authors | Emanuela Prato-Previde, Simona Cannas, Clara Palestrini, Sara Ingraffia, Monica Battini, Luca Andrea Ludovico, Stavros Ntalampiras, Giorgio Presti, Silvana Mattiello — University of Milan |
+| Type | Peer-reviewed empirical study, open access, journal *Animals* (MDPI), DOI 10.3390/ani10122390 |
+| Canonical URL | https://pmc.ncbi.nlm.nih.gov/articles/PMC7765146/ |
+| Access status | Full text read directly |
+| Main content coverage | Recorded meows from 10 Maine Coon cats in three everyday contexts (waiting for delayed food, brief isolation in an unfamiliar place, routine brushing). 225 adult participants heard a representative meow from each context and tried to identify the situation and emotional tone. Correct context classification never rose significantly above chance (33%) even for the most representative recordings; food-waiting was best recognised (~40%), isolation worst (~27%). Participants could nonetheless sense broad emotional valence (isolation meows rated clearly negative, brushing meows rated positive) even without correctly identifying the specific context. Cat owners were modestly but significantly more accurate than non-owners in the isolation and brushing contexts specifically; mere childhood exposure to cats (without current ownership) did not confer the same advantage. Female participants and participants with higher cat-directed empathy scored better on the isolation/brushing contexts. Overall conclusion: humans, including regular cat owners, have only a limited capacity to decode a meow's specific meaning from sound alone, stripped of context. |
+| Important limitations | Small, single-breed sample (10 Maine Coon cats); a listener-only paradigm that deliberately strips away the situational/body-language context a real owner would normally have alongside the sound. It demonstrates that *sound alone* is an unreliable channel — it does not show that meows are meaningless, and should not be over-read as "meowing carries no information." |
+| Owner- vs clinician-facing | Academic/research source, used here for its finding, not as owner-facing prescriptive material |
+| Potential future Parts | Part II ("Learn to Read Her") |
+| Potential chapter themes | Direct evidentiary anchor for Chapter 4's core teaching point: that isolated single cues (a meow heard alone) are not reliably interpretable, which is the evidence basis for teaching combined, context-dependent signal-reading rather than a memorised vocabulary list |
+| DIRECT claims available | Chance-level context-classification accuracy from meow sound alone; the owner-vs-non-owner accuracy gap; the emotional-valence-without-context-accuracy finding |
+| Possible SYNTHESIS opportunities | Using this single-cue-unreliability finding as the evidentiary basis for Chapter 4's design decision to teach combined-signal reading — the study itself only measures meow-classification accuracy; the pedagogical conclusion ("therefore teach combined reading, not vocabulary memorisation") is this course's synthesis and must be disclosed as such in the chapter's reference note, not presented as something the paper itself recommends |
+| Notes/conflicts | None. Complements rather than conflicts with `S28`: `S28` describes what vocal categories exist and their typical social function; `S29` demonstrates that decoding a specific instance from sound alone is unreliable — different claims, not contradictory ones. |
+
 ### Re-verification of S1–S4
 
-- **`S1` (2013 Environmental Needs Guidelines):** the landing page was re-confirmed accessible, but the specific "five pillars" wording has still not been independently read from `S1`'s own full text (the SAGE version is paywalled) — my working knowledge of pillar wording comes from how later guidelines (`S4`, `S8`) describe it, not from reading `S1` directly. This is an existing gap, not a new one, but it is now flagged explicitly: **do not attribute exact pillar-definition wording to `S1` without reading `S1`'s own full text.**
+- **`S1` (2013 Environmental Needs Guidelines):** **gap closed (2026-09-05).**
+  `S1`'s own full text was read directly via its PMC mirror
+  (https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/), ahead of drafting
+  Chapter 5. Pillar 3 ("Provide opportunity for play and predatory
+  behavior") states cats "should be able to engage in pseudo-predatory
+  play and feeding behaviors," recommends letting the cat "express as
+  many aspects of the predatory sequence as possible" via food methods
+  (hiding food in multiple locations, scatter-feeding, puzzle/timed
+  feeders) and play methods (wand/rod toys mimicking prey and simulating
+  a capture, rotating toys to prevent habituation, and explicitly
+  avoiding hands/feet in play). Pillar 4 ("positive, consistent and
+  predictable human–cat social interaction") states plainly: "Do not
+  force interaction with a cat. Let the cat initiate, choose and control
+  the type of human contact," and "When a cat ends an interaction by
+  moving away, do not force further contact" — this is the exact `S1`
+  wording behind Chapter 1's already-taught no-forced-interaction rule
+  (`CH1-05`), now independently confirmed rather than inferred from `S2`.
 - **`S2` (2021 Life Stage Guidelines):** the `aaha.org` landing page (403) could not be re-confirmed directly; re-verified instead via the same PMC mirror already cited in the Source Library. Confirms the guideline's own life-stage boundaries (kitten, young adult, mature adult, senior, plus an unelaborated fifth "end-of-life" stage that only cross-references separate end-of-life resources) — **`S2` does *not* independently support Part IV end-of-life content; use `S16` for that.**
 - **`S3` (2022 Cat Friendly Veterinary Interaction Guidelines):** full text re-confirmed via the existing PMC mirror. Roughly half the document is clinic-logistics content (exam-room prep, sedation tables, in-practice documentation) that does **not** transfer to a home context and should not be cited for home-context claims; the other half (species-level sensory/emotional needs, cooperative-care conditioning, body-language reading, touch preferences) is explicitly general and safely transferable — this is the basis for how `S3` is already used in Chapter 2.
 - **`S4` (2014 House-Soiling Guidelines):** landing page re-confirmed live and consistent with the existing registration (DOI visible, no content changes found).
@@ -482,8 +550,8 @@ area a future Part is likely to need.
 
 | Content area | Strongest source(s) | Supporting source(s) | Likely Part | Evidence strength | Remaining gap |
 |---|---|---|---|---|---|
-| Environment / resource setup | `S1` | `S8` (multi-cat) | II | Strong for single-cat; moderate for multi-cat (landing-page only) | `S1`'s own pillar wording still unread in full text |
-| Communication / body language | `S3` | `S9`, `S10` (TOC only) | II | Strong for handling/consent context; textbook depth pending full-text access | Textbook full-text access |
+| Environment / resource setup | `S1` | `S8` (multi-cat) | II | Strong for single-cat (full Pillar text verified 2026-09-05); moderate for multi-cat (landing-page only) | `S8` full text |
+| Communication / body language | `S3` | `S9`, `S10` (TOC only); `S28` (vocal/scent vocabulary); `S29` (peer-reviewed, single-cue reliability) | II | Strong — handling context (`S3`), vocal/scent vocabulary (`S28`), and the evidence basis for combined-signal reading (`S29`) are all covered; textbook depth still pending | Textbook full-text access (lower priority — no longer blocks Chapter 4) |
 | Learning / training / cooperative care | `S3` | `S9` (TOC: "feline learning") | II | Moderate | No dedicated learning-theory source yet |
 | Multi-cat relationships | `S8` | `S1` | II | Moderate (landing-page level) | `S8` full text |
 | Elimination / house-soiling | `S4` | `S19` (companion tone) | I (done), II/III | Strong | None significant |
@@ -496,7 +564,7 @@ area a future Part is likely to need.
 | End of life | `S16` | `S15` | IV | Strong | QOL tool internals |
 | Cognitive change | `S25` | `S15`, `S2` (frailty context) | IV | Strong (full text) | None significant |
 | Grooming (overgrooming) | `S27` | `S9`, `S10` (TOC only) | II | Moderate — overgrooming closed; routine/general grooming still thin | Routine grooming practice (brushing, mats, shedding) still needs a dedicated source if taught in depth |
-| Scratching / predatory / play | `S26` | `S1` (partial), `S11` (foraging), `S9` (TOC) | II | Moderate-strong — scratching closed; predatory/play still TOC-only | Predatory/play-specific guidance still pending textbook access |
+| Scratching / predatory / play | `S26`, `S1` | `S11` (foraging), `S3` (hand-play redirection), `S9` (TOC) | II | Strong — scratching and predatory/play both closed via `S1`'s own verified Pillar 3 text; textbook still TOC-only but no longer a blocker | None significant for Chapter 5's scope |
 | Nutrition / body condition / weight | `S22` | `S11` (feeding behaviour) | III | Strong (hub page; chart wording not verbatim-verified) | Exact BCS/MCS chart per-point wording not independently read — minor follow-up only |
 | Parasite prevention | `S23` | `S2` (high-level) | III | Moderate-strong (clinician-facing cadence confirmed; cat-specific tab not spot-checked) | Spot-check the CAPC cat-specific tab before quoting a cat-only cadence number verbatim |
 | Indoor/outdoor risk | `S24` | `S1` (indoor enrichment) | II–III | Strong (full text) | None significant |
@@ -513,10 +581,17 @@ guessed URL. **Updated following the Phase B targeted verification pass**
 and read directly; all six were strong enough on inspection to register,
 so none were rejected in favour of a lower-authority substitute.
 
-- **Feline communication/body language:** not a hard gap — `S3` is strong
-  for handling-context communication; `S9`/`S10` promise deeper coverage
-  once their full text is accessible. Action: pursue textbook full-text
-  access, not a new source hunt. **Status: unchanged, still open.**
+- **Feline communication/body language:** **closed for Chapter 4's needs.**
+  `S28` (International Cat Care / ISFM, "Cat Communication") was verified
+  (full text read via reader-proxy access after direct WebFetch was
+  blocked) and registered — it gives a full vocal-category and
+  scent-marking vocabulary beyond `S3`'s handling-context scope. `S29`
+  (Prato-Previde et al. 2020, peer-reviewed) was verified and registered
+  as the evidentiary anchor for teaching combined, context-dependent
+  signal-reading rather than single-cue memorisation. `S9`/`S10` textbook
+  full-text access remains a lower-priority open item for any future
+  deeper-communication content. **Status: gap closed (Phase C targeted
+  research); textbook access no longer blocks any locked chapter.**
 - **Learning and training:** thin. `S3` covers cooperative-care
   conditioning but there is no dedicated learning-theory source. Consider,
   once needed: ISFM/International Cat Care training resources, or the
@@ -534,10 +609,13 @@ so none were rejected in favour of a lower-authority substitute.
   still only present at TOC level in `S9`/`S10` and remains open — no
   standalone grooming chapter is planned per prior instruction, so this
   is a lower-priority remaining gap.
-- **Scratching and predatory/play behaviour:** **partially closed.**
-  Scratching specifically is now covered by `S26` (verified, full text).
-  Predatory/play behaviour remains TOC-only in `S9` and is still open,
-  though `S11`'s foraging/play content already gives partial coverage.
+- **Scratching and predatory/play behaviour:** **closed.** Scratching is
+  covered by `S26` (verified, full text). Predatory/play is now covered
+  by `S1`'s own verified Pillar 3 text (hunting-sequence expression,
+  wand-toy technique, puzzle/scatter feeding, avoiding hands in play),
+  read directly ahead of Chapter 5, corroborated by `S11`'s foraging
+  content and `S3`'s hand-play-redirection guidance. `S9`'s textbook
+  chapter remains TOC-only but is no longer needed to close this gap.
 - **Parasite prevention:** **closed.** `S23` (CAPC General Guidelines)
   was verified and registered — testing cadence and prevention-category
   guidance now exists. Minor follow-up: the page's cat-specific tab was
@@ -583,12 +661,20 @@ so none were rejected in favour of a lower-authority substitute.
 
 **Remaining genuine gaps after this pass, in priority order:** (1) `S13`
 pain-management guideline access (weakest link, affects Chapter 9); (2)
-`S9`/`S10` textbook full-text access (affects communication depth,
-learning theory, routine grooming, predatory/play depth); (3) the actual
+`S9`/`S10` textbook full-text access (affects learning-theory depth and
+routine-grooming (brushing/mats/shedding) depth specifically — vocal/scent
+communication for Chapter 4 and predatory-play/scratching for Chapter 5
+are now closed by `S28`/`S29` and `S1`/`S26` respectively); (3) the actual
 QOL assessment tool referenced by `S16` (affects how precisely Chapter 12
 can describe a structured check-in without over-claiming a "score").
 None of these block writing the Chapter 1–12 skeleton, since skeleton-level
 work identifies *what evidence a chapter will need*, not the chapter's
 full text — but all three should be resolved before their respective
-chapters (9, and any communication/grooming/learning-heavy chapter, and
-12) are written in full.
+chapters (9, any deep learning-theory/routine-grooming content, and 12)
+are written in full.
+
+**Phase C targeted research (2026-09-05):** `S28` and `S29` were added to
+close Chapter 4's flagged vocal/scent-communication `SOURCE GAP`; `S1`'s
+own full text was independently read (closing a long-standing pillar-
+wording gap) to verify Pillar 3's predatory-play content ahead of drafting
+Chapter 5 — all per `CLAUDE.md` §21.
