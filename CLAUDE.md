@@ -488,6 +488,78 @@ just the sources already registered as of this section's creation.
 
 ---
 
+## 22. Voice & editorial design workflow
+
+**Curriculum content is complete and structurally locked** (all twelve
+chapters, whole-course audited — see the commit history for Parts I–IV
+and the whole-course audit/repair stage). This section governs a
+separate, later stage: making that locked content sound like one
+deliberately-written course rather than twelve factually-correct but
+interchangeable articles, per Assignment 2's requirement that a
+curriculum must not be built from "content-shaped chunks" (§6) and must
+hold together as one idea (project mission statement, top of this file).
+
+**Authoritative voice guide.** `docs/VOICE.md` is the editorial guide for
+this course's prose voice, in the same sense that `docs/CURRICULUM.md` is
+authoritative for structure and `docs/SOURCES.md` is authoritative for
+facts. `VOICE.md` governs *how* a true thing is said. It has no authority
+over *what* is true, over chapter order, or over learning outcomes —
+those remain governed by `docs/CURRICULUM.md`, the chapter files, and
+`docs/SOURCES.md` per §16's documentation authority order, unchanged by
+this section.
+
+**Editorial tools.** `.claude/skills/humanizer/SKILL.md` and
+`.claude/skills/storyteller/SKILL.md` are editorial tools invoked during
+this workflow. Per §17's rule for project-local skills, neither has
+curriculum authority: neither may add, remove, or reinterpret a teaching
+claim, Source ID, Claim ID, or DIRECT/SYNTHESIS classification. Humanizer
+targets prose shape (rhythm, structure, banned vocabulary, formulaic
+transitions); Storyteller targets narrative wrapping (Momo scenes,
+transitions, callbacks) around already-locked evidence. They are not
+interchangeable and should not be applied identically to every paragraph
+— see each skill's own file for its specific role.
+
+**The workflow:**
+
+```
+LOCKED CONTENT
+  -> VOICE PASS               (apply docs/VOICE.md's voice + chapter grammar)
+  -> NARRATIVE PASS           (Storyteller: scenes, transitions, callbacks)
+  -> HUMANIZATION PASS        (Humanizer: strip AI-prose shape)
+  -> EVIDENCE-PRESERVATION CHECK  (verify every claim/ID/tag/threshold intact)
+  -> VOICE AUDIT              (check the result actually reads as intended)
+  -> APPROVED PROSE
+```
+
+**Factual immutability rule (hard constraint, not a judgement call).**
+An editorial pass may change sentence structure, paragraph structure,
+rhythm, examples, scene framing, transitions, explanatory analogies, and
+narrative sequence where factual meaning is preserved. It may **not**
+silently change: claim meaning, Source IDs, Claim IDs, DIRECT/SYNTHESIS
+classification, numerical thresholds, medical escalation guidance, risk
+distinctions, sex-specific nuance, source limitations, learning outcomes,
+prerequisite relationships, or the approved curriculum backbone. If a
+more natural-sounding rewrite would alter a factual claim, keep the
+factual claim — voice never outranks evidence, exactly as §7 and §19
+already establish for claims and sources generally.
+
+**Human approval boundary for this stage.** Ordinary prose-level
+improvements (rhythm, sentence variety, scene framing, vocabulary,
+transitions) may be made autonomously once an approach is approved for a
+given chapter or sample. A human decision is required only if an
+editorial change would materially affect: curriculum meaning, factual
+interpretation, course thesis, chapter capability, medical advice, or
+source interpretation. This mirrors the escalation boundary already used
+for curriculum work (§16), applied here at the prose level.
+
+**Process boundary.** This stage produces voice/prose work only. It does
+not redesign the curriculum, change chapter order or capabilities, or
+begin UI, slide, animation, or Cat Run/virtual-cat interface
+implementation — those remain separate, later stages per this file's
+content-first-then-form principle (§9, §10).
+
+---
+
 ## Current project state
 
 ```
@@ -514,6 +586,10 @@ SOURCE REGISTER:          docs/SOURCES.md — full Claim Register (CH1-01
                           chapters, backed by the Part I sources (S1-S7)
                           and the whole-course source pack (S8 onward),
                           verified per `CLAUDE.md` §21
+VOICE:                    docs/VOICE.md established — see §22. One
+                          representative sample produced and audited
+                          (docs/process/voice-sample-chapter-05.md);
+                          full twelve-chapter voice pass NOT yet run.
 ASSESSMENTS:              NOT DESIGNED
 VISUAL DIRECTION:         Slide grammar reserved in docs/LESSON_SYSTEM.md;
                           final CSS NOT designed
