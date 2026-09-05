@@ -398,6 +398,96 @@ history should tell the story of how the project and harness developed.
 
 ---
 
+## 21. Source Supplementation Protocol
+
+**Purpose.** This project's evidence base grows over time as new chapters
+are planned. This protocol lets a future agent session perform *controlled*
+supplementary research to fill a genuine, specific evidence gap without
+requiring repeated human permission for each search — while keeping every
+new claim as rigorously sourced as Chapters 1–3.
+
+**1. Existing sources come first.** `docs/SOURCES.md` is always the first
+evidence base consulted for a teaching claim. Do not search externally for
+something the register may already support — re-read the Source Library,
+Claim Register, whole-course source pack, and coverage map before deciding
+a gap is real.
+
+**2. Search by gap, not by desired answer.** External research is
+permitted only to fill a genuine, specific gap identified in the coverage
+map or gap analysis (e.g. "no source yet supports body-condition
+scoring") — never to go looking for a source that will say what the
+curriculum already wants to claim. If a chapter's argument depends on
+finding a specific fact, the fact must be found and verified first; the
+teaching claim follows the evidence, not the reverse.
+
+**3. Authority hierarchy.** When filling a gap, prefer sources in this
+order: FelineVMA (formerly AAFP)/AAFP, AAHA, ISFM/International Cat Care,
+WSAVA, CAPC, university veterinary schools (e.g. Cornell, UC Davis,
+Illinois), and peer-reviewed literature. Blogs, forums, SEO content,
+pet-influencer material, and manufacturer/marketing content are never
+acceptable sources for a factual teaching claim, regardless of how
+well-written or how well they fit the argument.
+
+**4. Verify before registering.** Do not register a source from a title,
+a search snippet, or a secondary summary alone. Open and actually read
+(directly or via WebFetch/a research agent) enough of the source to
+honestly complete the full field set used elsewhere in `docs/SOURCES.md`:
+full title, year, organisation/authors, type, canonical URL, access status
+(what was actually read vs. only glimpsed), main content coverage,
+important limitations, owner- vs. clinician-facing, potential future
+Parts/chapter themes, DIRECT claims available, possible SYNTHESIS
+opportunities, and notes/conflicts. If full access fails (paywall,
+blocked domain, metadata-only), register that honestly as a
+partial/TOC-only entry rather than pretending full verification occurred.
+
+**5. New sources supplement — they never silently replace.** A newly
+registered source may corroborate, extend, or add nuance to an existing
+claim. It must never silently overwrite or contradict an existing
+Claim Register entry. If a new source appears to conflict with an
+existing one and the conflict cannot be responsibly resolved by this
+project's own judgement, do not pick a winner — mark the claim
+`SOURCE CONFLICT — HUMAN REVIEW` in `docs/SOURCES.md` and flag it in the
+next report rather than quietly choosing the newer or more convenient
+source.
+
+**6. Newer is not automatically better.** A more recent guideline
+supersedes an older one only when it actually addresses the same
+question with equal or greater rigor (e.g. a peer-reviewed consensus
+guideline update). A newer blog-tier or client-education page does not
+outrank an older peer-reviewed guideline merely by publication date — see
+`S9`/`S10`'s explicit "default to the more current one only where they
+actually overlap" handling as the model for this judgement.
+
+**7. DIRECT vs SYNTHESIS remains mandatory.** Every claim drawn from a
+newly registered source must be tagged `DIRECT` or `SYNTHESIS` exactly as
+described in §19. A synthesis assembled across multiple new or existing
+sources must disclose what was combined and why, in the source/reference
+note, not inline in learner-facing teaching copy.
+
+**8. Medical scope boundary holds.** Newly sourced content must stay
+within this course's established owner-facing scope: observe → recognise
+→ record → adjust safe environmental/behavioural factors → escalate to a
+veterinary professional. This course never teaches the owner to diagnose,
+prescribe, or treat a medical condition, no matter how authoritative the
+new source is. A source that is itself clinician-facing (dosing tables,
+diagnostic algorithms, prescribing guidance) may still be registered for
+its *concepts*, but its prescribing/diagnostic content must not be
+adapted into owner-facing teaching material.
+
+**9. Source depth matches teaching importance.** Not every teaching point
+needs a cluster of sources. A single well-verified authoritative source is
+sufficient to support a supporting idea or a minor supporting claim. A
+major chapter representing 4+ hours of teaching time and carrying real
+factual weight should be backed by a stronger cluster — a primary
+guideline plus at least one corroborating or complementary source — before
+that chapter is written in full. Do not manufacture a cluster by
+registering marginal sources merely to pad the appearance of rigor.
+
+This protocol applies to all future chapters (Parts II–IV and beyond), not
+just the sources already registered as of this section's creation.
+
+---
+
 ## Current project state
 
 ```

@@ -351,6 +351,120 @@ claim should be built on a detail that is flagged below as unread.
 | Possible SYNTHESIS opportunities | None needed |
 | Notes/conflicts | Use only as a hook/framing device; cite `S15` for the substantive teaching claim |
 
+### S22 — WSAVA Global Nutrition Guidelines and Body/Muscle Condition Score Tools (Cat)
+
+| Field | Value |
+|---|---|
+| Full title | "Global Nutrition Guidelines" (2011, JSAP) plus the WSAVA Global Nutrition Committee's "Body Condition Score – Cat" chart and "Muscle Condition Score – Cat" chart |
+| Year | Guidelines 2011; Cat BCS chart dated 2025 (filename "250612"); Cat MCS chart dated 2020 |
+| Organisation | World Small Animal Veterinary Association (WSAVA), Global Nutrition Committee |
+| Type | Peer-reviewed/consensus guideline (the 2011 guidelines document) plus two WSAVA-copyrighted client/clinical assessment tools (BCS and MCS charts) |
+| Canonical URL | Guidelines hub: https://wsava.org/global-guidelines/global-nutrition-guidelines/ ; Cat BCS chart: https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf ; Cat MCS chart referenced from the same hub page |
+| Access status | **Landing/hub page read directly in full** (confirms guideline history, endorsing associations, and the existence/naming/dates of both charts). **The BCS chart PDF itself is image/graphic content and could not be extracted as machine-readable text** — its 9-point-scale structure and per-score palpation criteria are corroborated by WSAVA's own hub-page description and by independent secondary veterinary sources describing the same WSAVA-standardised 9-point scale, but the chart's exact wording per score has not been read verbatim. The MCS chart PDF was not independently fetched. |
+| Main content coverage | BCS: a 9-point body-fat assessment scale (5/9 = ideal; visible waist from above, ribs palpable with slight fat covering), used to judge whether a cat is underweight, ideal, overweight, or obese. MCS: a separate scale (WSAVA/AAHA use descriptive terms — normal muscle mass, or mild/moderate/severe muscle atrophy) that assesses muscle wasting, which can occur independently of body fat (e.g. in an aging or ill cat that is not fat but is losing muscle). Guidelines document: nutritional-assessment framework, individually tailored feeding plans. |
+| Important limitations | No pharmaceutical/prescribing content anywhere in the hub page or chart descriptions — this is a physical/visual assessment tool, not a treatment resource, which satisfies the requirement this candidate was checked against. Exact chart wording (the descriptive text for each of the 9 points) is not independently verified — a future chapter should describe the *scale and its purpose* rather than quote specific per-point chart language verbatim until the chart is read directly (e.g. by a human opening the PDF). |
+| Owner- vs clinician-facing | Both — WSAVA explicitly designs these as tools vets and owners can use together; BCS/MCS assessment is routinely taught to owners as a hands-on skill (checking ribs/waist by touch and eye). |
+| Potential future Parts | Part III ("Keep Her Well") |
+| Potential chapter themes | Fills the previously-flagged nutrition/body-condition gap — supports a chapter teaching owners to assess Momo's body and muscle condition over time as an extension of the observation-log habit established in Chapter 1 |
+| DIRECT claims available | The 9-point BCS scale exists and is WSAVA-standardised; 5/9 is the ideal score; BCS and MCS are distinct assessments (fat vs. muscle) and should not be conflated; MCS uses descriptive categories rather than a numeric scale |
+| Possible SYNTHESIS opportunities | Connecting ongoing BCS/MCS self-assessment to Chapter 1's daily-observation-habit claim (`CH1-09`) — teaching body/muscle condition tracking as part of the same personal-baseline practice, not a separate one-off task |
+| Notes/conflicts | None. This closes the "Nutrition and body condition / weight management" gap flagged in the prior evidence gap analysis — the chart's exact per-point wording remains a minor follow-up item, not a blocking gap. |
+
+### S23 — CAPC General Guidelines
+
+| Field | Value |
+|---|---|
+| Full title | "General Guidelines" (Companion Animal Parasite Council) |
+| Year | Undated, actively maintained/updated guidance |
+| Organisation | Companion Animal Parasite Council (CAPC) — veterinarians, academic parasitologists, veterinary technicians, state public-health veterinarians, and CDC staff |
+| Type | Consensus practice guideline, clinician-facing |
+| Canonical URL | https://capcvet.org/guidelines/general-guidelines/ |
+| Access status | Read directly. The page defaults to a "Dog" tab view; a parallel cat-specific tab exists on the live site but its distinct content was not independently confirmed in this pass — flagged below. |
+| Main content coverage | Preventive-examination cadence (every 6–12 months); year-round broad-spectrum parasite control recommended over intermittent treatment; fecal testing cadence (at least 4x in year one of life, at least 2x/year for healthy adults, more if outdoor access/travel/contact with other animals); heartworm testing "prior to placing [a cat] on heartworm preventive and thereafter as indicated"; general public-health hygiene measures (do not handle faeces/urine bare-handed; dispose of waste properly; spay/neuter) |
+| Important limitations | **No specific pharmaceutical product names, active ingredients, or dosing amounts are given anywhere on this page** — recommendations stay at the level of testing cadence and drug *classes* ("broad-spectrum parasite control," "anthelmintic treatment"), which satisfies the constraint this candidate was checked against (no pharmaceutical-prescribing content). This is clinician-facing directive language ("Conduct," "Administer") rather than owner-facing prose, and must be translated into an owner-facing "questions to ask your vet" framing, not quoted as a self-administered protocol — consistent with this course's medical scope boundary (§21 point 8). The cat-specific tab's exact wording (vs. the dog-tab content captured here) should be spot-checked before quoting a cat-specific cadence number verbatim. |
+| Owner- vs clinician-facing | Clinician-facing |
+| Potential future Parts | Part III ("Keep Her Well") |
+| Potential chapter themes | Fills the previously-flagged parasite-prevention gap — supports teaching owners the *categories and cadence* of parasite prevention worth discussing with a vet (fecal testing frequency, year-round vs. seasonal control, indoor-cat risk is non-zero), mirroring how `S12` is already used for vaccination ("risk-based conversation, not self-prescribed schedule") |
+| DIRECT claims available | Preventive-exam and fecal-testing cadence figures; the general principle that indoor cats are not risk-free for heartworm/parasites; the recommendation for year-round rather than intermittent control |
+| Possible SYNTHESIS opportunities | Pairing this cadence information with `S12`'s "risk-based conversation, not routine self-prescription" framing, so parasite prevention and vaccination are taught as one coherent "informed preventive-care conversation" skill rather than two unrelated checklists |
+| Notes/conflicts | None. This closes the "Parasite prevention" gap flagged in the prior evidence gap analysis. |
+
+### S24 — 2024 FelineVMA Indoor/Outdoor Lifestyle Position Statement
+
+| Field | Value |
+|---|---|
+| Full title | "2024 AAFP/FelineVMA Indoor/Outdoor Lifestyle Position Statement" (supersedes a 2016 predecessor position statement) |
+| Year | 2024 |
+| Organisation | FelineVMA (formerly AAFP); Feline Welfare Committee, chaired by Ilona Rodan |
+| Type | Peer-reviewed consensus position statement, *Journal of Feline Medicine and Surgery*, DOI 10.1177/1098612X241227827 |
+| Canonical URL | https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/ |
+| Access status | **Full text read directly** — the landing page hosts the complete statement text, not merely a summary |
+| Main content coverage | States explicitly that no single lifestyle (indoor-only, indoor/outdoor, outdoor-only) is universally correct — each carries its own risks and benefits, and the "right" choice depends on the individual cat and household. Indoor-only: requires deliberate effort to meet all environmental needs (food, water, resting, hunting/foraging simulation, play, vertical territory, clean toileting) or the cat risks anxiety/stress-related illness. Indoor/outdoor: safety is the primary concern; recommends controlled-access methods (secure outdoor enclosures, cat-safe fencing, harness-and-leash walking); notes young and male cats warrant closer monitoring for injury risk; recommends nighttime confinement. Outdoor-only: acknowledges some cats' welfare may be better served outdoors (prior outdoor-only cats, multi-cat household tension, unmet needs indoors); recommends barn placement, colony management, or TNVR programs over forced confinement. Universal recommendation: microchip and visible ID regardless of lifestyle. Explicitly scopes out wildlife-welfare/environmental-impact considerations as a separate topic. |
+| Important limitations | This is a position statement (welfare-risk framing for a client conversation), not a detailed how-to enclosure/harness-training manual — practical step-by-step harness/enclosure training content would need to draw on `S2`/`S3`'s existing carrier/handling-training material by extension, not this source directly. |
+| Owner- vs clinician-facing | Primarily a clinician-facing position statement intended to inform vet-client conversations, but its content and framing translate directly to owner-facing teaching about lifestyle-risk trade-offs. |
+| Potential future Parts | Part II/III (a genuine, non-trivial lifestyle decision point) |
+| Potential chapter themes | Fills the previously-flagged indoor/outdoor-risk gap — supports a chapter teaching owners to weigh lifestyle options against their specific household's constraints (space, money for an enclosure, time for leash training, local risk factors) rather than assuming one universally correct answer |
+| DIRECT claims available | All bullets under "Main content coverage" above are direct statements from the full text |
+| Possible SYNTHESIS opportunities | Connecting this statement's "meet all environmental needs indoors or accept real welfare risk" framing to `S1`'s five-pillar environmental-needs framework, so an indoor-lifestyle decision is taught as "choosing indoor means committing to `S1`'s pillars in full," not a free pass from environmental effort |
+| Notes/conflicts | None. This closes the "Indoor/outdoor risk" gap flagged in the prior evidence gap analysis. |
+
+### S25 — Cornell: Cognitive Dysfunction
+
+| Field | Value |
+|---|---|
+| Full title | "Cognitive Dysfunction" |
+| Year | Reviewed 2024; quotes the late Dr. Alexander de Lahunta, Cornell emeritus professor of anatomy |
+| Organisation | Cornell Feline Health Center |
+| Type | University veterinary client-education page |
+| Canonical URL | https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cognitive-dysfunction |
+| Access status | Full text read directly |
+| Main content coverage | Signs "clearly noticeable" from roughly age 10+: spatial disorientation, wandering into unfamiliar territory, lost interest in play, excessive sleeping, altered sleep/wake cycles, long blank-staring episodes, indifference to food/water, house-soiling, unprompted loud vocalising (often at night). Explicitly frames diagnosis as a *rule-out* process: arthritis, kidney failure, hyperthyroidism, hypertension, and periodontal disease must be excluded first, potentially via MRI/CSF analysis for neurological causes; medication (e.g. fluoxetine) is something a vet may prescribe only after ruling out other causes. Owner-support suggestions: an antioxidant/vitamin-E-rich diet, avoiding a new-animal introduction that could stress the cat, low-sided/accessible litter boxes, ramps for stairs, routine checkups for early detection. |
+| Important limitations | This page explicitly and repeatedly routes diagnosis to a veterinarian — it must **not** be adapted into an owner-self-diagnosis checklist; it is well suited to this course's existing observe → recognise → escalate scope boundary and no further. |
+| Owner- vs clinician-facing | Owner-facing |
+| Potential future Parts | Part IV ("Change With Her") |
+| Potential chapter themes | Fills the previously-flagged cognitive-change gap — supports a chapter teaching owners to recognise cognitive-dysfunction signs in an aging cat as behavioural signals to report to a vet (mirroring Chapter 3's "recognise the behavioural signature, not the diagnosis" pattern, `CH3-06`), not to self-diagnose dementia |
+| DIRECT claims available | The full signs list; the rule-out diagnostic sequence; the owner-support suggestions list |
+| Possible SYNTHESIS opportunities | Applying Chapter 3's already-established "observe → recognise → escalate, do not diagnose" teaching pattern to this new, aging-specific context — an explicit callback/reapplication of an existing course skill, not a new one, so should be disclosed as such rather than presented as brand-new content |
+| Notes/conflicts | None. This closes the "Cognitive change" gap flagged in the prior evidence gap analysis. |
+
+### S26 — Cornell: Feline Behavior Problems — Destructive Behavior
+
+| Field | Value |
+|---|---|
+| Full title | "Feline Behavior Problems: Destructive Behavior" |
+| Year | Updated March 2018 |
+| Organisation | Cornell Feline Health Center |
+| Type | University veterinary client-education page |
+| Canonical URL | https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-destructive-behavior |
+| Access status | Full text read directly |
+| Main content coverage | Reframes scratching as instinctive territorial/identity marking (scent-gland deposition, claw-sheath removal), not spite or revenge. Three-part management approach: (1) identify the cat's preferred surface/orientation before choosing a solution; (2) provide a matching alternative (post at least as tall as the cat standing on hind legs, placed near the existing scratch site, then gradually relocated, reinforced with treats/praise; worn posts should not be discarded); (3) reduce the appeal of off-limits surfaces (blocking access, deterrent textures, a "tower of plastic cups" startle device) plus scent-neutralising previously scratched spots. Recommends regular nail trims/caps as damage-reduction, not a substitute for scratching outlets. Firmly discourages punishment (cats "see no link between the punishment and the crime") and frames declawing as a last-resort, invasive amputation-equivalent procedure. Briefly covers related destructive behaviours (fabric chewing/sucking, houseplant chewing) with similar redirection logic. |
+| Important limitations | None significant — this is squarely owner-facing, non-technical, and directly usable. |
+| Owner- vs clinician-facing | Owner-facing |
+| Potential future Parts | Part II ("Learn to Read Her") |
+| Potential chapter themes | Fills the previously-flagged scratching gap — supports teaching scratching as a normal need-driven behaviour to redirect, not a misbehaviour to punish, reinforcing this course's existing no-punishment principle already established for house-soiling (`CH3-04`) |
+| DIRECT claims available | All bullets under "Main content coverage" above |
+| Possible SYNTHESIS opportunities | Connecting the no-punishment principle here to the identical principle already taught for house-soiling (`CH3-04`), so the course explicitly names "do not punish a need-driven behaviour" as one recurring principle applied across multiple behaviours, rather than teaching it twice as if unrelated |
+| Notes/conflicts | None. This closes the "Scratching" portion of the previously-thin "Scratching and predatory/play behaviour" gap. |
+
+### S27 — Cornell: Cats That Lick Too Much
+
+| Field | Value |
+|---|---|
+| Full title | "Cats that Lick Too Much" |
+| Year | Undated; cites Pamela Perry, D.V.M. (Cornell animal-behavior resident, Camuti Consultant) and William Miller, Jr., V.M.D. (Professor Emeritus, Cornell Section of Behavior and Dermatology) |
+| Organisation | Cornell Feline Health Center |
+| Type | University veterinary client-education page |
+| Canonical URL | https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cats-lick-too-much |
+| Access status | Full text read directly |
+| Main content coverage | Distinguishes normal grooming (30–50% of a cat's day) from excessive/overgrooming. Pain-related licking stays localised to one spot (e.g. disc disease, anal-sac impaction); itch-related licking is more widespread (parasites, allergies, neurological causes) — described as "fur mowing," with hair-loss location as a diagnostic clue. Frames diagnosis as elimination: physical/medical causes must be ruled out by a veterinarian first; only once medical causes are excluded is stress/displacement behaviour considered. Notes a self-reinforcing cycle (licking → skin damage → infection → more licking) and that the behaviour can persist as a stress-relieving habit even after the original trigger resolves. Owner recommendations: have a vet rule out medical causes; reduce stress via gradual transitions and familiar bedding; add vertical retreat space; provide ~10–15 minutes/day of interactive play; in severe cases, discuss temporary anti-anxiety medication with a vet; expect resolution to take time (the article's case cat took roughly a month once the cause was addressed). |
+| Important limitations | The "discuss anti-anxiety medication with a vet" content must be taught strictly as "a vet may consider this," never as an owner-actionable step — consistent with this course's medical scope boundary (§21 point 8). |
+| Owner- vs clinician-facing | Owner-facing |
+| Potential future Parts | Part II ("Learn to Read Her") |
+| Potential chapter themes | Fills the previously-flagged overgrooming portion of the grooming gap — supports teaching overgrooming as a medical-first, then behavioural, diagnostic-elimination process (paralleling the already-established medical-first reasoning pattern from Chapter 3, `CH3-03`), explicitly **not** as a standalone chapter topic per prior instruction, but as material within a broader needs/behaviour-interpretation chapter |
+| DIRECT claims available | All bullets under "Main content coverage" above |
+| Possible SYNTHESIS opportunities | Connecting this source's medical-then-behavioural elimination logic to the identical structure already used for house-soiling (`CH3-03`) — another instance of one recurring diagnostic-reasoning principle applied across different presenting behaviours |
+| Notes/conflicts | None. Grooming remains only *partially* filled: this closes overgrooming specifically, but general/routine grooming practice (brushing, mat prevention, shedding) is still only covered at TOC level in `S9`/`S10` — see updated gap analysis below. |
+
 ### Re-verification of S1–S4
 
 - **`S1` (2013 Environmental Needs Guidelines):** the landing page was re-confirmed accessible, but the specific "five pillars" wording has still not been independently read from `S1`'s own full text (the SAGE version is paywalled) — my working knowledge of pillar wording comes from how later guidelines (`S4`, `S8`) describe it, not from reading `S1` directly. This is an existing gap, not a new one, but it is now flagged explicitly: **do not attribute exact pillar-definition wording to `S1` without reading `S1`'s own full text.**
@@ -380,11 +494,12 @@ area a future Part is likely to need.
 | Aging / senior care | `S15` | `S20`, `S21`, `S2` | IV | Strong | None significant, but must pair `S20` with `S15`'s budget framing |
 | Quality of life / caregiver burden | `S15`, `S16` | — | IV | Strong (concept-level); QOL tool internals unverified | Read the actual QOL PDF tool before teaching it as scored |
 | End of life | `S16` | `S15` | IV | Strong | QOL tool internals |
-| Cognitive change | — | Cornell hub mention only (`S18`, unread link) | IV | **Thin** | See gap analysis |
-| Grooming | — | `S9`, `S10` (TOC only) | II | **Thin** | See gap analysis |
-| Scratching / predatory / play | `S1` (partial) | `S11` (foraging), `S9` (TOC) | II | Moderate | Scratching-specific guidance still missing |
-| Parasite prevention | `S2` (high-level) | — | III | **Thin** | See gap analysis |
-| Indoor/outdoor risk | — | `S1` (indoor enrichment, indirect) | I–III | **Thin** | See gap analysis |
+| Cognitive change | `S25` | `S15`, `S2` (frailty context) | IV | Strong (full text) | None significant |
+| Grooming (overgrooming) | `S27` | `S9`, `S10` (TOC only) | II | Moderate — overgrooming closed; routine/general grooming still thin | Routine grooming practice (brushing, mats, shedding) still needs a dedicated source if taught in depth |
+| Scratching / predatory / play | `S26` | `S1` (partial), `S11` (foraging), `S9` (TOC) | II | Moderate-strong — scratching closed; predatory/play still TOC-only | Predatory/play-specific guidance still pending textbook access |
+| Nutrition / body condition / weight | `S22` | `S11` (feeding behaviour) | III | Strong (hub page; chart wording not verbatim-verified) | Exact BCS/MCS chart per-point wording not independently read — minor follow-up only |
+| Parasite prevention | `S23` | `S2` (high-level) | III | Moderate-strong (clinician-facing cadence confirmed; cat-specific tab not spot-checked) | Spot-check the CAPC cat-specific tab before quoting a cat-only cadence number verbatim |
+| Indoor/outdoor risk | `S24` | `S1` (indoor enrichment) | II–III | Strong (full text) | None significant |
 | Emergency warning signs | `S5`, `S7` | `S6` (poisoning) | I (done) | Adequate for Part I scope; may be thin if reused broadly in III/IV | Consider a dedicated emergency/critical-care source if a later chapter needs broader coverage |
 
 ## Evidence gap analysis
@@ -393,61 +508,87 @@ Checked against the candidate weak areas named in the instruction. Per the
 instruction, **no source has been added below without verification** —
 where a genuine gap exists, this section names the missing evidence
 category and the *kind* of authority that should be sought, not a
-guessed URL.
+guessed URL. **Updated following the Phase B targeted verification pass**
+(see `S22`–`S27` above) — six previously-flagged candidates were opened
+and read directly; all six were strong enough on inspection to register,
+so none were rejected in favour of a lower-authority substitute.
 
 - **Feline communication/body language:** not a hard gap — `S3` is strong
   for handling-context communication; `S9`/`S10` promise deeper coverage
   once their full text is accessible. Action: pursue textbook full-text
-  access, not a new source hunt.
+  access, not a new source hunt. **Status: unchanged, still open.**
 - **Learning and training:** thin. `S3` covers cooperative-care
   conditioning but there is no dedicated learning-theory source. Consider,
   once needed: ISFM/International Cat Care training resources, or the
-  "feline learning" chapter inside `S9` once accessible.
-- **Nutrition and body condition / weight management:** genuine gap.
-  `S11` covers feeding *behaviour* well but not body-condition scoring or
-  weight-management protocol. Missing evidence category: a body-condition
-  scoring standard and/or a weight-management guideline. Candidate
-  authorities to verify before registering, **not yet verified**: WSAVA
-  Global Nutrition Guidelines; an AAHA/AAFP weight-management guideline if
-  one exists in current form.
-- **Grooming:** thin — only present at TOC level in `S9`/`S10`. No
-  dedicated peer-reviewed grooming source identified. Candidate: ISFM/
-  International Cat Care client information (unverified, not registered).
-- **Scratching and predatory/play behaviour:** partially covered (`S1`
-  environmental pillar, `S11` foraging/play, `S9` TOC predatory-behaviour
-  chapter) but nothing scratching-specific. Candidate: ISFM/International
-  Cat Care scratching-behaviour material (unverified, not registered).
-- **Parasite prevention:** thin — only high-level coverage via `S2`.
-  Missing evidence category: a dedicated parasite-prevention protocol.
-  Candidate authority: Companion Animal Parasite Council (CAPC) guidelines
-  (unverified, not registered).
-- **Indoor/outdoor risk:** thin — no dedicated source directly weighs
-  indoor-vs-outdoor risk tradeoffs; `S1` only indirectly supports indoor
-  enrichment. Candidate: an AAFP/AVMA position statement on cats and the
-  outdoors, if one exists (unverified, not registered).
+  "feline learning" chapter inside `S9` once accessible. **Status:
+  unchanged, still open.**
+- **Nutrition and body condition / weight management:** **closed.**
+  `S22` (WSAVA Global Nutrition Guidelines + Body/Muscle Condition Score
+  charts for cats) was verified and registered — a genuine authoritative
+  standard now exists for this content. Minor follow-up only: the BCS/MCS
+  chart PDFs' exact per-point wording was not independently read (image
+  content); this does not block teaching the scale and its purpose.
+- **Grooming:** **partially closed.** Overgrooming specifically is now
+  covered by `S27` (verified, full text). Routine/general grooming
+  practice (brushing frequency, mat prevention, shedding management) is
+  still only present at TOC level in `S9`/`S10` and remains open — no
+  standalone grooming chapter is planned per prior instruction, so this
+  is a lower-priority remaining gap.
+- **Scratching and predatory/play behaviour:** **partially closed.**
+  Scratching specifically is now covered by `S26` (verified, full text).
+  Predatory/play behaviour remains TOC-only in `S9` and is still open,
+  though `S11`'s foraging/play content already gives partial coverage.
+- **Parasite prevention:** **closed.** `S23` (CAPC General Guidelines)
+  was verified and registered — testing cadence and prevention-category
+  guidance now exists. Minor follow-up: the page's cat-specific tab was
+  not independently spot-checked against the dog-tab content captured
+  here; confirm before quoting a cat-only cadence figure verbatim.
+- **Indoor/outdoor risk:** **closed.** `S24` (2024 FelineVMA Indoor/
+  Outdoor Lifestyle Position Statement) was verified and registered —
+  full text read directly, giving a strong, current, single-source basis
+  for this content.
 - **Emergency warning signs:** adequate for Part I's current narrow scope
   (`S5`, `S6`, `S7`), but this pack has not verified a broader
   general-emergency-recognition source. If a later Part needs wider
   emergency-sign coverage than Chapter 3's urinary-specific rule, consider
   a veterinary emergency/critical-care body (e.g. VECCS) as a candidate
-  (unverified, not registered).
+  (unverified, not registered). **Status: unchanged, still open** — not
+  part of the Phase B candidate list.
 - **Chronic disease observation:** reasonably strong — `S15`, and `S13`
-  once accessible.
-- **Mobility:** reasonably strong via `S15` (DJD prevalence, mobility
-  content behind linked videos) and `S21` (hook statistic); weakened by
-  `S13`'s access failure, since gait/mobility pain assessment was meant to
-  be a `S13` strength.
-- **Cognitive change:** thin. Only an unread link on `S18`'s hub page and
-  passing "frailty"/"cognitive decline" mentions in `S15`/`S2`. No
-  dedicated feline cognitive dysfunction guideline has been identified or
-  verified. Flagged as a genuine open gap for a future research pass, not
-  filled here.
+  once accessible. **Status: unchanged.**
+- **Pain recognition / mobility:** reasonably strong via `S15` (DJD
+  prevalence, mobility content behind linked videos) and `S21` (hook
+  statistic); weakened by `S13`'s access failure, since gait/mobility
+  pain assessment was meant to be a `S13` strength. **Status: unchanged
+  — `S13` was not part of the Phase B candidate list; obtaining it via an
+  institutional/library channel remains the recommended action, per the
+  authority hierarchy's preference for the primary peer-reviewed guideline
+  over a hook statistic alone.** This is currently the single weakest link
+  in the Part III evidence base and should be flagged to any human
+  planning Chapter 9's full content.
+- **Cognitive change:** **closed.** `S25` (Cornell Cognitive Dysfunction)
+  was verified and registered — full text read directly, with an explicit
+  rule-out diagnostic sequence and owner-support list suited to this
+  course's existing medical-scope boundary.
 - **Caregiver burden:** strong — `S15`'s "budgets of care" and `S16`'s
   "unit of care" are both confirmed direct content and are likely to
-  become a load-bearing course-wide idea for Part IV.
+  become a load-bearing course-wide idea for Part IV. **Status:
+  unchanged.**
 - **Quality-of-life assessment:** strong at the concept level (`S15`,
   `S16`), but the actual QOL assessment tool referenced by `S16` has not
   been read — its internal structure/scoring must be verified before any
   future chapter teaches it as a scored tool, consistent with the
   instruction not to reduce end-of-life teaching to a simple checklist or
-  score.
+  score. **Status: unchanged.**
+
+**Remaining genuine gaps after this pass, in priority order:** (1) `S13`
+pain-management guideline access (weakest link, affects Chapter 9); (2)
+`S9`/`S10` textbook full-text access (affects communication depth,
+learning theory, routine grooming, predatory/play depth); (3) the actual
+QOL assessment tool referenced by `S16` (affects how precisely Chapter 12
+can describe a structured check-in without over-claiming a "score").
+None of these block writing the Chapter 1–12 skeleton, since skeleton-level
+work identifies *what evidence a chapter will need*, not the chapter's
+full text — but all three should be resolved before their respective
+chapters (9, and any communication/grooming/learning-heavy chapter, and
+12) are written in full.
