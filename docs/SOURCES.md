@@ -64,14 +64,41 @@ sufficiently sourced.
 | CH6-01 | A general baseline-comparison method for judging whether a behaviour change is meaningful: (1) recall the personal baseline from the observation log; (2) identify specifically what changed — frequency, intensity, duration, a new behaviour, or the absence of a usual one; (3) check whether the change matches a known urgent-escalation signature (e.g. the obstruction-risk pattern from `CH3-06`) — if so, escalate immediately regardless of any apparent explanation; (4) if not urgent, ask whether an identifiable, benign cause accounts for it (a schedule disruption, a new household stressor, an environmental change) — if so, and the change resolves once the cause passes, log and keep observing; if no explanation exists, or the change persists or worsens, treat it as a "raise it with the vet" tier change, not indefinite wait-and-see | 06 | S1, S2, S3, S4 | SYNTHESIS | Moderate | No single guideline states this exact four-step procedure; it is this course's own formalisation of the "observer → interpreter" reasoning already practised across Chapters 1, 3, 4, and 5, built from the shared principle across `S1`–`S4` that meaningful change is judged against what is normal for that individual cat. Disclosed per `CLAUDE.md` §19. |
 | CH6-02 | Two symmetrical failure modes threaten this method in practice: **normalisation drift**, where a real, gradual change is explained away as "she's always been a bit like that" because the baseline itself quietly shifted along with the cat; and **over-escalation**, where every ordinary day-to-day variation is treated as cause for alarm, which is exhausting to sustain and erodes an owner's ability to notice a change that actually matters. Neither a permanently cautious "wait and see" stance nor a permanently anxious "escalate everything" stance is the correct application of the method | 06 | — | SYNTHESIS | Moderate | This is a pedagogical caution drawn from the practical experience of applying `CH6-01`'s method, not a claim from any veterinary guideline. Included specifically to satisfy the Autonomous Production Loop's requirement for realistic ambiguity rather than an obvious-answer method with no genuine judgment call. |
 
+| CH7-01 | Body Condition Score (BCS, a 9-point scale assessing fat covering — 5/9 is ideal, judged by rib palpability and waist visibility from above) and Muscle Condition Score (MCS, a separate descriptive scale — normal, or mild/moderate/severe muscle atrophy) measure different things and must be assessed independently; a cat can be overweight while simultaneously losing muscle mass, especially with age or illness | 07 | S22 | DIRECT | High | The BCS/MCS charts' own exact per-point wording has not been independently read (image content) — teach the scale and its purpose, not verbatim per-point chart language, per `S22`'s own access-status note. |
+| CH7-02 | Feeding is a behavioural need as well as a nutritional one: foraging/puzzle feeders let a cat "forage and engage senses"; small, frequent meals suit feline feeding biology better than one or two large meals; obesity is linked to an indoor, sedentary lifestyle; in multi-cat households, feeding stations should be visually separated and kept away from litter boxes so an anxious or subordinate cat isn't avoiding food access | 07 | S11 | DIRECT | High | Feeding-station separation directly extends the "resources need space between them" principle already established for litter-box placement (`CH1-03`, sourced from `S1`/`S2`) and connects to `CH5-02`'s foraging/puzzle-feeding content from a predatory-need angle — here taught from a preventive-health angle instead. |
+| CH7-03 | Vaccination decisions should be organised around individualised risk factors — life stage, environment, and lifestyle (e.g. indoor/outdoor access, multi-cat household, travel/boarding) — rather than one fixed schedule applied to every cat; current guidelines explicitly supersede older, more rigid protocol-based vaccination schedules | 07 | S12 | DIRECT | Moderate-High | `S12` is a partial-summary source (landing page only; full PDF not independently fetched) — this claim uses only what the landing page itself states, not the disease-specific fact sheets behind it. |
+| CH7-04 | The owner's productive role in a vaccination or parasite-prevention conversation is to accurately report the household's lifestyle risk factors (indoor/outdoor access, other animals in the home, travel or boarding, geographic region) to the vet — not to select a vaccine, choose a parasite-prevention product, or set a treatment schedule themselves | 07 | S12, S23 | SYNTHESIS | Moderate | Neither `S12` nor `S23` is written as owner-facing coaching; both are clinician-facing guidelines. This owner-conversation framing is this course's own construction, built from `S12`'s individualised-risk-assessment emphasis and `S23`'s risk-based testing cadence, deliberately kept inside this course's medical scope boundary (`CLAUDE.md` §21 point 8: never prescribe/treat). Disclosed per `CLAUDE.md` §19. |
+| CH7-05 | Routine parasite prevention follows a testing-and-cadence pattern, not a one-time check: a preventive exam roughly every 6–12 months; fecal testing at least four times in a cat's first year and at least twice yearly for a healthy adult (more often with outdoor access, travel, or contact with other animals); year-round broad-spectrum parasite control is preferred over seasonal/intermittent treatment; indoor-only status reduces but does not eliminate parasite risk | 07 | S23 | DIRECT | High | Cadence figures are drawn from the page's default (dog-tab) view; the parallel cat-specific tab's exact wording was not independently spot-checked, per `S23`'s own access-status note — figures should be confirmed against the cat-specific tab before being quoted as cat-only numbers in any future revision. |
+| CH7-06 | Body/muscle condition and weight should be added to the personal observation-log baseline (extending `CH1-09`), and judged using the same baseline-comparison method already taught for behaviour (`CH6-01`): a single reading is not the concern — a gradual, unexplained trend in either direction is what should prompt raising it with the vet ahead of the next scheduled visit, rather than waiting for the annual checkup to be the only point of assessment | 07 | S22, S1 | SYNTHESIS | Moderate | This is this course's own extension of `CH6-01`'s method to a new observation category (physical condition rather than behaviour); no single source states this integration. Disclosed per `CLAUDE.md` §19. |
+
+| CH8-01 | No single lifestyle — indoor-only, indoor/outdoor with controlled access, or outdoor-only — is universally correct for every cat; each carries its own risks and benefits, and the right choice depends on the individual cat's temperament/history and the household's specific circumstances | 08 | S24 | DIRECT | High | Full text read directly; this is the position statement's own central framing. |
+| CH8-02 | Choosing an indoor-only lifestyle requires deliberately meeting *all* of a cat's environmental needs (food, water, resting space, hunting/foraging simulation, play, vertical territory, clean toileting) — without that deliberate effort, an indoor cat risks anxiety and stress-related illness; indoor-only is not a lower-effort or risk-free default | 08 | S24 | DIRECT | High | |
+| CH8-03 | If outdoor access is chosen, safety is the primary concern: controlled-access methods (secure outdoor enclosures, cat-safe fencing, harness-and-leash walking) are recommended over unsupervised free-roaming; young cats and male cats warrant closer monitoring for injury risk; nighttime confinement is recommended | 08 | S24 | DIRECT | High | |
+| CH8-04 | In specific, narrow circumstances (a cat previously accustomed to an outdoor-only life, unresolved multi-cat household tension, or needs that remain unmet despite genuine indoor effort), a cat's welfare may be better served with outdoor access than with forced full-time confinement; where full outdoor access is appropriate, barn placement, colony management, or TNVR (trap-neuter-vaccinate-return) programs are recommended over other forms of uncontrolled outdoor living | 08 | S24 | DIRECT | High | Narrow-circumstance claim — must not be taught as "outdoor-only is generally preferable" or as directly applicable to Momo's own situation (an indoor-raised cat with no such history); included so the household-decision chapter accurately represents the full option space a real household might face, not only Momo's specific case. |
+| CH8-05 | Regardless of which lifestyle is chosen, microchipping plus visible ID (e.g. a collar tag) is a universal recommendation | 08 | S24 | DIRECT | High | |
+| CH8-06 | Choosing an indoor-only lifestyle should be taught as "committing to implementing Chapter 1's five environmental-needs pillars in full" (safe space, separated resources, predatory-play/foraging outlets, predictable social interaction, familiar scent/objects) — not as a simpler default that requires less deliberate effort than providing outdoor access | 08 | S24, S1 | SYNTHESIS | Moderate | Connects `S24`'s "meet all environmental needs indoors or accept real welfare risk" framing to `S1`'s five-pillar framework already taught in Chapter 1 (`CH1-02`, `CH1-03`) and Chapter 5 (`CH5-02`'s predatory-play/foraging content) — `S24` itself suggests exactly this connection as a possible synthesis opportunity. Disclosed per `CLAUDE.md` §19. |
+| CH8-07 | Harness, leash, and outdoor-enclosure training should use the same gradual, reward-based, no-forced-interaction acclimation method already taught for carrier and travel training — introduce the equipment as a comfortable, food-paired object first, let the cat set the pace, and never force the transition | 08 | S2, S3, S24 | SYNTHESIS | Moderate | `S24` explicitly notes that its own position-statement format does not provide step-by-step training content and that practical training "would need to draw on `S2`/`S3`'s existing carrier/handling-training material by extension" — this claim is that extension, directly reusing `CH2-08`'s method rather than inventing a new one. Disclosed per `CLAUDE.md` §19. |
+
+| CH9-01 | Five observable facial "Action Units" are associated with acute pain in cats: ear position (upright/forward vs. rotated/flattened), orbital tightening (open vs. squinted eye), muzzle tension (relaxed/round vs. tense/elliptical), whisker change (loose/curved vs. straight/bunched), and head position (above shoulder line vs. level/lower) | 09 | S30 | DIRECT | High | The Feline Grimace Scale's five Action Units, quoted from the full-text-verified paper. |
+| CH9-02 | These five Action Units form an empirically validated pain-scoring instrument (good inter-rater reliability among trained scorers, a validated cutoff with stated sensitivity/specificity, strong correlation with an already-validated pain scale), validated specifically for *acute* pain — not chronic or slow-onset conditions such as arthritis | 09 | S30 | DIRECT | High | Precise figures (ICC, cutoff, sensitivity/specificity, correlation) are recorded in `S30`'s own entry; this claim teaches the scale's rigor and acute-only scope, not the numbers themselves, per `CH9-03`'s owner/clinician boundary. |
+| CH9-03 | An owner's role with the five Action Units is to notice and describe them to a vet, not to self-score a diagnostic cutoff and decide alone whether the cat is in significant pain — the scale's validation used trained observers only, and the paper itself states lay/novice-rater reliability is unknown | 09 | S30, S31 | SYNTHESIS | Moderate | Neither source states this owner/clinician boundary in exactly this form; it follows directly from `S30`'s trained-rater-only validation (see its "Correction from an initial internal draft" note) and this course's medical scope boundary (`CLAUDE.md` §21 point 8). Disclosed per `CLAUDE.md` §19. |
+| CH9-04 | Six owner-observable warning signs of dental disease: bad breath, excessive drooling, pawing at the face, difficulty eating, bleeding or recessed gums, and tooth loss | 09 | S32 | DIRECT | High | Quoted directly from Cornell's Dentistry and Oral Surgery Service page. |
+| CH9-05 | Animals usually conceal discomfort, so clinical signs of pain and dental disease can be very subtle even when the underlying condition is severe; a definitive dental diagnosis requires general anesthesia with probing/charting and full-mouth x-rays, so an owner-observed warning sign is a prompt to seek veterinary assessment, not something fully evaluable at home | 09 | S30, S32 | SYNTHESIS | High | S32 states the concealment point specifically for dental disease and the anesthesia/probing/x-ray diagnostic requirement; S30 independently documents cats' concealment of acute pain more broadly (the evidentiary basis for the Feline Grimace Scale existing at all). The general "pain and dental disease" framing combines the two; neither source alone states it in exactly this combined form. Disclosed per `CLAUDE.md` §19. |
+| CH9-06 | Facial-expression and mouth-related signs should be added to the same personal observation-log baseline already extended once for body/muscle condition, checked during the same regular look-over rather than as a separate new ritual | 09 | — | SYNTHESIS | Moderate | Directly extends `CH1-09`'s original daily-log habit and `CH7-06`'s body-condition addition to it; no single source states this specific extension. Disclosed per `CLAUDE.md` §19. |
+| CH9-07 | Chapter 6's four-step baseline-comparison method (`CH6-01`) applies directly to pain and dental signs, with `CH4-04`'s combined-signal principle mattering more here than elsewhere: no single Action Unit or dental sign, alone and momentary, is conclusive — a combination of signs, or any one sign persisting against baseline with no benign explanation, is what should prompt raising it with the vet promptly, while a single sign with an identifiable benign context (e.g. a momentary reaction to an uncomfortable procedure) does not warrant escalation | 09 | — | SYNTHESIS | Moderate | This course's own integration of `CH6-01`, `CH6-02`, and `CH4-04` with the pain/dental content of `CH9-01`–`CH9-05`; no single source states this integration. Disclosed per `CLAUDE.md` §19. |
+
 No claim in this register has been fabricated or extrapolated beyond what
 is noted above. `CH1-06`, `CH1-09`, `CH2-03`, `CH4-04`, `CH5-04`, `CH6-01`,
-and `CH6-02` are deliberately marked `SYNTHESIS`, not `DIRECT`, per the
+`CH6-02`, `CH7-04`, `CH7-06`, `CH8-06`, `CH8-07`, `CH9-03`, `CH9-05`,
+`CH9-06`, and `CH9-07` are deliberately marked `SYNTHESIS`, not `DIRECT`, per the
 instruction not to claim guidelines say things they do not; `CH3-06` is
 DIRECT for its clinical content but is explicit about the one place this
-course reasons beyond a source (applying an adult-cat risk presentation to
-a kitten-age chapter) rather than silently overstating Momo's personal
-risk.
+course reasons beyond a source (applying an adult-cat risk presentation
+to a kitten-age chapter) rather than silently overstating Momo's personal
+risk. `CH9-02` is DIRECT but deliberately teaches only the scale's
+validated scope and rigor, not its precise clinician-facing statistics or
+an owner self-scoring use — that boundary is `CH9-03`'s disclosed
+synthesis.
 
 ---
 
@@ -211,7 +238,7 @@ claim should be built on a detail that is flagged below as unread.
 | Potential chapter themes | "Reading pain your cat is hiding — from baseline to change" (tentative) |
 | DIRECT claims available | None yet with confidence — access is insufficient |
 | Possible SYNTHESIS opportunities | None assessable until verified |
-| Notes/conflicts | **Recommendation:** obtain the PDF via an institutional library or VPN before this source supports any teaching claim; the domain-level blocking (`aaha.org`, Meridian/Allen Press) appears systemic, not a wrong-URL problem, so retrying the same automated approach is unlikely to succeed |
+| Notes/conflicts | **Recommendation:** obtain the PDF via an institutional library or VPN before this source supports any teaching claim; the domain-level blocking (`aaha.org`, Meridian/Allen Press) appears systemic, not a wrong-URL problem, so retrying the same automated approach is unlikely to succeed. **Update (2026-09-05):** the Chapter 9 pain-recognition evidence gap this access failure created has been resolved via CLAUDE.md §21 Source Supplementation, not by working around this block — see `S30` (Evangelista et al. 2019, Feline Grimace Scale, peer-reviewed) and `S31` (its official companion site), paired with the already-registered `S21` (Cornell) for chronic/mobility content. This entry is left unchanged and still unread; no claim in this course is attributed to `S13`. |
 
 ### S14 — 2025 FelineVMA Feline Oral Health and Dental Care Guidelines
 
@@ -230,7 +257,7 @@ claim should be built on a detail that is flagged below as unread.
 | Potential chapter themes | "The mouth nobody checks" (prevention/brushing); "When to ask for a dental" |
 | DIRECT claims available | The existence of a caregiver-empowerment framing and named prevention videos/brochure; nothing clinical yet |
 | Possible SYNTHESIS opportunities | None needed yet — wait for full-text access before drawing conclusions |
-| Notes/conflicts | The organisational rename (AAFP → FelineVMA) should be applied consistently across the whole source register going forward — several already-registered sources (`S1`, `S2`, `S3`, `S4`, `S8`) predate the rename and correctly say "AAFP" for their own publication date; this is a naming-history note, not an error to correct retroactively |
+| Notes/conflicts | The organisational rename (AAFP → FelineVMA) should be applied consistently across the whole source register going forward — several already-registered sources (`S1`, `S2`, `S3`, `S4`, `S8`) predate the rename and correctly say "AAFP" for their own publication date; this is a naming-history note, not an error to correct retroactively. **Update (2026-09-05):** the specific owner-facing warning-sign gap flagged above has been closed via `S32` (Cornell Dentistry and Oral Surgery Service page, verified full text), found through CLAUDE.md §21 Source Supplementation. This entry remains unchanged and its own PDF still unread; no specific warning-sign claim is attributed to `S14` — those claims trace to `S32` instead. |
 
 ### S15 — 2021 AAFP Feline Senior Care Guidelines
 
@@ -517,6 +544,63 @@ claim should be built on a detail that is flagged below as unread.
 | Possible SYNTHESIS opportunities | Using this single-cue-unreliability finding as the evidentiary basis for Chapter 4's design decision to teach combined-signal reading — the study itself only measures meow-classification accuracy; the pedagogical conclusion ("therefore teach combined reading, not vocabulary memorisation") is this course's synthesis and must be disclosed as such in the chapter's reference note, not presented as something the paper itself recommends |
 | Notes/conflicts | None. Complements rather than conflicts with `S28`: `S28` describes what vocal categories exist and their typical social function; `S29` demonstrates that decoding a specific instance from sound alone is unreliable — different claims, not contradictory ones. |
 
+### S30 — Evangelista et al. (2019), peer-reviewed: Feline Grimace Scale
+
+| Field | Value |
+|---|---|
+| Full title | "Facial expressions of domestic cats with acute pain" |
+| Year | 2019 (published 9 December 2019) |
+| Organisation / authors | Marina C. Evangelista, Ryota Watanabe, Vivian S. Y. Leung, Beatriz P. Monteiro, Elizabeth O'Toole, Daniel S. J. Pang, Paulo V. Steagall — Université de Montréal (Faculté de médecine vétérinaire) |
+| Type | Peer-reviewed empirical/validation study, open access, journal *Scientific Reports* (Nature), DOI 10.1038/s41598-019-55693-8 |
+| Canonical URL | https://www.nature.com/articles/s41598-019-55693-8 (paywalled/login-redirected on direct fetch) |
+| Access status | Direct WebFetch of the Nature.com URL returned a 303 redirect to an institutional-login/paywall page and was not pursued further. Full text was instead read directly via the open-access PMC mirror, https://pmc.ncbi.nlm.nih.gov/articles/PMC6911058/ (redirected there from an initial `www.ncbi.nlm.nih.gov` PMC link) — this is a genuine full read of the paper's methods, results, and stated limitations, not a secondhand summary. |
+| Main content coverage | Developed and validated the **Feline Grimace Scale (FGS)**, a facial-action-unit pain-scoring tool, explicitly aimed at detecting **naturally-occurring acute pain** (the paper's own stated goal — abstract: "to develop and validate the Feline Grimace Scale (FGS) to detect naturally-occurring acute pain"), using video/photographs of client-owned cats with acute painful conditions (mainly abdominal pain and urinary obstruction) compared against pain-free controls, before and after analgesic treatment. Five Action Units, each scored 0 ("not present"), 1 ("moderately present"), or 2 ("markedly present"): (1) **ear position** (upright/facing forward → rotated/flattened outward), (2) **orbital tightening** (open eye → squinted/partially closed eye), (3) **muzzle tension** (relaxed, round muzzle → tense muzzle with a more elliptical shape), (4) **whiskers change** (loose, curved, spread from the face → straight, moved forward, and/or bunched together), (5) **head position** (above the shoulder line → level with the shoulders or lower/tilted down). Scores summed and divided by the maximum possible (10) for a normalised 0–1 score. Four blinded observers (two PhD candidates, two board-certified veterinary anaesthesiologists) scored the images across two rounds; **good inter-rater reliability, ICC = 0.89 (95% CI 0.85–0.92)**. A validated cutoff score of **0.39 (out of a maximum of 1.0)** is recommended as the threshold for considering analgesic intervention, with **sensitivity 90.7% and specificity 86.6%** at that cutoff. Strong correlation with the already-validated Glasgow Feline Composite Measure Pain Scale (rCMPS-F): **Spearman rho = 0.86, p < 0.001**. Scores dropped significantly after analgesic treatment (construct/criterion validity). The paper also states that cats "are prescribed less analgesic drugs when compared with dogs," attributed to "challenges in feline pain recognition and assessment, lack of specific training" among veterinary professionals — this is the paper's own stated motivation for building the scale. |
+| Important limitations | **Validated specifically for ACUTE pain** (the study population was cats with acute painful conditions, chiefly abdominal/urinary-tract pain) — the paper does NOT validate the FGS for chronic pain, osteoarthritis, or slow-onset degenerative conditions, and this course must not present it as validated for that use; it also does not discuss chronic-pain applicability at all, so this course must not extrapolate an implied "works for chronic pain too" position either. **Correction from an initial internal draft of this entry (2026-09-05):** the paper's inter-rater reliability study used four *trained* observers (two PhD candidates, two board-certified veterinary anaesthesiologists) — it did **not** test lay/owner raters, and the discussion explicitly flags this as an open question: "It is unknown, and deserves further investigation, how reliability would be affected by novice" raters. This course must therefore **not** claim the paper itself validated the scale for at-home, non-expert use — that framing is not supported by the paper and has been removed from this entry. Study design is observational (painful vs. pain-free cats, between-subjects), not a randomised trial; the paper itself notes potential image-selection effects, no pre-registered sample-size calculation, and that black cats and brachycephalic (flat-faced) breeds were excluded from the image set because their facial features are harder to score visually. |
+| Owner- vs clinician-facing | **Primarily a clinician/researcher-facing validation study.** The scale's *content* (the five Action Units) is simple enough to teach to an owner as an observation aid, and the tool's own companion materials (`S31`) market it for owner use — but the peer-reviewed validation itself was performed by trained observers only, not lay owners, and this distinction must be preserved in any owner-facing teaching material (see Important limitations). |
+| Potential future Parts | Part III ("Keep Her Well") |
+| Potential chapter themes | Resolves Chapter 9's flagged pain-recognition evidence gap (`S13` access-blocked) for **acute** pain recognition specifically — a rigorous, quantified, peer-reviewed instrument sitting at the top of the §21 authority hierarchy, and a good fit for Chapter 9's placement (Momo is still a young adult there, not yet in the senior/chronic-disease territory reserved for Chapter 10, which is where `S15`/`S20`/`S21`'s chronic joint-pain content belongs instead — see those entries). |
+| DIRECT claims available | The five Action Units and their two-endpoint descriptions; the 0/1/2 scoring and normalisation method; the 0.39 cutoff with its sensitivity/specificity figures; the ICC = 0.89 inter-rater reliability figure (among trained observers); the rho = 0.86 correlation with the Glasgow scale; the acute-pain-only validation population and study aim; the black-cat/brachycephalic exclusion; the "cats are prescribed less analgesia than dogs, partly due to recognition difficulty" framing |
+| Possible SYNTHESIS opportunities | Teaching the five Action Units to an owner as a home observation aid is this course's own synthesis: the paper validates the scale's accuracy among trained raters, not lay ones, so any owner-facing teaching must frame the Action Units as "things to notice and describe to a vet," not as a self-administered diagnostic score with the paper's own sensitivity/specificity guarantees. This distinction must be disclosed in the chapter's reference note per `CLAUDE.md` §19, not asserted as something the paper itself validated for home use. |
+| Notes/conflicts | Does **not** replace `S13` (2022 AAHA Pain Management Guidelines), which remains registered as access-blocked and unverified — see `S13`'s own entry, unchanged. This entry *supplements* the evidence base per §21 point 5 rather than silently standing in for `S13`'s presumed content. No claim from `S13` is used anywhere in this course; Chapter 9's pain-recognition claims trace to `S30` alone, scoped honestly to acute pain and to what was actually validated (trained raters, not owners). |
+
+### S31 — Feline Grimace Scale official educational website
+
+| Field | Value |
+|---|---|
+| Full title | "Feline Grimace Scale" (official project website, science/research page) |
+| Year | Undated (ongoing project site; no page-level publication date shown) |
+| Organisation | Feline Grimace Scale project team (Université de Montréal-affiliated researchers, overlapping with `S30`'s authorship) |
+| Type | Owner/clinician-facing educational project website (companion to the peer-reviewed tool, not itself peer-reviewed) |
+| Canonical URL | https://www.felinegrimacescale.com/science-and-research |
+| Access status | Full text read directly |
+| Main content coverage | Restates the same five Action Units as `S30` in owner-facing language; describes roughly a decade of underlying video/image research comparing naturally painful and pain-free cats with informed owner consent; lists six claimed validated scientific properties of the scale (construct validity, criterion validity, inter-rater reliability, internal consistency, responsiveness to treatment, and a specificity/sensitivity-supported cutoff score); states the tool is intended for use by "veterinary professionals and cat owners" alike, and references a free companion mobile app for at-home scoring. |
+| Important limitations | This page states no explicit caution, warning, or disclaimer about relying on the scale at home in place of seeking veterinary care — any such caution taught in this course is this course's own disclosed teaching judgement (consistent with this course's medical-scope boundary: observe → recognise → record → safe adjustment → escalate, never diagnose/treat), not a claim sourced from this page. As a project/marketing-adjacent site rather than a peer-reviewed document, it is used here only to corroborate `S30`'s Action Units, not as an independent evidentiary source for the validation statistics themselves (those are cited from `S30`). **Note the tension with `S30`:** this page's "cat owners" audience claim is the project's own marketing framing, not something the peer-reviewed validation study established — `S30`'s own inter-rater reliability testing used trained observers only (see `S30`'s corrected entry). This course teaches the Action Units as an owner observation aid, not as a claim that owners were shown to score as reliably as trained raters. |
+| Owner- vs clinician-facing | Both (explicitly states both audiences) |
+| Potential future Parts | Part III ("Keep Her Well") |
+| Potential chapter themes | Corroborating/companion source for Chapter 9 — confirms `S30`'s Action Units are the same ones taught to owners in the tool's own official materials, and supports teaching the existence of a free at-home scoring app as a practical owner tool. |
+| DIRECT claims available | The five Action Units restated in owner-facing form; the tool's owner-facing app availability; the "veterinary professionals and cat owners" dual-audience framing |
+| Possible SYNTHESIS opportunities | None beyond what is already disclosed under `S30`. |
+| Notes/conflicts | None. Corroborates `S30`; does not independently establish any validation statistic on its own. |
+
+### S32 — Cornell University College of Veterinary Medicine: Dentistry and Oral Surgery Service
+
+| Field | Value |
+|---|---|
+| Full title | "Dentistry and Oral Surgery" (Cornell University Hospital for Animals, clinical service page) |
+| Year | Undated (ongoing hospital-service page; no page-level publication date shown) |
+| Organisation | Cornell University College of Veterinary Medicine |
+| Type | University veterinary school clinical-service page (owner-facing service description) |
+| Canonical URL | https://www.vet.cornell.edu/hospitals/services/dentistry-and-oral-surgery |
+| Access status | Full text read directly |
+| Main content coverage | States plainly: "Possible signs of dental disease include bad breath, excessive drooling, pawing at the face, difficulty eating, bleeding or recessed gums, and tooth loss." Explains why these signs are easy to miss: "animals usually conceal their discomfort," so "clinical signs and symptoms can be very subtle" even when the underlying disease is severe and painful. States that a definitive diagnosis and treatment plan requires general anesthesia, with a standard of care that includes dental probing/charting and full-mouth x-rays — i.e. a home-observable sign is a prompt to seek veterinary assessment, not something an owner can fully evaluate alone. Describes board-certified specialists and cross-consultation with Anesthesiology, Oncology, Surgery, and Emergency and Critical Care for advanced cases. |
+| Important limitations | A hospital-service marketing/informational page, not a peer-reviewed guideline — the warning-sign list is a concise clinical summary rather than a graded evidence review. Written for a general small-animal audience (dogs and cats together), not cat-specific, though the listed signs are consistent with feline-specific sources elsewhere in this register (`S14`'s own linked owner-facing materials gesture at the same territory without stating the list directly). |
+| Owner- vs clinician-facing | Owner-facing (a hospital service page written to inform pet owners) |
+| Potential future Parts | Part III ("Keep Her Well") |
+| Potential chapter themes | Closes Chapter 9's `S14`-flagged dental warning-sign gap directly — gives the exact owner-facing sign list (bad breath, drooling, pawing at the face, difficulty eating, bleeding/recessed gums, tooth loss) that `S14`'s own pages did not state, plus the "cats/animals conceal pain, so signs are subtle" framing that reinforces this chapter's central "easy to miss" theme alongside `S30`/`S21`. |
+| DIRECT claims available | The six-item warning-sign list quoted above; the "animals conceal discomfort, so signs are subtle" framing; the general-anesthesia-required-for-definitive-diagnosis point |
+| Possible SYNTHESIS opportunities | Combining this source's "pain/disease is concealed, signs are subtle" framing with `S30`'s facial-pain-scoring and `S21`'s chronic-mobility content into one unified chapter principle ("across body condition, pain, and dental health, a healthy-looking cat can still be having a real problem") — this cross-domain generalisation is this course's synthesis, not a claim any one source makes about the other domains. |
+| Notes/conflicts | Complements `S14` rather than replacing it: `S14` remains the authoritative peer-reviewed guideline for dental *practice/procedure* scope (still largely unread beyond landing-page level); `S32` supplies the owner-facing warning-sign list `S14`'s read pages lacked. |
+
 ### Re-verification of S1–S4
 
 - **`S1` (2013 Environmental Needs Guidelines):** **gap closed (2026-09-05).**
@@ -557,8 +641,8 @@ area a future Part is likely to need.
 | Elimination / house-soiling | `S4` | `S19` (companion tone) | I (done), II/III | Strong | None significant |
 | Feeding / nutritional behaviour | `S11` | `S9` (TOC) | III | Strong (full text) | Body condition scoring / weight management — see gap analysis |
 | Preventive care / vaccination | `S12` | `S2` | III | Moderate (landing-page level) | `S12` full PDF |
-| Pain recognition | `S13` | `S15`, `S16` | III/IV | **Weak** — `S13` access failed | Institutional access to `S13`; see gap analysis |
-| Oral/dental health | `S14` | — | III | Moderate (landing-page level, key warning signs unread) | `S14` full PDF |
+| Pain recognition | Ch9 (acute, young-adult Momo): `S30` | Ch10 (chronic/aging pain): `S15`, `S20`, `S21` | III (Ch9, acute), IV (Ch10, chronic) | **Strong for Ch9's scope** — `S13` remains access-blocked, but `S30` (peer-reviewed Feline Grimace Scale, full text verified 2026-09-05) closes acute-pain-recognition for Chapter 9, cleanly separated from Chapter 10's chronic/DJD-focused content (`S15`/`S20`/`S21`, all reserved for Momo's senior years) | None significant for Chapter 9's scope; `S13` itself remains unread and should still be sought via an institutional channel if ever needed for clinician-facing dosing/protocol content |
+| Oral/dental health | `S14` | `S32` (owner-facing warning signs, full text verified 2026-09-05) | III | Strong for owner-facing warning-sign recognition; `S14`'s own guideline PDF still unread for procedure/practice-level detail | `S14` full PDF (only needed if teaching moves beyond owner-facing recognition into procedure/practice detail) |
 | Aging / senior care | `S15` | `S20`, `S21`, `S2` | IV | Strong | None significant, but must pair `S20` with `S15`'s budget framing |
 | Quality of life / caregiver burden | `S15`, `S16` | — | IV | Strong (concept-level); QOL tool internals unverified | Read the actual QOL PDF tool before teaching it as scored |
 | End of life | `S16` | `S15` | IV | Strong | QOL tool internals |
@@ -632,18 +716,47 @@ so none were rejected in favour of a lower-authority substitute.
   a veterinary emergency/critical-care body (e.g. VECCS) as a candidate
   (unverified, not registered). **Status: unchanged, still open** — not
   part of the Phase B candidate list.
-- **Chronic disease observation:** reasonably strong — `S15`, and `S13`
-  once accessible. **Status: unchanged.**
-- **Pain recognition / mobility:** reasonably strong via `S15` (DJD
-  prevalence, mobility content behind linked videos) and `S21` (hook
-  statistic); weakened by `S13`'s access failure, since gait/mobility
-  pain assessment was meant to be a `S13` strength. **Status: unchanged
-  — `S13` was not part of the Phase B candidate list; obtaining it via an
-  institutional/library channel remains the recommended action, per the
-  authority hierarchy's preference for the primary peer-reviewed guideline
-  over a hook statistic alone.** This is currently the single weakest link
-  in the Part III evidence base and should be flagged to any human
-  planning Chapter 9's full content.
+- **Chronic disease observation:** strong — `S15` (trend/aging content)
+  plus `S21` and `S30` for the pain-recognition component specifically
+  (see next entry). `S13` remains unread and is no longer needed to close
+  this gap. **Status: closed.**
+- **Pain recognition / mobility:** **closed (2026-09-05, via CLAUDE.md §21
+  Source Supplementation Protocol).** `S13` (2022 AAHA Pain Management
+  Guidelines) remains genuinely access-blocked at `aaha.org` (HTTP 403,
+  consistent with this register's own access-honesty note) and is left
+  registered as-is, unread and uncited — no claim below is attributed to
+  it. The gap this created was resolved by finding and fully verifying
+  `S30` (Evangelista et al. 2019, peer-reviewed, *Scientific Reports* —
+  the Feline Grimace Scale), read in full via its open-access PMC mirror,
+  and its official companion site `S31`. `S30` sits at the top of §21's
+  authority hierarchy (peer-reviewed literature) and gives far more
+  rigorous, quantified content than a landing-page-level `S13` read likely
+  would have: five scored facial Action Units, a validated 0.39 cutoff
+  score (sensitivity 90.7%, specificity 86.6%), ICC = 0.89 inter-rater
+  reliability among trained observers, and rho = 0.86 correlation with an
+  already-validated pain scale. **Important scoping honestly preserved,
+  not smoothed over, on two separate points:** (1) `S30` was validated
+  specifically for *acute* pain (abdominal/urinary cases vs. pain-free
+  controls) — it must not be taught as validated for chronic or
+  slow-onset pain; conveniently, this matches Chapter 9's own placement,
+  since Momo is still a young adult there, not yet in the senior/chronic-
+  disease territory Chapter 10 covers — so `S21` (and `S15`/`S20`) are
+  **not** pulled into Chapter 9 at all, and remain reserved for Chapter
+  10 where they actually fit Momo's age. (2) `S30`'s own inter-rater
+  reliability testing used four *trained* observers (two PhD candidates,
+  two board-certified veterinary anaesthesiologists), not lay owners —
+  the paper itself flags owner/novice-rater reliability as unvalidated
+  and open. Chapter 9 must therefore teach the five Action Units as an
+  owner *observation aid* to describe to a vet, not as a self-scored
+  diagnostic tool with the paper's own accuracy guarantees — a disclosed
+  `SYNTHESIS`, per §19 (see `S30`'s corrected entry above; an earlier
+  internal draft of this entry incorrectly implied lay-rater validation
+  and was corrected before any chapter content was drafted on top of it).
+  Obtaining `S13` via an institutional/library channel is no longer
+  blocking for Chapter 9, though it would still be a worthwhile future
+  addition for any clinician-facing dosing/protocol context this course
+  does not currently need (this course's medical scope stops at
+  escalation to a vet, per §21 point 8).
 - **Cognitive change:** **closed.** `S25` (Cornell Cognitive Dysfunction)
   was verified and registered — full text read directly, with an explicit
   rule-out diagnostic sequence and owner-support list suited to this
