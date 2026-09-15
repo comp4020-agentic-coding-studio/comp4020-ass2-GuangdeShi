@@ -8,6 +8,65 @@ const courseNodeLoader = (dir: string) =>
   glob({ pattern: ["**/*.{md,mdx}", "!**/CLAUDE.md"], base: `src/content/${dir}` });
 const teacherRefs = z.array(reference("people")).min(1);
 
+const chapterCheckQuestionSchema = z
+  .object({
+    id: z.string().regex(/^ch\d{2}-q\d{2}$/),
+    type: z.enum(["core-concept", "scenario", "synthesis"]),
+    prompt: z.string().trim().min(20),
+    options: z
+      .array(
+        z.object({
+          id: z.string().regex(/^[a-d]$/),
+          text: z.string().trim().min(10),
+          feedback: z.string().trim().min(30),
+        }),
+      )
+      .min(3)
+      .max(4),
+    bestOption: z.string().regex(/^[a-d]$/),
+    claimIds: z.array(z.string().regex(/^CH\d{1,2}-\d{2}$/)).min(1),
+  })
+  .superRefine((question, ctx) => {
+    const optionIds = question.options.map((option) => option.id);
+    if (new Set(optionIds).size !== optionIds.length) {
+      ctx.addIssue({ code: "custom", path: ["options"], message: "option IDs must be unique" });
+    }
+    if (!optionIds.includes(question.bestOption)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["bestOption"],
+        message: "bestOption must identify one of the supplied options",
+      });
+    }
+  });
+
+const chapterCheckSchema = z
+  .object({
+    chapter: weekSchema,
+    title: z.string().trim().min(1),
+    status: z.enum(["prototype", "voice-gated", "final"]),
+    formative: z.literal(true),
+    questions: z.array(chapterCheckQuestionSchema).min(7).max(8),
+  })
+  .superRefine((check, ctx) => {
+    const ids = check.questions.map((question) => question.id);
+    if (new Set(ids).size !== ids.length) {
+      ctx.addIssue({ code: "custom", path: ["questions"], message: "question IDs must be unique" });
+    }
+
+    const counts = check.questions.reduce<Record<string, number>>((result, question) => {
+      result[question.type] = (result[question.type] ?? 0) + 1;
+      return result;
+    }, {});
+    if ((counts["core-concept"] ?? 0) < 3 || (counts.scenario ?? 0) < 2 || (counts.synthesis ?? 0) < 1) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["questions"],
+        message: "a check needs at least 3 core concepts, 2 scenarios, and 1 synthesis judgement",
+      });
+    }
+  });
+
 const weightedMarking = z
   .object({
     mode: z.literal("weighted"),
@@ -32,6 +91,11 @@ const holisticMarking = z.object({
 });
 
 export const collections = {
+  chapterChecks: defineCollection({
+    loader: glob({ pattern: "**/*.json", base: "src/content/chapter-checks" }),
+    schema: chapterCheckSchema,
+  }),
+
   sessions: defineCollection({
     loader: courseNodeLoader("sessions"),
     schema: courseNodeSchema

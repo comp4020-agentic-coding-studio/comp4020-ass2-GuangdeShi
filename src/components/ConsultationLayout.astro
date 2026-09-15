@@ -1,0 +1,57 @@
+---
+interface Step {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  chapter: number;
+  title: string;
+  age: string;
+  steps: Step[];
+  prototype?: boolean;
+}
+
+const { chapter, title, age, steps, prototype = false } = Astro.props;
+---
+
+<article class="consultation" data-consultation data-chapter={chapter}>
+  <header class="consultation-hero">
+    <div>
+      <p class="eyebrow">Chapter {chapter} · Care consultation</p>
+      <h1>{title}</h1>
+    </div>
+    <div class="consultation-hero__context">
+      <span>Momo</span>
+      <strong>{age}</strong>
+    </div>
+  </header>
+
+  {prototype && (
+    <aside class="prototype-notice" aria-label="Prototype content status">
+      <strong>Structural prototype</strong>
+      <span>
+        This page maps the reviewed Chapter 1 plan and evidence. Learner-facing wording remains
+        subject to the project's Voice Gate and is not final course copy.
+      </span>
+    </aside>
+  )}
+
+  <nav class="consultation-progress" aria-label="Consultation progress">
+    <ol>
+      {steps.map((step, index) => (
+        <li>
+          <a href={`#${step.id}`}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            {step.label}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="consultation-content">
+    <slot />
+  </div>
+</article>
+

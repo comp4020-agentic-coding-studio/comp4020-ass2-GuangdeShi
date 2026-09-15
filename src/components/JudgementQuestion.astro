@@ -1,0 +1,86 @@
+---
+interface Option {
+  id: string;
+  text: string;
+}
+
+interface Props {
+  id: string;
+  phase: "initial" | "revised";
+  prompt: string;
+  options: Option[];
+  bestOption: string;
+}
+
+const { id, phase, prompt, options, bestOption } = Astro.props;
+const isRevised = phase === "revised";
+---
+
+<form
+  class:list={["judgement-question", `judgement-question--${phase}`]}
+  data-judgement
+  data-storage-key={`momo-ch01-${phase}-judgement`}
+  data-best-option={bestOption}
+>
+  <fieldset>
+    <legend>{prompt}</legend>
+    <div class="judgement-options">
+      {options.map((option) => (
+        <label>
+          <input type="radio" name={id} value={option.id} required />
+          <span><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+  {isRevised && (
+    <label class="judgement-rationale">
+      <span>What changed or strengthened your reasoning?</span>
+      <textarea name={`${id}-rationale`} rows="4"></textarea>
+    </label>
+  )}
+  <div class="judgement-actions">
+    <button type="submit">Save {isRevised ? "revised" : "initial"} judgement</button>
+    <p data-judgement-status aria-live="polite"></p>
+  </div>
+</form>
+
+<script>
+  function setupJudgements() {
+    for (const form of document.querySelectorAll<HTMLFormElement>("[data-judgement]")) {
+      if (form.dataset.initialized === "true") continue;
+      form.dataset.initialized = "true";
+      const key = form.dataset.storageKey ?? "";
+      const status = form.querySelector<HTMLElement>("[data-judgement-status]")!;
+      const rationale = form.querySelector<HTMLTextAreaElement>("textarea");
+      const saved = localStorage.getItem(key);
+
+      if (saved) {
+        const state = JSON.parse(saved) as { option?: string; rationale?: string };
+        const radio = form.querySelector<HTMLInputElement>(`input[value="${state.option}"]`);
+        if (radio) radio.checked = true;
+        if (rationale) rationale.value = state.rationale ?? "";
+        status.textContent = "Your earlier judgement is restored on this device.";
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const radio = form.querySelector<HTMLInputElement>("input[type=radio]:checked");
+        if (!radio) return;
+        localStorage.setItem(
+          key,
+          JSON.stringify({ option: radio.value, rationale: rationale?.value ?? "" }),
+        );
+        const best = form.dataset.bestOption;
+        status.textContent = form.classList.contains("judgement-question--revised")
+          ? radio.value === best
+            ? "Saved. This judgement now matches the safer care plan."
+            : "Saved. Keep this choice in view as you compare it with the care plan below."
+          : "Saved. You will return to this decision after the core learning.";
+      });
+    }
+  }
+
+  setupJudgements();
+  document.addEventListener("astro:page-load", setupJudgements);
+</script>

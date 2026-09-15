@@ -1,9 +1,78 @@
 ---
+import { getCollection } from "astro:content";
+import CarePlan from "../../components/CarePlan.astro";
+import ChapterCheck from "../../components/ChapterCheck.astro";
+import ConsultationLayout from "../../components/ConsultationLayout.astro";
+import JudgementQuestion from "../../components/JudgementQuestion.astro";
+import ScenarioScene from "../../components/ScenarioScene.astro";
 import { getChapter } from "../../data/chapters";
 import CourseLayout from "../../layouts/CourseLayout.astro";
 
 const chapter = getChapter("the-first-72-hours");
 if (!chapter) throw new Error("Chapter 1 course data is missing");
+
+const chapterChecks = await getCollection("chapterChecks");
+const check = chapterChecks.find((entry) => entry.data.chapter === chapter.number)?.data;
+if (!check) throw new Error("Chapter 1 check data is missing");
+
+const steps = [
+  { id: "scenario", label: "Scenario" },
+  { id: "observation", label: "Observation" },
+  { id: "initial-judgement", label: "Initial judgement" },
+  { id: "core-learning", label: "Core learning" },
+  { id: "practice", label: "Practice" },
+  { id: "return", label: "Return to Momo" },
+  { id: "care-plan", label: "Care plan" },
+  { id: "chapter-check", label: "Chapter Check" },
+];
+
+const arrivalOptions = [
+  {
+    id: "a",
+    text: "Reach under the bed and gently pull her out so she can start getting used to the house.",
+  },
+  {
+    id: "b",
+    text: "Leave accessible resources and a hiding place nearby, then let her come out when she is ready.",
+  },
+  {
+    id: "c",
+    text: "Leave her completely alone without food or litter nearby, and check again in a day or two.",
+  },
+];
+
+const carePlan = [
+  {
+    action: "Remove foreseeable hazards before arrival",
+    reason: "Remove true lilies entirely, secure human medication, and use only pest products labelled safe for cats.",
+    claimIds: ["CH1-07"],
+  },
+  {
+    action: "Prepare one small, quiet first territory",
+    reason: "Include a defensible hiding place and rest area, with litter physically separated from food and water.",
+    claimIds: ["CH1-02", "CH1-03"],
+  },
+  {
+    action: "Keep the carrier open and familiar",
+    reason: "Let it remain part of ordinary safe territory instead of appearing only before disruptive travel.",
+    claimIds: ["CH1-04"],
+  },
+  {
+    action: "Reduce demands and follow Momo's pace",
+    reason: "Do not chase, retrieve, pick up, or force contact; expand the territory gradually as she settles.",
+    claimIds: ["CH1-01", "CH1-05", "CH1-06"],
+  },
+  {
+    action: "Arrange prompt veterinary screening",
+    reason: "Keep Momo separate from resident cats until veterinary examination, FeLV/FIV screening, and parasite checks are addressed.",
+    claimIds: ["CH1-08"],
+  },
+  {
+    action: "Start Momo's daily observation log",
+    reason: "Record eating, drinking, litter use, energy, hiding, and exploration so later change has a personal baseline.",
+    claimIds: ["CH1-09"],
+  },
+];
 ---
 
 <CourseLayout
@@ -11,10 +80,279 @@ if (!chapter) throw new Error("Chapter 1 course data is missing");
   description={chapter.question}
   pageClass="consultation-page"
 >
-  <article class="consultation-shell">
-    <p class="eyebrow">Chapter {chapter.number} · Care consultation</p>
-    <h1>{chapter.title}</h1>
-    <p>{chapter.question}</p>
-    <p><strong>Structural prototype:</strong> consultation content is being mapped from the reviewed Chapter 1 plan.</p>
-  </article>
+  <ConsultationLayout
+    chapter={chapter.number}
+    title={chapter.title}
+    age={chapter.momoAge}
+    steps={steps}
+    prototype={check.status === "prototype"}
+  >
+    <section id="scenario" class="consultation-section consultation-section--opening" aria-labelledby="scenario-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Scenario</p>
+        <h2 id="scenario-heading">Momo is home. Then she disappears.</h2>
+        <p>
+          Momo is about ten weeks old. Within minutes of leaving the carrier in the spare room,
+          she bolts under the bed. You can hear her, but you cannot see her.
+        </p>
+      </div>
+      <ScenarioScene />
+      <aside class="withheld-note">
+        <strong>What you do not know yet</strong>
+        <p>
+          You do not know whether this is normal, how long it will last, or whether approaching
+          her would reassure her. Make your first decision without that reassurance.
+        </p>
+      </aside>
+    </section>
+
+    <section id="observation" class="consultation-section" aria-labelledby="observation-heading">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="section-kicker">Observe before explaining</p>
+          <h2 id="observation-heading">What do you actually notice?</h2>
+        </div>
+        <p>Keep observation separate from the story you are tempted to tell about it.</p>
+      </div>
+      <form class="observation-note" data-observation-note>
+        <label for="arrival-observation">Write only what a camera or simple record could confirm.</label>
+        <textarea id="arrival-observation" rows="5" placeholder="For example: The carrier door is open..."></textarea>
+        <div>
+          <button type="submit">Save observation</button>
+          <p data-observation-status aria-live="polite"></p>
+        </div>
+      </form>
+      <details class="observation-reveal">
+        <summary>Compare with the visible evidence</summary>
+        <ul>
+          <li>The carrier door is open and the carrier is empty.</li>
+          <li>Momo moved under the bed within minutes of arrival.</li>
+          <li>She can be heard but is not currently visible.</li>
+          <li>No evidence yet shows why she hid or what she will do next.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="initial-judgement" class="consultation-section consultation-section--tint" aria-labelledby="initial-heading">
+      <div class="section-heading">
+        <p class="section-kicker">First judgement</p>
+        <h2 id="initial-heading">What should you do right now?</h2>
+        <p>Your answer is saved locally so you can compare it with your later judgement.</p>
+      </div>
+      <JudgementQuestion
+        id="arrival-initial"
+        phase="initial"
+        prompt="Momo will not come out from under the bed. What should you do?"
+        options={arrivalOptions}
+        bestOption="b"
+      />
+    </section>
+
+    <section id="core-learning" class="consultation-section" aria-labelledby="learning-heading">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="section-kicker">Core learning</p>
+          <h2 id="learning-heading">Build safety before you ask for confidence</h2>
+        </div>
+        <p>
+          Five linked decisions turn “give her time” from vague reassurance into a practical
+          first-72-hours plan.
+        </p>
+      </div>
+
+      <div class="evidence-sections">
+        <section class="evidence-section">
+          <header><span>01</span><div><p>Before arrival</p><h3>Remove risks that watching cannot control</h3></div></header>
+          <p>
+            True lilies must leave the home entirely: leaves, stems, petals, and pollen can cause
+            life-threatening kidney injury. Secure ordinary human pain medication, and check that
+            flea, tick, and insecticide products are specifically labelled safe for cats.
+          </p>
+          <p class="claim-list">CH1-07 · Direct evidence</p>
+        </section>
+
+        <section class="evidence-section">
+          <header><span>02</span><div><p>Read the behaviour</p><h3>Hiding is a coping strategy</h3></div></header>
+          <p>
+            A new environment removes familiarity and control. A private, enclosed, defensible
+            place lets Momo reduce contact while she gathers information. Retrieving her solves the
+            owner's discomfort, but removes the strategy she is using to cope.
+          </p>
+          <p class="claim-list">CH1-01 · CH1-02 · Direct evidence</p>
+        </section>
+
+        <section class="evidence-section">
+          <header><span>03</span><div><p>Design the room</p><h3>Accessible does not mean clustered</h3></div></header>
+          <p>
+            Keep food, water, litter, rest, and hiding options inside a manageable first territory,
+            while separating toileting from eating and drinking. Leave the carrier open as a
+            familiar object and widen access to the home gradually.
+          </p>
+          <p class="claim-list">CH1-03 · CH1-04 · CH1-06 (synthesis)</p>
+        </section>
+
+        <section class="evidence-section">
+          <header><span>04</span><div><p>Protect choice</p><h3>Low pressure is active care</h3></div></header>
+          <p>
+            Do not chase, pick up, force petting, or manufacture an introduction. Quietly maintain
+            the room and let Momo initiate approach and end contact. Space still includes food,
+            water, litter, shelter, and observation.
+          </p>
+          <p class="claim-list">CH1-05 · Direct evidence</p>
+        </section>
+
+        <section class="evidence-section">
+          <header><span>05</span><div><p>After arrival</p><h3>Looking well is not medical clearance</h3></div></header>
+          <p>
+            Arrange a veterinary examination as soon as possible for a newly adopted kitten with
+            unknown health history, including FeLV/FIV screening and parasite checks. Keep her
+            separate from resident cats until that screening is done.
+          </p>
+          <p class="claim-list">CH1-08 · Direct evidence</p>
+        </section>
+
+        <section class="evidence-section">
+          <header><span>06</span><div><p>Start the baseline</p><h3>Day one belongs in the log</h3></div></header>
+          <p>
+            Note roughly how much Momo ate and drank, litter use, energy, and whether she hid or
+            explored. This course recommends the habit as a practical bridge to later decisions;
+            it is not a diagnostic tool or a substitute for professional advice.
+          </p>
+          <p class="claim-list">CH1-09 · Course synthesis</p>
+        </section>
+      </div>
+
+      <aside class="evidence-trail">
+        <div><p class="section-kicker">Evidence trail</p><h3>Where these claims come from</h3></div>
+        <ul>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/">AAFP / ISFM feline environmental needs guidance</a></li>
+          <li><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/choosing-and-caring-your-new-cat">Cornell Feline Health Center: choosing and caring for a new cat</a></li>
+          <li><a href="https://www.aspca.org/news/these-harmful-feline-hazards-could-be-your-home">ASPCA Animal Poison Control: household hazards</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="practice" class="consultation-section consultation-section--tint" aria-labelledby="practice-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Practice and compare</p>
+        <h2 id="practice-heading">Two rooms can contain the same supplies and feel very different</h2>
+      </div>
+      <div class="comparison-grid">
+        <article>
+          <p class="comparison-label">Room A</p>
+          <h3>Everything together, everyone welcome</h3>
+          <ul>
+            <li>Food, water, and litter lined up beside the door</li>
+            <li>Carrier stored away after arrival</li>
+            <li>Visitors invited to “help her socialise”</li>
+            <li>Whole-house access from the first hour</li>
+          </ul>
+          <p>This looks generous and efficient, but concentrates pressure and removes retreat.</p>
+        </article>
+        <article class="comparison-grid__preferred">
+          <p class="comparison-label">Room B · Safer fit</p>
+          <h3>Essentials separated, choices preserved</h3>
+          <ul>
+            <li>Litter separated from food and water</li>
+            <li>Carrier open beside another hiding option</li>
+            <li>Quiet maintenance with no forced contact</li>
+            <li>Territory widened only as Momo settles</li>
+          </ul>
+          <p>The difference is not the shopping list. It is how the room protects control.</p>
+        </article>
+      </div>
+
+      <div class="practice-brief">
+        <div>
+          <p class="section-kicker">Full applied activity · about 90 minutes</p>
+          <h3>Prepare an unfamiliar home</h3>
+        </div>
+        <ol>
+          <li>Flag at least three plausible hazards from a mixed set of safe and unsafe objects.</li>
+          <li>Place food, water, litter, rest, and hiding resources while respecting separation.</li>
+          <li>Write a realistic first-day observation entry without turning it into a diagnosis.</li>
+        </ol>
+        <p>This MVP preserves the approved activity brief; the interactive arrangement tool is a later implementation slice.</p>
+      </div>
+    </section>
+
+    <section id="return" class="consultation-section" aria-labelledby="return-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Return to Momo</p>
+        <h2 id="return-heading">The room is quiet. Momo is still under the bed.</h2>
+        <p>
+          Nothing dramatic has happened. That does not mean care has stopped: the hazards were
+          removed, resources remain accessible, and Momo still controls the distance.
+        </p>
+      </div>
+      <ScenarioScene phase="return" />
+      <div class="revised-judgement">
+        <h3>Make the decision again</h3>
+        <JudgementQuestion
+          id="arrival-revised"
+          phase="revised"
+          prompt="With the evidence now in view, what should you do next?"
+          options={arrivalOptions}
+          bestOption="b"
+        />
+      </div>
+    </section>
+
+    <section id="care-plan" class="consultation-section consultation-section--dark" aria-labelledby="care-plan-heading">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="section-kicker">Recommendation</p>
+          <h2 id="care-plan-heading">Momo's first-72-hours care plan</h2>
+        </div>
+        <p>Six owner-level actions, each attached to the reason it exists.</p>
+      </div>
+      <CarePlan items={carePlan} />
+    </section>
+
+    <section id="chapter-check" class="consultation-section consultation-section--check" aria-labelledby="chapter-check-heading">
+      <ChapterCheck check={check} />
+    </section>
+
+    <section class="workload-map" aria-labelledby="workload-heading">
+      <div>
+        <p class="section-kicker">Learning depth retained</p>
+        <h2 id="workload-heading">This consultation maps to about 4 hours 10 minutes</h2>
+      </div>
+      <dl>
+        <div><dt>Core teaching</dt><dd>~50 min</dd></div>
+        <div><dt>Guided reading</dt><dd>~40 min</dd></div>
+        <div><dt>Scenario analysis</dt><dd>~45 min</dd></div>
+        <div><dt>Applied activity</dt><dd>~90 min</dd></div>
+        <div><dt>Check and review</dt><dd>~25 min</dd></div>
+      </dl>
+      <p>
+        The MVP exposes the full approved learning map. Guided readings and the room-arrangement
+        tool remain planned content work; they have not been replaced by this shorter on-screen summary.
+      </p>
+    </section>
+  </ConsultationLayout>
 </CourseLayout>
+
+<script>
+  function setupObservationNotes() {
+    for (const form of document.querySelectorAll<HTMLFormElement>("[data-observation-note]")) {
+      if (form.dataset.initialized === "true") continue;
+      form.dataset.initialized = "true";
+      const input = form.querySelector<HTMLTextAreaElement>("textarea")!;
+      const status = form.querySelector<HTMLElement>("[data-observation-status]")!;
+      const key = "momo-ch01-arrival-observation";
+      input.value = localStorage.getItem(key) ?? "";
+      if (input.value) status.textContent = "Your observation is restored on this device.";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        localStorage.setItem(key, input.value);
+        status.textContent = input.value.trim()
+          ? "Observation saved locally."
+          : "Write one concrete observation before saving.";
+      });
+    }
+  }
+
+  setupObservationNotes();
+  document.addEventListener("astro:page-load", setupObservationNotes);
+</script>

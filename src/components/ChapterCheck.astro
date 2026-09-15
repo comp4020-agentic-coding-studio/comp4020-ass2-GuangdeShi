@@ -1,0 +1,138 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  check: CollectionEntry<"chapterChecks">["data"];
+}
+
+const { check } = Astro.props;
+---
+
+<form class="chapter-check" data-chapter-check data-chapter={check.chapter} novalidate>
+  <div class="chapter-check__intro">
+    <div>
+      <p class="eyebrow">Formative · {check.questions.length} questions</p>
+      <h2 id="chapter-check-heading">Chapter Check</h2>
+    </div>
+    <p>This check supports learning only. It does not contribute to the course's assessment percentage.</p>
+  </div>
+
+  <div class="chapter-check__questions">
+    {check.questions.map((question, index) => (
+      <fieldset
+        class="check-question"
+        data-check-question
+        data-best-option={question.bestOption}
+      >
+        <legend>
+          <span>{String(index + 1).padStart(2, "0")} · {question.type.replace("-", " ")}</span>
+          {question.prompt}
+        </legend>
+        <div class="check-options">
+          {question.options.map((option) => (
+            <label data-check-option data-option={option.id}>
+              <input type="radio" name={question.id} value={option.id} />
+              <span class="check-option__body">
+                <span class="check-option__text"><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+                <span class="check-option__feedback" data-option-feedback hidden>{option.feedback}</span>
+              </span>
+            </label>
+          ))}
+        </div>
+        <p class="claim-list">Evidence: {question.claimIds.join(" · ")}</p>
+      </fieldset>
+    ))}
+  </div>
+
+  <div class="chapter-check__actions">
+    <button type="submit">Review my judgements</button>
+    <button type="button" class="secondary-action" data-check-retry hidden>Try again</button>
+    <p data-check-status aria-live="polite"></p>
+  </div>
+</form>
+
+<script>
+  interface CheckState {
+    answers: Record<string, string>;
+    submitted: boolean;
+  }
+
+  function setupChapterChecks() {
+    for (const form of document.querySelectorAll<HTMLFormElement>("[data-chapter-check]")) {
+      if (form.dataset.initialized === "true") continue;
+      form.dataset.initialized = "true";
+      const key = `momo-chapter-${form.dataset.chapter}-check`;
+      const questions = [...form.querySelectorAll<HTMLFieldSetElement>("[data-check-question]")];
+      const status = form.querySelector<HTMLElement>("[data-check-status]")!;
+      const retry = form.querySelector<HTMLButtonElement>("[data-check-retry]")!;
+
+      function setReviewed(reviewed: boolean) {
+        form.classList.toggle("is-reviewed", reviewed);
+        for (const question of questions) {
+          const selected = question.querySelector<HTMLInputElement>("input:checked")?.value;
+          for (const option of question.querySelectorAll<HTMLElement>("[data-check-option]")) {
+            const isBest = option.dataset.option === question.dataset.bestOption;
+            const isSelected = option.dataset.option === selected;
+            option.classList.toggle("is-best", reviewed && isBest);
+            option.classList.toggle("is-selected", reviewed && isSelected);
+            const feedback = option.querySelector<HTMLElement>("[data-option-feedback]");
+            if (feedback) feedback.hidden = !reviewed;
+          }
+        }
+        retry.hidden = !reviewed;
+      }
+
+      function save(submitted: boolean) {
+        const answers: Record<string, string> = {};
+        for (const question of questions) {
+          const selected = question.querySelector<HTMLInputElement>("input:checked");
+          if (selected) answers[selected.name] = selected.value;
+        }
+        localStorage.setItem(key, JSON.stringify({ answers, submitted } satisfies CheckState));
+        if (submitted) {
+          const progress = JSON.parse(localStorage.getItem("momo-course-progress") ?? "{}") as Record<string, boolean>;
+          progress[`chapter-${form.dataset.chapter}`] = true;
+          localStorage.setItem("momo-course-progress", JSON.stringify(progress));
+        }
+      }
+
+      const saved = localStorage.getItem(key);
+      if (saved) {
+        const state = JSON.parse(saved) as CheckState;
+        for (const [name, value] of Object.entries(state.answers)) {
+          const radio = form.querySelector<HTMLInputElement>(`input[name="${name}"][value="${value}"]`);
+          if (radio) radio.checked = true;
+        }
+        if (state.submitted) {
+          setReviewed(true);
+          status.textContent = "Your completed Chapter Check is restored on this device.";
+        }
+      }
+
+      form.addEventListener("change", () => save(false));
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const firstUnanswered = questions.find((question) => !question.querySelector("input:checked"));
+        if (firstUnanswered) {
+          status.textContent = "Choose one response for every question before reviewing the feedback.";
+          firstUnanswered.querySelector<HTMLInputElement>("input")?.focus();
+          return;
+        }
+        setReviewed(true);
+        save(true);
+        status.textContent = "Review every option below, including why the alternatives can seem reasonable.";
+      });
+
+      retry.addEventListener("click", () => {
+        form.reset();
+        setReviewed(false);
+        localStorage.removeItem(key);
+        status.textContent = "Responses cleared. Work through the situations again when you are ready.";
+        questions[0]?.querySelector<HTMLInputElement>("input")?.focus();
+      });
+    }
+  }
+
+  setupChapterChecks();
+  document.addEventListener("astro:page-load", setupChapterChecks);
+</script>

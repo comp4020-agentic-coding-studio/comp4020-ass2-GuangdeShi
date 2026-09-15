@@ -283,8 +283,20 @@ const consultationHref = (slug: string) => {
 
       triggers.forEach((trigger) => {
         trigger.addEventListener("click", () => selectStage(trigger.dataset.stageTrigger ?? "kitten"));
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          selectStage(trigger.dataset.stageTrigger ?? "kitten");
+        });
       });
-      hotspots.forEach((hotspot) => hotspot.addEventListener("click", () => selectChapter(hotspot)));
+      hotspots.forEach((hotspot) => {
+        hotspot.addEventListener("click", () => selectChapter(hotspot));
+        hotspot.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          selectChapter(hotspot);
+        });
+      });
 
       const saved = localStorage.getItem("momo-home-stage");
       const initialStage = triggers.some((trigger) => trigger.dataset.stageTrigger === saved)

@@ -1,0 +1,51 @@
+---
+interface Props {
+  phase?: "arrival" | "return";
+}
+
+const { phase = "arrival" } = Astro.props;
+---
+
+<figure class:list={["scenario-scene", `scenario-scene--${phase}`]}>
+  <svg viewBox="0 0 960 500" role="img" aria-labelledby={`scenario-title-${phase} scenario-desc-${phase}`}>
+    <title id={`scenario-title-${phase}`}>Momo's safe room during her first day</title>
+    <desc id={`scenario-desc-${phase}`}>
+      A small room with separated food, water, and litter resources, an open carrier, a hiding box,
+      and Momo partly visible beneath the bed.
+    </desc>
+    <rect width="960" height="500" fill="#f4ead7" />
+    <rect y="365" width="960" height="135" fill="#c8b58f" />
+    <path d="M0 365h960" stroke="#354b48" stroke-width="6" />
+    <rect x="505" y="145" width="330" height="190" rx="6" fill="#50736c" stroke="#354b48" stroke-width="10" />
+    <rect x="470" y="315" width="400" height="56" rx="5" fill="#50736c" stroke="#354b48" stroke-width="10" />
+    <path d="M505 371v67m330-67v67" stroke="#354b48" stroke-width="14" />
+    <path d="M609 354q24-52 63 0" fill="#30393b" />
+    <path d="M615 335l10-28 20 22m9 2 21-25 8 31" fill="#30393b" />
+    <circle cx="635" cy="342" r="4" fill="#f0c35a" />
+    <circle cx="658" cy="342" r="4" fill="#f0c35a" />
+    <path d="M83 315h147l34 84H48z" fill="#f0c35a" stroke="#354b48" stroke-width="8" />
+    <path d="M91 315q10-50 62-50t62 50" fill="none" stroke="#354b48" stroke-width="8" />
+    <rect x="107" y="335" width="82" height="64" fill="#354b48" />
+    <path d="M122 339v55m18-55v55m18-55v55m18-55v55" stroke="#f4ead7" stroke-width="5" />
+    <rect x="282" y="245" width="135" height="109" fill="#dfcfad" stroke="#354b48" stroke-width="8" />
+    <path d="M282 245l66-43 69 43" fill="#f0c35a" stroke="#354b48" stroke-width="8" />
+    <path d="M324 354v-48q0-32 27-32t27 32v48" fill="#354b48" />
+    <path d="M55 420h135l-15 56H69z" fill="#d6a847" stroke="#354b48" stroke-width="8" />
+    <path d="M722 427h77l-10 37h-57z" fill="#e7e0cf" stroke="#354b48" stroke-width="7" />
+    <path d="M818 427h77l-10 37h-57z" fill="#91bcc0" stroke="#354b48" stroke-width="7" />
+    <rect x="731" y="60" width="164" height="76" rx="3" fill="#fffdf7" stroke="#354b48" stroke-width="7" transform="rotate(-3 813 98)" />
+    <path d="M758 84h105m-105 18h91m-91 18h96" stroke="#c85f43" stroke-width="6" transform="rotate(-3 813 98)" />
+    {phase === "return" && (
+      <g>
+        <path d="M690 351q36-32 73-2" fill="none" stroke="#f0c35a" stroke-width="7" />
+        <circle cx="718" cy="340" r="5" fill="#f0c35a" />
+      </g>
+    )}
+  </svg>
+  <figcaption>
+    {phase === "arrival"
+      ? "Arrival, minute six: the carrier is open and Momo is under the bed."
+      : "Later that evening: the room has stayed quiet, and Momo has begun watching from the edge of cover."}
+  </figcaption>
+</figure>
+

@@ -1,0 +1,27 @@
+---
+interface PlanItem {
+  action: string;
+  reason: string;
+  claimIds: string[];
+}
+
+interface Props {
+  items: PlanItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<ol class="care-plan">
+  {items.map((item, index) => (
+    <li>
+      <span class="care-plan__number">{String(index + 1).padStart(2, "0")}</span>
+      <div>
+        <h3>{item.action}</h3>
+        <p>{item.reason}</p>
+        <p class="claim-list" aria-label="Relevant evidence claims">{item.claimIds.join(" · ")}</p>
+      </div>
+    </li>
+  ))}
+</ol>
+
