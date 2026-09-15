@@ -1,0 +1,261 @@
+<div class="arrival-practice" data-arrival-practice>
+  <section class="practice-part" aria-labelledby="hazard-sweep-heading">
+    <header class="practice-part__heading">
+      <span>01 · about 25 minutes</span>
+      <h3 id="hazard-sweep-heading">Walk the room before Milo does</h3>
+      <p>Select every item that needs action before the carrier door opens.</p>
+    </header>
+
+    <fieldset class="hazard-sweep" data-hazard-sweep>
+      <legend class="visually-hidden">Household items to inspect</legend>
+      <label data-hazard data-risk="true">
+        <input type="checkbox" value="lilies" />
+        <span><strong>Vase of Easter lilies</strong><small>On a shelf in the next room</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>Act on this. True lilies must be removed from the home entirely; height does not contain pollen, fallen plant material, or a knocked vase.</span>
+      </label>
+      <label data-hazard data-risk="false">
+        <input type="checkbox" value="towel" />
+        <span><strong>Clean folded towel</strong><small>Inside the open carrier</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>This does not need to be removed. The open carrier can remain as a familiar, enclosed resting option.</span>
+      </label>
+      <label data-hazard data-risk="true">
+        <input type="checkbox" value="ibuprofen" />
+        <span><strong>Loose ibuprofen packet</strong><small>On the bedside table</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>Act on this. Human medication should be secured where a curious kitten cannot knock it loose or gain access.</span>
+      </label>
+      <label data-hazard data-risk="false">
+        <input type="checkbox" value="ceramic-bowl" />
+        <span><strong>Clean ceramic water bowl</strong><small>Across the room from the litter tray</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>This arrangement supports access and physical separation. It is not one of the hazards in this sweep.</span>
+      </label>
+      <label data-hazard data-risk="true">
+        <input type="checkbox" value="dog-flea-treatment" />
+        <span><strong>Dog-only flea treatment</strong><small>Stored with Milo's supplies</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>Act on this. A dog or household pest product is not automatically safe for a cat; the label must identify it as safe for cats before use.</span>
+      </label>
+      <label data-hazard data-risk="false">
+        <input type="checkbox" value="cardboard-box" />
+        <span><strong>Cardboard box with one open side</strong><small>Beside the wall, away from the doorway</small></span>
+        <span class="practice-feedback" data-practice-feedback hidden>This can provide a private, defensible hiding option. Check that it is stable and accessible, then leave it available.</span>
+      </label>
+    </fieldset>
+    <div class="practice-actions">
+      <button type="button" data-review-hazards>Review the sweep</button>
+      <p data-hazard-status aria-live="polite"></p>
+    </div>
+    <p class="claim-list">CH1-02 · CH1-04 · CH1-07 · Direct evidence</p>
+  </section>
+
+  <section class="practice-part" aria-labelledby="room-plan-heading">
+    <header class="practice-part__heading">
+      <span>02 · about 35 minutes</span>
+      <h3 id="room-plan-heading">Give five resources five deliberate places</h3>
+      <p>Choose a location for each resource. The room is small; that does not mean everything belongs in one line.</p>
+    </header>
+
+    <div class="room-plan" data-room-plan>
+      <label>
+        <span><strong>Food</strong><small>Where will meals go?</small></span>
+        <select data-plan-item="food" data-best="quiet-wall">
+          <option value="">Choose a location</option>
+          <option value="beside-litter" data-feedback="Easy for a person to service, but it clusters eating with toileting.">Beside the litter tray</option>
+          <option value="quiet-wall" data-feedback="A good fit: accessible, low-pressure, and physically separated from the litter tray.">Along a quiet wall, away from litter</option>
+          <option value="hallway" data-feedback="This asks a newly arrived kitten to leave the first territory to eat.">In the hallway outside the room</option>
+        </select>
+        <span class="practice-feedback" data-plan-feedback hidden></span>
+      </label>
+      <label>
+        <span><strong>Water</strong><small>Where can Milo drink?</small></span>
+        <select data-plan-item="water" data-best="separate-corner">
+          <option value="">Choose a location</option>
+          <option value="litter-edge" data-feedback="Close access is not enough; water should be physically separated from toileting.">At the edge of the litter mat</option>
+          <option value="separate-corner" data-feedback="A good fit: Milo can reach it inside the room without drinking beside the litter tray.">A separate, quiet corner</option>
+          <option value="kitchen" data-feedback="The kitchen may work later, but it sits outside Milo's manageable first territory.">In the usual kitchen spot</option>
+        </select>
+        <span class="practice-feedback" data-plan-feedback hidden></span>
+      </label>
+      <label>
+        <span><strong>Litter</strong><small>Where is toileting least pressured?</small></span>
+        <select data-plan-item="litter" data-best="far-corner">
+          <option value="">Choose a location</option>
+          <option value="door" data-feedback="The doorway is a traffic point. It also makes quiet access harder if people enter.">Immediately beside the door</option>
+          <option value="food-line" data-feedback="A neat line is convenient to service, but it removes physical separation from food and water.">In one line with the bowls</option>
+          <option value="far-corner" data-feedback="A good fit: accessible within the first territory and separated from eating and drinking.">A quiet corner away from food and water</option>
+        </select>
+        <span class="practice-feedback" data-plan-feedback hidden></span>
+      </label>
+      <label>
+        <span><strong>Rest</strong><small>Where can activity drop away?</small></span>
+        <select data-plan-item="rest" data-best="sheltered-wall">
+          <option value="">Choose a location</option>
+          <option value="centre" data-feedback="The centre exposes the resting place to movement from every direction.">In the centre of the room</option>
+          <option value="sheltered-wall" data-feedback="A good fit: the resting area is accessible, quiet, and distinct from the other resources.">Against a sheltered, low-traffic wall</option>
+          <option value="landing" data-feedback="This places rest outside the small first territory and near household traffic.">On the upstairs landing</option>
+        </select>
+        <span class="practice-feedback" data-plan-feedback hidden></span>
+      </label>
+      <label>
+        <span><strong>Hide</strong><small>Where can Milo withdraw without being trapped?</small></span>
+        <select data-plan-item="hide" data-best="covered-choice">
+          <option value="">Choose a location</option>
+          <option value="covered-choice" data-feedback="A good fit: private and defensible, with Milo able to enter and leave on her own terms.">A stable covered box beside the wall</option>
+          <option value="closed-carrier" data-feedback="A carrier can be useful, but closing Milo inside removes the choice that makes it a safe option.">Inside the carrier with the door closed</option>
+          <option value="no-hide" data-feedback="Removing hiding places does not teach confidence; it removes a normal coping option.">No hiding place, so she learns the room</option>
+        </select>
+        <span class="practice-feedback" data-plan-feedback hidden></span>
+      </label>
+    </div>
+    <div class="practice-actions">
+      <button type="button" data-review-plan>Review the room plan</button>
+      <p data-plan-status aria-live="polite"></p>
+    </div>
+    <p class="claim-list">CH1-02 · CH1-03 · Direct evidence</p>
+  </section>
+
+  <section class="practice-part" aria-labelledby="first-log-heading">
+    <header class="practice-part__heading">
+      <span>03 · about 20 minutes, plus 10 minutes to review</span>
+      <h3 id="first-log-heading">Write the first line of Milo's long record</h3>
+      <p>Record what happened. Leave causes and diagnoses out of the entry.</p>
+    </header>
+
+    <div class="first-log" data-first-log>
+      <label><span>Eating</span><textarea rows="2" name="eating" placeholder="What and roughly how much did she eat?"></textarea></label>
+      <label><span>Drinking</span><textarea rows="2" name="drinking" placeholder="What did you observe about drinking?"></textarea></label>
+      <label><span>Litter use</span><textarea rows="2" name="litter" placeholder="Was the tray used, and what could you directly observe?"></textarea></label>
+      <label><span>Energy</span><textarea rows="2" name="energy" placeholder="What activity did you actually see or hear?"></textarea></label>
+      <label class="first-log__wide"><span>Hiding and exploring</span><textarea rows="3" name="movement" placeholder="Where did she stay, and did her location change?"></textarea></label>
+    </div>
+    <div class="practice-actions">
+      <button type="button" data-save-log>Save this entry</button>
+      <button type="button" class="secondary-action" data-clear-practice>Clear activity</button>
+      <p data-log-status aria-live="polite"></p>
+    </div>
+    <p class="practice-boundary"><strong>Owner-level boundary:</strong> this record gives later observations a dated baseline. It does not diagnose Milo or replace professional advice.</p>
+    <p class="claim-list">CH1-09 · Course synthesis</p>
+  </section>
+</div>
+
+<script>
+  interface PracticeState {
+    hazards: string[];
+    plan: Record<string, string>;
+    log: Record<string, string>;
+  }
+
+  function setupArrivalPractice() {
+    for (const activity of document.querySelectorAll<HTMLElement>("[data-arrival-practice]")) {
+      if (activity.dataset.initialized === "true") continue;
+      activity.dataset.initialized = "true";
+      const storageKey = "milo-ch01-arrival-practice-v1";
+      const hazards = [...activity.querySelectorAll<HTMLElement>("[data-hazard]")];
+      const planItems = [...activity.querySelectorAll<HTMLSelectElement>("[data-plan-item]")];
+      const logFields = [...activity.querySelectorAll<HTMLTextAreaElement>("[data-first-log] textarea")];
+      const hazardStatus = activity.querySelector<HTMLElement>("[data-hazard-status]")!;
+      const planStatus = activity.querySelector<HTMLElement>("[data-plan-status]")!;
+      const logStatus = activity.querySelector<HTMLElement>("[data-log-status]")!;
+
+      function currentState(): PracticeState {
+        return {
+          hazards: hazards
+            .filter((item) => item.querySelector<HTMLInputElement>("input")?.checked)
+            .map((item) => item.querySelector<HTMLInputElement>("input")!.value),
+          plan: Object.fromEntries(planItems.map((select) => [select.dataset.planItem ?? "", select.value])),
+          log: Object.fromEntries(logFields.map((field) => [field.name, field.value])),
+        };
+      }
+
+      function save() {
+        localStorage.setItem(storageKey, JSON.stringify(currentState()));
+      }
+
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey) ?? "null") as PracticeState | null;
+        if (saved) {
+          for (const item of hazards) {
+            const input = item.querySelector<HTMLInputElement>("input")!;
+            input.checked = saved.hazards?.includes(input.value) ?? false;
+          }
+          for (const select of planItems) select.value = saved.plan?.[select.dataset.planItem ?? ""] ?? "";
+          for (const field of logFields) field.value = saved.log?.[field.name] ?? "";
+          logStatus.textContent = "Your activity notes are restored on this device.";
+        }
+      } catch {
+        localStorage.removeItem(storageKey);
+      }
+
+      activity.addEventListener("input", save);
+
+      activity.querySelector<HTMLButtonElement>("[data-review-hazards]")?.addEventListener("click", () => {
+        let correct = 0;
+        for (const item of hazards) {
+          const selected = item.querySelector<HTMLInputElement>("input")!.checked;
+          const isRisk = item.dataset.risk === "true";
+          item.classList.toggle("is-correct", selected === isRisk);
+          item.classList.toggle("is-missed", isRisk && !selected);
+          item.querySelector<HTMLElement>("[data-practice-feedback]")!.hidden = false;
+          if (selected === isRisk) correct += 1;
+        }
+        hazardStatus.textContent = `${correct} of ${hazards.length} decisions align with the evidence. Read every explanation, including the ordinary items you left in place.`;
+        save();
+      });
+
+      activity.querySelector<HTMLButtonElement>("[data-review-plan]")?.addEventListener("click", () => {
+        const unanswered = planItems.find((select) => !select.value);
+        if (unanswered) {
+          planStatus.textContent = "Choose a location for all five resources before reviewing the room.";
+          unanswered.focus();
+          return;
+        }
+        let correct = 0;
+        for (const select of planItems) {
+          const feedback = select.selectedOptions[0]?.dataset.feedback ?? "";
+          const output = select.parentElement?.querySelector<HTMLElement>("[data-plan-feedback]");
+          if (output) {
+            output.textContent = feedback;
+            output.hidden = false;
+          }
+          const aligned = select.value === select.dataset.best;
+          select.parentElement?.classList.toggle("is-correct", aligned);
+          if (aligned) correct += 1;
+        }
+        planStatus.textContent = `${correct} of ${planItems.length} placements protect access, separation, and choice. Use the feedback to revise any that do not.`;
+        save();
+      });
+
+      activity.querySelector<HTMLButtonElement>("[data-save-log]")?.addEventListener("click", () => {
+        const empty = logFields.find((field) => !field.value.trim());
+        if (empty) {
+          logStatus.textContent = "Complete each observation field before saving the first entry.";
+          empty.focus();
+          return;
+        }
+        save();
+        logStatus.textContent = "Entry saved locally. Read it once more and remove any cause or diagnosis you could not directly observe.";
+      });
+
+      activity.querySelector<HTMLButtonElement>("[data-clear-practice]")?.addEventListener("click", () => {
+        for (const item of hazards) {
+          item.classList.remove("is-correct", "is-missed");
+          item.querySelector<HTMLInputElement>("input")!.checked = false;
+          item.querySelector<HTMLElement>("[data-practice-feedback]")!.hidden = true;
+        }
+        for (const select of planItems) {
+          select.value = "";
+          select.parentElement?.classList.remove("is-correct");
+          const output = select.parentElement?.querySelector<HTMLElement>("[data-plan-feedback]");
+          if (output) output.hidden = true;
+        }
+        for (const field of logFields) field.value = "";
+        localStorage.removeItem(storageKey);
+        hazardStatus.textContent = "";
+        planStatus.textContent = "";
+        logStatus.textContent = "Activity cleared.";
+        hazards[0]?.querySelector<HTMLInputElement>("input")?.focus();
+      });
+    }
+  }
+
+  setupArrivalPractice();
+  document.addEventListener("astro:page-load", setupArrivalPractice);
+</script>

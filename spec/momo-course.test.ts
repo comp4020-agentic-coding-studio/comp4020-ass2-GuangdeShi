@@ -5,6 +5,7 @@ import { chapters, lifecycleStageIds } from "../src/data/chapters";
 
 interface CheckData {
   formative: boolean;
+  status: "prototype" | "voice-gated" | "final";
   questions: Array<{
     id: string;
     type: string;
@@ -14,7 +15,7 @@ interface CheckData {
   }>;
 }
 
-describe("Momo course shell", () => {
+describe("Milo course shell", () => {
   it("defines twelve ordered, dated chapter entrances", () => {
     expect(chapters).toHaveLength(12);
     expect(chapters.map((chapter) => chapter.number)).toEqual(
@@ -62,6 +63,7 @@ describe("Momo course shell", () => {
       readFileSync(resolve("src/content/chapter-checks/chapter-01.json"), "utf8"),
     ) as CheckData;
     expect(check.formative).toBe(true);
+    expect(check.status).not.toBe("prototype");
     expect(check.questions).toHaveLength(7);
     expect(check.questions.filter((question) => question.type === "core-concept")).toHaveLength(4);
     expect(check.questions.filter((question) => question.type === "scenario")).toHaveLength(2);
@@ -71,6 +73,18 @@ describe("Momo course shell", () => {
       expect(question.options.some((option) => option.id === question.bestOption)).toBe(true);
       expect(question.options.every((option) => option.feedback.length >= 30)).toBe(true);
       expect(question.claimIds.every((claimId) => /^CH1-\d{2}$/.test(claimId))).toBe(true);
+    }
+  });
+
+  it("builds Chapter 1 as long-form learning rather than a prototype placeholder", () => {
+    const page = readFileSync(resolve("dist/chapters/the-first-72-hours/index.html"), "utf8");
+    expect(page).toContain("Walk the room before Milo does");
+    expect(page).toContain("data-arrival-practice");
+    expect(page).toContain("Guided reading");
+    expect(page).not.toContain("Structural prototype");
+    expect(page).not.toContain("later implementation slice");
+    for (let claim = 1; claim <= 9; claim += 1) {
+      expect(page).toContain(`CH1-${String(claim).padStart(2, "0")}`);
     }
   });
 });

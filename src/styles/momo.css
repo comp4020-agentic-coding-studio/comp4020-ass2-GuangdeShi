@@ -653,8 +653,25 @@
 
   .judgement-options label > span {
     display: grid;
+  }
+
+  .judgement-options label > span > span {
+    display: grid;
     grid-template-columns: 2rem minmax(0, 1fr);
     gap: 0.5rem;
+  }
+
+  .judgement-option__feedback {
+    margin-block-start: 0.75rem;
+    padding-block-start: 0.75rem;
+    border-block-start: 1px solid var(--momo-line);
+    color: #4b5b58;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .judgement-option__feedback[hidden] {
+    display: none;
   }
 
   .judgement-options strong,
@@ -666,6 +683,170 @@
   .judgement-rationale {
     display: block;
     margin-block-start: 1.5rem;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .learning-threads {
+    border-block-start: 2px solid var(--momo-green-dark);
+  }
+
+  .learning-thread {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 3rem;
+    padding-block: 4rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .learning-thread__marker {
+    align-self: start;
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .learning-thread__marker span {
+    display: block;
+    margin-block-end: 0.7rem;
+    color: var(--momo-green-dark);
+    font-family: Georgia, serif;
+    font-size: 2.4rem;
+  }
+
+  .learning-thread__marker p {
+    margin: 0;
+  }
+
+  .reading-prose {
+    width: min(100%, 48rem);
+  }
+
+  .reading-prose h3 {
+    margin: 0 0 1.5rem;
+    color: var(--momo-green-dark);
+    font-size: 2rem;
+    line-height: 1.12;
+  }
+
+  .reading-prose > p,
+  .reading-prose blockquote {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .reading-prose blockquote {
+    margin: 2rem 0;
+    padding: 1rem 0 1rem 1.5rem;
+    border-inline-start: 5px solid var(--momo-yellow);
+    color: var(--momo-green-dark);
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+  }
+
+  .principle-note {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-block: 2rem;
+    padding-block: 1.1rem;
+    border-block: 1px solid var(--momo-line);
+  }
+
+  .principle-note strong {
+    color: var(--momo-coral);
+  }
+
+  .principle-note p {
+    margin: 0;
+  }
+
+  .resource-map {
+    margin-block: 2rem;
+    border-block-start: 1px solid var(--momo-line);
+  }
+
+  .resource-map > div {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding-block: 0.85rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .resource-map dt {
+    color: var(--momo-green-dark);
+    font-weight: 800;
+  }
+
+  .resource-map dd {
+    margin: 0;
+  }
+
+  .transfer-question {
+    margin-block-start: 2.5rem;
+    padding-block: 1.5rem;
+    border-block: 2px solid var(--momo-green-dark);
+  }
+
+  .transfer-question > p:not(.section-kicker) {
+    margin-block-end: 1.5rem;
+  }
+
+  .consultation-section--reading {
+    background: var(--momo-white);
+  }
+
+  .reading-list {
+    margin: 0;
+    padding: 0;
+    border-block-start: 2px solid var(--momo-green-dark);
+    list-style: none;
+  }
+
+  .reading-list li {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr) 12rem;
+    gap: 2rem;
+    align-items: start;
+    padding-block: 1.5rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .reading-list h3,
+  .reading-list p {
+    margin: 0;
+  }
+
+  .reading-list span {
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .reading-list h3 {
+    margin-block-start: 0.3rem;
+    color: var(--momo-green-dark);
+    font-size: 1.15rem;
+  }
+
+  .reading-list a {
+    color: var(--momo-green-dark);
+    font-weight: 800;
+    text-underline-offset: 0.2em;
   }
 
   .evidence-sections {
@@ -783,6 +964,207 @@
     margin: 0;
     color: #5c6764;
     font-size: 0.87rem;
+  }
+
+  .arrival-practice {
+    margin-block-start: 3.5rem;
+    border-block-start: 3px solid var(--momo-green-dark);
+  }
+
+  .practice-part {
+    padding-block: 3.5rem;
+    border-block-end: 2px solid var(--momo-green-dark);
+  }
+
+  .practice-part__heading {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: 0.4rem 2rem;
+    margin-block-end: 2rem;
+  }
+
+  .practice-part__heading > span {
+    grid-row: 1 / span 2;
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .practice-part__heading h3,
+  .practice-part__heading p {
+    margin: 0;
+  }
+
+  .practice-part__heading h3 {
+    color: var(--momo-green-dark);
+    font-size: 1.65rem;
+  }
+
+  .hazard-sweep {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .hazard-sweep label {
+    display: grid;
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-content: start;
+    min-height: 7rem;
+    padding-block: 1.15rem;
+    border-block-start: 1px solid var(--momo-line);
+    cursor: pointer;
+  }
+
+  .hazard-sweep label:has(input:focus-visible) {
+    outline: 3px solid var(--momo-coral);
+    outline-offset: 3px;
+  }
+
+  .hazard-sweep label.is-correct {
+    box-shadow: inset 5px 0 0 var(--momo-green);
+  }
+
+  .hazard-sweep label.is-missed {
+    box-shadow: inset 5px 0 0 var(--momo-coral);
+  }
+
+  .hazard-sweep input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-block-start: 0.25rem;
+    accent-color: var(--momo-coral);
+  }
+
+  .hazard-sweep label > span:not(.practice-feedback) {
+    display: grid;
+  }
+
+  .hazard-sweep small,
+  .room-plan small {
+    color: #5c6966;
+  }
+
+  .practice-feedback {
+    grid-column: 2;
+    margin-block-start: 0.55rem;
+    color: #4b5b58;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .practice-feedback[hidden] {
+    display: none;
+  }
+
+  .room-plan {
+    border-block-start: 1px solid var(--momo-line);
+  }
+
+  .room-plan > label {
+    display: grid;
+    grid-template-columns: 10rem minmax(15rem, 0.8fr) minmax(16rem, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    padding-block: 1.1rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .room-plan > label > span:first-child {
+    display: grid;
+  }
+
+  .room-plan select {
+    width: 100%;
+    min-height: 2.85rem;
+    padding: 0.55rem 2.5rem 0.55rem 0.7rem;
+    border: 1px solid var(--momo-green-dark);
+    border-radius: 3px;
+    color: var(--momo-ink);
+    background: var(--momo-white);
+    font: inherit;
+  }
+
+  .room-plan label.is-correct select {
+    border-width: 3px;
+    border-color: var(--momo-green);
+  }
+
+  .first-log {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+  }
+
+  .first-log label {
+    display: grid;
+    gap: 0.55rem;
+    color: var(--momo-green-dark);
+    font-weight: 800;
+  }
+
+  .first-log__wide {
+    grid-column: 1 / -1;
+  }
+
+  .first-log textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid var(--momo-green-dark);
+    border-radius: 3px;
+    color: var(--momo-ink);
+    background: var(--momo-white);
+  }
+
+  .practice-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-block-start: 1.5rem;
+  }
+
+  .practice-actions button {
+    min-height: 2.85rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--momo-green-dark);
+    border-radius: 4px;
+    color: var(--momo-white);
+    background: var(--momo-green-dark);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .practice-actions button:hover,
+  .practice-actions button:focus-visible {
+    color: var(--momo-green-dark);
+    background: var(--momo-yellow);
+  }
+
+  .practice-actions .secondary-action {
+    color: var(--momo-green-dark);
+    background: transparent;
+  }
+
+  .practice-actions p {
+    flex: 1 1 20rem;
+    margin: 0;
+    color: #53615e;
+    font-size: 0.88rem;
+  }
+
+  .practice-boundary {
+    max-width: 48rem;
+    margin-block-start: 1.5rem;
+    padding-inline-start: 1rem;
+    border-inline-start: 4px solid var(--momo-yellow);
   }
 
   .revised-judgement {
@@ -918,9 +1300,7 @@
   }
 
   .chapter-check__actions {
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
+    position: static;
     padding: 1rem;
     border: 2px solid var(--momo-green-dark);
     background: rgb(255 253 247 / 96%);
@@ -1218,10 +1598,56 @@
     .withheld-note,
     .evidence-trail,
     .practice-brief,
+    .principle-note,
+    .learning-thread,
+    .practice-part__heading,
     .chapter-check__intro,
     .workload-map {
       grid-template-columns: 1fr;
       gap: 1rem;
+    }
+
+    .learning-thread {
+      padding-block: 3rem;
+    }
+
+    .learning-thread__marker {
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .learning-thread__marker span {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    .reading-prose h3 {
+      font-size: 1.65rem;
+    }
+
+    .resource-map > div,
+    .reading-list li,
+    .room-plan > label {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .reading-list li {
+      padding-block: 1.4rem;
+    }
+
+    .hazard-sweep,
+    .first-log {
+      grid-template-columns: 1fr;
+    }
+
+    .practice-part__heading > span {
+      grid-row: auto;
+    }
+
+    .practice-part {
+      padding-block: 2.7rem;
     }
 
     .prototype-notice {

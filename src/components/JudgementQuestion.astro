@@ -2,11 +2,12 @@
 interface Option {
   id: string;
   text: string;
+  feedback?: string;
 }
 
 interface Props {
   id: string;
-  phase: "initial" | "revised";
+  phase: "initial" | "revised" | "transfer";
   prompt: string;
   options: Option[];
   bestOption: string;
@@ -14,12 +15,17 @@ interface Props {
 
 const { id, phase, prompt, options, bestOption } = Astro.props;
 const isRevised = phase === "revised";
+const storageKey = id === "arrival-initial"
+  ? "momo-ch01-initial-judgement"
+  : id === "arrival-revised"
+    ? "momo-ch01-revised-judgement"
+    : `milo-ch01-${id}-judgement`;
 ---
 
 <form
   class:list={["judgement-question", `judgement-question--${phase}`]}
   data-judgement
-  data-storage-key={`momo-ch01-${phase}-judgement`}
+  data-storage-key={storageKey}
   data-best-option={bestOption}
 >
   <fieldset>
@@ -28,7 +34,10 @@ const isRevised = phase === "revised";
       {options.map((option) => (
         <label>
           <input type="radio" name={id} value={option.id} required />
-          <span><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+          <span>
+            <span><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+            {option.feedback && <small class="judgement-option__feedback" data-judgement-feedback hidden>{option.feedback}</small>}
+          </span>
         </label>
       ))}
     </div>
@@ -40,7 +49,7 @@ const isRevised = phase === "revised";
     </label>
   )}
   <div class="judgement-actions">
-    <button type="submit">Save {isRevised ? "revised" : "initial"} judgement</button>
+    <button type="submit">Save {isRevised ? "revised" : phase} judgement</button>
     <p data-judgement-status aria-live="polite"></p>
   </div>
 </form>
@@ -60,6 +69,9 @@ const isRevised = phase === "revised";
         const radio = form.querySelector<HTMLInputElement>(`input[value="${state.option}"]`);
         if (radio) radio.checked = true;
         if (rationale) rationale.value = state.rationale ?? "";
+        if (form.classList.contains("judgement-question--transfer")) {
+          form.querySelectorAll<HTMLElement>("[data-judgement-feedback]").forEach((item) => { item.hidden = false; });
+        }
         status.textContent = "Your earlier judgement is restored on this device.";
       }
 
@@ -71,11 +83,16 @@ const isRevised = phase === "revised";
           key,
           JSON.stringify({ option: radio.value, rationale: rationale?.value ?? "" }),
         );
+        if (form.classList.contains("judgement-question--transfer")) {
+          form.querySelectorAll<HTMLElement>("[data-judgement-feedback]").forEach((item) => { item.hidden = false; });
+        }
         const best = form.dataset.bestOption;
         status.textContent = form.classList.contains("judgement-question--revised")
           ? radio.value === best
             ? "Saved. This judgement now matches the safer care plan."
             : "Saved. Keep this choice in view as you compare it with the care plan below."
+          : form.classList.contains("judgement-question--transfer")
+            ? "Saved. Compare the timing and the amount of choice in all three responses."
           : "Saved. You will return to this decision after the core learning.";
       });
     }

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import ArrivalPractice from "../../components/ArrivalPractice.astro";
 import CarePlan from "../../components/CarePlan.astro";
 import ChapterCheck from "../../components/ChapterCheck.astro";
 import ConsultationLayout from "../../components/ConsultationLayout.astro";
@@ -20,6 +21,7 @@ const steps = [
   { id: "observation", label: "Observation" },
   { id: "initial-judgement", label: "Initial judgement" },
   { id: "core-learning", label: "Core learning" },
+  { id: "guided-reading", label: "Guided reading" },
   { id: "practice", label: "Practice" },
   { id: "return", label: "Return to Milo" },
   { id: "care-plan", label: "Care plan" },
@@ -90,18 +92,21 @@ const carePlan = [
     <section id="scenario" class="consultation-section consultation-section--opening" aria-labelledby="scenario-heading">
       <div class="section-heading">
         <p class="section-kicker">Scenario</p>
-        <h2 id="scenario-heading">Milo is home. Then she disappears.</h2>
+        <h2 id="scenario-heading">The carrier door opens. Milo disappears.</h2>
         <p>
-          Milo is about ten weeks old. Within minutes of leaving the carrier in the spare room,
-          she bolts under the bed. You can hear her, but you cannot see her.
+          The spare room is ready before Milo arrives: the window is secure, the carrier sits open,
+          and the bowls and litter tray are not crowded together. Milo is about ten weeks old.
+          Six minutes after the carrier door opens, she is under the bed. You can hear one small
+          movement against the skirting board, then nothing.
         </p>
       </div>
       <ScenarioScene />
       <aside class="withheld-note">
         <strong>What you do not know yet</strong>
         <p>
-          You do not know whether this is normal, how long it will last, or whether approaching
-          her would reassure her. Make your first decision without that reassurance.
+          You do not know how long Milo will stay there or whether approaching her would help.
+          The silence does not tell you what she feels. Make the first decision from what you can
+          observe, not from the story the empty room invites you to invent.
         </p>
       </aside>
     </section>
@@ -155,70 +160,180 @@ const carePlan = [
           <h2 id="learning-heading">Build safety before you ask for confidence</h2>
         </div>
         <p>
-          Five linked decisions turn “give her time” from vague reassurance into a practical
-          first-72-hours plan.
+          By the end of this consultation, you should be able to prepare one room, respond to a
+          hiding kitten without forcing contact, arrange prompt veterinary screening, and begin a
+          useful observation record.
         </p>
       </div>
 
-      <div class="evidence-sections">
-        <section class="evidence-section">
-          <header><span>01</span><div><p>Before arrival</p><h3>Remove risks that watching cannot control</h3></div></header>
-          <p>
-            True lilies must leave the home entirely: leaves, stems, petals, and pollen can cause
-            life-threatening kidney injury. Secure ordinary human pain medication, and check that
-            flea, tick, and insecticide products are specifically labelled safe for cats.
-          </p>
-          <p class="claim-list">CH1-07 · Direct evidence</p>
+      <div class="learning-threads">
+        <section class="learning-thread" aria-labelledby="learning-before-arrival">
+          <div class="learning-thread__marker"><span>01</span><p>Before arrival</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-before-arrival">Some risks cannot be managed by watching</h3>
+            <p>
+              A kitten makes ordinary rooms look different. The tablet beside a glass of water is
+              no longer merely untidy. A flower on a high shelf is not safely outside the room if
+              pollen or a petal can fall. The flea treatment left from a dog is not interchangeable
+              with a product labelled for cats. Preparation starts with the things already in the
+              household, before it starts with shopping.
+            </p>
+            <p>
+              True lilies in the <em>Lilium</em> and <em>Hemerocallis</em> groups need the clearest
+              decision: remove them from the home entirely. Leaves, stems, petals, and even pollen
+              can cause life-threatening kidney injury from a small exposure. “Out of reach” is not
+              a reliable boundary for a mobile cat or for loose plant material.
+            </p>
+            <p>
+              Secure human medication such as ibuprofen and naproxen where a curious kitten cannot
+              knock it loose. Read the species label on flea, tick, and insecticide products before
+              use; a dog or household product is not automatically safe for a cat. These actions do
+              not depend on noticing a symptom later. They remove foreseeable exposure first.
+            </p>
+            <aside class="principle-note"><strong>The owner-level decision</strong><p>Remove or secure the known hazard before exposure. Watching a known hazard is not the same as removing it.</p></aside>
+            <p class="claim-list">CH1-07 · Direct evidence</p>
+          </div>
         </section>
 
-        <section class="evidence-section">
-          <header><span>02</span><div><p>Read the behaviour</p><h3>Hiding is a coping strategy</h3></div></header>
-          <p>
-            A new environment removes familiarity and control. A private, enclosed, defensible
-            place lets Milo reduce contact while she gathers information. Retrieving her solves the
-            owner's discomfort, but removes the strategy she is using to cope.
-          </p>
-          <p class="claim-list">CH1-01 · CH1-02 · Direct evidence</p>
+        <section class="learning-thread" aria-labelledby="learning-hiding">
+          <div class="learning-thread__marker"><span>02</span><p>Read the behaviour</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-hiding">Under the bed is a coping strategy</h3>
+            <p>
+              Milo has moved from a carrier into a room without a familiar route, scent map, or
+              routine. Hiding reduces what reaches her and gives her some control over distance. In
+              a newly arrived cat, that withdrawal is a normal coping and stress-reduction
+              behaviour. It is not disobedience, a failed adoption, or a social problem that must be
+              corrected in the first hour.
+            </p>
+            <p>
+              The owner's urge to reach under the bed is understandable. There is a small animal in
+              an unfamiliar room, and doing nothing can feel careless. But pulling Milo out would
+              answer the owner's uncertainty by taking away the strategy Milo is already using.
+              Forced reassurance is still forced contact.
+            </p>
+            <p>
+              A useful safe place is private and defensible, often enclosed or raised. It does not
+              have to make a cat literally unreachable. A stable covered box or an open carrier can
+              work because Milo can withdraw, watch, and leave without being handled. Provide at
+              least one safe place for each cat in the household.
+            </p>
+            <blockquote>Care can look quiet: a closed door, an available tray, a bowl checked without fanfare, and a person who leaves before patience turns into pressure.</blockquote>
+            <p class="claim-list">CH1-01 · CH1-02 · Direct evidence</p>
+          </div>
         </section>
 
-        <section class="evidence-section">
-          <header><span>03</span><div><p>Design the room</p><h3>Accessible does not mean clustered</h3></div></header>
-          <p>
-            Keep food, water, litter, rest, and hiding options inside a manageable first territory,
-            while separating toileting from eating and drinking. Leave the carrier open as a
-            familiar object and widen access to the home gradually.
-          </p>
-          <p class="claim-list">CH1-03 · CH1-04 · CH1-06 (synthesis)</p>
+        <section class="learning-thread" aria-labelledby="learning-room">
+          <div class="learning-thread__marker"><span>03</span><p>Design the room</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-room">A safe room is a map, not a pile of supplies</h3>
+            <p>
+              Food, water, litter, rest, and hiding all need to be accessible inside Milo's first
+              territory. Accessibility does not mean lining them up for the owner's convenience.
+              Separate the resources physically, with particular care to keep the litter tray away
+              from food and water. The room can be small while each function still has its own place.
+            </p>
+            <dl class="resource-map">
+              <div><dt>Food and water</dt><dd>Reachable without crossing the busy doorway, and separated from the litter area.</dd></div>
+              <div><dt>Litter</dt><dd>In a quiet, accessible position away from eating and drinking.</dd></div>
+              <div><dt>Rest</dt><dd>A low-pressure place where household movement does not repeatedly interrupt settling.</dd></div>
+              <div><dt>Hide</dt><dd>Private and defensible, with Milo able to enter and leave without being retrieved.</dd></div>
+              <div><dt>Carrier</dt><dd>Open and available as an ordinary familiar object, rather than stored until the next vet trip.</dd></div>
+            </dl>
+            <p>
+              The course also recommends expanding access to the rest of the home gradually. This
+              is informed guidance drawn from the environmental principles of familiarity,
+              predictability, and gradual introduction; it is a <strong>synthesis</strong>, not a
+              room-by-room rule quoted directly from a guideline. Watch how Milo uses the first
+              territory and open the next area deliberately instead of treating the whole house as
+              one immediate test.
+            </p>
+            <p class="claim-list">CH1-03 · CH1-04 · Direct evidence · CH1-06 · Synthesis</p>
+          </div>
         </section>
 
-        <section class="evidence-section">
-          <header><span>04</span><div><p>Protect choice</p><h3>Low pressure is active care</h3></div></header>
-          <p>
-            Do not chase, pick up, force petting, or manufacture an introduction. Quietly maintain
-            the room and let Milo initiate approach and end contact. Space still includes food,
-            water, litter, shelter, and observation.
-          </p>
-          <p class="claim-list">CH1-05 · Direct evidence</p>
+        <section class="learning-thread" aria-labelledby="learning-contact">
+          <div class="learning-thread__marker"><span>04</span><p>Protect choice</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-contact">Low pressure still contains care</h3>
+            <p>
+              Let Milo initiate an approach and end contact. Do not chase, retrieve, pick up, or
+              force petting because the first meeting feels overdue. The same rule applies to other
+              people. A calm visitor can still be one demand too many on the first evening.
+            </p>
+            <p>
+              “Leave her alone” becomes poor guidance when it means removing attention to food,
+              water, litter, or change. Low pressure is active: enter quietly when needed, maintain
+              the resources, notice what has changed, and leave without turning every visit into an
+              attempt at contact. Milo controls social distance; the owner remains responsible for
+              the room.
+            </p>
+            <p class="claim-list">CH1-05 · Direct evidence</p>
+
+            <div class="transfer-question">
+              <p class="section-kicker">Transfer case · first evening</p>
+              <p>Three friends ask to visit. They promise to sit quietly and “just have a look.” The offer is gentle; the timing is still yours to judge.</p>
+              <JudgementQuestion
+                id="visitors-transfer"
+                phase="transfer"
+                prompt="What plan best protects Milo's first evening without turning caution into permanent isolation?"
+                options={[
+                  { id: "a", text: "Invite them for a short quiet visit so Milo begins getting used to people.", feedback: "The quiet conditions sound considerate, but the visit still adds an avoidable social demand before Milo has established security in the room." },
+                  { id: "b", text: "Ask them to wait; make a later visit calm and let Milo choose whether to appear or approach.", feedback: "This protects the first evening while keeping future contact possible, gradual, and directed by Milo's willingness to appear or approach." },
+                  { id: "c", text: "Cancel all future visits until Milo is completely comfortable with every part of the home.", feedback: "This begins with caution but turns temporary low-pressure care into indefinite avoidance. Later, gradual and cat-directed contact can still be appropriate." },
+                ]}
+                bestOption="b"
+              />
+            </div>
+          </div>
         </section>
 
-        <section class="evidence-section">
-          <header><span>05</span><div><p>After arrival</p><h3>Looking well is not medical clearance</h3></div></header>
-          <p>
-            Arrange a veterinary examination as soon as possible for a newly adopted kitten with
-            unknown health history, including FeLV/FIV screening and parasite checks. Keep her
-            separate from resident cats until that screening is done.
-          </p>
-          <p class="claim-list">CH1-08 · Direct evidence</p>
+        <section class="learning-thread" aria-labelledby="learning-vet">
+          <div class="learning-thread__marker"><span>05</span><p>After arrival</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-vet">Looking well is not medical clearance</h3>
+            <p>
+              Milo may eat, explore, and look healthy before an owner knows her health history.
+              Those observations are useful, but they cannot clear risks that are not visible. A
+              newly adopted cat or kitten with an unknown history should be examined by a
+              veterinarian as soon as possible after arrival, including screening for FeLV and FIV
+              and checks for internal and external parasites.
+            </p>
+            <p>
+              If another cat already lives in the home, keep Milo separate until that screening is
+              done. The safe room now has two jobs: it reduces pressure on Milo and maintains a
+              practical boundary while veterinary screening is arranged. The owner is not being
+              asked to identify an infection. The decision is to book the examination and preserve
+              separation until professional screening addresses it.
+            </p>
+            <aside class="principle-note"><strong>Make the appointment concrete</strong><p>“Soon” is easy to postpone. Put the veterinary examination and screening on the first-arrival task list.</p></aside>
+            <p class="claim-list">CH1-08 · Direct evidence</p>
+          </div>
         </section>
 
-        <section class="evidence-section">
-          <header><span>06</span><div><p>Start the baseline</p><h3>Day one belongs in the log</h3></div></header>
-          <p>
-            Note roughly how much Milo ate and drank, litter use, energy, and whether she hid or
-            explored. This course recommends the habit as a practical bridge to later decisions;
-            it is not a diagnostic tool or a substitute for professional advice.
-          </p>
-          <p class="claim-list">CH1-09 · Course synthesis</p>
+        <section class="learning-thread" aria-labelledby="learning-log">
+          <div class="learning-thread__marker"><span>06</span><p>Start the baseline</p></div>
+          <div class="reading-prose">
+            <h3 id="learning-log">Day one belongs in the record</h3>
+            <p>
+              Write down roughly how much Milo ate and drank, whether and how the litter tray was
+              used, her energy level, and whether she hid or explored. Keep the entry plain. “Used
+              the tray once” is an observation. “Was upset with me” is an interpretation the room
+              cannot confirm.
+            </p>
+            <p>
+              This daily habit is a course recommendation: a practical bridge from arrival to the
+              later question, “Is this different for Milo?” It is not a diagnostic method and it
+              does not replace a veterinarian. Its value is personal and cumulative. A dated line
+              written tonight gives tomorrow something real to be compared with.
+            </p>
+            <p>
+              The same notebook will return across Milo's life. Later it can hold body-condition
+              observations, dental and facial signs, and changes that matter in old age. For now,
+              the first page needs only what you could see, hear, count, or reasonably estimate.
+            </p>
+            <p class="claim-list">CH1-09 · Course synthesis</p>
+          </div>
         </section>
       </div>
 
@@ -232,10 +347,38 @@ const carePlan = [
       </aside>
     </section>
 
+    <section id="guided-reading" class="consultation-section consultation-section--reading" aria-labelledby="guided-reading-heading">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="section-kicker">Guided reading · about 40 minutes</p>
+          <h2 id="guided-reading-heading">Read the guidance with a room in mind</h2>
+        </div>
+        <p>Use the source material to test the decisions above. You are reading for owner action, not for a list of terms.</p>
+      </div>
+      <ol class="reading-list">
+        <li>
+          <div><span>15 min</span><h3>Environmental needs</h3></div>
+          <p>Read the safe-place, separated-resource, and human-interaction sections in the AAFP/ISFM guidance. Sketch Milo's room from above and mark where each principle becomes a physical decision.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/">Open the AAFP/ISFM guidance</a>
+        </li>
+        <li>
+          <div><span>10 min</span><h3>Household hazards</h3></div>
+          <p>Read the ASPCA material for the three registered Chapter 1 hazards. For each one, write the action that must happen before arrival rather than the symptom you might watch for afterwards.</p>
+          <a href="https://www.aspca.org/news/these-harmful-feline-hazards-could-be-your-home">Open the ASPCA hazard guidance</a>
+        </li>
+        <li>
+          <div><span>15 min</span><h3>The first veterinary visit</h3></div>
+          <p>Read Cornell's new-cat guidance and locate the reason a healthy appearance is not the same as screening. Write the owner action and the boundary that protects a resident cat while the visit is arranged.</p>
+          <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/choosing-and-caring-your-new-cat">Open the Cornell Feline Health Center guidance</a>
+        </li>
+      </ol>
+    </section>
+
     <section id="practice" class="consultation-section consultation-section--tint" aria-labelledby="practice-heading">
       <div class="section-heading">
         <p class="section-kicker">Practice and compare</p>
-        <h2 id="practice-heading">Two rooms can contain the same supplies and feel very different</h2>
+        <h2 id="practice-heading">Now prepare a room you have not seen before</h2>
+        <p>The exercise keeps the three tasks together: remove hazards, place resources, then write the first observation entry.</p>
       </div>
       <div class="comparison-grid">
         <article>
@@ -262,18 +405,7 @@ const carePlan = [
         </article>
       </div>
 
-      <div class="practice-brief">
-        <div>
-          <p class="section-kicker">Full applied activity · about 90 minutes</p>
-          <h3>Prepare an unfamiliar home</h3>
-        </div>
-        <ol>
-          <li>Flag at least three plausible hazards from a mixed set of safe and unsafe objects.</li>
-          <li>Place food, water, litter, rest, and hiding resources while respecting separation.</li>
-          <li>Write a realistic first-day observation entry without turning it into a diagnosis.</li>
-        </ol>
-        <p>This MVP preserves the approved activity brief; the interactive arrangement tool is a later implementation slice.</p>
-      </div>
+      <ArrivalPractice />
     </section>
 
     <section id="return" class="consultation-section" aria-labelledby="return-heading">
@@ -281,8 +413,10 @@ const carePlan = [
         <p class="section-kicker">Return to Milo</p>
         <h2 id="return-heading">The room is quiet. Milo is still under the bed.</h2>
         <p>
-          Nothing dramatic has happened. That does not mean care has stopped: the hazards were
-          removed, resources remain accessible, and Milo still controls the distance.
+          By evening, the food bowl shows a small disturbance. The litter tray has been used once.
+          Milo is still mostly hidden, but now she watches from the edge of cover. Nothing dramatic
+          has happened. Care has: hazards were removed, resources stayed accessible, the veterinary
+          visit is being arranged, and Milo still controls the distance.
         </p>
       </div>
       <ScenarioScene phase="return" />
@@ -315,7 +449,7 @@ const carePlan = [
 
     <section class="workload-map" aria-labelledby="workload-heading">
       <div>
-        <p class="section-kicker">Learning depth retained</p>
+        <p class="section-kicker">Chapter workload</p>
         <h2 id="workload-heading">This consultation maps to about 4 hours 10 minutes</h2>
       </div>
       <dl>
@@ -326,8 +460,9 @@ const carePlan = [
         <div><dt>Check and review</dt><dd>~25 min</dd></div>
       </dl>
       <p>
-        The MVP exposes the full approved learning map. Guided readings and the room-arrangement
-        tool remain planned content work; they have not been replaced by this shorter on-screen summary.
+        The consultation combines reading, evidence tracing, three judgement points, a complete
+        room-preparation activity, a saved observation entry, and formative review. The time is a
+        learning estimate, not a timer; careful comparison and revision are part of the work.
       </p>
     </section>
   </ConsultationLayout>
