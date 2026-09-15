@@ -63,7 +63,7 @@ describe("Milo course shell", () => {
       readFileSync(resolve("src/content/chapter-checks/chapter-01.json"), "utf8"),
     ) as CheckData;
     expect(check.formative).toBe(true);
-    expect(check.status).not.toBe("prototype");
+    expect(check.status).toBe("final");
     expect(check.questions).toHaveLength(7);
     expect(check.questions.filter((question) => question.type === "core-concept")).toHaveLength(4);
     expect(check.questions.filter((question) => question.type === "scenario")).toHaveLength(2);
@@ -86,5 +86,12 @@ describe("Milo course shell", () => {
     for (let claim = 1; claim <= 9; claim += 1) {
       expect(page).toContain(`CH1-${String(claim).padStart(2, "0")}`);
     }
+  });
+
+  it("keeps the formative retry path explicit and local-only", () => {
+    const component = readFileSync(resolve("src/components/ChapterCheck.astro"), "utf8");
+    expect(component).toContain('retry.addEventListener("click"');
+    expect(component).toContain("form.reset()");
+    expect(component).toContain("localStorage.removeItem(key)");
   });
 });

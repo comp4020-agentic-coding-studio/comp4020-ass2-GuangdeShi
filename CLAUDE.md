@@ -563,7 +563,9 @@ content-first-then-form principle (§9, §10).
 ## 23. Approved presentation form and development boundary
 
 **Human decision gate passed (2026-09-15).** The primary form/experience
-direction is **Momo's Life — Interactive Home + Care Consultations**. This is
+direction was approved as **Momo's Life — Interactive Home + Care
+Consultations**. The learner-facing cat was subsequently renamed **Milo**;
+this naming change does not alter the approved character or form. This is
 no longer a proposal. Implementation may proceed within this direction,
 subject to the curriculum, evidence, voice, starter, accessibility, and
 responsive constraints elsewhere in this harness. The decision record is
@@ -602,7 +604,7 @@ scenarios, and factual scope.
 **Owner-level scope.** The consultant helps the learner observe, recognise,
 interpret, make safe owner-level decisions, and know when to seek professional
 help. The interface must never imply that the learner is training to diagnose,
-prescribe, or provide veterinary treatment. Momo is observed through behaviour
+prescribe, or provide veterinary treatment. Milo is observed through behaviour
 and evidence; she is not given human dialogue or an invented interior life.
 
 **Chapter Checks.** Each chapter ends with a formative check of approximately
@@ -677,10 +679,13 @@ VOICE:                    docs/VOICE.md established — see §22. One
                           (docs/process/voice-sample-chapter-05.md);
                           full twelve-chapter voice pass NOT yet run.
 ASSESSMENTS:              NOT DESIGNED
-FORM / EXPERIENCE:        HUMAN-APPROVED — Momo's Life: Interactive Home +
+FORM / EXPERIENCE:        HUMAN-APPROVED — Milo's Life: Interactive Home +
                           Care Consultations + formative Chapter Checks;
-                          see §23 and docs/LESSON_SYSTEM.md
-IMPLEMENTATION:           NOT STARTED — final CSS/assets remain undesigned
+                          approved under the working name Momo; see §23 and
+                          docs/LESSON_SYSTEM.md
+IMPLEMENTATION:           Chapter 1 FINAL learner-facing reference; Chapters
+                          2-12 not implemented. See
+                          docs/process/chapter-01-production.md
 ```
 
 Topic, thesis and transformation are approved as a *working* direction only.

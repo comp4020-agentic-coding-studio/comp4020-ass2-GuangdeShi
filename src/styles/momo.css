@@ -19,6 +19,13 @@
     padding: 0;
   }
 
+  .at-footer-theme-toggle {
+    display: inline-grid;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    place-items: center;
+  }
+
   .momo-main :is(h1, h2, h3, p) {
     letter-spacing: 0;
   }

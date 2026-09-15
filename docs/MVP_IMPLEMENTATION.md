@@ -10,8 +10,8 @@ The validated MVP consists of three public routes:
 
 - `/` — the Interactive Home and all twelve data-generated chapter entrances;
 - `/chapters/` — the semantic, linear course journey and non-visual fallback;
-- `/chapters/the-first-72-hours/` — the Chapter 1 Care Consultation vertical
-  slice.
+- `/chapters/the-first-72-hours/` — the final learner-facing Chapter 1 Care
+  Consultation and production reference for later chapters.
 
 Only Chapter 1 is open in this slice. Chapters 2–12 remain represented in the
 shared course data and on both navigation surfaces, but must not lead to empty
@@ -65,10 +65,11 @@ Scenario -> Observation -> Initial Judgement -> Core Learning
 -> Care Plan -> Chapter Check
 ```
 
-The Chapter 1 slice uses reusable components only where behaviour or continuity
+The Chapter 1 page uses reusable components only where behaviour or continuity
 justifies them: the consultation shell, scenario scene, judgement question,
-Care Plan, and Chapter Check. The teaching sections remain ordinary semantic
-HTML so later chapters are not forced into a brittle screen template.
+applied arrival practice, Care Plan, and Chapter Check. The teaching sections
+remain ordinary semantic HTML so later chapters are not forced into a brittle
+screen template.
 
 ## Chapter Check schema
 
@@ -105,10 +106,9 @@ native buttons. Reduced-motion preference disables non-essential transitions.
 - The approved form was recorded under the working name “Momo's Life.” The
   learner-facing cat was renamed Milo during Chapter 1 production; this naming
   change does not alter the approved character, lifecycle, or course structure.
-- Chapter 1 is visibly marked as a structural prototype. Its mapped teaching
-  claims remain subject to the voice pass, narrative continuity check,
-  humanization pass, evidence-preservation check, and voice audit before the
-  learner-facing prose can be called final.
-- The full approved 4+ hour chapter plan remains visible in the activity and
-  workload map. The MVP summary does not replace the pending guided readings or
-  applied room-arrangement activity.
+- Chapter 1 passed its narrative, voice, humanization, evidence-preservation,
+  and final voice audits on 2026-09-15. The audit is recorded in
+  `docs/process/chapter-01-production.md`.
+- The approved 4+ hour chapter depth is implemented through long-form teaching,
+  guided source reading, judgement and transfer work, the complete applied
+  activity, Care Plan, and formative Chapter Check.

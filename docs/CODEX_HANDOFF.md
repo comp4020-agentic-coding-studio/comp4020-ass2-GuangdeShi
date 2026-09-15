@@ -65,7 +65,7 @@ VOICE DESIGN         — voice system + one representative sample + audit       
        |
 PRESENTATION FORM    — Interactive Home + Care Consultations approved           [APPROVED]
        |
-MVP IMPLEMENTATION  — Astro/vanilla-JS implementation                           [CH1 VOICE-GATED CANDIDATE]
+MVP IMPLEMENTATION  — Astro/vanilla-JS implementation                           [CH1 FINAL]
 ```
 
 See `docs/process/voice-design-transition.md` for the reasoning behind
@@ -131,14 +131,19 @@ merely asserted.
   unfinished learner-facing areas. Current learner-facing routes now call the
   cat Milo; existing `momo-*` CSS and local-storage identifiers remain internal
   compatibility keys so the rename does not discard saved learner state.
-- **Chapter 1 production checkpoint: long-form candidate** — the former six-card
+- **Chapter 1 production checkpoint: final long-form chapter** — the former six-card
   core summary is now a 3,000-word editorial consultation covering every
   `CH1-01`–`CH1-09` claim. The guided-reading sequence and 90-minute applied
   activity are implemented rather than deferred: learners inspect a mixed
   hazard set, place five resources, and save a first observation log. A third
   transfer judgement uses its own local key and reveals option-specific
-  reasoning. `pnpm check` passes 18 built pages and 8 tests. The Chapter Check
-  status is `voice-gated` pending final browser and interaction inspection.
+  reasoning. The narrative, storyteller, voice, humanizer,
+  evidence-preservation, and final voice audits passed and are recorded in
+  `docs/process/chapter-01-production.md`. Browser inspection passed at
+  `1920x1080` and `390x844`, including responsive flow, visible keyboard focus,
+  interaction feedback, reload/resize restoration, and console checks.
+  `pnpm check` passes 18 built pages and 9 tests. The Chapter Check status is
+  `final`.
 - **Git/process checkpoints** — a readable commit history from the
   project's initial evidence-foundation stage through the voice-design
   stage (see `git log --oneline`), each meaningful stage committed and
@@ -146,16 +151,16 @@ merely asserted.
 
 ### Not yet started / not complete
 
-- **Full voice pass across all chapters.** Chapter 1 now has a learner-facing
-  voice-gated candidate, and Chapter 5 has a partial voice sample. Chapters 2–12's actual
+- **Full voice pass across all chapters.** Chapter 1 has passed its learner-facing
+  Voice Gate, and Chapter 5 has a partial voice sample. Chapters 2–12's actual
   chapter files (`docs/chapters/chapter-XX.md`) remain in their original
   planning-document style (Concrete Knowledge Map, claim bullets, Slide/
   Beat Plan tables) — this is deliberate; see `CLAUDE.md` §22's process
   boundary and the explicit stop point the prior session was given.
 - **Chapters 2–12 presentation scale-out.** Their entrances and lifecycle
   context exist in shared data, but only Chapter 1 has an implemented Care
-  Consultation. Do not scale the pattern until the Chapter 1 system and prose
-  pass their remaining human and Voice gates.
+  Consultation. Do not scale the pattern until the human accepts Chapter 1 as
+  the production reference.
 - **Cat Run adaptation.** The approved boundary is now documented: borrow the
   room/object/input separation as a reference, but not runner, score, or
   decaying pet-stat mechanics. No third-party code or asset has been copied;
@@ -544,20 +549,14 @@ going through the escalation path in §4:
 
 ---
 
-## 9. Next-step recommendation (updated for Chapter 1 production)
+## 9. Next-step recommendation (after Chapter 1 production)
 
-The Human Design Gate has approved the form, and the long-form Chapter 1
-candidate exists. The next planned phase is:
+The Human Design Gate has approved the form, and Chapter 1 is now the final
+learner-facing implementation. The next action is:
 
-1. Inspect Chapter 1 in a real browser at `1920x1080` and `390x844`, including
-   top, reading middle, activity, Care Plan, Chapter Check, and bottom.
-2. Exercise keyboard focus, judgement feedback, activity review/reset,
-   Chapter Check feedback/retry, resize, and local restoration.
-3. Implement using the **existing Astro/SlopU starter** (`README.md`,
-   `astro.config.ts`, `src/`) — do not replace the stack, rename or
-   remove the required core content collections (`sessions`,
-   `assessments`, `lectures`, `people`), or otherwise violate the
-   Starter contract (`CLAUDE.md` §8) without explicit human approval.
-4. Record the evidence-preservation and Voice Gate audit, change the Chapter
-   Check status from `voice-gated` to `final` only if those checks pass, then run
-   `pnpm check` again.
+1. Wait for the human to inspect and accept Chapter 1 as the production
+   reference.
+2. Do not implement Chapters 2-12 before that acceptance.
+3. After acceptance, plan the next narrow scale-out stage from Chapter 1's
+   semantic consultation grammar, not by cloning its exact section count or
+   prose rhythm.
