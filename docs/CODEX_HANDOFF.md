@@ -60,7 +60,7 @@ VOICE DESIGN         — voice system + one representative sample + audit       
        |
 PRESENTATION FORM    — Interactive Home + Care Consultations approved           [APPROVED]
        |
-MVP IMPLEMENTATION  — Astro/vanilla-JS implementation                           [NOT STARTED]
+MVP IMPLEMENTATION  — Astro/vanilla-JS implementation                           [CH1 VERTICAL SLICE COMPLETE]
 ```
 
 See `docs/process/voice-design-transition.md` for the reasoning behind
@@ -114,6 +114,11 @@ merely asserted.
   Checks. The binding development boundary is in `CLAUDE.md` §23, the reusable
   grammar is in `docs/LESSON_SYSTEM.md`, and the decision record is
   `docs/process/form-design-decision.md`.
+- **MVP vertical slice** — the SVG-first Interactive Home, semantic
+  `/chapters/` journey, and Chapter 1 Care Consultation are implemented with
+  Astro and vanilla JavaScript. The formative Chapter Check is schema-validated
+  and restores local progress. See `docs/MVP_IMPLEMENTATION.md` for the stable
+  contracts and commits `3f6a435` and `40914bb` for implementation evidence.
 - **Git/process checkpoints** — a readable commit history from the
   project's initial evidence-foundation stage through the voice-design
   stage (see `git log --oneline`), each meaningful stage committed and
@@ -127,15 +132,14 @@ merely asserted.
   planning-document style (Concrete Knowledge Map, claim bullets, Slide/
   Beat Plan tables) — this is deliberate; see `CLAUDE.md` §22's process
   boundary and the explicit stop point the prior session was given.
-- **Presentation implementation.** The major form is approved, but no
-  consultation shell, Interactive Home, production CSS, or chapter page has
-  been implemented yet.
+- **Chapters 2–12 presentation scale-out.** Their entrances and lifecycle
+  context exist in shared data, but only Chapter 1 has an implemented Care
+  Consultation. Do not scale the pattern until the Chapter 1 system and prose
+  pass their remaining human and Voice gates.
 - **Cat Run adaptation.** The approved boundary is now documented: borrow the
   room/object/input separation as a reference, but not runner, score, or
   decaying pet-stat mechanics. No third-party code or asset has been copied;
   licence verification is still required before any such reuse.
-- **UI implementation.** No pages beyond the starter's placeholder content
-  and collections have been built for the course itself.
 - **Slides.** `docs/LESSON_SYSTEM.md` reserves a slide-type vocabulary and
   a Momo motion language, but no slide has been implemented.
 - **Visual assets.** `docs/ASSETS.md` is a reservation/licence-audit
@@ -144,8 +148,10 @@ merely asserted.
   actually been downloaded or created.**
 - **Animation.** Reserved conceptually (`docs/LESSON_SYSTEM.md`'s Momo
   motion language table) but not implemented.
-- **Final responsive implementation/testing.** No UI exists yet to test
-  at the two required marker viewports (1920×1080, 390×844).
+- **Final full-site responsive implementation/testing.** The three-route MVP
+  has been checked at both marker viewports (1920×1080 and 390×844), but the
+  future Chapters 2–12 pages and final course-wide content still require their
+  own checks.
 - **Final `PROCESS.md`.** The root `PROCESS.md` is still the unfilled
   template shipped by the starter (verify with
   `grep -n TEMPLATE PROCESS.md` — it still contains the template

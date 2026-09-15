@@ -89,3 +89,34 @@ solve details inside this system rather than reopening alternative visual
 directions. Any proposal to replace the Interactive Home, remove the Care
 Consultation arc, turn Chapter Checks into formal weighted assessment, or
 reduce chapter depth requires a new human decision gate.
+
+## MVP implementation evidence
+
+The first implementation slice preserves the approved form in two independent
+navigation modes. Commit
+[`3f6a435`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/3f6a435)
+adds the SVG-first Interactive Home, five lifecycle states, twelve generated
+chapter entrances, and the semantic `/chapters/` journey. The same data drives
+the visual and linear routes, so changing a chapter entrance cannot silently
+leave the fallback behind.
+
+Commit
+[`40914bb`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/40914bb)
+implements the Chapter 1 vertical slice through the complete consultation arc.
+It adds an Astro-validated seven-question formative check with feedback for
+every option and Claim IDs for every question. Initial and revised judgements,
+observations, and check completion are local interaction state only; none
+changes formal assessment weight.
+
+The implementation was checked at `1920x1080` and `390x844`. Browser inspection
+confirmed no horizontal overflow, 46-pixel mobile lifecycle controls, retained
+lifecycle state after resize, visible keyboard focus, and submission/restoration
+of all 21 Chapter Check option explanations. `pnpm check` also verifies the
+three MVP routes, twelve chapter records, lifecycle vocabulary, preserved core
+collections and generated API types, Chapter Check structure, accessibility,
+base-path links, and broken links.
+
+No Cat Run material was copied. Chapter 1 remains visibly labelled as a
+structural prototype because the learner-facing prose has not passed the Voice
+Gate; the UI maps all `CH1-01`–`CH1-09` teaching clusters without presenting
+that wording as final copy.
