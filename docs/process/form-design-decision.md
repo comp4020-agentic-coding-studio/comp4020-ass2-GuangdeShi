@@ -120,3 +120,11 @@ No Cat Run material was copied. Chapter 1 remains visibly labelled as a
 structural prototype because the learner-facing prose has not passed the Voice
 Gate; the UI maps all `CH1-01`–`CH1-09` teaching clusters without presenting
 that wording as final copy.
+
+## Subsequent naming note
+
+The Human Design Gate above was approved under the working name **Momo's
+Life**. During Chapter 1 production, the learner-facing cat was renamed
+**Milo** for the Australian/English course context. Momo and Milo refer to the
+same continuing course character; the original decision language remains here
+as historical process evidence.

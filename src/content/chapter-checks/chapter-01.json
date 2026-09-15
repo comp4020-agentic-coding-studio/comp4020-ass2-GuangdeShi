@@ -7,12 +7,12 @@
     {
       "id": "ch01-q01",
       "type": "core-concept",
-      "prompt": "Momo stays under the bed during her first hour at home. Which response best protects her sense of control?",
+      "prompt": "Milo stays under the bed during her first hour at home. Which response best protects her sense of control?",
       "options": [
         {
           "id": "a",
           "text": "Reach in carefully and place her beside the food so she learns where everything is.",
-          "feedback": "This can feel like useful orientation, but it removes the hiding place and forces contact at the moment Momo is using distance to cope."
+          "feedback": "This can feel like useful orientation, but it removes the hiding place and forces contact at the moment Milo is using distance to cope."
         },
         {
           "id": "b",
@@ -31,21 +31,21 @@
     {
       "id": "ch01-q02",
       "type": "core-concept",
-      "prompt": "A vase contains true lilies in a room Momo cannot yet reach. What is the safest preparation?",
+      "prompt": "A vase contains true lilies in a room Milo cannot yet reach. What is the safest preparation?",
       "options": [
         {
           "id": "a",
-          "text": "Move the vase to a high shelf before Momo begins exploring the whole home.",
+          "text": "Move the vase to a high shelf before Milo begins exploring the whole home.",
           "feedback": "Height lowers access but does not remove fallen pollen, petals, leaves, or the possibility that the vase is knocked down."
         },
         {
           "id": "b",
-          "text": "Remove the true lilies from the home entirely before Momo has access to the room.",
+          "text": "Remove the true lilies from the home entirely before Milo has access to the room.",
           "feedback": "This is the best judgement because true lilies can cause life-threatening kidney injury from very small exposures, including pollen."
         },
         {
           "id": "c",
-          "text": "Keep the vase for now and watch Momo closely for vomiting if she enters the room.",
+          "text": "Keep the vase for now and watch Milo closely for vomiting if she enters the room.",
           "feedback": "Observation after possible exposure is not hazard-proofing. Waiting for visible signs risks delaying professional help after a serious exposure."
         }
       ],
@@ -69,7 +69,7 @@
         },
         {
           "id": "c",
-          "text": "Distribute resources across the full house immediately so Momo can select her preferred locations.",
+          "text": "Distribute resources across the full house immediately so Milo can select her preferred locations.",
           "feedback": "Choice matters later, but making a frightened newcomer search a large unfamiliar territory can add pressure before a safe baseline exists."
         }
       ],
@@ -79,7 +79,7 @@
     {
       "id": "ch01-q04",
       "type": "core-concept",
-      "prompt": "After Momo leaves the carrier, what should happen to it during the settling-in period?",
+      "prompt": "After Milo leaves the carrier, what should happen to it during the settling-in period?",
       "options": [
         {
           "id": "a",
@@ -93,7 +93,7 @@
         },
         {
           "id": "c",
-          "text": "Close Momo inside it for short periods each night so familiarity develops quickly.",
+          "text": "Close Milo inside it for short periods each night so familiarity develops quickly.",
           "feedback": "Repeated exposure may sound efficient, but confinement removes choice and does not follow gradual, low-pressure familiarisation."
         }
       ],
@@ -103,21 +103,21 @@
     {
       "id": "ch01-q05",
       "type": "scenario",
-      "prompt": "Several friends want to meet Momo on her first evening. Which plan best applies the arrival principles?",
+      "prompt": "Several friends want to meet Milo on her first evening. Which plan best applies the arrival principles?",
       "options": [
         {
           "id": "a",
-          "text": "Ask them to wait; later visits should be calm, with Momo free to stay hidden or approach.",
+          "text": "Ask them to wait; later visits should be calm, with Milo free to stay hidden or approach.",
           "feedback": "This is the best judgement. It delays an avoidable demand now without turning temporary settling-in guidance into permanent isolation."
         },
         {
           "id": "b",
-          "text": "Allow a short, quiet visit tonight so Momo begins learning that visitors are safe.",
-          "feedback": "The calm conditions sound reasonable, but the timing still adds a social demand before Momo has established security in the room."
+          "text": "Allow a short, quiet visit tonight so Milo begins learning that visitors are safe.",
+          "feedback": "The calm conditions sound reasonable, but the timing still adds a social demand before Milo has established security in the room."
         },
         {
           "id": "c",
-          "text": "Cancel visits indefinitely because unfamiliar people will always undermine Momo's safe space.",
+          "text": "Cancel visits indefinitely because unfamiliar people will always undermine Milo's safe space.",
           "feedback": "This protects the first evening but overextends the principle. Gradual, cat-directed exposure is different from avoiding all future change."
         }
       ],
@@ -127,16 +127,16 @@
     {
       "id": "ch01-q06",
       "type": "scenario",
-      "prompt": "Momo looks healthy, and a resident cat waits outside the room. What is the safest next step?",
+      "prompt": "Milo looks healthy, and a resident cat waits outside the room. What is the safest next step?",
       "options": [
         {
           "id": "a",
-          "text": "Allow a supervised introduction because Momo has no visible symptoms.",
+          "text": "Allow a supervised introduction because Milo has no visible symptoms.",
           "feedback": "A calm appearance is useful observation, but it cannot rule out FeLV, FIV, or parasites that may not be visible to an owner."
         },
         {
           "id": "b",
-          "text": "Keep them separate and arrange prompt veterinary examination and screening for Momo.",
+          "text": "Keep them separate and arrange prompt veterinary examination and screening for Milo.",
           "feedback": "This is the best judgement: visible wellbeing is not medical clearance, and separation protects both cats while screening is arranged."
         },
         {
@@ -151,12 +151,12 @@
     {
       "id": "ch01-q07",
       "type": "synthesis",
-      "prompt": "On day one Momo eats only a little, uses the litter tray once, and remains mostly hidden. What is the most useful owner-level response?",
+      "prompt": "On day one Milo eats only a little, uses the litter tray once, and remains mostly hidden. What is the most useful owner-level response?",
       "options": [
         {
           "id": "a",
           "text": "Treat the single entry as proof of illness and decide immediately that hiding is abnormal.",
-          "feedback": "The observations matter, but one entry does not establish Momo's personal pattern or explain the cause; owner observation should inform, not impersonate diagnosis."
+          "feedback": "The observations matter, but one entry does not establish Milo's personal pattern or explain the cause; owner observation should inform, not impersonate diagnosis."
         },
         {
           "id": "b",
@@ -165,7 +165,7 @@
         },
         {
           "id": "c",
-          "text": "Wait until Momo is fully settled before logging anything because arrival behaviour is not representative.",
+          "text": "Wait until Milo is fully settled before logging anything because arrival behaviour is not representative.",
           "feedback": "Arrival is unusual, but that is precisely why dated observations are useful. Delaying the log discards the starting point later comparisons need."
         }
       ],

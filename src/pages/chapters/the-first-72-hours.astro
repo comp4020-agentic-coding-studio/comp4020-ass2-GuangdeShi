@@ -21,7 +21,7 @@ const steps = [
   { id: "initial-judgement", label: "Initial judgement" },
   { id: "core-learning", label: "Core learning" },
   { id: "practice", label: "Practice" },
-  { id: "return", label: "Return to Momo" },
+  { id: "return", label: "Return to Milo" },
   { id: "care-plan", label: "Care plan" },
   { id: "chapter-check", label: "Chapter Check" },
 ];
@@ -58,17 +58,17 @@ const carePlan = [
     claimIds: ["CH1-04"],
   },
   {
-    action: "Reduce demands and follow Momo's pace",
+    action: "Reduce demands and follow Milo's pace",
     reason: "Do not chase, retrieve, pick up, or force contact; expand the territory gradually as she settles.",
     claimIds: ["CH1-01", "CH1-05", "CH1-06"],
   },
   {
     action: "Arrange prompt veterinary screening",
-    reason: "Keep Momo separate from resident cats until veterinary examination, FeLV/FIV screening, and parasite checks are addressed.",
+    reason: "Keep Milo separate from resident cats until veterinary examination, FeLV/FIV screening, and parasite checks are addressed.",
     claimIds: ["CH1-08"],
   },
   {
-    action: "Start Momo's daily observation log",
+    action: "Start Milo's daily observation log",
     reason: "Record eating, drinking, litter use, energy, hiding, and exploration so later change has a personal baseline.",
     claimIds: ["CH1-09"],
   },
@@ -90,9 +90,9 @@ const carePlan = [
     <section id="scenario" class="consultation-section consultation-section--opening" aria-labelledby="scenario-heading">
       <div class="section-heading">
         <p class="section-kicker">Scenario</p>
-        <h2 id="scenario-heading">Momo is home. Then she disappears.</h2>
+        <h2 id="scenario-heading">Milo is home. Then she disappears.</h2>
         <p>
-          Momo is about ten weeks old. Within minutes of leaving the carrier in the spare room,
+          Milo is about ten weeks old. Within minutes of leaving the carrier in the spare room,
           she bolts under the bed. You can hear her, but you cannot see her.
         </p>
       </div>
@@ -126,7 +126,7 @@ const carePlan = [
         <summary>Compare with the visible evidence</summary>
         <ul>
           <li>The carrier door is open and the carrier is empty.</li>
-          <li>Momo moved under the bed within minutes of arrival.</li>
+          <li>Milo moved under the bed within minutes of arrival.</li>
           <li>She can be heard but is not currently visible.</li>
           <li>No evidence yet shows why she hid or what she will do next.</li>
         </ul>
@@ -142,7 +142,7 @@ const carePlan = [
       <JudgementQuestion
         id="arrival-initial"
         phase="initial"
-        prompt="Momo will not come out from under the bed. What should you do?"
+        prompt="Milo will not come out from under the bed. What should you do?"
         options={arrivalOptions}
         bestOption="b"
       />
@@ -175,7 +175,7 @@ const carePlan = [
           <header><span>02</span><div><p>Read the behaviour</p><h3>Hiding is a coping strategy</h3></div></header>
           <p>
             A new environment removes familiarity and control. A private, enclosed, defensible
-            place lets Momo reduce contact while she gathers information. Retrieving her solves the
+            place lets Milo reduce contact while she gathers information. Retrieving her solves the
             owner's discomfort, but removes the strategy she is using to cope.
           </p>
           <p class="claim-list">CH1-01 · CH1-02 · Direct evidence</p>
@@ -195,7 +195,7 @@ const carePlan = [
           <header><span>04</span><div><p>Protect choice</p><h3>Low pressure is active care</h3></div></header>
           <p>
             Do not chase, pick up, force petting, or manufacture an introduction. Quietly maintain
-            the room and let Momo initiate approach and end contact. Space still includes food,
+            the room and let Milo initiate approach and end contact. Space still includes food,
             water, litter, shelter, and observation.
           </p>
           <p class="claim-list">CH1-05 · Direct evidence</p>
@@ -214,7 +214,7 @@ const carePlan = [
         <section class="evidence-section">
           <header><span>06</span><div><p>Start the baseline</p><h3>Day one belongs in the log</h3></div></header>
           <p>
-            Note roughly how much Momo ate and drank, litter use, energy, and whether she hid or
+            Note roughly how much Milo ate and drank, litter use, energy, and whether she hid or
             explored. This course recommends the habit as a practical bridge to later decisions;
             it is not a diagnostic tool or a substitute for professional advice.
           </p>
@@ -256,7 +256,7 @@ const carePlan = [
             <li>Litter separated from food and water</li>
             <li>Carrier open beside another hiding option</li>
             <li>Quiet maintenance with no forced contact</li>
-            <li>Territory widened only as Momo settles</li>
+            <li>Territory widened only as Milo settles</li>
           </ul>
           <p>The difference is not the shopping list. It is how the room protects control.</p>
         </article>
@@ -278,11 +278,11 @@ const carePlan = [
 
     <section id="return" class="consultation-section" aria-labelledby="return-heading">
       <div class="section-heading">
-        <p class="section-kicker">Return to Momo</p>
-        <h2 id="return-heading">The room is quiet. Momo is still under the bed.</h2>
+        <p class="section-kicker">Return to Milo</p>
+        <h2 id="return-heading">The room is quiet. Milo is still under the bed.</h2>
         <p>
           Nothing dramatic has happened. That does not mean care has stopped: the hazards were
-          removed, resources remain accessible, and Momo still controls the distance.
+          removed, resources remain accessible, and Milo still controls the distance.
         </p>
       </div>
       <ScenarioScene phase="return" />
@@ -302,7 +302,7 @@ const carePlan = [
       <div class="section-heading section-heading--split">
         <div>
           <p class="section-kicker">Recommendation</p>
-          <h2 id="care-plan-heading">Momo's first-72-hours care plan</h2>
+          <h2 id="care-plan-heading">Milo's first-72-hours care plan</h2>
         </div>
         <p>Six owner-level actions, each attached to the reason it exists.</p>
       </div>

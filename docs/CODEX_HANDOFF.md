@@ -38,7 +38,7 @@ instruction-following owner -> observer -> interpreter -> adaptive lifelong care
 ```
 
 **Structure:** exactly twelve dated teaching weeks/chapters, grouped into
-four Parts of three chapters each, following one fictional cat, **Momo**,
+four Parts of three chapters each, following one fictional cat, **Milo**,
 from kitten to end-of-life:
 
 - **Part I — A New Life** (Chapters 1–3)
@@ -46,9 +46,14 @@ from kitten to end-of-life:
 - **Part III — Keep Her Well** (Chapters 7–9)
 - **Part IV — Change With Her** (Chapters 10–12)
 
-Full chapter-by-chapter detail (working titles, core questions, Momo's age
+Full chapter-by-chapter detail (working titles, core questions, Milo's age
 at each chapter, dependencies) is in `docs/CURRICULUM.md`'s Twelve-Chapter
 Curriculum Table — read that table before proposing any structural work.
+
+The Human Design Gate and earlier curriculum documents used the working name
+**Momo**. Chapter 1 production later changed only the learner-facing name to
+**Milo**. Both names refer to the same continuing character; historical process
+records retain the name used when each decision was made.
 
 **Current development stage.** The presentation/form gate was approved after
 this handoff was first written. The current sequence is:
@@ -119,6 +124,13 @@ merely asserted.
   Astro and vanilla JavaScript. The formative Chapter Check is schema-validated
   and restores local progress. See `docs/MVP_IMPLEMENTATION.md` for the stable
   contracts and commits `3f6a435` and `40914bb` for implementation evidence.
+- **Chapter 1 production checkpoint: audit and naming** — the production audit
+  retained the consultation shell, scenario, observation note, initial/revised
+  judgement, Care Plan, and seven-question formative check. It identified the
+  six core-learning summaries and 90-minute activity placeholder as the main
+  unfinished learner-facing areas. Current learner-facing routes now call the
+  cat Milo; existing `momo-*` CSS and local-storage identifiers remain internal
+  compatibility keys so the rename does not discard saved learner state.
 - **Git/process checkpoints** — a readable commit history from the
   project's initial evidence-foundation stage through the voice-design
   stage (see `git log --oneline`), each meaningful stage committed and
@@ -524,19 +536,19 @@ going through the escalation path in §4:
 
 ---
 
-## 9. Next-step recommendation (updated after Human Design Gate)
+## 9. Next-step recommendation (updated for Chapter 1 production)
 
-The Human Design Gate has now approved the form. The next planned phase is:
+The Human Design Gate has approved the form, and the structural MVP exists. The
+next planned phase is:
 
-1. Implement a narrow vertical slice of the approved Interactive Home and
-   Care Consultation system, following `CLAUDE.md` §23 and
-   `docs/LESSON_SYSTEM.md`.
-2. Run learner-facing prose through `CLAUDE.md` §22's voice and evidence
+1. Replace Chapter 1's summary copy and activity placeholder with the complete
+   long-form learner experience, without adding or changing claims.
+2. Run the resulting learner-facing prose through `CLAUDE.md` §22's voice and evidence
    preservation workflow before treating it as production copy.
 3. Implement using the **existing Astro/SlopU starter** (`README.md`,
    `astro.config.ts`, `src/`) — do not replace the stack, rename or
    remove the required core content collections (`sessions`,
    `assessments`, `lectures`, `people`), or otherwise violate the
    Starter contract (`CLAUDE.md` §8) without explicit human approval.
-4. Verify the vertical slice at 1920x1080 and 390x844, including keyboard,
+4. Verify the final Chapter 1 page at 1920x1080 and 390x844, including keyboard,
    focus, semantic fallback, resize persistence, and reduced motion.

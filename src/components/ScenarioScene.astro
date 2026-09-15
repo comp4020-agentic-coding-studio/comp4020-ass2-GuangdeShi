@@ -8,10 +8,10 @@ const { phase = "arrival" } = Astro.props;
 
 <figure class:list={["scenario-scene", `scenario-scene--${phase}`]}>
   <svg viewBox="0 0 960 500" role="img" aria-labelledby={`scenario-title-${phase} scenario-desc-${phase}`}>
-    <title id={`scenario-title-${phase}`}>Momo's safe room during her first day</title>
+    <title id={`scenario-title-${phase}`}>Milo's safe room during her first day</title>
     <desc id={`scenario-desc-${phase}`}>
       A small room with separated food, water, and litter resources, an open carrier, a hiding box,
-      and Momo partly visible beneath the bed.
+      and Milo partly visible beneath the bed.
     </desc>
     <rect width="960" height="500" fill="#f4ead7" />
     <rect y="365" width="960" height="135" fill="#c8b58f" />
@@ -44,8 +44,7 @@ const { phase = "arrival" } = Astro.props;
   </svg>
   <figcaption>
     {phase === "arrival"
-      ? "Arrival, minute six: the carrier is open and Momo is under the bed."
-      : "Later that evening: the room has stayed quiet, and Momo has begun watching from the edge of cover."}
+      ? "Arrival, minute six: the carrier is open and Milo is under the bed."
+      : "Later that evening: the room has stayed quiet, and Milo has begun watching from the edge of cover."}
   </figcaption>
 </figure>
-

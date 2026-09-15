@@ -1,4 +1,4 @@
-# Momo's Life MVP implementation contract
+# Milo's Life MVP implementation contract
 
 **Status:** project-owned implementation specification for the approved Human
 Design Gate. This file records technical promises; it does not override
@@ -102,6 +102,9 @@ native buttons. Reduced-motion preference disables non-essential transitions.
 - Cat Run informed only the separation of room rendering, data, state, and
   input handling. No Cat Run code, assets, game loop, audio, or mechanics were
   copied, and this MVP does not depend on its licence.
+- The approved form was recorded under the working name “Momo's Life.” The
+  learner-facing cat was renamed Milo during Chapter 1 production; this naming
+  change does not alter the approved character, lifecycle, or course structure.
 - Chapter 1 is visibly marked as a structural prototype. Its mapped teaching
   claims remain subject to the voice pass, narrative continuity check,
   humanization pass, evidence-preservation check, and voice audit before the
@@ -109,4 +112,3 @@ native buttons. Reduced-motion preference disables non-essential transitions.
 - The full approved 4+ hour chapter plan remains visible in the activity and
   workload map. The MVP summary does not replace the pending guided readings or
   applied room-arrangement activity.
-
