@@ -1,0 +1,299 @@
+---
+import { withBase } from "astro-theme-university/url";
+import { chapterPath, chapters, lifecycleStages } from "../data/chapters";
+
+const firstStage = lifecycleStages[0];
+const consultationHref = (slug: string) => {
+  const chapter = chapters.find((item) => item.slug === slug);
+  return chapter ? withBase(chapterPath(chapter)) : "";
+};
+---
+
+<section
+  class="interactive-home"
+  data-interactive-home
+  data-stage={firstStage.id}
+  data-stages={JSON.stringify(lifecycleStages)}
+  aria-labelledby="home-heading"
+>
+  <div class="home-intro">
+    <div>
+      <p class="eyebrow">SLOP8988 · A life in twelve consultations</p>
+      <h1 id="home-heading">Momo's Life</h1>
+    </div>
+    <p class="home-thesis">A cat is not a pet you acquire. It is a life you agree to understand as it changes.</p>
+  </div>
+
+  <div class="home-workspace">
+    <div class="home-scene-column">
+      <div class="lifecycle-control" role="group" aria-label="Momo's life stages">
+        <span class="lifecycle-control__label">Momo's age</span>
+        <div class="lifecycle-segments">
+          {lifecycleStages.map((stage, index) => (
+            <button
+              type="button"
+              class="lifecycle-segment"
+              data-stage-trigger={stage.id}
+              aria-pressed={index === 0 ? "true" : "false"}
+            >
+              {stage.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="room-frame">
+        <svg
+          class="home-room"
+          viewBox="0 0 1200 720"
+          role="img"
+          aria-labelledby="room-title room-description"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <title id="room-title">Momo's home across her life</title>
+          <desc id="room-description">A cutaway room with a sofa, window, door, bed, bowls, litter box, carrier, observation notebook, and age-specific adaptations.</desc>
+
+          <rect width="1200" height="720" fill="#f4ead7" />
+          <rect y="505" width="1200" height="215" fill="#c8b58f" />
+          <path d="M0 505h1200" stroke="#354b48" stroke-width="6" />
+          <path d="M600 0v505" stroke="#d7c6a5" stroke-width="5" />
+
+          <g>
+            <rect x="740" y="88" width="310" height="230" rx="4" fill="#91bcc0" stroke="#354b48" stroke-width="12" />
+            <path d="M895 94v218M746 203h298" stroke="#f4ead7" stroke-width="9" />
+            <path d="M725 326h345" stroke="#354b48" stroke-width="18" />
+          </g>
+
+          <g>
+            <rect x="1057" y="157" width="118" height="348" fill="#d66f4d" stroke="#354b48" stroke-width="10" />
+            <circle cx="1083" cy="335" r="9" fill="#f0c35a" />
+          </g>
+
+          <g>
+            <rect x="248" y="385" width="395" height="166" rx="18" fill="#50736c" stroke="#354b48" stroke-width="10" />
+            <rect x="222" y="333" width="94" height="190" rx="24" fill="#50736c" stroke="#354b48" stroke-width="10" />
+            <rect x="575" y="333" width="94" height="190" rx="24" fill="#50736c" stroke="#354b48" stroke-width="10" />
+            <path d="M445 391v155" stroke="#354b48" stroke-width="6" opacity=".45" />
+          </g>
+
+          <g>
+            <ellipse cx="770" cy="585" rx="132" ry="52" fill="#d66f4d" stroke="#354b48" stroke-width="9" />
+            <ellipse cx="770" cy="574" rx="92" ry="28" fill="#f2c66a" />
+          </g>
+
+          <g>
+            <path d="M905 600h82l-10 39h-62z" fill="#e7e0cf" stroke="#354b48" stroke-width="8" />
+            <path d="M1000 600h82l-10 39h-62z" fill="#8bb9bd" stroke="#354b48" stroke-width="8" />
+          </g>
+
+          <g>
+            <path d="M58 589h154l-17 72H75z" fill="#d6a847" stroke="#354b48" stroke-width="9" />
+            <path d="M84 588q48-22 103 0" fill="#d9c79d" />
+          </g>
+
+          <g>
+            <path d="M775 423h142l34 88H741z" fill="#f2c66a" stroke="#354b48" stroke-width="9" />
+            <path d="M787 423q11-55 64-55t64 55" fill="none" stroke="#354b48" stroke-width="9" />
+            <rect x="798" y="445" width="83" height="66" fill="#354b48" />
+            <path d="M812 449v58m18-58v58m18-58v58m18-58v58" stroke="#f4ead7" stroke-width="5" />
+          </g>
+
+          <g>
+            <rect x="515" y="268" width="92" height="68" rx="3" fill="#fffaf0" stroke="#354b48" stroke-width="7" transform="rotate(-5 560 302)" />
+            <path d="M536 286h49m-49 14h45m-44 14h38" stroke="#d66f4d" stroke-width="5" transform="rotate(-5 560 302)" />
+          </g>
+
+          <g data-room-stage="kitten">
+            <g>
+              <path d="M884 561q22-48 60 0" fill="#30393b" />
+              <path d="M891 543l8-25 18 19m9 0 17-19 8 26" fill="#30393b" />
+              <circle cx="910" cy="550" r="3" fill="#f2c66a" />
+              <circle cx="929" cy="550" r="3" fill="#f2c66a" />
+            </g>
+            <rect x="36" y="362" width="148" height="110" fill="#dfcfad" stroke="#354b48" stroke-width="8" />
+            <path d="M36 362l73-47 75 47" fill="#f0c35a" stroke="#354b48" stroke-width="8" />
+            <path d="M85 472v-52q0-35 28-35t28 35v52" fill="#354b48" />
+          </g>
+
+          <g data-room-stage="young-adult" style="display:none">
+            <g>
+              <ellipse cx="704" cy="552" rx="42" ry="61" fill="#30393b" />
+              <circle cx="704" cy="483" r="39" fill="#30393b" />
+              <path d="M674 458l9-41 27 30m10 1 26-31 8 43" fill="#30393b" />
+              <path d="M741 565q83 5 55-65" fill="none" stroke="#30393b" stroke-width="18" stroke-linecap="round" />
+              <circle cx="690" cy="480" r="4" fill="#f2c66a" />
+              <circle cx="716" cy="480" r="4" fill="#f2c66a" />
+            </g>
+            <rect x="125" y="255" width="32" height="257" fill="#b9833d" stroke="#354b48" stroke-width="7" />
+            <rect x="88" y="246" width="107" height="30" fill="#d66f4d" stroke="#354b48" stroke-width="7" />
+            <path d="M232 405l28 60m-28-41 29 58m-29-36 27 55" stroke="#f2c66a" stroke-width="6" />
+          </g>
+
+          <g data-room-stage="mature" style="display:none">
+            <g>
+              <ellipse cx="430" cy="442" rx="95" ry="42" fill="#30393b" />
+              <circle cx="360" cy="428" r="34" fill="#30393b" />
+              <path d="M337 407l8-30 22 24m7 4 25-25 4 34" fill="#30393b" />
+              <path d="M505 444q80 28 92-28" fill="none" stroke="#30393b" stroke-width="17" stroke-linecap="round" />
+            </g>
+            <path d="M835 372q49-22 98 0" fill="none" stroke="#d66f4d" stroke-width="7" />
+          </g>
+
+          <g data-room-stage="senior" style="display:none">
+            <g>
+              <ellipse cx="726" cy="553" rx="49" ry="58" fill="#596064" />
+              <circle cx="726" cy="488" r="39" fill="#596064" />
+              <path d="M697 464l10-38 24 29m8 3 25-30 5 41" fill="#596064" />
+              <circle cx="712" cy="486" r="4" fill="#f2c66a" />
+              <circle cx="739" cy="486" r="4" fill="#f2c66a" />
+            </g>
+            <path d="M295 551h376l89 96H385z" fill="#d9c79d" stroke="#354b48" stroke-width="9" />
+            <path d="M380 581h316m-286 28h314" stroke="#b9833d" stroke-width="6" />
+            <circle cx="185" cy="296" r="27" fill="#f2c66a" stroke="#354b48" stroke-width="7" />
+          </g>
+
+          <g data-room-stage="very-old" style="display:none">
+            <g>
+              <ellipse cx="769" cy="568" rx="73" ry="29" fill="#6e7375" />
+              <circle cx="718" cy="557" r="28" fill="#6e7375" />
+              <path d="M698 539l8-27 19 21m5 2 22-23 3 31" fill="#6e7375" />
+            </g>
+            <path d="M640 505h166l-84 94H505z" fill="#d9c79d" stroke="#354b48" stroke-width="9" />
+            <rect x="970" y="483" width="106" height="58" rx="4" fill="#fffaf0" stroke="#354b48" stroke-width="7" />
+            <path d="M987 501h71m-71 14h57m-57 14h65" stroke="#d66f4d" stroke-width="5" />
+          </g>
+        </svg>
+
+        <div class="home-hotspots" role="group" aria-label="Consultation entrances">
+          {chapters.map((chapter) => (
+            <button
+              type="button"
+              class="home-hotspot"
+              data-home-hotspot
+              data-stage={chapter.stage}
+              data-chapter={chapter.number}
+              data-week={chapter.week}
+              data-title={chapter.title}
+              data-question={chapter.question}
+              data-age={chapter.momoAge}
+              data-cue={chapter.homeCue}
+              data-href={chapter.implemented ? consultationHref(chapter.slug) : ""}
+              aria-label={`Chapter ${chapter.number}: ${chapter.title}`}
+              style={`--hotspot-x:${chapter.hotspot.x}%;--hotspot-y:${chapter.hotspot.y}%`}
+            >
+              <span>{chapter.number}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <aside class="home-context" aria-live="polite" aria-labelledby="selected-chapter-title">
+      <p class="home-context__meta" data-stage-meta>{firstStage.age}</p>
+      <p class="home-context__stage-note" data-stage-note>{firstStage.note}</p>
+      <div class="home-context__rule"></div>
+      <p class="home-context__chapter" data-selected-number>Chapter 1 · Week 1</p>
+      <h2 id="selected-chapter-title" data-selected-title>{chapters[0].title}</h2>
+      <p data-selected-cue>{chapters[0].homeCue}</p>
+      <p class="home-context__question" data-selected-question>{chapters[0].question}</p>
+      <a class="primary-action" data-selected-link href={consultationHref(chapters[0].slug)}>
+        Begin consultation
+      </a>
+      <p class="availability-note" data-selected-availability hidden>This consultation will be built after the Chapter 1 system is validated.</p>
+    </aside>
+  </div>
+
+  <details class="home-fallback">
+    <summary>Browse all twelve chapters as a list</summary>
+    <ol>
+      {chapters.map((chapter) => (
+        <li>
+          {chapter.implemented ? (
+            <a href={consultationHref(chapter.slug)}>Chapter {chapter.number}: {chapter.title}</a>
+          ) : (
+            <span>Chapter {chapter.number}: {chapter.title}</span>
+          )}
+          <span>{chapter.momoAge}</span>
+        </li>
+      ))}
+    </ol>
+    <a href={withBase("/chapters/")}>Open the accessible course journey</a>
+  </details>
+</section>
+
+<script>
+  function setupInteractiveHome() {
+    for (const home of document.querySelectorAll<HTMLElement>("[data-interactive-home]")) {
+      if (home.dataset.initialized === "true") continue;
+      home.dataset.initialized = "true";
+
+      const triggers = [...home.querySelectorAll<HTMLButtonElement>("[data-stage-trigger]")];
+      const hotspots = [...home.querySelectorAll<HTMLButtonElement>("[data-home-hotspot]")];
+      const stageLayers = [...home.querySelectorAll<SVGGElement>("[data-room-stage]")];
+      const selectedNumber = home.querySelector<HTMLElement>("[data-selected-number]")!;
+      const selectedTitle = home.querySelector<HTMLElement>("[data-selected-title]")!;
+      const selectedCue = home.querySelector<HTMLElement>("[data-selected-cue]")!;
+      const selectedQuestion = home.querySelector<HTMLElement>("[data-selected-question]")!;
+      const selectedLink = home.querySelector<HTMLAnchorElement>("[data-selected-link]")!;
+      const availability = home.querySelector<HTMLElement>("[data-selected-availability]")!;
+      const stageMeta = home.querySelector<HTMLElement>("[data-stage-meta]")!;
+      const stageNote = home.querySelector<HTMLElement>("[data-stage-note]")!;
+      const stages = JSON.parse(home.dataset.stages ?? "[]") as Array<{ id: string; age: string; note: string }>;
+
+      function selectChapter(hotspot: HTMLButtonElement) {
+        hotspots.forEach((item) => item.classList.toggle("is-selected", item === hotspot));
+        selectedNumber.textContent = `Chapter ${hotspot.dataset.chapter} · Week ${hotspot.dataset.week}`;
+        selectedTitle.textContent = hotspot.dataset.title ?? "";
+        selectedCue.textContent = hotspot.dataset.cue ?? "";
+        selectedQuestion.textContent = hotspot.dataset.question ?? "";
+        const href = hotspot.dataset.href;
+        selectedLink.hidden = !href;
+        if (href) selectedLink.href = href;
+        availability.hidden = Boolean(href);
+      }
+
+      function selectStage(stageId: string, remember = true) {
+        home.dataset.stage = stageId;
+        triggers.forEach((trigger) => {
+          trigger.setAttribute("aria-pressed", String(trigger.dataset.stageTrigger === stageId));
+        });
+        stageLayers.forEach((layer) => {
+          layer.style.display = layer.dataset.roomStage === stageId ? "" : "none";
+        });
+        hotspots.forEach((hotspot) => {
+          hotspot.hidden = hotspot.dataset.stage !== stageId;
+        });
+        const stage = stages.find((item) => item.id === stageId);
+        stageMeta.textContent = stage?.age ?? "";
+        stageNote.textContent = stage?.note ?? "";
+        const first = hotspots.find((item) => !item.hidden);
+        if (first) {
+          selectChapter(first);
+        } else {
+          hotspots.forEach((item) => item.classList.remove("is-selected"));
+          selectedNumber.textContent = "Between Chapters 9 and 10";
+          selectedTitle.textContent = "The ordinary years matter too";
+          selectedCue.textContent = "The routines built earlier become the baseline that later change is measured against.";
+          selectedQuestion.textContent = "Momo's life is not paused simply because the course turns a page.";
+          selectedLink.hidden = true;
+          availability.hidden = true;
+        }
+        if (remember) localStorage.setItem("momo-home-stage", stageId);
+      }
+
+      triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => selectStage(trigger.dataset.stageTrigger ?? "kitten"));
+      });
+      hotspots.forEach((hotspot) => hotspot.addEventListener("click", () => selectChapter(hotspot)));
+
+      const saved = localStorage.getItem("momo-home-stage");
+      const initialStage = triggers.some((trigger) => trigger.dataset.stageTrigger === saved)
+        ? saved!
+        : "kitten";
+      selectStage(initialStage, false);
+    }
+  }
+
+  setupInteractiveHome();
+  document.addEventListener("astro:page-load", setupInteractiveHome);
+</script>

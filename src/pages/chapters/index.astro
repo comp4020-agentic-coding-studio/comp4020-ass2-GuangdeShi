@@ -1,0 +1,66 @@
+---
+import { withBase } from "astro-theme-university/url";
+import { chapterPath, chapters } from "../../data/chapters";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+
+const parts = [1, 2, 3, 4].map((part) => ({
+  number: part,
+  title: chapters.find((chapter) => chapter.part === part)?.partTitle ?? "",
+  chapters: chapters.filter((chapter) => chapter.part === part),
+}));
+
+const displayDate = (date: string) =>
+  new Intl.DateTimeFormat("en-AU", { day: "numeric", month: "short", year: "numeric" }).format(
+    new Date(`${date}T12:00:00+11:00`),
+  );
+---
+
+<CourseLayout
+  title="The course journey"
+  description="Twelve care consultations follow Momo from her first night home into old age."
+  pageClass="journey-page"
+>
+  <header class="journey-header">
+    <div>
+      <p class="eyebrow">Twelve consultations · one cat's life</p>
+      <h1>The course journey</h1>
+    </div>
+    <p class="journey-header__intro">
+      Each chapter begins with a change in Momo's life. You will observe first,
+      learn what the evidence can tell you, then return to make a safer care decision.
+    </p>
+  </header>
+
+  <div class="journey-parts">
+    {parts.map((part) => (
+      <section class="journey-part" aria-labelledby={`part-${part.number}`}>
+        <header class="journey-part__heading">
+          <p>Part {part.number}</p>
+          <h2 id={`part-${part.number}`}>{part.title}</h2>
+        </header>
+
+        <ol class="chapter-list" start={part.chapters[0]?.number}>
+          {part.chapters.map((chapter) => (
+            <li>
+              <span class="chapter-number" aria-hidden="true">{chapter.number}</span>
+              <div>
+                <h3>
+                  {chapter.implemented ? (
+                    <a class="chapter-link" href={withBase(chapterPath(chapter))}>{chapter.title}</a>
+                  ) : (
+                    chapter.title
+                  )}
+                </h3>
+                <p>{chapter.question}</p>
+              </div>
+              <div class="chapter-status">
+                {chapter.implemented ? "Consultation open" : chapter.momoAge}
+                <time datetime={chapter.date}>{displayDate(chapter.date)}</time>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </div>
+</CourseLayout>

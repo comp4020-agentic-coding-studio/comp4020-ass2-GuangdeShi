@@ -1,0 +1,24 @@
+---
+import BaseLayout from "astro-theme-university/layouts/BaseLayout.astro";
+import { courseMeta } from "../course-config";
+import { siteConfig } from "../site-config";
+import "../styles/momo.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  pageClass?: string;
+}
+
+const { title, description, pageClass = "" } = Astro.props;
+---
+
+<BaseLayout
+  title={`${title} — ${courseMeta.title}`}
+  description={description}
+  {...siteConfig}
+  mainAttrs={{ class: `momo-main ${pageClass}`.trim(), "data-pagefind-body": true }}
+>
+  <slot name="head" slot="head" />
+  <slot />
+</BaseLayout>
