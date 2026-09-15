@@ -50,20 +50,23 @@ Full chapter-by-chapter detail (working titles, core questions, Momo's age
 at each chapter, dependencies) is in `docs/CURRICULUM.md`'s Twelve-Chapter
 Curriculum Table — read that table before proposing any structural work.
 
-**Current development stage.** The project has moved through three
-sequential stages so far, and is between the second and third:
+**Current development stage.** The presentation/form gate was approved after
+this handoff was first written. The current sequence is:
 
 ```
 CONTENT-FIRST        — twelve chapters drafted, reviewed, whole-course audited  [COMPLETE]
        |
 VOICE DESIGN         — voice system + one representative sample + audit        [PARTIALLY COMPLETE]
        |
-PRESENTATION DESIGN  — slides, UI, Cat Run/virtual-cat interface                [NOT STARTED]
+PRESENTATION FORM    — Interactive Home + Care Consultations approved           [APPROVED]
+       |
+MVP IMPLEMENTATION  — Astro/vanilla-JS implementation                           [NOT STARTED]
 ```
 
 See `docs/process/voice-design-transition.md` for the reasoning behind
 this sequencing, and `docs/process/agent-handoff-claude-to-codex.md` for
-why this handoff exists.
+why this handoff exists. See `docs/process/form-design-decision.md` for the
+subsequent Human Design Gate decision.
 
 ---
 
@@ -106,6 +109,11 @@ merely asserted.
   5, ~1,050 words) demonstrating the new voice, with its own audit
   recorded inline. This has **not yet been extended to the rest of
   Chapter 5 or to any other chapter** — see "Not yet started" below.
+- **Presentation/form direction** — the Human Design Gate approved **Momo's
+  Life — Interactive Home + Care Consultations**, including formative Chapter
+  Checks. The binding development boundary is in `CLAUDE.md` §23, the reusable
+  grammar is in `docs/LESSON_SYSTEM.md`, and the decision record is
+  `docs/process/form-design-decision.md`.
 - **Git/process checkpoints** — a readable commit history from the
   project's initial evidence-foundation stage through the voice-design
   stage (see `git log --oneline`), each meaningful stage committed and
@@ -119,18 +127,13 @@ merely asserted.
   planning-document style (Concrete Knowledge Map, claim bullets, Slide/
   Beat Plan tables) — this is deliberate; see `CLAUDE.md` §22's process
   boundary and the explicit stop point the prior session was given.
-- **Presentation / form design.** No slide implementation, no CSS/visual
-  design beyond the reserved slide-grammar vocabulary in
-  `docs/LESSON_SYSTEM.md`.
-- **Cat Run / virtual-cat interface / technical adaptation.** Referenced
-  informally in recent process notes as a planned interactive Momo
-  interface, but **not defined anywhere in this repo's tracked
-  documentation** — not in `docs/LESSON_SYSTEM.md`, not in
-  `docs/ASSETS.md`, not in `docs/CURRICULUM.md`. Treat any reference to
-  "Cat Run" as an informal placeholder for future interaction design, not
-  as an existing spec. If asked to "inspect Cat Run," there is nothing in
-  this repository to inspect yet — say so rather than inventing a
-  specification.
+- **Presentation implementation.** The major form is approved, but no
+  consultation shell, Interactive Home, production CSS, or chapter page has
+  been implemented yet.
+- **Cat Run adaptation.** The approved boundary is now documented: borrow the
+  room/object/input separation as a reference, but not runner, score, or
+  decaying pet-stat mechanics. No third-party code or asset has been copied;
+  licence verification is still required before any such reuse.
 - **UI implementation.** No pages beyond the starter's placeholder content
   and collections have been built for the course itself.
 - **Slides.** `docs/LESSON_SYSTEM.md` reserves a slide-type vocabulary and
@@ -515,27 +518,19 @@ going through the escalation path in §4:
 
 ---
 
-## 9. Next-step recommendation (not yet started — for planning only)
+## 9. Next-step recommendation (updated after Human Design Gate)
 
-The next planned phase, once a human has reviewed and approved this
-handoff and the state it describes, is expected to be:
+The Human Design Gate has now approved the form. The next planned phase is:
 
-1. Finish and get human approval for a full voice pass across the whole
-   curriculum (all twelve chapters), using the Chapter 5 sample
-   (`docs/process/voice-sample-chapter-05.md`) as the calibration
-   reference and following the editorial workflow in `CLAUDE.md` §22.
-2. Inspect "Cat Run" as a technical/interaction reference **once the
-   human provides an actual specification or example for it** — it is
-   not currently defined anywhere in this repository (see §2 above).
-3. Design the presentation/form architecture (slides, UI, interaction)
-   from the approved, voiced content — following the derivation order in
-   `CLAUDE.md` §10 (course idea → information architecture → interaction
-   → visual language), not the reverse.
-4. Implement using the **existing Astro/SlopU starter** (`README.md`,
+1. Implement a narrow vertical slice of the approved Interactive Home and
+   Care Consultation system, following `CLAUDE.md` §23 and
+   `docs/LESSON_SYSTEM.md`.
+2. Run learner-facing prose through `CLAUDE.md` §22's voice and evidence
+   preservation workflow before treating it as production copy.
+3. Implement using the **existing Astro/SlopU starter** (`README.md`,
    `astro.config.ts`, `src/`) — do not replace the stack, rename or
    remove the required core content collections (`sessions`,
    `assessments`, `lectures`, `people`), or otherwise violate the
    Starter contract (`CLAUDE.md` §8) without explicit human approval.
-
-**None of steps 1–4 above should begin as part of this handoff.** This
-handoff is documentation and branch preparation only.
+4. Verify the vertical slice at 1920x1080 and 390x844, including keyboard,
+   focus, semantic fallback, resize persistence, and reduced motion.

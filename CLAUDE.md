@@ -560,6 +560,92 @@ content-first-then-form principle (§9, §10).
 
 ---
 
+## 23. Approved presentation form and development boundary
+
+**Human decision gate passed (2026-09-15).** The primary form/experience
+direction is **Momo's Life — Interactive Home + Care Consultations**. This is
+no longer a proposal. Implementation may proceed within this direction,
+subject to the curriculum, evidence, voice, starter, accessibility, and
+responsive constraints elsewhere in this harness. The decision record is
+`docs/process/form-design-decision.md`; the reusable teaching grammar is in
+`docs/LESSON_SYSTEM.md`.
+
+**Interactive Home.** The homepage is Momo's home and the principal course
+map. It is the same recognisable home across all twelve chapters, changing as
+Momo moves through kitten, young/adult, mature, senior, and very-old life
+stages. Chapter access should be embedded in meaningful rooms, objects, and
+changes rather than presented primarily as a generic LMS card list. The
+underlying twelve dated teaching weeks and required starter collections remain
+intact.
+
+**Care Consultations.** Every chapter is framed as an owner bringing a real
+problem involving Momo to an experienced, plain-speaking feline-care
+consultant. The recurring reasoning arc is:
+
+```
+MOMO'S SITUATION
+  -> NOTICE / OBSERVE
+  -> INITIAL JUDGEMENT
+  -> LEARN FROM EVIDENCE, COMPARISON, AND PRACTICE
+  -> RETURN TO THE ORIGINAL SITUATION
+  -> REVISED JUDGEMENT
+  -> OWNER-LEVEL CARE PLAN / RECOMMENDATION
+  -> FORMATIVE CHAPTER CHECK
+```
+
+This is a shared course language, not a rigid screen template. A chapter may
+vary the number, order, or presentation of its learning sections when its
+approved pedagogy requires it. It must still make the consultation arc
+recognisable and preserve the chapter's existing capability, dependencies,
+scenarios, and factual scope.
+
+**Owner-level scope.** The consultant helps the learner observe, recognise,
+interpret, make safe owner-level decisions, and know when to seek professional
+help. The interface must never imply that the learner is training to diagnose,
+prescribe, or provide veterinary treatment. Momo is observed through behaviour
+and evidence; she is not given human dialogue or an invented interior life.
+
+**Chapter Checks.** Each chapter ends with a formative check of approximately
+7–8 questions: normally 3–4 core-concept questions, 2 realistic scenarios,
+and 1–2 deliberately ambiguous synthesis questions. Distractors must express
+credible misconceptions already documented in the chapter, not absurd wrong
+answers. Feedback explains why the preferred judgement is more defensible and
+why each alternative may seem plausible but breaks down. These checks do not
+contribute automatically to formal assessment percentages.
+
+**Depth preservation.** The website organises the approved chapter content; it
+does not summarise it away. The 4+ hour learning depth in every
+`docs/chapters/chapter-XX.md` remains a production requirement, including core
+teaching, guided reading/evidence, scenarios, applied practice, transfer, and
+self-review. Progressive disclosure may reduce visual density but must not
+delete substantive content. A polished short consultation is not a valid
+replacement for a complete chapter.
+
+**Implementation boundary.** Preserve Astro, SlopU, the four required content
+collections, and the GitHub Pages base-path contract. Build the home and
+consultation shell with Astro components and content-driven data; use small,
+page-scoped vanilla-JS modules for interaction and state. Cat Run is a
+reference for its room/object/input separation and responsive interaction,
+not a dependency or a licence to import its runner, pet-stat, scoring, or
+care-simulation mechanics. Any copied third-party code or asset still requires
+licence verification and recording in `docs/ASSETS.md`.
+
+**Responsive/accessibility boundary.** At 1920x1080 the home may use a broad
+room view with adjacent consultation/progress context. At 390x844 the same
+information must reflow into a scene-first vertical experience with large tap
+targets; no essential hotspot, label, state, or explanation may depend on hover
+or precise pointing. Keyboard access, visible focus, semantic fallbacks,
+reduced-motion support, and persistence across resize are required.
+
+**Editorial sequencing.** Reusable interface and a content-mapping prototype
+may now be implemented because the form gate has passed. Learner-facing
+chapter prose is not production-approved until it has completed §22's voice
+and evidence-preservation workflow. During the MVP, provisional copy must stay
+traceable to the authoritative chapter files and must not silently become the
+new curriculum source of truth.
+
+---
+
 ## Current project state
 
 ```
@@ -591,14 +677,17 @@ VOICE:                    docs/VOICE.md established — see §22. One
                           (docs/process/voice-sample-chapter-05.md);
                           full twelve-chapter voice pass NOT yet run.
 ASSESSMENTS:              NOT DESIGNED
-VISUAL DIRECTION:         Slide grammar reserved in docs/LESSON_SYSTEM.md;
-                          final CSS NOT designed
+FORM / EXPERIENCE:        HUMAN-APPROVED — Momo's Life: Interactive Home +
+                          Care Consultations + formative Chapter Checks;
+                          see §23 and docs/LESSON_SYSTEM.md
+IMPLEMENTATION:           NOT STARTED — final CSS/assets remain undesigned
 ```
 
 Topic, thesis and transformation are approved as a *working* direction only.
 The twelve-chapter curriculum backbone has been approved by the human (see
 the HUMAN DECISION record in project history) and all twelve chapters have
-been drafted, reviewed, and repaired per-Part and whole-course. Visual
-language and final thesis presentation remain undesigned. Do not fill in
-ASSESSMENTS or VISUAL DIRECTION beyond what is reserved above without
-explicit human approval — content remains first, form second.
+been drafted, reviewed, and repaired per-Part and whole-course. The major form
+direction is approved; its implementation details must now be derived within
+§23 rather than reopening the direction. Do not fill in ASSESSMENTS or alter
+the approved form, curriculum, evidence, or voice boundaries without explicit
+human approval.

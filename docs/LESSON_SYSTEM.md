@@ -1,10 +1,49 @@
-# Lesson System — Reusable Presentation Grammar
+# Lesson System — Care Consultation Presentation Grammar
 
-This document defines the reusable slide/lesson grammar shared across all
-twelve chapters, so the course is implemented as one lesson system rather
-than twelve bespoke mini-sites. No final CSS is designed in this document —
-see `CLAUDE.md` §10 for the UI/visual-design principles this grammar must
-still satisfy once implementation begins.
+**Status:** Form/experience direction approved at the Human Design Gate on
+2026-09-15. This document defines the reusable lesson grammar shared across
+all twelve chapters, so the course is implemented as one consultation system
+rather than twelve bespoke mini-sites. It does not alter the curriculum or
+define final CSS; see `CLAUDE.md` §10 and §23.
+
+## Approved experience frame
+
+The site is **Momo's Life — Interactive Home + Care Consultations**.
+
+- The homepage is one recognisable home that changes with Momo's age and the
+  care decisions made visible across the twelve-chapter course.
+- A chapter begins with a concrete problem in that life, not a topic card.
+- The learner acts as Momo's owner seeking practical guidance, not as a
+  veterinary trainee.
+- The consultant's recurring reasoning is: observe, recognise, interpret,
+  make a safe owner-level decision, and know when professional help is needed.
+- The learner makes an initial judgement before teaching, then revisits the
+  same problem after evidence, comparison, and practice.
+- The consultation ends with a practical Care Plan and a formative Chapter
+  Check.
+
+The consultation is the chapter's narrative and pedagogical wrapper. It must
+not turn a 4+ hour chapter into a short branching quiz. Core teaching,
+readings/evidence, practice, transfer cases, and self-review remain present,
+using progressive disclosure where useful.
+
+## Consultation phases
+
+| Phase | Purpose | Typical lesson types | Required outcome |
+|---|---|---|---|
+| Arrival | Establish Momo's age, household context, and concrete problem | HERO, SCENARIO | The learner understands what has happened without being handed the interpretation |
+| Notice | Ask what the learner observes before explaining it | QUESTION, ANNOTATED SCENE | The learner separates visible evidence from assumption |
+| Initial judgement | Capture a plausible first decision and its reasoning | QUESTION, COMPARE | A revisitable judgement is stored locally for the consultation |
+| Consultation | Teach the chapter's approved knowledge clusters | TEACH, IMAGE + TEXT, DIAGRAM, COMPARE | All substantive content and evidence in the chapter plan remain accessible |
+| Guided practice | Apply the new reasoning to observations, arrangements, or comparisons | DIAGRAM, COMPARE, SCENARIO | The learner practises the chapter capability rather than only reading it |
+| Return to Momo | Reopen the original problem with the relevant evidence now visible | SCENARIO, QUESTION, REVEAL | The learner makes and explains a revised judgement |
+| Care Plan | Turn the judgement into safe owner actions, observations to record, and escalation boundaries | REVEAL, TEACH | A concise, printable/retained recommendation grounded in the chapter |
+| Chapter Check | Test concepts, realistic scenarios, and ambiguous synthesis | CHECKPOINT | Formative feedback explains every option; no formal assessment weight is implied |
+
+The phases are a common language, not a requirement for one screen per row.
+A reasoning-heavy chapter may spend longer in comparison and evidence; a
+spatial chapter may spend longer in an annotated room. Every chapter must
+still make the opening judgement and later re-judgement legible.
 
 ## Slide vocabulary
 
@@ -43,20 +82,49 @@ building blocks, not one-off effects per slide.
 
 ## Standard chapter rhythm
 
-Default teaching rhythm, applied unless a chapter's pedagogy genuinely
-requires variation (agents should not invent new interaction patterns
-without a stated reason):
+Default consultation rhythm, applied unless a chapter's approved pedagogy
+genuinely requires variation:
 
 ```
-SCENARIO
-  -> WHAT WOULD YOU DO?
-  -> STUDENT CHOICE
-  -> REVEAL THE MISCONCEPTION
-  -> TEACH THE PRINCIPLE
-  -> SHOW / PRACTISE
-  -> APPLY
-  -> FRESH CASE CHECK
+MOMO'S SITUATION
+  -> WHAT DO YOU NOTICE?
+  -> INITIAL JUDGEMENT
+  -> CONSULTATION: EVIDENCE + CORE KNOWLEDGE
+  -> GUIDED PRACTICE / COMPARISON
+  -> RETURN TO MOMO
+  -> REVISED JUDGEMENT
+  -> CARE PLAN / RECOMMENDATION
+  -> CHAPTER CHECK
   -> CHAPTER CAPABILITY GAINED
 ```
 
 This is a default grammar, not an absolute constraint.
+
+## Formative Chapter Check contract
+
+Each chapter should normally end with 7–8 questions, assembled from the
+chapter's claim map, common misconceptions, transfer scenarios, and
+prerequisite callbacks:
+
+| Question group | Typical count | Design rule |
+|---|---:|---|
+| Core concepts | 3–4 | Test distinctions or reasoning the chapter explicitly taught, not isolated trivia |
+| Realistic scenarios | 2 | Change the household or situation enough to require transfer, not recall of Momo's exact scene |
+| Ambiguous synthesis | 1–2 | Include incomplete or competing evidence and ask for the safest, best-supported owner-level judgement |
+
+Every option must carry feedback. The preferred answer explains why it is
+better supported; each distractor explains both why a learner might reasonably
+choose it and where its reasoning fails. Distractors should come from the
+chapter's documented misconceptions. Results are formative and local by
+default: no score is sent into the formal assessment system and no percentage
+weight is created.
+
+## Home-to-chapter continuity
+
+Momo's home is a visible course memory. Reuse only lifecycle changes and
+callbacks supported by `docs/CURRICULUM.md` and the chapter files: the Chapter
+1 safe room and observation log, Chapter 5 scratching/feeding/enrichment,
+Chapter 8 access decision, Chapter 10 senior adaptations and reconsideration
+of that access decision, and the familiar home in Chapter 12 with Momo very
+old. Object changes should show accumulated care and adaptation, not game
+inventory or reward collection.
