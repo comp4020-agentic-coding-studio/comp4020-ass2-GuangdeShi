@@ -22,8 +22,16 @@ const chapter = getChapter(content.slug);
 if (!chapter) throw new Error(`Missing chapter metadata for ${content.slug}`);
 
 const anchorVisuals = {
+  2: "consent",
+  3: "warning-signs",
+  4: "vocabulary",
   5: "scratching",
+  6: "baseline",
+  7: "routine",
+  8: "threshold",
+  9: "subtle-signs",
   10: "aging",
+  11: "night-route",
   12: "together",
 } as const;
 const anchorVisual = anchorVisuals[content.chapter as keyof typeof anchorVisuals];

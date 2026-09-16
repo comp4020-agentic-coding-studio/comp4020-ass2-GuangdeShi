@@ -62,21 +62,26 @@ describe("Milo course shell", () => {
     }
 
     const anchors = [
-      ["the-first-72-hours", "arrival"],
-      ["needs-not-naughtiness", "scratching"],
-      ["the-aging-cat", "aging"],
-      ["deciding-together", "together"],
+      ["the-first-72-hours", "arrival", "kitten"],
+      ["learning-her-on-her-terms", "consent", "kitten"],
+      ["reading-the-first-warning-signs", "warning-signs", "kitten"],
+      ["the-full-vocabulary", "vocabulary", "kitten"],
+      ["needs-not-naughtiness", "scratching", "young-adult"],
+      ["noticing-what-changed", "baseline", "young-adult"],
+      ["designing-a-healthy-routine", "routine", "young-adult"],
+      ["the-indoor-outdoor-decision", "threshold", "young-adult"],
+      ["the-signs-easy-to-miss", "subtle-signs", "young-adult"],
+      ["the-aging-cat", "aging", "senior"],
+      ["when-her-mind-changes", "night-route", "senior"],
+      ["deciding-together", "together", "very-old"],
     ] as const;
-    for (const [slug, moment] of anchors) {
+    for (const [slug, moment, stage] of anchors) {
       const page = readFileSync(resolve(`dist/chapters/${slug}/index.html`), "utf8");
       expect(page).toContain(`data-visual-moment="${moment}"`);
+      expect(page).toContain(`data-milo-stage="${stage}"`);
     }
 
-    const nonAnchor = readFileSync(
-      resolve("dist/chapters/learning-her-on-her-terms/index.html"),
-      "utf8",
-    );
-    expect(nonAnchor).not.toContain("data-visual-moment");
+    expect(new Set(anchors.map(([, moment]) => moment)).size).toBe(12);
   });
 
   it("uses the approved five-item student navigation", () => {

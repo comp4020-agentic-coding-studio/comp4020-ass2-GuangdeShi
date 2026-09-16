@@ -1,7 +1,19 @@
 ---
 import MiloFigure from "./MiloFigure.astro";
 
-export type VisualMoment = "arrival" | "scratching" | "aging" | "together";
+export type VisualMoment =
+  | "arrival"
+  | "consent"
+  | "warning-signs"
+  | "vocabulary"
+  | "scratching"
+  | "baseline"
+  | "routine"
+  | "threshold"
+  | "subtle-signs"
+  | "aging"
+  | "night-route"
+  | "together";
 
 interface Props {
   moment: VisualMoment;
@@ -42,17 +54,17 @@ const idPrefix = `editorial-${moment}-${phase}`;
     <desc id={`${idPrefix}-description`}>{description}</desc>
     <defs>
       <linearGradient id={`${idPrefix}-wall`} x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0" stop-color={moment === "together" ? "#ebe5dc" : "#f4eee3"} />
-        <stop offset="1" stop-color={moment === "together" ? "#cfc8bd" : "#dcccaf"} />
+        <stop offset="0" stop-color={moment === "night-route" ? "#87928d" : moment === "together" ? "#ebe5dc" : "#f4eee3"} />
+        <stop offset="1" stop-color={moment === "night-route" ? "#545f5d" : moment === "together" ? "#cfc8bd" : "#dcccaf"} />
       </linearGradient>
       <linearGradient id={`${idPrefix}-floor`} x1="0" x2="0" y1="0" y2="1">
         <stop offset="0" stop-color="#c59e72" />
         <stop offset="1" stop-color="#9a7455" />
       </linearGradient>
       <linearGradient id={`${idPrefix}-window`} x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0" stop-color={moment === "together" ? "#b6c4c0" : "#a8cacb"} />
-        <stop offset="0.62" stop-color={moment === "together" ? "#d8d1ba" : "#d8dfc1"} />
-        <stop offset="1" stop-color="#78906d" />
+        <stop offset="0" stop-color={moment === "night-route" ? "#263b45" : moment === "together" ? "#b6c4c0" : "#a8cacb"} />
+        <stop offset="0.62" stop-color={moment === "night-route" ? "#4f6268" : moment === "together" ? "#d8d1ba" : "#d8dfc1"} />
+        <stop offset="1" stop-color={moment === "night-route" ? "#283f3e" : "#78906d"} />
       </linearGradient>
       <linearGradient id={`${idPrefix}-sofa`} x1="0" x2="1" y1="0" y2="1">
         <stop offset="0" stop-color="#718b82" />
@@ -80,7 +92,7 @@ const idPrefix = `editorial-${moment}-${phase}`;
       <path d="M840 267c65-43 116-25 159-65 25-24 50-29 77-33v156H840z" fill="#6f9169" opacity="0.62" />
       <path d="M958 77v246M842 197h232" stroke="#f8f1e4" stroke-width="10" />
       <path d="M807 349h302" stroke="#405955" stroke-linecap="round" stroke-width="17" />
-      <path d="M812 68c-28 68-23 194-4 265M1104 68c28 68 26 194 5 265" fill="none" stroke={moment === "together" ? "#9a7064" : "#bb745d"} stroke-width="22" />
+      <path d="M812 68c-28 68-23 194-4 265M1104 68c28 68 26 194 5 265" fill="none" stroke={moment === "night-route" ? "#695e62" : moment === "together" ? "#9a7064" : "#bb745d"} stroke-width="22" />
     </g>
 
     {moment !== "arrival" && (
@@ -137,6 +149,77 @@ const idPrefix = `editorial-${moment}-${phase}`;
       </g>
     )}
 
+    {moment === "consent" && (
+      <g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M677 455h162v113H677z" fill="#d9bd82" stroke="#405955" stroke-width="7" />
+          <path d="m677 455 80-52 82 52" fill="#d99a63" stroke="#405955" stroke-width="7" />
+          <path d="M720 568v-51q0-42 36-42t36 42v51" fill="#334a47" />
+        </g>
+        <ellipse cx="770" cy="595" rx="210" ry="40" fill="#d7c7a4" opacity="0.72" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="kitten" pose="cautious" x={754} y={604} scale={0.67} flip idPrefix={`${idPrefix}-milo`} />
+        </g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M1200 489c-79-8-129 5-173 38l-56 43 27 39 67-29c55-24 92-27 135-22Z" fill="#a55f4c" />
+          <path d="M1001 551c-25-4-51 6-68 24l-27 29c-8 9 5 20 14 13l33-23-23 29c-7 10 7 18 15 10l28-27-13 26c-5 11 10 17 16 8l27-35 24-24Z" fill="#d7a486" stroke="#765b50" stroke-linejoin="round" stroke-width="4" />
+        </g>
+        <path d="M894 505q-38 31-70 10" fill="none" stroke="#bd654e" stroke-dasharray="7 9" stroke-linecap="round" stroke-width="5" opacity="0.72" />
+      </g>
+    )}
+
+    {moment === "warning-signs" && (
+      <g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M701 518h177l-16 103H717z" fill="#c8a35b" stroke="#405955" stroke-width="8" />
+          <path d="M727 518c35-19 72-19 110 0" fill="#eadcbc" />
+          <path d="M739 550h91M740 578h90" stroke="#ddc893" stroke-width="5" opacity="0.9" />
+        </g>
+        <path d="M937 569h79l-9 45h-61zM1034 569h79l-9 45h-61z" fill="#e9e3d7" stroke="#405955" stroke-width="7" />
+        <ellipse cx="1073" cy="569" rx="39" ry="10" fill="#a7ced0" />
+        <g transform="translate(661 490) rotate(-5)" opacity="0.82">
+          <ellipse cx="0" cy="0" rx="12" ry="17" fill="#bd654e" />
+          <circle cx="-16" cy="-15" r="5" fill="#bd654e" /><circle cx="-5" cy="-22" r="5" fill="#bd654e" /><circle cx="7" cy="-21" r="5" fill="#bd654e" /><circle cx="17" cy="-13" r="5" fill="#bd654e" />
+        </g>
+        <g transform="translate(633 546) rotate(8)" opacity="0.56">
+          <ellipse cx="0" cy="0" rx="12" ry="17" fill="#bd654e" />
+          <circle cx="-16" cy="-15" r="5" fill="#bd654e" /><circle cx="-5" cy="-22" r="5" fill="#bd654e" /><circle cx="7" cy="-21" r="5" fill="#bd654e" /><circle cx="17" cy="-13" r="5" fill="#bd654e" />
+        </g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="kitten" pose="cautious" x={614} y={613} scale={0.66} idPrefix={`${idPrefix}-milo`} />
+        </g>
+        <g transform="translate(904 391) rotate(3)" filter={`url(#${idPrefix}-soft)`}>
+          <rect width="178" height="118" rx="5" fill="#fffaf0" stroke="#405955" stroke-width="7" />
+          <path d="M23 30h128M23 54h96M23 78h124M23 99h83" stroke="#bd654e" stroke-linecap="round" stroke-width="5" />
+          <circle cx="148" cy="99" r="8" fill="#d4ad55" />
+        </g>
+      </g>
+    )}
+
+    {moment === "vocabulary" && (
+      <g>
+        <g filter={`url(#${idPrefix}-shadow)`}>
+          <rect x="930" y="205" width="198" height="350" rx="5" fill="#b9654e" stroke="#405955" stroke-width="9" />
+          <path d="M956 231h145v296H956z" fill="#c9785e" opacity="0.72" />
+          <circle cx="956" cy="389" r="10" fill="#e9c874" stroke="#405955" stroke-width="4" />
+          <path d="M908 558h242" stroke="#405955" stroke-linecap="round" stroke-width="11" />
+        </g>
+        <ellipse cx="758" cy="597" rx="220" ry="42" fill="#d7c7a4" opacity="0.72" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="kitten" pose="cautious" x={760} y={608} scale={0.72} flip idPrefix={`${idPrefix}-milo`} />
+        </g>
+        <g fill="none" stroke="#bd654e" stroke-linecap="round" stroke-width="5">
+          <circle cx="774" cy="497" r="34" opacity="0.75" />
+          <path d="M744 471 687 420h-72" />
+          <circle cx="662" cy="565" r="25" opacity="0.75" />
+          <path d="M642 548 584 498h-64" />
+          <circle cx="850" cy="566" r="28" opacity="0.75" />
+          <path d="M871 548 904 497h61" />
+          <path d="M809 525q57-13 102 14" stroke-dasharray="7 8" opacity="0.68" />
+        </g>
+      </g>
+    )}
+
     {moment === "scratching" && (
       <g>
         <g filter={`url(#${idPrefix}-soft)`}>
@@ -155,6 +238,107 @@ const idPrefix = `editorial-${moment}-${phase}`;
       </g>
     )}
 
+    {moment === "baseline" && (
+      <g>
+        <ellipse cx="663" cy="594" rx="315" ry="45" fill="#d7c7a4" opacity="0.7" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M831 557h87l-10 53h-67z" fill="#eae4d7" stroke="#405955" stroke-width="7" />
+          <ellipse cx="874" cy="557" rx="43" ry="11" fill="#c6ac6a" />
+          <path d="M844 557h60" stroke="#f4ead5" stroke-width="5" />
+        </g>
+        <g transform="translate(704 405) rotate(-3)" filter={`url(#${idPrefix}-soft)`}>
+          <rect width="244" height="138" rx="6" fill="#fffaf0" stroke="#405955" stroke-width="8" />
+          <path d="M122 5v128" stroke="#cbbd9f" stroke-width="7" />
+          <path d="M25 34h70M25 60h82M25 86h61M149 34h68M149 60h76M149 86h52" stroke="#bd654e" stroke-linecap="round" stroke-width="6" />
+          <circle cx="95" cy="111" r="8" fill="#7a9189" /><circle cx="215" cy="111" r="8" fill="#d4ad55" />
+        </g>
+        <path d="m939 530 77 71" stroke="#405955" stroke-linecap="round" stroke-width="9" />
+        <path d="m1009 595 21 20" stroke="#d4ad55" stroke-linecap="round" stroke-width="13" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="young-adult" pose="standing" x={655} y={613} scale={0.69} flip idPrefix={`${idPrefix}-milo`} />
+        </g>
+      </g>
+    )}
+
+    {moment === "routine" && (
+      <g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M716 539h92l-10 62h-72zM825 539h92l-10 62h-72z" fill="#eae4d7" stroke="#405955" stroke-width="7" />
+          <ellipse cx="762" cy="539" rx="46" ry="11" fill="#c6ac6a" />
+          <ellipse cx="871" cy="539" rx="46" ry="11" fill="#a7ced0" />
+        </g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M943 463h157l31 97H913z" fill="#d6a84f" stroke="#405955" stroke-width="8" />
+          <path d="M956 463c7-58 42-82 73-82s67 24 75 82" fill="none" stroke="#405955" stroke-width="9" />
+          <path d="M970 484h101v76H970z" fill="#314744" />
+          <path d="M987 488v68m19-68v68m19-68v68m19-68v68" stroke="#efe3ca" stroke-width="6" />
+        </g>
+        <ellipse cx="569" cy="597" rx="250" ry="42" fill="#d7c7a4" opacity="0.72" />
+        <path d="M479 563c27-16 51-9 63 20-23 14-47 8-63-20Z" fill="#c7624a" />
+        <path d="m486 558-22-24" stroke="#405955" stroke-width="5" />
+        <path d="M351 546q58-43 117 0v60H351z" fill="#d8c39d" stroke="#405955" stroke-width="7" />
+        <g transform="translate(703 386)" filter={`url(#${idPrefix}-soft)`}>
+          <rect width="160" height="104" rx="5" fill="#fffaf0" stroke="#405955" stroke-width="7" />
+          <path d="M24 28h91M24 51h113M24 74h77" stroke="#bd654e" stroke-linecap="round" stroke-width="5" />
+          <path d="m123 26 10 10 19-23M123 72l10 10 19-23" fill="none" stroke="#6d887f" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+        </g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="young-adult" pose="standing" x={605} y={611} scale={0.68} idPrefix={`${idPrefix}-milo`} />
+        </g>
+      </g>
+    )}
+
+    {moment === "threshold" && (
+      <g>
+        <g filter={`url(#${idPrefix}-shadow)`}>
+          <path d="M963 240h167v319H963z" fill="#e8dfcf" stroke="#405955" stroke-width="9" />
+          <path d="M987 264h119v271H987z" fill="#8eaa83" />
+          <path d="M987 404c42-35 79-43 119-32v163H987z" fill="#6f9069" />
+          <path d="M963 240 875 283v306l88-30z" fill="#bc6e56" stroke="#405955" stroke-linejoin="round" stroke-width="9" />
+          <circle cx="912" cy="432" r="9" fill="#e9c874" stroke="#405955" stroke-width="4" />
+          <path d="M968 477h157M968 513h157" stroke="#f0e6d4" stroke-width="8" opacity="0.86" />
+        </g>
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M718 374h180v30H718zM735 404h146v35H735z" fill="#d8c39d" stroke="#405955" stroke-width="7" />
+          <path d="M753 439v72m111-72v72" stroke="#405955" stroke-linecap="round" stroke-width="10" />
+        </g>
+        <path d="M696 555c26-17 51-9 63 19-23 14-46 8-63-19Z" fill="#c7624a" />
+        <path d="m702 550-21-25" stroke="#405955" stroke-width="5" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="young-adult" pose="standing" x={665} y={612} scale={0.72} flip idPrefix={`${idPrefix}-milo`} />
+        </g>
+        <path d="M790 548q61-26 116 7" fill="none" stroke="#bd654e" stroke-dasharray="8 10" stroke-linecap="round" stroke-width="5" opacity="0.72" />
+      </g>
+    )}
+
+    {moment === "subtle-signs" && (
+      <g>
+        <ellipse cx="680" cy="595" rx="285" ry="44" fill="#d7c7a4" opacity="0.7" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <path d="M837 551h105l-11 62h-83z" fill="#eae4d7" stroke="#405955" stroke-width="7" />
+          <ellipse cx="889" cy="551" rx="52" ry="12" fill="#c6ac6a" />
+          <path d="M858 552q24 12 59 0" fill="none" stroke="#f3e8d1" stroke-width="6" />
+        </g>
+        <g transform="translate(690 382) rotate(-4)" filter={`url(#${idPrefix}-soft)`}>
+          <rect width="116" height="92" fill="#fffaf0" stroke="#405955" stroke-width="7" />
+          <circle cx="58" cy="45" r="27" fill="#817970" />
+          <path d="m36 30 5-24 17 20m13 1L91 6l-1 28" fill="#756f68" stroke="#4d504d" stroke-linejoin="round" stroke-width="4" />
+          <path d="M43 48c8 3 15 3 22-1M68 48c7 3 14 2 20-2" fill="none" stroke="#343c3a" stroke-linecap="round" stroke-width="4" />
+        </g>
+        <g transform="translate(814 365) rotate(5)" filter={`url(#${idPrefix}-soft)`}>
+          <rect width="116" height="92" fill="#fffaf0" stroke="#405955" stroke-width="7" />
+          <circle cx="58" cy="45" r="27" fill="#817970" />
+          <path d="m36 30 5-24 17 20m13 1L91 6l-1 28" fill="#756f68" stroke="#4d504d" stroke-linejoin="round" stroke-width="4" />
+          <path d="M42 46c8 5 16 5 24 0M68 46c8 4 15 4 21-1" fill="none" stroke="#343c3a" stroke-linecap="round" stroke-width="4" />
+        </g>
+        <path d="M948 453h94" stroke="#bd654e" stroke-linecap="round" stroke-width="6" />
+        <path d="m1008 438 34 15-34 15" fill="none" stroke="#bd654e" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="young-adult" pose="standing" x={643} y={613} scale={0.7} idPrefix={`${idPrefix}-milo`} />
+        </g>
+      </g>
+    )}
+
     {moment === "aging" && (
       <g>
         <path d="M193 520h418l112 116H317z" fill="#d8c39d" stroke="#405955" stroke-linejoin="round" stroke-width="8" filter={`url(#${idPrefix}-soft)`} />
@@ -169,6 +353,32 @@ const idPrefix = `editorial-${moment}-${phase}`;
         <path d="M963 553c28-17 57-17 86 0" fill="#f3ead9" />
         <g filter={`url(#${idPrefix}-soft)`}>
           <MiloFigure stage="senior" pose="slow" x={817} y={615} scale={0.78} idPrefix={`${idPrefix}-milo`} />
+        </g>
+      </g>
+    )}
+
+    {moment === "night-route" && (
+      <g>
+        <rect width="1200" height="650" fill="#263a40" opacity="0.22" />
+        <ellipse cx="767" cy="574" rx="205" ry="82" fill="#f4d984" opacity="0.2" />
+        <ellipse cx="1045" cy="574" rx="127" ry="68" fill="#f4d984" opacity="0.18" />
+        <g transform="translate(713 366)" filter={`url(#${idPrefix}-soft)`}>
+          <path d="M0 54h128" stroke="#405955" stroke-linecap="round" stroke-width="11" />
+          <path d="M64 54v171" stroke="#405955" stroke-width="10" />
+          <path d="M19 54 36 0h56l17 54Z" fill="#efd17a" stroke="#405955" stroke-linejoin="round" stroke-width="8" />
+          <circle cx="64" cy="27" r="19" fill="#fff4b5" opacity="0.82" />
+        </g>
+        <path d="M925 552h111l-12 67h-87z" fill="#d5c8ad" stroke="#405955" stroke-width="7" />
+        <path d="M947 552c26-16 52-16 78 0" fill="#f2e8d6" />
+        <path d="M1048 566h84l-10 48h-64z" fill="#e6dfd1" stroke="#405955" stroke-width="7" />
+        <ellipse cx="1090" cy="566" rx="42" ry="11" fill="#a7ced0" />
+        <path d="M617 595q74-34 144-3t159 2 170-3" fill="none" stroke="#f2d77e" stroke-dasharray="6 17" stroke-linecap="round" stroke-width="7" opacity="0.74" />
+        <g filter={`url(#${idPrefix}-soft)`}>
+          <MiloFigure stage="senior" pose="slow" x={675} y={616} scale={0.78} flip idPrefix={`${idPrefix}-milo`} />
+        </g>
+        <g fill="none" stroke="#d7a56f" stroke-linecap="round" stroke-width="5" opacity="0.75">
+          <path d="M840 484q37-32 73 0" />
+          <path d="M852 466q26-21 50 0" />
         </g>
       </g>
     )}
