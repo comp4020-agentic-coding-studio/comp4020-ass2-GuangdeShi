@@ -1,0 +1,40 @@
+{
+  "chapter": 10, "title": "The Aging Cat", "status": "final", "formative": true,
+  "questions": [
+    { "id": "ch10-q01", "type": "core-concept", "prompt": "How should a household interpret new reluctance to jump in a senior cat?", "options": [
+      { "id": "a", "text": "As a change to compare and report because reduced mobility can reflect joint pain, not merely age.", "feedback": "This is the best answer. Age provides context but does not make lost function inevitable, harmless, or unaddressable." },
+      { "id": "b", "text": "As normal aging that needs no action unless the cat cries out.", "feedback": "Chronic discomfort can present quietly through movement and resource use. Waiting for dramatic vocalisation risks normalisation drift." },
+      { "id": "c", "text": "As proof of joint disease that the household can diagnose from movement alone.", "feedback": "The movement pattern is important to report, but it does not establish a home diagnosis or treatment plan." }
+    ], "bestOption": "a", "claimIds": ["CH10-01"] },
+    { "id": "ch10-q02", "type": "core-concept", "prompt": "What are the four budgets of care named in the senior guideline?", "options": [
+      { "id": "a", "text": "Financial, time, emotional, and physical capacity.", "feedback": "This is the best answer. A sustainable senior plan must consider the caregiver's real capacity across all four dimensions." },
+      { "id": "b", "text": "Food, medication, transport, and equipment.", "feedback": "These may be plan items, but they are not the four caregiver budgets named by the guideline." },
+      { "id": "c", "text": "Indoor, outdoor, medical, and behavioural risk.", "feedback": "Those categories may shape decisions but do not represent the guideline's explicit budget-of-care framework." }
+    ], "bestOption": "a", "claimIds": ["CH10-02"] },
+    { "id": "ch10-q03", "type": "core-concept", "prompt": "Why can Chapter 9's Grimace Scale not rule out chronic senior pain?", "options": [
+      { "id": "a", "text": "It was validated for acute pain, while chronic discomfort may appear through mobility and resource-use change.", "feedback": "This is the best answer. The tool remains useful in its supported context but cannot be treated as universal." },
+      { "id": "b", "text": "Facial-expression research is unreliable and should no longer be used for any cat.", "feedback": "That over-corrects. The scale has strong acute-pain validation; the issue is transfer beyond its evidence boundary." },
+      { "id": "c", "text": "Senior cats no longer make readable facial expressions of any kind.", "feedback": "The evidence does not support that claim. The limitation belongs to tool validation and pain context, not the existence of expression." }
+    ], "bestOption": "a", "claimIds": ["CH10-05", "CH9-02"] },
+    { "id": "ch10-q04", "type": "core-concept", "prompt": "What can this course responsibly say about senior veterinary visit frequency?", "options": [
+      { "id": "a", "text": "Use one fixed interval for every senior cat because consistency is safer than individual judgement.", "feedback": "The exact interval was not independently verified and should depend on health, observed change, and household circumstances." },
+      { "id": "b", "text": "Discuss a generally more frequent, individualised cadence with the vet without presenting an unverified number.", "feedback": "This is the best answer and preserves both useful direction and the registered source limitation." },
+      { "id": "c", "text": "Keep the young-adult cadence unless an emergency occurs because aging alone changes nothing.", "feedback": "Senior status and gradual change warrant revisiting cadence; waiting only for emergencies defeats preventive partnership." }
+    ], "bestOption": "b", "claimIds": ["CH10-06"] },
+    { "id": "ch10-q05", "type": "scenario", "prompt": "Milo avoids stairs and has accidents only downstairs for six weeks. What is the best immediate plan?", "options": [
+      { "id": "a", "text": "Add an accessible downstairs litter option and raise the persistent mobility pattern with the vet.", "feedback": "This is the best answer because it removes an immediate barrier and seeks professional assessment without claiming a diagnosis." },
+      { "id": "b", "text": "Wait because a senior cat can reasonably choose fewer stairs without the change meaning anything.", "feedback": "Choice is possible, but the combined sustained change and altered litter access make indefinite dismissal unsafe." },
+      { "id": "c", "text": "Use a face photograph to confirm pain before changing the environment.", "feedback": "An acute-pain facial tool cannot rule in or rule out a chronic mobility pattern, and a simple access improvement need not wait." }
+    ], "bestOption": "a", "claimIds": ["CH10-01", "CH10-03", "CH10-05"] },
+    { "id": "ch10-q06", "type": "scenario", "prompt": "A caregiver has little money but ample time. Which plan best respects the budgets framework?", "options": [
+      { "id": "a", "text": "Treat the missing premium equipment as evidence that adequate senior care is impossible.", "feedback": "This turns one constrained budget into a moral judgement and ignores time, observation, prioritisation, and low-cost adaptation." },
+      { "id": "b", "text": "Use stable low-cost adaptations, closer observation, and a cost-honest vet conversation focused on priorities.", "feedback": "This is the best answer because it builds from the resources that exist while making the financial limit explicit." },
+      { "id": "c", "text": "Attempt every checklist item anyway, even if the plan cannot be sustained.", "feedback": "An unsustainable maximal plan does not honour the guideline's caregiver partnership or the reality of care over time." }
+    ], "bestOption": "b", "claimIds": ["CH10-02", "CH10-03"] },
+    { "id": "ch10-q07", "type": "synthesis", "prompt": "How should Chapter 8's controlled garden plan change when senior Milo tires and hesitates on ramps?", "options": [
+      { "id": "a", "text": "Keep it unchanged because revising a previously responsible decision would mean it was wrong.", "feedback": "A good earlier decision can stop fitting as Milo changes. Lifetime care requires revisiting fit, not defending history." },
+      { "id": "b", "text": "Reweigh current mobility and household budgets, then adapt, pause, or replace access while keeping indoor needs complete.", "feedback": "This is the best synthesis. It reuses the same decision process with today's cat and today's household." },
+      { "id": "c", "text": "End all outdoor access for every senior cat because age creates a universal answer.", "feedback": "This merely substitutes a new absolute rule for the one Chapter 8 rejected. Individual function and setting still matter." }
+    ], "bestOption": "b", "claimIds": ["CH10-02", "CH10-03", "CH8-01", "CH8-03"] }
+  ]
+}

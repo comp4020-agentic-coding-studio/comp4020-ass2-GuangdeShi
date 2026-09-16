@@ -1,0 +1,40 @@
+{
+  "chapter": 8, "title": "The Indoor / Outdoor Decision", "status": "final", "formative": true,
+  "questions": [
+    { "id": "ch08-q01", "type": "core-concept", "prompt": "What is the chapter's central rule for choosing a lifestyle?", "options": [
+      { "id": "a", "text": "Indoor-only is always correct because it removes every meaningful welfare risk.", "feedback": "Indoor-only reduces some risks but requires full environmental provision and is not universally correct for every cat and household." },
+      { "id": "b", "text": "Match the cat's temperament and history with the household's real setting, risks, and capacity.", "feedback": "This is the best answer. The position statement treats every lifestyle as a risk-benefit decision for the individual case." },
+      { "id": "c", "text": "Outdoor access is always better because it lets cats express natural behaviour without human design.", "feedback": "Outdoor access also carries significant safety risks and does not remove the need for deliberate care or controlled planning." }
+    ], "bestOption": "b", "claimIds": ["CH8-01"] },
+    { "id": "ch08-q02", "type": "core-concept", "prompt": "What does an indoor-only decision commit the household to?", "options": [
+      { "id": "a", "text": "A closed door plus food and one litter box, because outside risk is the main welfare issue.", "feedback": "A closed door is not enough. The indoor environment must deliberately meet resting, toileting, play, foraging, territory, social, and scent needs." },
+      { "id": "b", "text": "Implementing the full environmental-needs pillars and checking that they continue to work for this cat.", "feedback": "This is the best answer. Indoor-only is a complete environmental-care commitment, not the absence of an outdoor plan." },
+      { "id": "c", "text": "Replacing all hunting and play opportunities with larger meals so the cat feels satisfied.", "feedback": "A full bowl does not replace predatory sequence or foraging opportunities and may create a different preventive-health concern." }
+    ], "bestOption": "b", "claimIds": ["CH8-02", "CH8-06"] },
+    { "id": "ch08-q03", "type": "core-concept", "prompt": "Which option accurately describes controlled outdoor access?", "options": [
+      { "id": "a", "text": "A secure enclosure, cat-safe fencing, or gradually trained harness-and-leash use.", "feedback": "This is the best answer. These methods create a managed middle ground between indoor-only life and unrestricted roaming." },
+      { "id": "b", "text": "Any balcony or garden visit counts as controlled when a person is somewhere nearby.", "feedback": "Supervision does not make an unsecured physical setting safe. Escape routes, edges, traffic, and actual containment still matter." },
+      { "id": "c", "text": "Free-roaming during daylight is controlled because nighttime is the only risky period.", "feedback": "Nighttime confinement is one recommendation, not proof that unrestricted daytime roaming is controlled or low-risk." }
+    ], "bestOption": "a", "claimIds": ["CH8-03"] },
+    { "id": "ch08-q04", "type": "core-concept", "prompt": "Which recommendation applies regardless of the final lifestyle?", "options": [
+      { "id": "a", "text": "Microchipping plus visible identification.", "feedback": "This is the best answer. Identification remains relevant for indoor cats, controlled-access cats, and managed outdoor arrangements." },
+      { "id": "b", "text": "Harness training, even when the cat consistently shows fear around the equipment.", "feedback": "Harness access is optional and must remain gradual and consent-aware. Repeated fear can mean the method or plan does not fit." },
+      { "id": "c", "text": "Nighttime outdoor confinement in a barn or colony setting.", "feedback": "That arrangement is relevant only in narrow circumstances and does not describe every cat or Milo's own situation." }
+    ], "bestOption": "a", "claimIds": ["CH8-05"] },
+    { "id": "ch08-q05", "type": "scenario", "prompt": "Milo is confident, lives by a busy street, and can visit a secure garden on weekends. Which plan is best supported?", "options": [
+      { "id": "a", "text": "Keep the indoor pillars complete and try gradual harness training for supervised garden visits, with ID either way.", "feedback": "This is the best answer because it combines ordinary indoor welfare, a genuinely controlled option, gradual training, and universal identification." },
+      { "id": "b", "text": "Let her use the open balcony because frequent supervision offsets the street and fall risks.", "feedback": "An unenclosed balcony remains physically uncontrolled. Being present does not reliably prevent escape or a sudden accident." },
+      { "id": "c", "text": "Rule out all outdoor experience forever because the primary home has no yard.", "feedback": "The secure weekend setting is relevant. The final choice should still depend on Milo's training response and the household's ability to manage it." }
+    ], "bestOption": "a", "claimIds": ["CH8-01", "CH8-05", "CH8-06", "CH8-07"] },
+    { "id": "ch08-q06", "type": "scenario", "prompt": "A former outdoor-only barn cat remains distressed after a genuinely complete indoor setup. What is the responsible response?", "options": [
+      { "id": "a", "text": "Continue indoor-only indefinitely because a complete pillar setup must suit every cat eventually.", "feedback": "This applies a generally responsible plan too rigidly and ignores the cat's history and persistent evidence that the fit remains poor." },
+      { "id": "b", "text": "Reconsider a secure or managed outdoor arrangement without treating unrestricted release as the only alternative.", "feedback": "This is the best answer. It keeps the narrow exception narrow and retains safety and management within the reconsideration." },
+      { "id": "c", "text": "Open the door without management because indoor enrichment has already been tried.", "feedback": "Failure of one arrangement does not justify unmanaged risk. The source describes managed alternatives rather than uncontrolled release." }
+    ], "bestOption": "b", "claimIds": ["CH8-01", "CH8-04"] },
+    { "id": "ch08-q07", "type": "synthesis", "prompt": "Milo repeatedly freezes and withdraws during gradual harness contact but remains settled indoors. What should change?", "options": [
+      { "id": "a", "text": "Force a brief outdoor trial because the new environment may overcome equipment fear.", "feedback": "Forcing the next stage breaks the no-force training method and gives Milo less control when her current signals already request distance." },
+      { "id": "b", "text": "Pause, keep indoor needs fully met, and reassess pace or whether controlled outdoor access fits Milo at all.", "feedback": "This is the best synthesis. The lifestyle process remains responsive to temperament evidence rather than committed to a predetermined outcome." },
+      { "id": "c", "text": "Remove the harness and allow free-roaming because only the equipment has been shown to be unpleasant.", "feedback": "Harness avoidance does not prove unrestricted outdoor access is desired or safe. That conclusion outruns the observed evidence." }
+    ], "bestOption": "b", "claimIds": ["CH8-01", "CH8-06", "CH8-07", "CH2-05"] }
+  ]
+}
