@@ -2,10 +2,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { courseMeta } from "../src/course-config";
+import { captureContents } from "../src/data/captures";
 import { chapters, lifecycleStageIds } from "../src/data/chapters";
 import { siteConfig } from "../src/site-config";
 
 interface CheckData {
+  chapter: number;
   formative: boolean;
   status: "prototype" | "voice-gated" | "final";
   questions: Array<{
@@ -129,6 +131,87 @@ describe("Milo course shell", () => {
       expect(question.options.some((option) => option.id === question.bestOption)).toBe(true);
       expect(question.options.every((option) => option.feedback.length >= 30)).toBe(true);
       expect(question.claimIds.every((claimId) => /^CH1-\d{2}$/.test(claimId))).toBe(true);
+    }
+  });
+
+  it("builds every approved chapter as a complete Capture", () => {
+    expect(chapters.every((chapter) => chapter.implemented)).toBe(true);
+    expect(Object.keys(captureContents)).toHaveLength(11);
+
+    for (const chapter of chapters) {
+      const pagePath = resolve(`dist/chapters/${chapter.slug}/index.html`);
+      expect(existsSync(pagePath), `missing Chapter ${chapter.number} page`).toBe(true);
+      const page = readFileSync(pagePath, "utf8");
+      const phasePattern = chapter.number === 1
+        ? /<section id="[^"]+" class="consultation-section/g
+        : /<section id="[^"]+" class="capture-phase/g;
+      expect(page.match(phasePattern), `Chapter ${chapter.number} phase count`).toHaveLength(9);
+      expect(page).toContain(`SLOP5251 · Capture ${String(chapter.number).padStart(2, "0")}`);
+
+      if (chapter.number > 1) {
+        const content = captureContents[chapter.slug];
+        expect(content, `missing Chapter ${chapter.number} Capture data`).toBeDefined();
+        expect(content.chapter).toBe(chapter.number);
+        expect(content.workloadTotal).toMatch(/^About 4 hours/);
+        expect(content.practicePrompts.length).toBeGreaterThanOrEqual(4);
+        expect(content.learningThreads.length).toBeGreaterThanOrEqual(4);
+      }
+    }
+  });
+
+  it("keeps all twelve Chapter Checks challenging, formative, and evidence-linked", () => {
+    const sourceRegister = readFileSync(resolve("docs/SOURCES.md"), "utf8");
+
+    for (const chapter of chapters) {
+      const number = String(chapter.number).padStart(2, "0");
+      const check = JSON.parse(
+        readFileSync(resolve(`src/content/chapter-checks/chapter-${number}.json`), "utf8"),
+      ) as CheckData;
+      const counts = check.questions.reduce<Record<string, number>>((result, question) => {
+        result[question.type] = (result[question.type] ?? 0) + 1;
+        return result;
+      }, {});
+
+      expect(check.chapter).toBe(chapter.number);
+      expect(check.formative).toBe(true);
+      expect(check.status).toBe("final");
+      expect(check.questions.length).toBeGreaterThanOrEqual(7);
+      expect(check.questions.length).toBeLessThanOrEqual(8);
+      expect(counts["core-concept"]).toBeGreaterThanOrEqual(3);
+      expect(counts["core-concept"]).toBeLessThanOrEqual(4);
+      expect(counts.scenario).toBe(2);
+      expect(counts.synthesis).toBeGreaterThanOrEqual(1);
+      expect(counts.synthesis).toBeLessThanOrEqual(2);
+
+      for (const question of check.questions) {
+        expect(question.options.some((option) => option.id === question.bestOption)).toBe(true);
+        expect(question.options.every((option) => option.feedback.length >= 30)).toBe(true);
+        for (const claimId of question.claimIds) {
+          expect(sourceRegister, `${claimId} is absent from the claim register`).toContain(`| ${claimId} |`);
+        }
+      }
+    }
+  });
+
+  it("keeps every data-driven Capture claim and source in the registered evidence set", () => {
+    const sourceRegister = readFileSync(resolve("docs/SOURCES.md"), "utf8");
+
+    for (const content of Object.values(captureContents)) {
+      const claimIds = [
+        ...content.learningThreads.flatMap((thread) => thread.claimIds),
+        ...content.evidenceNotes.flatMap((note) => note.claimIds),
+        ...content.carePlan.flatMap((item) => item.claimIds),
+      ];
+      const sourceIds = content.evidenceNotes.flatMap((note) => note.sourceIds);
+
+      for (const claimId of new Set(claimIds)) {
+        expect(sourceRegister, `${claimId} is absent from the claim register`).toContain(`| ${claimId} |`);
+      }
+      for (const sourceId of new Set(sourceIds)) {
+        expect(sourceRegister, `${sourceId} is absent from the source register`).toMatch(
+          new RegExp(`(?:\\| ${sourceId} \\||### ${sourceId} )`),
+        );
+      }
     }
   });
 

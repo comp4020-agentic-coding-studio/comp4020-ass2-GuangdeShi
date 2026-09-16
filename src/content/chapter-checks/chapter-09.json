@@ -7,25 +7,25 @@
       { "id": "c", "text": "Tail height, back arch, paw position, gait speed, and breathing rate.", "feedback": "Some may inform broader observation, but this list does not represent the validated facial tool taught in this Capture." }
     ], "bestOption": "a", "claimIds": ["CH9-01"] },
     { "id": "ch09-q02", "type": "core-concept", "prompt": "What is the most important validation boundary of the Feline Grimace Scale here?", "options": [
-      { "id": "a", "text": "It was validated for acute pain with trained scorers, not chronic pain or proven owner-level diagnostic accuracy.", "feedback": "This is the best answer and preserves both the tool's real rigor and the limits of the population and pain context studied." },
+      { "id": "a", "text": "It has no empirical validation and is included only as an owner folklore checklist.", "feedback": "The scale is empirically validated. The caution concerns scope, not whether the research exists." },
       { "id": "b", "text": "It was validated only for senior cats with chronic arthritis scored by their owners.", "feedback": "That reverses the evidence. The study focused on naturally occurring acute pain and trained observers." },
-      { "id": "c", "text": "It has no empirical validation and is included only as an owner folklore checklist.", "feedback": "The scale is empirically validated. The caution concerns scope, not whether the research exists." }
-    ], "bestOption": "a", "claimIds": ["CH9-02", "CH9-03"] },
+      { "id": "c", "text": "It was validated for acute pain with trained scorers, not chronic pain or proven owner-level diagnostic accuracy.", "feedback": "This is the best answer and preserves both the tool's real rigor and the limits of the population and pain context studied." }
+    ], "bestOption": "c", "claimIds": ["CH9-02", "CH9-03"] },
     { "id": "ch09-q03", "type": "core-concept", "prompt": "Which is an owner-observable dental warning pattern?", "options": [
       { "id": "a", "text": "Changed breath, drooling, face pawing, eating difficulty, gum change, or tooth loss.", "feedback": "This is the best answer. These observations can prompt assessment even when the cat has not completely stopped eating." },
       { "id": "b", "text": "Only a visibly broken tooth or total refusal of every meal.", "feedback": "Dental disease can be much subtler. Waiting for a dramatic endpoint repeats the misconception this chapter addresses." },
       { "id": "c", "text": "An owner-assigned diagnosis based on briefly lifting the lip at home.", "feedback": "Observation can identify warning signs, but definitive diagnosis requires anesthesia, probing, charting, and full-mouth x-rays." }
     ], "bestOption": "a", "claimIds": ["CH9-04", "CH9-08"] },
     { "id": "ch09-q04", "type": "core-concept", "prompt": "Why are face and mouth observations added to Milo's existing log?", "options": [
-      { "id": "a", "text": "So persistence and combinations can be compared with her baseline without creating an unsustainable separate ritual.", "feedback": "This is the best answer. The shared log can reveal a quiet cluster across days and observers that memory alone may miss." },
-      { "id": "b", "text": "So the household can calculate a diagnostic pain score without consulting a veterinarian.", "feedback": "The owner role is descriptive. The validation does not give lay observers authority to diagnose or self-treat." },
+      { "id": "a", "text": "So the household can calculate a diagnostic pain score without consulting a veterinarian.", "feedback": "The owner role is descriptive. The validation does not give lay observers authority to diagnose or self-treat." },
+      { "id": "b", "text": "So persistence and combinations can be compared with her baseline without creating an unsustainable separate ritual.", "feedback": "This is the best answer. The shared log can reveal a quiet cluster across days and observers that memory alone may miss." },
       { "id": "c", "text": "So one photographed facial sign can override every other piece of context.", "feedback": "The method depends on combination, persistence, and context rather than granting one image automatic priority." }
-    ], "bestOption": "a", "claimIds": ["CH9-06", "CH9-07"] },
+    ], "bestOption": "b", "claimIds": ["CH9-06", "CH9-07"] },
     { "id": "ch09-q05", "type": "scenario", "prompt": "Milo has ten days of slower one-sided eating, changed breath, reduced grooming, and repeated facial tension. What is the best response?", "options": [
-      { "id": "a", "text": "Describe the combined pattern to the vet promptly without naming a diagnosis or starting treatment.", "feedback": "This is the best response because the persistent unexplained cluster is meaningful even without a known emergency signature." },
+      { "id": "a", "text": "Score the photographs and begin pain medicine if the result seems high.", "feedback": "The study used trained scorers, and medication remains veterinarian-led. The household should report, not diagnose and treat." },
       { "id": "b", "text": "Wait until she refuses food because finishing meals proves the present signs are minor.", "feedback": "Continued eating does not erase quieter pain or dental signs. Waiting for dramatic deterioration defeats early recognition." },
-      { "id": "c", "text": "Score the photographs and begin pain medicine if the result seems high.", "feedback": "The study used trained scorers, and medication remains veterinarian-led. The household should report, not diagnose and treat." }
-    ], "bestOption": "a", "claimIds": ["CH9-03", "CH9-05", "CH9-07"] },
+      { "id": "c", "text": "Describe the combined pattern to the vet promptly without naming a diagnosis or starting treatment.", "feedback": "This is the best response because the persistent unexplained cluster is meaningful even without a known emergency signature." }
+    ], "bestOption": "c", "claimIds": ["CH9-03", "CH9-05", "CH9-07"] },
     { "id": "ch09-q06", "type": "scenario", "prompt": "A cat squints and flattens her ears only during a nail trim, then immediately returns to baseline. What should happen?", "options": [
       { "id": "a", "text": "Treat two Action Units as proof of an acute emergency.", "feedback": "This over-reads a momentary, context-explained response and skips the baseline method's explanation and resolution steps." },
       { "id": "b", "text": "Log the context and watch for recurrence outside it; no escalation is supported by this isolated resolved event.", "feedback": "This is the best answer. It keeps the signs meaningful while avoiding over-escalation when context explains the whole event." },

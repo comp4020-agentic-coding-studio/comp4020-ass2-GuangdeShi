@@ -7,15 +7,15 @@
       { "id": "c", "text": "As one universal numeric score that produces the correct decision.", "feedback": "The accessible guidance does not establish one universal score, and this course explicitly avoids teaching unverified scoring." }
     ], "bestOption": "a", "claimIds": ["CH12-01"] },
     { "id": "ch12-q02", "type": "core-concept", "prompt": "What can this course verify about feline hospice and palliative care planning?", "options": [
-      { "id": "a", "text": "A five-step, relationship-centred care-plan process exists, alongside quality-of-life and emotional or environmental considerations.", "feedback": "This is the best answer and stays within the accessible guideline summary rather than inventing its internal steps." },
-      { "id": "b", "text": "The full five steps and every questionnaire item can be reproduced from the landing page.", "feedback": "The full text and linked questionnaire were not independently inspected, so those details cannot be taught as verified." },
-      { "id": "c", "text": "No structured process exists because every household decision is entirely private.", "feedback": "The guideline explicitly names a structured relationship-centred process even though this course does not reproduce its full contents." }
-    ], "bestOption": "a", "claimIds": ["CH12-02"] },
+      { "id": "a", "text": "The full five steps and every questionnaire item can be reproduced from the landing page.", "feedback": "The full text and linked questionnaire were not independently inspected, so those details cannot be taught as verified." },
+      { "id": "b", "text": "No structured process exists because every household decision is entirely private.", "feedback": "The guideline explicitly names a structured relationship-centred process even though this course does not reproduce its full contents." },
+      { "id": "c", "text": "A five-step, relationship-centred care-plan process exists, alongside quality-of-life and emotional or environmental considerations.", "feedback": "This is the best answer and stays within the accessible guideline summary rather than inventing its internal steps." }
+    ], "bestOption": "c", "claimIds": ["CH12-02"] },
     { "id": "ch12-q03", "type": "core-concept", "prompt": "What is the responsible use of an unverified online quality-of-life quiz?", "options": [
-      { "id": "a", "text": "Use its prompts to notice concrete trends, but do not treat its numeric result as a verdict.", "feedback": "This is the best answer. Useful questions can strengthen observation without borrowing authority from unverified scoring." },
-      { "id": "b", "text": "Follow the score because numbers remove emotion and make the decision objective.", "feedback": "A score cannot remove values, clinical uncertainty, caregiver capacity, or the need for professional conversation." },
+      { "id": "a", "text": "Follow the score because numbers remove emotion and make the decision objective.", "feedback": "A score cannot remove values, clinical uncertainty, caregiver capacity, or the need for professional conversation." },
+      { "id": "b", "text": "Use its prompts to notice concrete trends, but do not treat its numeric result as a verdict.", "feedback": "This is the best answer. Useful questions can strengthen observation without borrowing authority from unverified scoring." },
       { "id": "c", "text": "Reject every question because structured observation is inappropriate near end of life.", "feedback": "That discards the concrete longitudinal evidence the course has built. The caution applies to premature verdicts, not observation." }
-    ], "bestOption": "a", "claimIds": ["CH12-03"] },
+    ], "bestOption": "b", "claimIds": ["CH12-03"] },
     { "id": "ch12-q04", "type": "core-concept", "prompt": "What does the 'unit of care' include?", "options": [
       { "id": "a", "text": "The cat alone, because caregiver capacity should not influence medical discussion.", "feedback": "Current hospice guidance explicitly includes caregiver needs rather than treating them as an inappropriate distraction." },
       { "id": "b", "text": "The cat and caregiver, with interdisciplinary support where appropriate.", "feedback": "This is the best answer. The caregiver's capacity is part of relationship-centred care, not evidence of caring less." },
@@ -28,9 +28,9 @@
     ], "bestOption": "b", "claimIds": ["CH12-04", "CH12-05", "CH12-06"] },
     { "id": "ch12-q06", "type": "scenario", "prompt": "A sole caregiver has low financial, time, and emotional reserves and feels selfish mentioning them. What is the best response?", "options": [
       { "id": "a", "text": "Hide those limits so the vet can focus only on Milo's clinical condition.", "feedback": "A plan built without the caregiver's real capacity may be impossible to sustain, and the guidance includes that person in the unit of care." },
-      { "id": "b", "text": "Bring the limits honestly alongside Milo's log so the team can discuss realistic options together.", "feedback": "This is the best answer. Honest budgets are relevant care information, not a confession of inadequate devotion." },
-      { "id": "c", "text": "Make the final decision alone before the visit because low budgets have already settled it.", "feedback": "Budgets matter but do not erase partnership or clinical judgement. They belong inside the conversation, not in place of it." }
-    ], "bestOption": "b", "claimIds": ["CH12-04", "CH12-05", "CH12-06"] },
+      { "id": "b", "text": "Make the final decision alone before the visit because low budgets have already settled it.", "feedback": "Budgets matter but do not erase partnership or clinical judgement. They belong inside the conversation, not in place of it." },
+      { "id": "c", "text": "Bring the limits honestly alongside Milo's log so the team can discuss realistic options together.", "feedback": "This is the best answer. Honest budgets are relevant care information, not a confession of inadequate devotion." }
+    ], "bestOption": "c", "claimIds": ["CH12-04", "CH12-05", "CH12-06"] },
     { "id": "ch12-q07", "type": "synthesis", "prompt": "Which statement best captures deciding together at the end of this course?", "options": [
       { "id": "a", "text": "The caregiver brings trends and honest capacity; the veterinary team brings clinical judgement; decisions remain an ongoing partnership.", "feedback": "This is the best synthesis of the observation log, budgets, professional scope, and relationship-centred care." },
       { "id": "b", "text": "The veterinarian decides everything because clinical expertise makes household evidence secondary.", "feedback": "Clinical expertise is essential, but it cannot replace the caregiver's longitudinal knowledge, values, and capacity." },
