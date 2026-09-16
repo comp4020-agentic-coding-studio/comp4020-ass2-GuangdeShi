@@ -228,7 +228,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 15 years",
     homeCue: "A night-light marks the route between bed, water, and litter.",
     hotspot: { x: 23, y: 38 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 12,
@@ -243,7 +243,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 19 years",
     homeCue: "The log, the adapted home, and an honest conversation now belong together.",
     hotspot: { x: 59, y: 69 },
-    implemented: false,
+    implemented: true,
   },
 ];
 

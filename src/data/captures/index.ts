@@ -8,6 +8,8 @@ import { chapter07 } from "./chapter-07";
 import { chapter08 } from "./chapter-08";
 import { chapter09 } from "./chapter-09";
 import { chapter10 } from "./chapter-10";
+import { chapter11 } from "./chapter-11";
+import { chapter12 } from "./chapter-12";
 
 export const captureContents: Record<string, CaptureChapterContent> = {
   [chapter02.slug]: chapter02,
@@ -19,4 +21,6 @@ export const captureContents: Record<string, CaptureChapterContent> = {
   [chapter08.slug]: chapter08,
   [chapter09.slug]: chapter09,
   [chapter10.slug]: chapter10,
+  [chapter11.slug]: chapter11,
+  [chapter12.slug]: chapter12,
 };

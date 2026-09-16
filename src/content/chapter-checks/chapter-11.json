@@ -1,0 +1,40 @@
+{
+  "chapter": 11, "title": "When Her Mind Changes", "status": "final", "formative": true,
+  "questions": [
+    { "id": "ch11-q01", "type": "core-concept", "prompt": "Which pattern is associated with feline cognitive dysfunction?", "options": [
+      { "id": "a", "text": "Disorientation, altered sleep-wake cycles, staring, reduced play, house-soiling, or unprompted nighttime vocalisation.", "feedback": "This is the best answer. These are signs to recognise and report, not a checklist that establishes the diagnosis." },
+      { "id": "b", "text": "Only memory loss that can be demonstrated with a formal home test.", "feedback": "The owner-facing evidence describes observable behavioural patterns, not a home memory examination." },
+      { "id": "c", "text": "Any one new senior behaviour, regardless of duration or context.", "feedback": "A single change can deserve observation, but association depends on pattern and still cannot replace clinical rule-out." }
+    ], "bestOption": "a", "claimIds": ["CH11-01"] },
+    { "id": "ch11-q02", "type": "core-concept", "prompt": "Why is cognitive dysfunction described as a rule-out diagnosis?", "options": [
+      { "id": "a", "text": "Arthritis, kidney disease, hyperthyroidism, hypertension, periodontal disease, and neurological causes can produce overlapping signs.", "feedback": "This is the best answer. Clinical examination and testing are needed before the cognitive explanation can be confirmed." },
+      { "id": "b", "text": "The condition has no observable signs, so owners should ignore behaviour and wait for imaging.", "feedback": "Observable signs are useful for recognition and reporting. They are insufficient for diagnosis, not irrelevant." },
+      { "id": "c", "text": "Every senior cat must be tested for every possible disease before any household observation is recorded.", "feedback": "The log comes first as evidence for the conversation. The veterinary team determines the appropriate rule-out process." }
+    ], "bestOption": "a", "claimIds": ["CH11-02"] },
+    { "id": "ch11-q03", "type": "core-concept", "prompt": "What is the Chapter 3 medical-first callback in this context?", "options": [
+      { "id": "a", "text": "Recognise the behavioural signature, report the full pattern, and avoid privately settling on one cause.", "feedback": "This is the best answer. The owner notices and escalates while diagnosis remains a clinical rule-out process." },
+      { "id": "b", "text": "Use whichever earlier chapter gives the most familiar explanation and treat that as the cause.", "feedback": "The point of the callback is that overlapping signs keep several explanations open, not that one earlier chapter wins." },
+      { "id": "c", "text": "Ignore house-soiling because it has already been taught and cannot mean something new in senior life.", "feedback": "The same observation can have different causes at different times. Earlier learning makes the report richer, not the sign irrelevant." }
+    ], "bestOption": "a", "claimIds": ["CH11-03", "CH3-03"] },
+    { "id": "ch11-q04", "type": "core-concept", "prompt": "How should owner-support suggestions be used after assessment?", "options": [
+      { "id": "a", "text": "Implement every item uniformly so care remains fair across households.", "feedback": "Uniform completeness ignores the financial, time, emotional, and physical budgets that make a plan sustainable." },
+      { "id": "b", "text": "Discuss relevant supports with the vet and scale feasible changes to the household's real budgets.", "feedback": "This is the best answer. Environmental support and caregiver capacity belong together rather than in competing lists." },
+      { "id": "c", "text": "Choose an online diet or supplement first because environmental changes take longer.", "feedback": "Diet and medication decisions remain vet-led after rule-out. Speed does not make self-selected treatment appropriate." }
+    ], "bestOption": "b", "claimIds": ["CH11-04", "CH10-02"] },
+    { "id": "ch11-q05", "type": "scenario", "prompt": "Milo wanders at night, sleeps at different times, and has one accident. Home checks show no dental or mobility change. What next?", "options": [
+      { "id": "a", "text": "Bring the full positive and negative pattern to the vet because clinical causes remain unexcluded.", "feedback": "This is the best answer. Clear home checks improve the report but do not replace bloodwork, blood pressure, examination, or other clinical assessment." },
+      { "id": "b", "text": "Start cognitive support because the two most obvious alternatives appear absent.", "feedback": "Many alternatives cannot be ruled out at home, and treatment or supplements should not precede the vet-led process." },
+      { "id": "c", "text": "Wait indefinitely because none of the signs is an immediate emergency.", "feedback": "This confuses urgency with relevance. A persistent unexplained cluster warrants a professional conversation even when not emergent." }
+    ], "bestOption": "a", "claimIds": ["CH11-01", "CH11-02", "CH11-03"] },
+    { "id": "ch11-q06", "type": "scenario", "prompt": "A senior cat yowls at night, eats less, and has newly bad breath. Which report is most useful?", "options": [
+      { "id": "a", "text": "Report all three together and identify bad breath as a dental warning that challenges a cognitive-only explanation.", "feedback": "This is the best answer. The complete cluster gives the vet a plausible alternative to investigate without asking the owner to diagnose it." },
+      { "id": "b", "text": "Report only the yowling because cognitive signs are the oldest cat's most likely issue.", "feedback": "Selecting only signs that fit the first hypothesis creates confirmation bias and hides a relevant dental observation." },
+      { "id": "c", "text": "Treat the breath change separately because dental and cognitive signs cannot share a cause.", "feedback": "The evidence does not justify separating them. Painful eating or oral discomfort could plausibly relate to appetite and vocal change." }
+    ], "bestOption": "a", "claimIds": ["CH11-03", "CH9-04"] },
+    { "id": "ch11-q07", "type": "synthesis", "prompt": "Which response avoids both cognitive-specific failure modes?", "options": [
+      { "id": "a", "text": "Record and raise gradual change without calling it 'just old,' while withholding diagnosis and products until rule-out.", "feedback": "This is the best synthesis. It acts on evidence without closing the case before clinical assessment." },
+      { "id": "b", "text": "Wait for a dramatic crisis so the household cannot be accused of overreacting.", "feedback": "That is normalisation drift and under-reaction, not a balanced response to persistent behavioural change." },
+      { "id": "c", "text": "Request cognitive medication immediately so the vet can decide whether to refuse it.", "feedback": "That begins with a treatment conclusion and skips the rule-out process the consultation is meant to support." }
+    ], "bestOption": "a", "claimIds": ["CH11-02", "CH11-05", "CH6-02"] }
+  ]
+}
