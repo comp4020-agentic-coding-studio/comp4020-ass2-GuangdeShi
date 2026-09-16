@@ -1,7 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { courseMeta } from "../src/course-config";
 import { chapters, lifecycleStageIds } from "../src/data/chapters";
+import { siteConfig } from "../src/site-config";
 
 interface CheckData {
   formative: boolean;
@@ -39,6 +41,60 @@ describe("Milo course shell", () => {
     expect(existsSync(resolve("dist/index.html"))).toBe(true);
     expect(existsSync(resolve("dist/chapters/index.html"))).toBe(true);
     expect(existsSync(resolve("dist/chapters/the-first-72-hours/index.html"))).toBe(true);
+  });
+
+  it("keeps the approved homepage opening and lifecycle contracts", () => {
+    const homepage = readFileSync(resolve("dist/index.html"), "utf8");
+    expect(courseMeta.code).toBe("SLOP5251");
+    expect(homepage).toMatch(/<video[^>]+autoplay[^>]+muted[^>]+loop[^>]+playsinline/);
+    expect(homepage).toContain("milo-at-home-poster.jpg");
+    expect(homepage.match(/class="life-timeline__node"/g)).toHaveLength(5);
+    expect(homepage).toContain('data-interactive-home data-stage="kitten"');
+    expect(homepage).not.toContain("momo-home-stage");
+  });
+
+  it("uses the approved five-item student navigation", () => {
+    expect(siteConfig.links?.map((link) => link.text)).toEqual([
+      "Home",
+      "Capture",
+      "Consultation",
+      "Assignments",
+      "People",
+    ]);
+  });
+
+  it("builds the reusable Capture rhythm without Chapter 1 teaching", () => {
+    const capture = readFileSync(
+      resolve("dist/lectures/capture-template/index.html"),
+      "utf8",
+    );
+    for (const phase of [
+      "scene",
+      "observation",
+      "knowledge",
+      "evidence",
+      "decision",
+      "reflection",
+      "quiz",
+    ]) {
+      expect(capture).toContain(`id="${phase}"`);
+    }
+    expect(capture).toContain("A warm field notebook following one cat across a lifetime.");
+    expect(capture).not.toContain("The First 72 Hours");
+  });
+
+  it("opens the complete first Capture from the Capture index", () => {
+    const index = readFileSync(resolve("dist/lectures/index.html"), "utf8");
+    const chapter = readFileSync(
+      resolve("dist/chapters/the-first-72-hours/index.html"),
+      "utf8",
+    );
+
+    expect(index).toContain("Begin Capture 01");
+    expect(index).toContain("/comp4020-ass2-GuangdeShi/chapters/the-first-72-hours/");
+    expect(chapter).toContain("SLOP5251 · Capture 01");
+    expect(chapter).toContain("DIRECT evidence");
+    expect(chapter).toContain("SYNTHESIS evidence");
   });
 
   it("preserves the starter's four core content collections", () => {

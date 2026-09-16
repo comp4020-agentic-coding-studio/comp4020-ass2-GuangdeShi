@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  support: "DIRECT" | "SYNTHESIS";
+  claimIds: string[];
+  sourceIds?: string[];
+}
+
+const { title, support, claimIds, sourceIds = [] } = Astro.props;
+---
+
+<aside
+  class="capture-source-note"
+  data-support={support.toLowerCase()}
+  aria-label={`${support} evidence note`}
+>
+  <header>
+    <span>{support} evidence</span>
+    <strong>{claimIds.join(" · ")}</strong>
+  </header>
+  <h3>{title}</h3>
+  <div class="capture-source-note__body">
+    <slot />
+  </div>
+  {sourceIds.length > 0 && <p class="capture-source-note__sources">Sources: {sourceIds.join(" · ")}</p>}
+</aside>

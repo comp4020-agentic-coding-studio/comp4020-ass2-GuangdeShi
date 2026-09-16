@@ -1,0 +1,71 @@
+---
+import { withBase } from "astro-theme-university/url";
+import { courseMeta } from "../course-config";
+
+const videoSrc = withBase("/media/milo-at-home.mp4");
+const posterSrc = withBase("/media/milo-at-home-poster.jpg");
+---
+
+<section class="home-video-hero" aria-labelledby="home-hero-title">
+  <img
+    class="home-video-hero__poster"
+    src={posterSrc}
+    alt=""
+    width="1600"
+    height="900"
+    fetchpriority="high"
+  />
+  <video
+    class="home-video-hero__video"
+    data-home-hero-video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster={posterSrc}
+    aria-hidden="true"
+  >
+    <source src={videoSrc} type="video/mp4" />
+  </video>
+  <div class="home-video-hero__shade" aria-hidden="true"></div>
+
+  <div class="home-video-hero__content">
+    <p class="eyebrow home-video-hero__eyebrow">
+      {courseMeta.code} · One cat, one home, twelve consultations
+    </p>
+    <h1 id="home-hero-title">Milo's Life</h1>
+    <p class="home-video-hero__thesis">
+      Learn to notice what changes, understand what it may mean, and make safer care decisions
+      across one cat's whole life.
+    </p>
+    <a class="home-video-hero__action" href="#interactive-home">
+      Enter Milo's home
+      <span aria-hidden="true">↓</span>
+    </a>
+  </div>
+
+  <p class="home-video-hero__caption">The same home. A lifetime of changing needs.</p>
+</section>
+
+<script>
+  function respectHeroMotionPreference() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const videos = document.querySelectorAll<HTMLVideoElement>("[data-home-hero-video]");
+
+    for (const video of videos) {
+      if (reduceMotion.matches) {
+        video.pause();
+        video.removeAttribute("autoplay");
+      } else {
+        video.setAttribute("autoplay", "");
+        void video.play().catch(() => {
+          // The poster remains visible when a browser blocks autoplay.
+        });
+      }
+    }
+  }
+
+  respectHeroMotionPreference();
+  document.addEventListener("astro:page-load", respectHeroMotionPreference);
+</script>

@@ -1,0 +1,64 @@
+---
+import { withBase } from "astro-theme-university/url";
+import { courseMeta } from "../../course-config";
+import { chapterPath, chapters } from "../../data/chapters";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+
+const firstCapture = chapters[0];
+---
+
+<CourseLayout
+  title="Capture"
+  description="A warm field notebook of observation, explanation, evidence, decisions, and reflection across Milo's life."
+  pageClass="capture-index-page"
+>
+  <section class="capture-index" aria-labelledby="capture-index-title">
+    <header class="capture-index__header">
+      <div>
+        <p class="eyebrow">{courseMeta.code} · Course learning</p>
+        <h1 id="capture-index-title">Capture</h1>
+      </div>
+      <p>
+        A warm field notebook following one cat across a lifetime. Each Capture begins with a
+        moment to notice and ends with a decision worth revisiting.
+      </p>
+    </header>
+
+    <div class="capture-index__prototype">
+      <div>
+        <p class="capture-index__number">Capture 01 · {firstCapture.momoAge}</p>
+        <h2>{firstCapture.title}</h2>
+        <p>
+          The carrier door opens and Milo disappears under the bed. Begin with what the room can
+          actually tell you, then return with a safer first-72-hours plan.
+        </p>
+      </div>
+      <a class="primary-action" href={withBase(chapterPath(firstCapture))}>
+        Begin Capture 01
+      </a>
+    </div>
+
+    <p class="capture-index__template-link">
+      <a href={withBase("/lectures/capture-template/")}>Review the reusable Capture template</a>
+    </p>
+
+    <section class="capture-index__sequence" aria-labelledby="capture-sequence-title">
+      <div>
+        <p class="eyebrow">The field notebook</p>
+        <h2 id="capture-sequence-title">Twelve captures will live here</h2>
+      </div>
+      <ol aria-label="Twelve planned Capture positions">
+        {chapters.map((chapter) => (
+          <li>
+            <span>{String(chapter.number).padStart(2, "0")}</span>
+            {chapter.implemented ? (
+              <a href={withBase(chapterPath(chapter))}>{chapter.title}</a>
+            ) : (
+              <span>{chapter.title}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+  </section>
+</CourseLayout>

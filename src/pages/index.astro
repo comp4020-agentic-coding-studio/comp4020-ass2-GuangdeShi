@@ -1,9 +1,11 @@
 ---
+import HomeHero from "../components/HomeHero.astro";
 import InteractiveHome from "../components/InteractiveHome.astro";
 import { courseMeta } from "../course-config";
 import CourseLayout from "../layouts/CourseLayout.astro";
 ---
 
 <CourseLayout title="Milo's Life" description={courseMeta.description} pageClass="home-page">
+  <HomeHero />
   <InteractiveHome />
 </CourseLayout>

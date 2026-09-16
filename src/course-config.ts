@@ -1,9 +1,9 @@
 import type { CourseMetaInput } from "astro-course-university";
 import { z } from "astro/zod";
 
-// The level digits ANU uses: 1000--4000 undergraduate, 6000 and 8000
-// postgraduate. Both the code pattern and the level field derive from this.
-const LEVELS = [1, 2, 3, 4, 6, 8] as const;
+// The starter's supported course-code levels, including the approved 5000-level
+// code for this prototype. Both the code pattern and the level field derive from it.
+const LEVELS = [1, 2, 3, 4, 5, 6, 8] as const;
 const allowedCode = new RegExp(`^SLOP[${LEVELS.join("")}]\\d{3}$`);
 
 export const slopCourseMetaSchema = z
@@ -43,15 +43,14 @@ export const slopCourseMetaSchema = z
 // Keep this shape: the catalogue ingests this API contract when the course is
 // published.
 //
-// The code's last three digits were assigned to this repo when it was
-// provisioned, and no other course in the cohort has them. Change the first
-// digit to your course's level (and `level` to match); keep the other three.
+// Keep the code and level aligned: the schema checks that the first code digit
+// matches the numeric course level.
 export const courseMeta = slopCourseMetaSchema.parse({
-  code: "SLOP8988",
+  code: "SLOP5251",
   title: "How to Keep One Cat Happy for Twenty Years",
   session: "Semester 1",
   year: 2027,
-  level: 8,
+  level: 5,
   startDate: "2027-02-22",
   endDate: "2027-05-28",
   description:

@@ -3,7 +3,8 @@ import { getCollection } from "astro:content";
 import ArrivalPractice from "../../components/ArrivalPractice.astro";
 import CarePlan from "../../components/CarePlan.astro";
 import ChapterCheck from "../../components/ChapterCheck.astro";
-import ConsultationLayout from "../../components/ConsultationLayout.astro";
+import CaptureEvidenceNote from "../../components/CaptureEvidenceNote.astro";
+import CaptureLayout from "../../components/CaptureLayout.astro";
 import JudgementQuestion from "../../components/JudgementQuestion.astro";
 import ScenarioScene from "../../components/ScenarioScene.astro";
 import { getChapter } from "../../data/chapters";
@@ -80,12 +81,13 @@ const carePlan = [
 <CourseLayout
   title={`Chapter ${chapter.number}: ${chapter.title}`}
   description={chapter.question}
-  pageClass="consultation-page"
+  pageClass="capture-page consultation-page"
 >
-  <ConsultationLayout
-    chapter={chapter.number}
+  <CaptureLayout
+    capture={String(chapter.number).padStart(2, "0")}
     title={chapter.title}
-    age={chapter.momoAge}
+    description={chapter.question}
+    context={`${chapter.partTitle} · Milo is ${chapter.momoAge.toLowerCase()}.`}
     steps={steps}
   >
     <section id="scenario" class="consultation-section consultation-section--opening" aria-labelledby="scenario-heading">
@@ -354,6 +356,32 @@ const carePlan = [
         </div>
         <p>Use the source material to test the decisions above. You are reading for owner action, not for a list of terms.</p>
       </div>
+      <div class="capture-evidence-pair">
+        <CaptureEvidenceNote
+          title="What the registered sources state directly"
+          support="DIRECT"
+          claimIds={["CH1-01–05", "CH1-07", "CH1-08"]}
+          sourceIds={["S1", "S2", "S5", "S6"]}
+        >
+          <p>
+            The source register directly supports hiding as coping, defensible safe places,
+            separated resources, an available carrier, cat-directed contact, the named household
+            hazards, and prompt post-adoption veterinary screening.
+          </p>
+        </CaptureEvidenceNote>
+        <CaptureEvidenceNote
+          title="Where the course connects supported ideas"
+          support="SYNTHESIS"
+          claimIds={["CH1-06", "CH1-09"]}
+          sourceIds={["S1", "Course progression"]}
+        >
+          <p>
+            Gradual room-by-room access is informed guidance rather than a quoted protocol. The
+            daily observation log is this course's owner-level practice for building Milo's
+            personal baseline; neither is presented as diagnosis or as a verbatim guideline rule.
+          </p>
+        </CaptureEvidenceNote>
+      </div>
       <ol class="reading-list">
         <li>
           <div><span>15 min</span><h3>Environmental needs</h3></div>
@@ -464,7 +492,7 @@ const carePlan = [
         learning estimate, not a timer; careful comparison and revision are part of the work.
       </p>
     </section>
-  </ConsultationLayout>
+  </CaptureLayout>
 </CourseLayout>
 
 <script>

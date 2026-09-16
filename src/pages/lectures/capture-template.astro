@@ -1,0 +1,185 @@
+---
+import CaptureLayout from "../../components/CaptureLayout.astro";
+import CaptureEvidenceNote from "../../components/CaptureEvidenceNote.astro";
+import CapturePhase from "../../components/CapturePhase.astro";
+import CaptureScenePlaceholder from "../../components/CaptureScenePlaceholder.astro";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+
+const steps = [
+  { id: "scene", label: "Scene" },
+  { id: "observation", label: "Observation" },
+  { id: "knowledge", label: "Knowledge" },
+  { id: "evidence", label: "Evidence" },
+  { id: "decision", label: "Decision" },
+  { id: "reflection", label: "Reflection" },
+  { id: "quiz", label: "Quiz" },
+];
+---
+
+<CourseLayout
+  title="Capture Template"
+  description="A reusable prototype for the course's scene-led, evidence-aware Capture lessons."
+  pageClass="capture-page"
+>
+  <CaptureLayout
+    capture="00"
+    title="A moment worth noticing"
+    description="The reusable lesson structure for future chapter material."
+    steps={steps}
+    prototype
+  >
+    <CapturePhase
+      id="scene"
+      number="01"
+      label="Scene / opening moment"
+      title="Begin before the answer"
+      description="A chapter-specific moment will establish Milo's age, household, and observable situation without explaining it for the learner."
+    >
+      <CaptureScenePlaceholder />
+    </CapturePhase>
+
+    <CapturePhase
+      id="observation"
+      number="02"
+      label="Observation"
+      title="What did you notice?"
+      description="The learner records what can be seen, heard, counted, or compared before naming a cause."
+      tone="tint"
+    >
+      <div class="capture-notebook">
+        <label for="capture-observation">Field note</label>
+        <textarea
+          id="capture-observation"
+          rows="5"
+          placeholder="Record the observable details here. Interpretation comes later."
+        ></textarea>
+        <p>Observation first. Meaning remains open.</p>
+      </div>
+    </CapturePhase>
+
+    <CapturePhase
+      id="knowledge"
+      number="03"
+      label="Knowledge explanation"
+      title="Give one idea enough room"
+      description="Approved chapter knowledge will be explained in plain language, supported by comparison, diagrams, or a return to the scene."
+    >
+      <div class="capture-explanation">
+        <div>
+          <p class="capture-block-label">Core idea</p>
+          <h3>Chapter-specific explanation</h3>
+          <p>
+            This region accepts long-form teaching rather than compressing the lesson into a short
+            summary card. Subheadings, figures, comparisons, and worked examples can be added as
+            the approved chapter requires.
+          </p>
+        </div>
+        <aside>
+          <p class="capture-block-label">Return to the field note</p>
+          <p>The explanation should change what the learner can now recognise in the opening scene.</p>
+        </aside>
+      </div>
+    </CapturePhase>
+
+    <CapturePhase
+      id="evidence"
+      number="04"
+      label="Evidence / source note"
+      title="Show where the claim comes from"
+      description="Sources constrain the teaching claim; the course voice determines how it is explained."
+      tone="dark"
+    >
+      <CaptureEvidenceNote
+        title="Chapter-specific evidence boundary"
+        support="DIRECT"
+        claimIds={["[Claim ID]"]}
+        sourceIds={["[Source ID]"]}
+      >
+        <p>
+          State what the source supports, where its boundary lies, and whether the course is making
+          a direct claim or a disclosed synthesis. Chapter evidence will be inserted only from the
+          approved claim register.
+        </p>
+      </CaptureEvidenceNote>
+    </CapturePhase>
+
+    <CapturePhase
+      id="decision"
+      number="05"
+      label="Scenario decision"
+      title="Change one variable"
+      description="A fresh household situation asks the learner to apply the idea rather than repeat Milo's answer."
+      tone="tint"
+    >
+      <div class="capture-decision" data-capture-decision>
+        <p class="capture-decision__prompt">A chapter-specific scenario and decision prompt will appear here.</p>
+        <div class="capture-decision__options">
+          <button type="button" data-feedback="This position will hold a realistic misconception and explain why it is tempting.">
+            Plausible first response
+          </button>
+          <button type="button" data-feedback="This position will hold the best-supported owner-level decision and its reasoning.">
+            Best-supported response
+          </button>
+          <button type="button" data-feedback="This position will hold an incomplete response whose missing consideration is explained.">
+            Reasonable but incomplete
+          </button>
+        </div>
+        <p class="capture-decision__feedback" data-decision-feedback aria-live="polite">
+          Choose a response to preview the feedback position.
+        </p>
+      </div>
+    </CapturePhase>
+
+    <CapturePhase
+      id="reflection"
+      number="06"
+      label="Reflection / checkpoint"
+      title="Return to the first note"
+      description="The learner revisits the original observation and records what changed in their interpretation or next action."
+    >
+      <div class="capture-reflection">
+        <p><strong>Before:</strong> What did the first observation suggest?</p>
+        <p><strong>Now:</strong> What would you notice, record, or decide differently?</p>
+        <label for="capture-reflection">Checkpoint note</label>
+        <textarea id="capture-reflection" rows="4" placeholder="Reconsider the opening moment here."></textarea>
+      </div>
+    </CapturePhase>
+
+    <CapturePhase
+      id="quiz"
+      number="07"
+      label="Quiz placeholder"
+      title="Chapter Check connects here"
+      description="The final implementation will attach seven or eight formative questions with option-specific feedback."
+      tone="tint"
+    >
+      <div class="capture-quiz-placeholder" aria-label="Seven-question formative quiz placeholder">
+        <ol>
+          {Array.from({ length: 7 }, (_, index) => <li>{String(index + 1).padStart(2, "0")}</li>)}
+        </ol>
+        <p>No score is sent to formal assessment. The check remains a place to revise judgement.</p>
+      </div>
+    </CapturePhase>
+  </CaptureLayout>
+</CourseLayout>
+
+<script>
+  function setupCaptureDecision() {
+    for (const decision of document.querySelectorAll<HTMLElement>("[data-capture-decision]")) {
+      if (decision.dataset.initialized === "true") continue;
+      decision.dataset.initialized = "true";
+      const options = [...decision.querySelectorAll<HTMLButtonElement>("button[data-feedback]")];
+      const feedback = decision.querySelector<HTMLElement>("[data-decision-feedback]")!;
+
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          options.forEach((item) => item.setAttribute("aria-pressed", String(item === option)));
+          feedback.textContent = option.dataset.feedback ?? "";
+        });
+      });
+    }
+  }
+
+  setupCaptureDecision();
+  document.addEventListener("astro:page-load", setupCaptureDecision);
+</script>

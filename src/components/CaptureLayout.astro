@@ -1,0 +1,70 @@
+---
+import { withBase } from "astro-theme-university/url";
+import { courseMeta } from "../course-config";
+
+export interface CaptureStep {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  capture: number | string;
+  title: string;
+  description: string;
+  context?: string;
+  steps: CaptureStep[];
+  prototype?: boolean;
+}
+
+const {
+  capture,
+  title,
+  description,
+  context = "A warm field notebook following one cat across a lifetime.",
+  steps,
+  prototype = false,
+} = Astro.props;
+---
+
+<article class="capture" data-capture data-capture-number={capture}>
+  <header class="capture-header">
+    <a class="capture-header__back" href={withBase("/lectures/")}>Capture index</a>
+    <div class="capture-header__title">
+      <p class="eyebrow">{courseMeta.code} · Capture {capture}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+    <p class="capture-header__voice">{context}</p>
+  </header>
+
+  {prototype && (
+    <aside class="capture-prototype-note" aria-label="Prototype status">
+      <strong>Structure only</strong>
+      <p>
+        This page demonstrates the reusable learning rhythm. It does not contain Chapter 1
+        teaching or evidence claims.
+      </p>
+    </aside>
+  )}
+
+  <nav
+    class="capture-progress"
+    aria-label="Capture progress"
+    style={`--capture-step-count:${steps.length};--capture-progress-width:${steps.length * 8.3}rem`}
+  >
+    <ol>
+      {steps.map((step, index) => (
+        <li>
+          <a href={`#${step.id}`}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            {step.label}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="capture-content">
+    <slot />
+  </div>
+</article>

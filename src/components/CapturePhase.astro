@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  number: string;
+  label: string;
+  title: string;
+  description?: string;
+  tone?: "paper" | "tint" | "dark";
+}
+
+const { id, number, label, title, description, tone = "paper" } = Astro.props;
+---
+
+<section id={id} class:list={["capture-phase", `capture-phase--${tone}`]}>
+  <div class="capture-phase__inner">
+    <header class="capture-phase__heading">
+      <p><span>{number}</span>{label}</p>
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+    </header>
+    <div class="capture-phase__body">
+      <slot />
+    </div>
+  </div>
+</section>
