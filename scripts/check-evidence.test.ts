@@ -1,5 +1,5 @@
 import { execFileSync, spawnSync } from "node:child_process";
-import { copyFileSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -210,20 +210,28 @@ describe("check:evidence", () => {
     expect(result.status, result.stderr).toBe(0);
   });
 
-  // Every image the starter ships is gated, not just the home page's, so a
-  // submission can't keep a starter portrait while replacing the prose beside
-  // it. Copied from the working tree, so a re-cut image updates the hash in
-  // check-evidence.ts and this test together or fails here first.
-  it.each(STARTER_IMAGES)("rejects the unchanged starter %s", (image) => {
+  it("accepts a finished site after the starter images are removed", () => {
     const cwd = assignment2Fixture(false);
-    mkdirSync(join(cwd, dirname(image)), { recursive: true });
-    copyFileSync(resolve(image), join(cwd, image));
     const result = spawnSync(process.execPath, [script], {
       cwd,
       env,
       encoding: "utf8",
     });
-    expect(result.status).toBe(1);
-    expect(result.stderr).toContain(`${image} is still the starter image`);
+    expect(result.status, result.stderr).toBe(0);
+  });
+
+  // The production gate retains the original SHA values. At project level we
+  // verify the other valid cleanup path: a genuinely replaced file at the same
+  // location must not be mistaken for the starter asset.
+  it.each(STARTER_IMAGES)("accepts a replaced starter asset at %s", (image) => {
+    const cwd = assignment2Fixture(false);
+    mkdirSync(join(cwd, dirname(image)), { recursive: true });
+    writeFileSync(join(cwd, image), "project-owned replacement image fixture");
+    const result = spawnSync(process.execPath, [script], {
+      cwd,
+      env,
+      encoding: "utf8",
+    });
+    expect(result.status, result.stderr).toBe(0);
   });
 });

@@ -1,0 +1,163 @@
+---
+title: A Quiet Change at Breakfast
+description: An adult cat leaves part of breakfast for four mornings; the household needs a method, not a guess.
+week: 6
+date: 2027-03-29
+spec:
+  - record the change against Pepper's stated baseline before selecting an explanation
+  - compare all three responses and identify the assumption each one makes
+  - leave with a monitoring endpoint and a clear professional-escalation boundary
+related:
+  - assessments/care-consultation
+---
+
+import CaptureLayout from "../../components/CaptureLayout.astro";
+import CapturePhase from "../../components/CapturePhase.astro";
+import CaptureNotebook from "../../components/CaptureNotebook.astro";
+import CaptureWorkbook from "../../components/CaptureWorkbook.astro";
+import CaptureEvidenceNote from "../../components/CaptureEvidenceNote.astro";
+import JudgementQuestion from "../../components/JudgementQuestion.astro";
+import CarePlan from "../../components/CarePlan.astro";
+
+export const steps = [
+  { id: "scene", label: "The problem" },
+  { id: "observe", label: "Observe" },
+  { id: "reason", label: "Reason" },
+  { id: "evidence", label: "Evidence" },
+  { id: "decide", label: "Decide" },
+  { id: "care-plan", label: "Care plan" },
+];
+
+<CaptureLayout
+  capture="Case 01"
+  title="A Quiet Change at Breakfast"
+  description="Pepper is still eating, playing and using the litter box. Four unfinished breakfasts are still a change worth describing."
+  context="A transfer case: use the method you learned with Milo in a household you have not met before."
+  steps={steps}
+  backHref="/sessions/"
+  backLabel="Consultation index"
+  eyebrow="SLOP5251 · Consultation Case 01"
+>
+  <CapturePhase id="scene" number="01" label="The problem" title="The bowl is not empty anymore">
+    <div class="case-prose">
+      <p>
+        Pepper is a six-year-old cat who usually finishes breakfast within twenty minutes. For four
+        mornings she has left roughly half. Her evening play, drinking and litter-box pattern appear
+        unchanged. One caregiver says the new work roster moved breakfast earlier; another says
+        Pepper is simply becoming fussy.
+      </p>
+      <p>
+        Neither explanation has been tested. There is no known urgent signature in the case file,
+        but “not an emergency” does not answer what the household should do next.
+      </p>
+    </div>
+  </CapturePhase>
+
+  <CapturePhase
+    id="observe"
+    number="02"
+    label="Observe"
+    title="Remove the explanation for one minute"
+    description="Write what changed, for how long, and what remained normal."
+    tone="tint"
+  >
+    <CaptureNotebook
+      storageKey="milo-consultation-01-observation"
+      label="Consultation field note"
+      prompt="Describe Pepper's breakfast pattern against her baseline. Include duration, amount, context and unchanged behaviours without naming a cause."
+    />
+  </CapturePhase>
+
+  <CapturePhase
+    id="reason"
+    number="03"
+    label="Reason"
+    title="Run the four steps in order"
+    description="A plausible explanation earns a test, not automatic acceptance."
+  >
+    <div class="capture-explanation">
+      <div>
+        <h3>Baseline → change → urgency → explanation and direction</h3>
+        <p>
+          Pepper's usual meal completion gives the comparison. Four mornings establish persistence,
+          while normal play and litter use help describe the wider pattern without cancelling the
+          appetite change. Check known urgent signatures before testing the schedule explanation.
+          Then ask whether returning to the established feeding time brings the pattern back toward
+          baseline. If it does not, or the change worsens, the case moves into a veterinary
+          conversation rather than indefinite waiting.
+        </p>
+      </div>
+      <aside>
+        <p class="eyebrow">Do not collapse these</p>
+        <p><strong>Not currently urgent</strong> is a triage observation. <strong>Nothing to do</strong> is a decision. They are not the same sentence.</p>
+      </aside>
+    </div>
+    <CaptureWorkbook
+      storageKey="milo-consultation-01-reasoning"
+      prompts={[
+        "Which detail establishes Pepper's baseline, and which detail establishes change?",
+        "What does the normal play and litter pattern contribute without proving?",
+        "What observation would support or weaken the changed-schedule explanation?",
+      ]}
+    />
+  </CapturePhase>
+
+  <CapturePhase
+    id="evidence"
+    number="04"
+    label="Evidence"
+    title="The method is a disclosed synthesis"
+    description="Its value comes from disciplined order, not from pretending one guideline names these exact four steps."
+    tone="dark"
+  >
+    <CaptureEvidenceNote
+      title="Personal baseline and proportionate escalation"
+      support="SYNTHESIS"
+      claimIds={["CH6-01", "CH6-02"]}
+      sourceIds={["S1", "S2", "S3", "S4"]}
+    >
+      <p>
+        The course combines individual baseline comparison, urgent-pattern recognition, and the
+        distinction between explained-and-resolving and unexplained-or-persisting change. No source
+        states this exact procedure. It remains an owner-level observation method, not a diagnostic
+        algorithm.
+      </p>
+    </CaptureEvidenceNote>
+  </CapturePhase>
+
+  <CapturePhase
+    id="decide"
+    number="05"
+    label="Decide"
+    title="Choose the next step, not the final explanation"
+    tone="tint"
+  >
+    <JudgementQuestion
+      id="consultation-breakfast-change"
+      phase="transfer"
+      storageKey="milo-consultation-01-decision"
+      prompt="What is the safest owner-level response to Pepper's current pattern?"
+      bestOption="b"
+      options={[
+        { id: "a", text: "Keep waiting because Pepper still eats some food and no emergency sign is visible.", feedback: "The reassuring details affect urgency, but they do not explain four departures from a recorded baseline or provide an endpoint for waiting." },
+        { id: "b", text: "Record the pattern, restore the established feeding time, watch for return toward baseline, and raise persistence or worsening with the vet.", feedback: "This preserves the current non-urgent context while testing the schedule explanation and defining when observation must become a professional conversation." },
+        { id: "c", text: "Treat any repeated appetite change as an emergency regardless of the rest of the pattern.", feedback: "Persistence matters, but emergency status comes from the whole pattern and known urgent signatures. This response skips proportionate triage." },
+      ]}
+    />
+  </CapturePhase>
+
+  <CapturePhase
+    id="care-plan"
+    number="06"
+    label="Care plan"
+    title="Leave the household with an endpoint"
+    description="The plan should still make sense tomorrow, including if the explanation turns out to be wrong."
+  >
+    <CarePlan items={[
+      { action: "Preserve the four-day record", reason: "Keep amount, timing, duration and the unchanged behaviours together so the pattern can be compared accurately.", claimIds: ["CH6-01"] },
+      { action: "Test the schedule explanation", reason: "Return to the established feeding time and observe whether Pepper moves back toward her own baseline.", claimIds: ["CH6-01"] },
+      { action: "Name the monitoring endpoint", reason: "If the appetite change persists, worsens or gains other signs, raise the complete pattern with a veterinarian rather than extending wait-and-see indefinitely.", claimIds: ["CH6-01", "CH6-02"] },
+      { action: "Keep urgent signatures separate", reason: "A known time-sensitive pattern would override this measured test and require immediate professional help.", claimIds: ["CH6-01", "CH3-06"] },
+    ]} />
+  </CapturePhase>
+</CaptureLayout>

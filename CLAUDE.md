@@ -674,18 +674,24 @@ SOURCE REGISTER:          docs/SOURCES.md — full Claim Register (CH1-01
                           chapters, backed by the Part I sources (S1-S7)
                           and the whole-course source pack (S8 onward),
                           verified per `CLAUDE.md` §21
-VOICE:                    docs/VOICE.md established — see §22. One
-                          representative sample produced and audited
-                          (docs/process/voice-sample-chapter-05.md);
-                          full twelve-chapter voice pass NOT yet run.
-ASSESSMENTS:              NOT DESIGNED
+VOICE:                    docs/VOICE.md established — see §22. All twelve
+                          learner-facing Captures implemented and accepted
+                          through Human Review; planning documents retain
+                          their source-first production style.
+ASSESSMENTS:              HUMAN-AUTHORISED / IMPLEMENTED — Field Notebook
+                          20%, Care Consultation 30%, Lifelong Care Dossier
+                          50%; Chapter Checks remain formative; see
+                          docs/process/course-shell-decision.md
 FORM / EXPERIENCE:        HUMAN-APPROVED — Milo's Life: Interactive Home +
                           Care Consultations + formative Chapter Checks;
                           approved under the working name Momo; see §23 and
                           docs/LESSON_SYSTEM.md
-IMPLEMENTATION:           Chapter 1 FINAL learner-facing reference; Chapters
-                          2-12 not implemented. See
-                          docs/process/chapter-01-production.md
+IMPLEMENTATION:           Chapters 1-12 FINAL learner-facing Captures. The
+                          Interactive Home, responsive Chapter Checks, and
+                          shared evidence components are implemented.
+COURSE SHELL:             Assignments, Consultation with one transfer case,
+                          People, policies, and Capture field guide complete;
+                          starter learner-facing content removed.
 ```
 
 Topic, thesis and transformation are approved as a *working* direction only.
@@ -693,6 +699,7 @@ The twelve-chapter curriculum backbone has been approved by the human (see
 the HUMAN DECISION record in project history) and all twelve chapters have
 been drafted, reviewed, and repaired per-Part and whole-course. The major form
 direction is approved; its implementation details must now be derived within
-§23 rather than reopening the direction. Do not fill in ASSESSMENTS or alter
+§23 rather than reopening the direction. The assessment shell was subsequently
+authorised by the human and is recorded above; do not alter its philosophy or
 the approved form, curriculum, evidence, or voice boundaries without explicit
 human approval.

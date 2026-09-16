@@ -2410,6 +2410,373 @@
     text-transform: none;
   }
 
+  .course-shell-page {
+    min-height: calc(100svh - var(--at-nav-height));
+    color: var(--momo-ink);
+    background: var(--momo-paper);
+  }
+
+  .shell-hero,
+  .assignment-path,
+  .formative-note,
+  .consultation-method,
+  .consultation-cases,
+  .scope-note,
+  .fiction-note,
+  .people-list,
+  .assignment-brief__hero,
+  .assignment-brief__body,
+  .shell-related {
+    width: min(74rem, calc(100% - 3rem));
+    margin-inline: auto;
+  }
+
+  .shell-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.58fr);
+    gap: 5rem;
+    align-items: end;
+    padding-block: 5rem 4rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .shell-hero h1 {
+    max-width: 13ch;
+    margin: 0;
+    color: var(--momo-green-dark);
+    font-size: 4.5rem;
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  .shell-hero > p {
+    margin: 0 0 0.4rem;
+    font-family: Georgia, serif;
+    font-size: 1.18rem;
+    line-height: 1.6;
+  }
+
+  .assignment-path,
+  .consultation-method,
+  .consultation-cases,
+  .people-list {
+    padding-block: 4.5rem;
+  }
+
+  .assignment-path__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem;
+    align-items: end;
+    margin-block-end: 2.5rem;
+  }
+
+  .assignment-path__heading h2,
+  .consultation-method h2,
+  .consultation-cases h2,
+  .formative-note h2,
+  .scope-note h2,
+  .fiction-note h2 {
+    margin: 0;
+    color: var(--momo-green-dark);
+    font-size: 2.35rem;
+    line-height: 1.06;
+  }
+
+  .assignment-path__heading > p {
+    margin: 0;
+    text-align: end;
+  }
+
+  .assignment-path__heading > p strong {
+    display: block;
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-size: 2rem;
+  }
+
+  .assignment-path > ol,
+  .case-list {
+    margin: 0;
+    padding: 0;
+    border-block-start: 1px solid var(--momo-line);
+    list-style: none;
+  }
+
+  .assignment-path > ol > li {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) 10rem;
+    gap: 2rem;
+    padding-block: 2rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .assignment-path__number,
+  .case-list__number {
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-weight: 800;
+  }
+
+  .assignment-path__stage,
+  .case-list__meta {
+    margin: 0 0 0.4rem;
+    color: #65716e;
+    font-family: var(--at-font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .assignment-path h3,
+  .case-list h2,
+  .people-list h2 {
+    margin: 0 0 0.6rem;
+    color: var(--momo-green-dark);
+    font-size: 1.55rem;
+  }
+
+  .assignment-path__content > p:not(.assignment-path__stage) {
+    max-width: 48rem;
+  }
+
+  .assignment-path__deliverable {
+    color: #4f5f5c;
+    font-size: 0.92rem;
+  }
+
+  .assignment-path a,
+  .case-list a,
+  .people-list a,
+  .assignment-brief__hero > a {
+    color: var(--momo-green-dark);
+    font-weight: 800;
+    text-underline-offset: 0.22em;
+  }
+
+  .assignment-path dl {
+    margin: 0;
+  }
+
+  .assignment-path dl div + div {
+    margin-block-start: 1rem;
+  }
+
+  .assignment-path dt,
+  .assignment-brief dt {
+    color: #65716e;
+    font-family: var(--at-font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .assignment-path dd,
+  .assignment-brief dd {
+    margin: 0.2rem 0 0;
+    color: var(--momo-green-dark);
+    font-weight: 800;
+  }
+
+  .formative-note,
+  .scope-note,
+  .fiction-note {
+    margin-block: 1rem 5rem;
+    padding: 2rem 0 2rem 2rem;
+    border-inline-start: 5px solid var(--momo-coral);
+  }
+
+  .formative-note > p:last-child,
+  .scope-note > p:last-child,
+  .fiction-note > p:last-child {
+    max-width: 54rem;
+    margin-block-end: 0;
+  }
+
+  .assignment-brief__hero {
+    padding-block: 3.5rem 3rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .assignment-brief__hero > a {
+    display: inline-block;
+    margin-block-end: 2.5rem;
+    font-family: var(--at-font-mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+  }
+
+  .assignment-brief__hero h1 {
+    max-width: 16ch;
+    margin: 0;
+    color: var(--momo-green-dark);
+    font-size: 4rem;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .assignment-brief__hero > p:not(.eyebrow) {
+    max-width: 48rem;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.55;
+  }
+
+  .assignment-brief__hero dl {
+    display: grid;
+    grid-template-columns: 8rem 13rem minmax(0, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0 0;
+  }
+
+  .assignment-brief__body {
+    max-width: 58rem;
+    padding-block: 4rem 6rem;
+  }
+
+  .assignment-brief__body > h2,
+  .assignment-brief__body section > h2 {
+    margin-block-start: 3rem;
+    color: var(--momo-green-dark);
+  }
+
+  .assignment-brief__body > p,
+  .assignment-brief__body > blockquote {
+    max-width: 49rem;
+    line-height: 1.7;
+  }
+
+  .assignment-brief__deliverable {
+    margin-block-end: 3rem;
+    padding: 1.6rem;
+    border: 1px solid var(--momo-line);
+    background: var(--momo-white);
+  }
+
+  .assignment-brief__deliverable h2 {
+    margin: 0;
+  }
+
+  .assignment-brief__body table {
+    width: 100%;
+  }
+
+  .consultation-method > header,
+  .consultation-cases > header {
+    max-width: 47rem;
+    margin-block-end: 2.5rem;
+  }
+
+  .consultation-method ol {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+    border-block: 1px solid var(--momo-line);
+    list-style: none;
+  }
+
+  .consultation-method li {
+    min-width: 0;
+    padding: 1.5rem;
+    border-inline-end: 1px solid var(--momo-line);
+  }
+
+  .consultation-method li:last-child {
+    border-inline-end: 0;
+  }
+
+  .consultation-method li span,
+  .consultation-method li strong {
+    display: block;
+  }
+
+  .consultation-method li span {
+    color: var(--momo-coral);
+    font-family: var(--at-font-mono);
+    font-size: 0.72rem;
+  }
+
+  .consultation-method li strong {
+    margin-block: 0.4rem;
+    color: var(--momo-green-dark);
+    font-size: 1.15rem;
+  }
+
+  .consultation-method li p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .consultation-cases {
+    border-block-start: 1px solid var(--momo-line);
+  }
+
+  .case-list li {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr) auto;
+    gap: 2rem;
+    align-items: center;
+    padding-block: 2rem;
+    border-block-end: 1px solid var(--momo-line);
+  }
+
+  .case-list li > a {
+    display: inline-flex;
+    min-height: 2.8rem;
+    padding: 0.55rem 0.8rem;
+    align-items: center;
+    border: 2px solid var(--momo-green-dark);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .case-list li > a:hover,
+  .case-list li > a:focus-visible {
+    background: var(--momo-yellow);
+  }
+
+  .case-prose {
+    max-width: 50rem;
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+
+  .shell-related {
+    padding-block: 3rem 5rem;
+  }
+
+  .people-list article {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 2rem;
+    padding-block: 2.5rem;
+    border-block: 1px solid var(--momo-line);
+  }
+
+  .people-list__mark {
+    display: grid;
+    width: 6rem;
+    height: 6rem;
+    place-items: center;
+    border: 2px solid var(--momo-green-dark);
+    color: var(--momo-green-dark);
+    background: var(--momo-yellow);
+    font-family: var(--at-font-mono);
+    font-size: 1.35rem;
+    font-weight: 900;
+  }
+
+  .people-list article > div:last-child > p:not(.eyebrow) {
+    max-width: 48rem;
+  }
+
+  .people-list__contact {
+    color: #52615e;
+    font-size: 0.9rem;
+  }
+
   @media (max-width: 62rem) {
     .home-section-intro,
     .life-timeline,
@@ -2881,6 +3248,124 @@
 
     .chapter-check__actions {
       position: static;
+    }
+  }
+
+  @media (max-width: 62rem) {
+    .shell-hero,
+    .assignment-path,
+    .formative-note,
+    .consultation-method,
+    .consultation-cases,
+    .scope-note,
+    .fiction-note,
+    .people-list,
+    .assignment-brief__hero,
+    .assignment-brief__body,
+    .shell-related {
+      width: min(100% - 2rem, 74rem);
+    }
+
+    .shell-hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .assignment-path > ol > li {
+      grid-template-columns: 3rem minmax(0, 1fr);
+    }
+
+    .assignment-path dl {
+      grid-column: 2;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .assignment-path dl div + div {
+      margin-block-start: 0;
+    }
+
+    .consultation-method ol {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .consultation-method li:nth-child(2) {
+      border-inline-end: 0;
+    }
+
+    .consultation-method li:nth-child(-n + 2) {
+      border-block-end: 1px solid var(--momo-line);
+    }
+  }
+
+  @media (max-width: 44rem) {
+    .shell-hero {
+      padding-block: 3rem;
+    }
+
+    .shell-hero h1,
+    .assignment-brief__hero h1 {
+      font-size: 2.8rem;
+    }
+
+    .assignment-path,
+    .consultation-method,
+    .consultation-cases,
+    .people-list {
+      padding-block: 3rem;
+    }
+
+    .assignment-path__heading,
+    .assignment-path > ol > li,
+    .case-list li,
+    .people-list article {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .assignment-path__heading > p {
+      text-align: start;
+    }
+
+    .assignment-path__number {
+      font-size: 1.15rem;
+    }
+
+    .assignment-path dl {
+      grid-column: auto;
+    }
+
+    .assignment-brief__hero dl,
+    .consultation-method ol {
+      grid-template-columns: 1fr;
+    }
+
+    .assignment-brief__hero dl {
+      gap: 1rem;
+    }
+
+    .consultation-method li {
+      border-inline-end: 0;
+      border-block-end: 1px solid var(--momo-line);
+    }
+
+    .consultation-method li:last-child {
+      border-block-end: 0;
+    }
+
+    .case-list li > a {
+      justify-self: start;
+    }
+
+    .formative-note,
+    .scope-note,
+    .fiction-note {
+      padding-inline-start: 1.2rem;
+    }
+
+    .people-list__mark {
+      width: 4.5rem;
+      height: 4.5rem;
     }
   }
 

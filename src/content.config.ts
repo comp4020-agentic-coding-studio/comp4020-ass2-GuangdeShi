@@ -114,6 +114,8 @@ export const collections = {
         week: weekSchema,
         due: z.coerce.date(),
         weight: z.coerce.number().positive().max(100),
+        stage: z.string().trim().min(10),
+        deliverable: z.string().trim().min(30),
         marking: z.discriminatedUnion("mode", [weightedMarking, holisticMarking]).optional(),
       })
       .loose(),

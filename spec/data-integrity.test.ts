@@ -33,4 +33,17 @@ describe("course data integrity", () => {
       expect(date <= api.course.endDate, `${node.id} falls after teaching ends`).toBe(true);
     }
   });
+
+  it("keeps formal assessment aligned and weighted to exactly 100 percent", () => {
+    const assessments = api.nodes.filter((node) => node.type === "assessments");
+    expect(assessments).toHaveLength(3);
+    expect(
+      assessments.reduce((sum, assessment) => sum + Number(assessment.meta?.weight ?? 0), 0),
+    ).toBe(100);
+
+    for (const assessment of assessments) {
+      expect(String(assessment.meta?.stage ?? "").length).toBeGreaterThanOrEqual(10);
+      expect(String(assessment.meta?.deliverable ?? "").length).toBeGreaterThanOrEqual(30);
+    }
+  });
 });

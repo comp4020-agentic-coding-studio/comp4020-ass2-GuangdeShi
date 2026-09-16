@@ -27,7 +27,7 @@ const firstCapture = chapters[0];
     <div class="capture-index__prototype">
       <div>
         <p class="capture-index__number">Capture 01 · {firstCapture.momoAge}</p>
-        <h2>{firstCapture.title}</h2>
+        <h2>Begin where Milo's record begins</h2>
         <p>
           The carrier door opens and Milo disappears under the bed. Begin with what the room can
           actually tell you, then return with a safer first-72-hours plan.
@@ -45,9 +45,9 @@ const firstCapture = chapters[0];
     <section class="capture-index__sequence" aria-labelledby="capture-sequence-title">
       <div>
         <p class="eyebrow">The field notebook</p>
-        <h2 id="capture-sequence-title">Twelve captures will live here</h2>
+        <h2 id="capture-sequence-title">Twelve captures, one changing life</h2>
       </div>
-      <ol aria-label="Twelve planned Capture positions">
+      <ol aria-label="Twelve Capture chapters">
         {chapters.map((chapter) => (
           <li>
             <span>{String(chapter.number).padStart(2, "0")}</span>

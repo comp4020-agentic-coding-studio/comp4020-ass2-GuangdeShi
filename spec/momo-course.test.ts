@@ -233,4 +233,21 @@ describe("Milo course shell", () => {
     expect(component).toContain("form.reset()");
     expect(component).toContain("localStorage.removeItem(key)");
   });
+
+  it("builds the approved non-Chapter course shell without a parallel teaching system", () => {
+    const assignments = readFileSync(resolve("dist/assessments/index.html"), "utf8");
+    const consultation = readFileSync(
+      resolve("dist/sessions/a-quiet-change-at-breakfast/index.html"),
+      "utf8",
+    );
+    const people = readFileSync(resolve("dist/people/index.html"), "utf8");
+
+    expect(assignments).toContain('data-assessment-total="100"');
+    expect(assignments).toContain("Chapter Checks remain formative");
+    expect(consultation.match(/<section id="[^"]+" class="capture-phase/g)).toHaveLength(6);
+    expect(consultation).toContain("CH6-01");
+    expect(consultation).toContain("data-judgement");
+    expect(people).toContain("The teaching profile below is fictional");
+    expect(people).toContain("Mara Bell");
+  });
 });

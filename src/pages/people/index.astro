@@ -1,0 +1,34 @@
+---
+import PeopleGrid from "../../components/PeopleGrid.astro";
+import { courseMeta } from "../../course-config";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+---
+
+<CourseLayout
+  title="People"
+  description="Who holds the course together, how the teaching works, and where different questions belong."
+  pageClass="course-shell-page"
+>
+  <section class="shell-hero shell-hero--people" aria-labelledby="people-title">
+    <div>
+      <p class="eyebrow">{courseMeta.code} · People</p>
+      <h1 id="people-title">A human place to bring an uncertain judgement</h1>
+    </div>
+    <p>
+      Course questions should not need a performance of certainty. Bring the observation, the
+      decision you are weighing, and the part of your reasoning that still feels unstable.
+    </p>
+  </section>
+
+  <aside class="fiction-note" aria-labelledby="fiction-note-title">
+    <p class="eyebrow">Course-world note</p>
+    <h2 id="fiction-note-title">The teaching profile below is fictional</h2>
+    <p>
+      SLOP5251 is an Assignment 2 course world. Its convenor is not an ANU staff member and this
+      site is not a veterinary service. The profile exists to make the fictional course complete
+      without borrowing a real person's identity.
+    </p>
+  </aside>
+
+  <PeopleGrid />
+</CourseLayout>

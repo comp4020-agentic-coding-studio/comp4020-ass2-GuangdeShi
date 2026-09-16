@@ -1,7 +1,6 @@
 ---
 import { getPublishedCollection } from "astro-course-university/content";
-import Card from "astro-theme-university/components/Card.astro";
-import CardGrid from "astro-theme-university/components/CardGrid.astro";
+import { withBase } from "astro-theme-university/url";
 
 const people = await getPublishedCollection("people");
 
@@ -21,13 +20,6 @@ const roleLabels: Record<string, string> = {
   other: "",
 };
 
-// photoAlt rides the schema's passthrough (definePeopleCollection has no
-// extension point), so it needs a cast out of the generated types.
-function photoAlt(data: unknown): string | undefined {
-  const alt = (data as { photoAlt?: unknown }).photoAlt;
-  return typeof alt === "string" ? alt : undefined;
-}
-
 const visible = people.sort((a, b) => {
   const ra = roleOrder[a.data.role ?? "other"] ?? 99;
   const rb = roleOrder[b.data.role ?? "other"] ?? 99;
@@ -36,23 +28,17 @@ const visible = people.sort((a, b) => {
 });
 ---
 
-<CardGrid columns={2}>
-  {
-    visible.map((person) => (
-      <Card
-        headingLevel="h2"
-        title={person.data.title}
-        href={`/people/${person.id}/`}
-        image={person.data.photo ?? undefined}
-        imageAlt={photoAlt(person.data)}
-      >
-        {person.data.role && roleLabels[person.data.role] && (
-          <p>
-            <small>{roleLabels[person.data.role]}</small>
-          </p>
-        )}
+<div class="people-list">
+  {visible.map((person) => (
+    <article>
+      <div class="people-list__mark" aria-hidden="true">MB</div>
+      <div>
+        {person.data.role && roleLabels[person.data.role] && <p class="eyebrow">{roleLabels[person.data.role]}</p>}
+        <h2>{person.data.title}</h2>
         <p>{person.data.description}</p>
-      </Card>
-    ))
-  }
-</CardGrid>
+        <p class="people-list__contact">{person.data.contact}</p>
+        <a href={withBase(`/people/${person.id}/`)}>Teaching approach and contact</a>
+      </div>
+    </article>
+  ))}
+</div>

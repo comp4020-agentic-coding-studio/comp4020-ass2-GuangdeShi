@@ -14,6 +14,9 @@ interface Props {
   context?: string;
   steps: CaptureStep[];
   prototype?: boolean;
+  backHref?: string;
+  backLabel?: string;
+  eyebrow?: string;
 }
 
 const {
@@ -23,14 +26,17 @@ const {
   context = "A warm field notebook following one cat across a lifetime.",
   steps,
   prototype = false,
+  backHref = "/lectures/",
+  backLabel = "Capture index",
+  eyebrow = `${courseMeta.code} · Capture ${capture}`,
 } = Astro.props;
 ---
 
 <article class="capture" data-capture data-capture-number={capture}>
   <header class="capture-header">
-    <a class="capture-header__back" href={withBase("/lectures/")}>Capture index</a>
+    <a class="capture-header__back" href={withBase(backHref)}>{backLabel}</a>
     <div class="capture-header__title">
-      <p class="eyebrow">{courseMeta.code} · Capture {capture}</p>
+      <p class="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p>{description}</p>
     </div>

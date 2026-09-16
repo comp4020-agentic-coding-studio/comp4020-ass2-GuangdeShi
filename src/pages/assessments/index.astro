@@ -1,0 +1,33 @@
+---
+import AssessmentsGrid from "../../components/AssessmentsGrid.astro";
+import { courseMeta } from "../../course-config";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+---
+
+<CourseLayout
+  title="Assignments"
+  description="Three formal assessments trace the move from precise observation to an adaptive lifelong care judgement."
+  pageClass="course-shell-page"
+>
+  <section class="shell-hero shell-hero--assignments" aria-labelledby="assignments-title">
+    <div>
+      <p class="eyebrow">{courseMeta.code} · Assessment</p>
+      <h1 id="assignments-title">Show how your judgement changed</h1>
+    </div>
+    <p>
+      The course does not reward a pile of remembered cat facts. It asks for a record of what you
+      noticed, how you tested an interpretation, and why the care decision that followed is safe.
+    </p>
+  </section>
+
+  <AssessmentsGrid />
+
+  <aside class="formative-note" aria-labelledby="formative-note-title">
+    <p class="eyebrow">Practice without penalty</p>
+    <h2 id="formative-note-title">Chapter Checks remain formative</h2>
+    <p>
+      The seven-question check at the end of each Capture helps you revise your reasoning. It does
+      not contribute to the formal assessment percentage and is not submitted for a mark.
+    </p>
+  </aside>
+</CourseLayout>
