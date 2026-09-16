@@ -1,23 +1,13 @@
-# Process overview
+# Process reflection
 
-> **Working structure, not the final submission account.** The final 400–600 word process overview
-> will be written after implementation and deployment work is complete. This file currently keeps
-> the evidence trail valid without pretending the project has reached that point.
+I began by asking my coding agent to make a Chapter page and a working course site quickly. The result ran, but that was also the problem: a functioning interface made thin teaching feel more finished than it was. The page divided material into neat, content-shaped chunks before I had settled what a student should be able to judge after twelve weeks. I stopped expanding the interface and changed the order of work.
 
-## Current through-line
+I first made evidence and curriculum into constraints rather than suggestions. I asked the agent to identify source gaps and register claims, but I retained the decisions about what counted as adequate evidence. The source protocol recorded in [`1056188`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/1056188) distinguished DIRECT claims from SYNTHESIS and set an owner-facing medical boundary: students observe, interpret, act safely, and know when to seek professional help; they do not diagnose. I then reviewed and locked the twelve-chapter backbone in [`4f11292`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/4f11292). This gate prevented the agent from quietly changing chapter purpose or solving uncertainty by adding more content.
 
-The project moved from an approved curriculum and form decision into a working homepage and a
-single production Capture in
-[`19bbe1f`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/19bbe1f).
-The Chapter 1 reference then became a data-driven system across the remaining eleven chapters in
-[`9389f28...2f74a35`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/compare/9389f28...2f74a35).
-The whole Capture course was checked for structural depth, evidence registration, formative-check
-quality and both required viewports in
-[`117b4b5`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/117b4b5).
+Correct content created another problem. Drafts could be accurate yet still sound generic, over-explained, and suspiciously uniform. I responded by establishing `docs/VOICE.md` and an editorial workflow in [`5dd1d27`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/5dd1d27). The line “a warm field notebook following one cat across a lifetime” became a practical test. Scenes had to begin with something observable, explanations had to preserve source limits, and Milo could not become a mascot pasted onto twelve unrelated articles. Human review remained necessary because no automated check can decide whether a paragraph feels attentive rather than synthetic.
 
-## Reserved for the final account
+Only after those decisions did I approve a reusable presentation system. I asked the agent to build Chapter 1 as the reference Capture, with consultation phases, evidence notes, a formative Chapter Check, and the interactive home, recorded in [`19bbe1f`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/19bbe1f). I reviewed that chapter before allowing batch production. This made later work a controlled mapping exercise instead of twelve independent page inventions.
 
-The final version will explain the consequential human design gates, the failed or discarded paths,
-the evolution of the project harness, and how automated checks and human review were given
-different jobs. It will cite the finished course-shell and deployment stages once those commits
-exist.
+Completion still required challenge rather than trust. In the whole-course audit at [`117b4b5`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/117b4b5), I used specifications to test structural promises and revised Chapter Checks whose distractors or synthesis demands were too weak. I combined those checks with browser inspection at 1920×1080 and 390×844. When final review exposed the home illustration covering its text column, I constrained the columns in [`c1d421d`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-GuangdeShi/commit/c1d421d) instead of redesigning the page.
+
+My eventual workflow was: decide, document, implement one slice, inspect it, encode repeatable checks, then scale. The agent was most useful for research support, repeated implementation, and verification. My role was to set the judgement, reject premature form, preserve uncertainty, and decide when the work was ready to expand. The course became complete through those corrections, not through one successful prompt.
