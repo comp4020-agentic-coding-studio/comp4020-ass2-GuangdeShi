@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { courseMeta } from "../src/course-config";
 import { captureContents } from "../src/data/captures";
-import { chapters, lifecycleStageIds } from "../src/data/chapters";
+import { chapters, lifecycleStageIds, teachingWeekLabel } from "../src/data/chapters";
 import { siteConfig } from "../src/site-config";
 
 interface CheckData {
@@ -45,9 +45,27 @@ describe("Milo course shell", () => {
     expect(existsSync(resolve("dist/chapters/the-first-72-hours/index.html"))).toBe(true);
   });
 
+  it("publishes every dated teaching week on the Capture index and chapter page", () => {
+    const index = readFileSync(resolve("dist/lectures/index.html"), "utf8");
+
+    for (const chapter of chapters) {
+      const label = teachingWeekLabel(chapter);
+      const page = readFileSync(
+        resolve(`dist/chapters/${chapter.slug}/index.html`),
+        "utf8",
+      );
+
+      expect(index).toContain(label);
+      expect(index).toContain(`datetime="${chapter.date}"`);
+      expect(page).toContain(label);
+      expect(page).toContain(`datetime="${chapter.date}"`);
+    }
+  });
+
   it("keeps the approved homepage opening and lifecycle contracts", () => {
     const homepage = readFileSync(resolve("dist/index.html"), "utf8");
-    expect(courseMeta.code).toBe("SLOP5251");
+    expect(courseMeta.code).toBe("SLOP6251");
+    expect(courseMeta.level).toBe(6);
     expect(homepage).toMatch(/<video[^>]+autoplay[^>]+muted[^>]+loop[^>]+playsinline/);
     expect(homepage).toContain("milo-at-home-poster.jpg");
     expect(homepage.match(/class="life-timeline__node"/g)).toHaveLength(5);
@@ -123,9 +141,29 @@ describe("Milo course shell", () => {
 
     expect(index).toContain("Begin Capture 01");
     expect(index).toContain("/comp4020-ass2-GuangdeShi/chapters/the-first-72-hours/");
-    expect(chapter).toContain("SLOP5251 · Capture 01");
+    expect(chapter).toContain("SLOP6251 · Capture 01");
     expect(chapter).toContain("DIRECT evidence");
     expect(chapter).toContain("SYNTHESIS evidence");
+  });
+
+  it("builds and links the Chapter 1 briefing deck", () => {
+    const deckUrl = "/comp4020-ass2-GuangdeShi/decks/capture-01-briefing/";
+    const deck = readFileSync(
+      resolve("dist/decks/capture-01-briefing/index.html"),
+      "utf8",
+    );
+    const index = readFileSync(resolve("dist/lectures/index.html"), "utf8");
+    const chapter = readFileSync(
+      resolve("dist/chapters/the-first-72-hours/index.html"),
+      "utf8",
+    );
+
+    expect(deck.match(/<section(?:\s|>)/g)).toHaveLength(10);
+    expect(deck).toContain("SLOP6251 · Capture 01");
+    expect(deck).toContain("The First 72 Hours");
+    expect(deck).toContain("CH1-09");
+    expect(index).toContain(deckUrl);
+    expect(chapter).toContain(deckUrl);
   });
 
   it("preserves the starter's four core content collections", () => {
@@ -175,7 +213,7 @@ describe("Milo course shell", () => {
         ? /<section id="[^"]+" class="consultation-section/g
         : /<section id="[^"]+" class="capture-phase/g;
       expect(page.match(phasePattern), `Chapter ${chapter.number} phase count`).toHaveLength(9);
-      expect(page).toContain(`SLOP5251 · Capture ${String(chapter.number).padStart(2, "0")}`);
+      expect(page).toContain(`SLOP6251 · Capture ${String(chapter.number).padStart(2, "0")}`);
 
       if (chapter.number > 1) {
         const content = captureContents[chapter.slug];

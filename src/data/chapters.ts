@@ -250,3 +250,16 @@ export const chapters: Chapter[] = [
 export const chapterPath = (chapter: Chapter) => `/chapters/${chapter.slug}/`;
 
 export const getChapter = (slug: string) => chapters.find((chapter) => chapter.slug === slug);
+
+const teachingDateFormatter = new Intl.DateTimeFormat("en-AU", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+export const formatTeachingDate = (date: string) =>
+  teachingDateFormatter.format(new Date(`${date}T00:00:00Z`));
+
+export const teachingWeekLabel = (chapter: Pick<Chapter, "week" | "date">) =>
+  `Week ${String(chapter.week).padStart(2, "0")} · ${formatTeachingDate(chapter.date)}`;

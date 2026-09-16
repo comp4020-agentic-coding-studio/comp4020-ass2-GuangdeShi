@@ -1,7 +1,7 @@
 import type { CourseMetaInput } from "astro-course-university";
 import { z } from "astro/zod";
 
-// The starter's supported course-code levels, including the approved 5000-level
+// The starter's supported course-code levels, including the approved 6000-level
 // code for this prototype. Both the code pattern and the level field derive from it.
 const LEVELS = [1, 2, 3, 4, 5, 6, 8] as const;
 const allowedCode = new RegExp(`^SLOP[${LEVELS.join("")}]\\d{3}$`);
@@ -46,11 +46,11 @@ export const slopCourseMetaSchema = z
 // Keep the code and level aligned: the schema checks that the first code digit
 // matches the numeric course level.
 export const courseMeta = slopCourseMetaSchema.parse({
-  code: "SLOP5251",
+  code: "SLOP6251",
   title: "How to Keep One Cat Happy for Twenty Years",
   session: "Semester 1",
   year: 2027,
-  level: 5,
+  level: 6,
   startDate: "2027-02-22",
   endDate: "2027-05-28",
   description:

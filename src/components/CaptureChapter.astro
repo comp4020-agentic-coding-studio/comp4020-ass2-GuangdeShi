@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getChapter } from "../data/chapters";
+import { getChapter, teachingWeekLabel } from "../data/chapters";
 import type { CaptureChapterContent } from "../data/captures/types";
 import CarePlan from "./CarePlan.astro";
 import CaptureEvidenceNote from "./CaptureEvidenceNote.astro";
@@ -54,6 +54,8 @@ const steps = [
   title={chapter.title}
   description={chapter.question}
   context={`${chapter.partTitle} · Milo is ${chapter.momoAge.toLowerCase()}.`}
+  scheduleLabel={teachingWeekLabel(chapter)}
+  scheduleDate={chapter.date}
   steps={steps}
 >
   <CapturePhase id="scene" number="01" label="Scene" title={content.sceneTitle}>

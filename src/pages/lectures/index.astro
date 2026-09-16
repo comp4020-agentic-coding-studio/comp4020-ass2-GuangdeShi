@@ -1,7 +1,7 @@
 ---
 import { withBase } from "astro-theme-university/url";
 import { courseMeta } from "../../course-config";
-import { chapterPath, chapters } from "../../data/chapters";
+import { chapterPath, chapters, teachingWeekLabel } from "../../data/chapters";
 import CourseLayout from "../../layouts/CourseLayout.astro";
 
 const firstCapture = chapters[0];
@@ -26,16 +26,21 @@ const firstCapture = chapters[0];
 
     <div class="capture-index__prototype">
       <div>
-        <p class="capture-index__number">Capture 01 · {firstCapture.momoAge}</p>
+        <p class="capture-index__number">
+          Capture 01 · {teachingWeekLabel(firstCapture)} · {firstCapture.momoAge}
+        </p>
         <h2>Begin where Milo's record begins</h2>
         <p>
           The carrier door opens and Milo disappears under the bed. Begin with what the room can
           actually tell you, then return with a safer first-72-hours plan.
         </p>
       </div>
-      <a class="primary-action" href={withBase(chapterPath(firstCapture))}>
-        Begin Capture 01
-      </a>
+      <div class="capture-index__actions">
+        <a class="primary-action" href={withBase(chapterPath(firstCapture))}>
+          Begin Capture 01
+        </a>
+        <a href={withBase("/decks/capture-01-briefing/")}>Open briefing deck</a>
+      </div>
     </div>
 
     <p class="capture-index__template-link">
@@ -50,12 +55,15 @@ const firstCapture = chapters[0];
       <ol aria-label="Twelve Capture chapters">
         {chapters.map((chapter) => (
           <li>
-            <span>{String(chapter.number).padStart(2, "0")}</span>
+            <span class="capture-index__sequence-number">
+              Capture {String(chapter.number).padStart(2, "0")}
+            </span>
             {chapter.implemented ? (
               <a href={withBase(chapterPath(chapter))}>{chapter.title}</a>
             ) : (
-              <span>{chapter.title}</span>
+              <span class="capture-index__sequence-title">{chapter.title}</span>
             )}
+            <time datetime={chapter.date}>{teachingWeekLabel(chapter)}</time>
           </li>
         ))}
       </ol>

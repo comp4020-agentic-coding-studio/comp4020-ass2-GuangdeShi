@@ -10,7 +10,7 @@ related:
   - assessments/field-notebook
 ---
 
-The `lectures` collection remains part of the course architecture, but SLOP5251 does not publish a
+The `lectures` collection remains part of the course architecture, but SLOP6251 does not publish a
 parallel lecture track. The twelve complete learning experiences live in the [Capture index](../).
 
 ## The recurring movement

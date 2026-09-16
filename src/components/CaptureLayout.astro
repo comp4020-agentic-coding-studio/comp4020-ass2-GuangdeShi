@@ -17,6 +17,8 @@ interface Props {
   backHref?: string;
   backLabel?: string;
   eyebrow?: string;
+  scheduleLabel?: string;
+  scheduleDate?: string;
 }
 
 const {
@@ -29,6 +31,8 @@ const {
   backHref = "/lectures/",
   backLabel = "Capture index",
   eyebrow = `${courseMeta.code} · Capture ${capture}`,
+  scheduleLabel,
+  scheduleDate,
 } = Astro.props;
 ---
 
@@ -36,6 +40,11 @@ const {
   <header class="capture-header">
     <a class="capture-header__back" href={withBase(backHref)}>{backLabel}</a>
     <div class="capture-header__title">
+      {scheduleLabel && (
+        <p class="capture-header__schedule">
+          <time datetime={scheduleDate}>{scheduleLabel}</time>
+        </p>
+      )}
       <p class="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p>{description}</p>

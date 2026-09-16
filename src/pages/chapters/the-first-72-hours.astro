@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { withBase } from "astro-theme-university/url";
 import ArrivalPractice from "../../components/ArrivalPractice.astro";
 import CarePlan from "../../components/CarePlan.astro";
 import ChapterCheck from "../../components/ChapterCheck.astro";
@@ -7,7 +8,7 @@ import CaptureEvidenceNote from "../../components/CaptureEvidenceNote.astro";
 import CaptureLayout from "../../components/CaptureLayout.astro";
 import JudgementQuestion from "../../components/JudgementQuestion.astro";
 import ScenarioScene from "../../components/ScenarioScene.astro";
-import { getChapter } from "../../data/chapters";
+import { getChapter, teachingWeekLabel } from "../../data/chapters";
 import CourseLayout from "../../layouts/CourseLayout.astro";
 
 const chapter = getChapter("the-first-72-hours");
@@ -88,6 +89,8 @@ const carePlan = [
     title={chapter.title}
     description={chapter.question}
     context={`${chapter.partTitle} · Milo is ${chapter.momoAge.toLowerCase()}.`}
+    scheduleLabel={teachingWeekLabel(chapter)}
+    scheduleDate={chapter.date}
     steps={steps}
   >
     <section id="scenario" class="consultation-section consultation-section--opening" aria-labelledby="scenario-heading">
@@ -102,6 +105,10 @@ const carePlan = [
         </p>
       </div>
       <ScenarioScene />
+      <p class="briefing-deck-link">
+        <a href={withBase("/decks/capture-01-briefing/")}>Open briefing deck</a>
+        <span>10 slides · an optional orientation to this consultation</span>
+      </p>
       <aside class="withheld-note">
         <strong>What you do not know yet</strong>
         <p>
