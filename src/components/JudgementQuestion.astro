@@ -11,15 +11,16 @@ interface Props {
   prompt: string;
   options: Option[];
   bestOption: string;
+  storageKey?: string;
 }
 
-const { id, phase, prompt, options, bestOption } = Astro.props;
+const { id, phase, prompt, options, bestOption, storageKey: suppliedStorageKey } = Astro.props;
 const isRevised = phase === "revised";
-const storageKey = id === "arrival-initial"
+const storageKey = suppliedStorageKey ?? (id === "arrival-initial"
   ? "momo-ch01-initial-judgement"
   : id === "arrival-revised"
     ? "momo-ch01-revised-judgement"
-    : `milo-ch01-${id}-judgement`;
+    : `milo-ch01-${id}-judgement`);
 ---
 
 <form

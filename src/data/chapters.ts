@@ -93,7 +93,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 11 weeks",
     homeCue: "A hand pauses beside the chair. Milo decides whether to return.",
     hotspot: { x: 25, y: 56 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 3,
@@ -108,7 +108,7 @@ export const chapters: Chapter[] = [
     momoAge: "12 to 13 weeks",
     homeCue: "The litter log shows more trips, less output, and one cry.",
     hotspot: { x: 15, y: 77 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 4,
@@ -123,7 +123,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 16 weeks",
     homeCue: "Milo waits at the door. One sound is not enough to explain why.",
     hotspot: { x: 87, y: 45 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 5,

@@ -1,0 +1,57 @@
+---
+interface Props {
+  storageKey: string;
+  prompts: string[];
+}
+
+const { storageKey, prompts } = Astro.props;
+---
+
+<form class="capture-workbook" data-capture-workbook data-storage-key={storageKey}>
+  {prompts.map((prompt, index) => (
+    <label>
+      <span>{String(index + 1).padStart(2, "0")}</span>
+      <strong>{prompt}</strong>
+      <textarea rows="4" name={`response-${index + 1}`} placeholder="Record your reasoning, not only the final choice."></textarea>
+    </label>
+  ))}
+  <div class="capture-workbook__actions">
+    <button type="submit">Save practice notes</button>
+    <p data-workbook-status aria-live="polite"></p>
+  </div>
+</form>
+
+<script>
+  function setupCaptureWorkbooks() {
+    for (const form of document.querySelectorAll<HTMLFormElement>("[data-capture-workbook]")) {
+      if (form.dataset.initialized === "true") continue;
+      form.dataset.initialized = "true";
+      const key = form.dataset.storageKey ?? "";
+      const fields = [...form.querySelectorAll<HTMLTextAreaElement>("textarea")];
+      const status = form.querySelector<HTMLElement>("[data-workbook-status]")!;
+      try {
+        const saved = JSON.parse(localStorage.getItem(key) ?? "null") as string[] | null;
+        if (saved) {
+          fields.forEach((field, index) => { field.value = saved[index] ?? ""; });
+          status.textContent = "Your practice notes are restored on this device.";
+        }
+      } catch {
+        localStorage.removeItem(key);
+      }
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const firstEmpty = fields.find((field) => !field.value.trim());
+        if (firstEmpty) {
+          status.textContent = "Complete each reasoning note before saving the set.";
+          firstEmpty.focus();
+          return;
+        }
+        localStorage.setItem(key, JSON.stringify(fields.map((field) => field.value)));
+        status.textContent = "Practice notes saved locally.";
+      });
+    }
+  }
+
+  setupCaptureWorkbooks();
+  document.addEventListener("astro:page-load", setupCaptureWorkbooks);
+</script>

@@ -1,0 +1,191 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getChapter } from "../data/chapters";
+import type { CaptureChapterContent } from "../data/captures/types";
+import CarePlan from "./CarePlan.astro";
+import CaptureEvidenceNote from "./CaptureEvidenceNote.astro";
+import CaptureLayout from "./CaptureLayout.astro";
+import CaptureNotebook from "./CaptureNotebook.astro";
+import CapturePhase from "./CapturePhase.astro";
+import CaptureScenePlaceholder from "./CaptureScenePlaceholder.astro";
+import CaptureWorkbook from "./CaptureWorkbook.astro";
+import ChapterCheck from "./ChapterCheck.astro";
+import JudgementQuestion from "./JudgementQuestion.astro";
+
+interface Props {
+  content: CaptureChapterContent;
+  check: CollectionEntry<"chapterChecks">["data"];
+}
+
+const { content, check } = Astro.props;
+const chapter = getChapter(content.slug);
+if (!chapter) throw new Error(`Missing chapter metadata for ${content.slug}`);
+
+const steps = [
+  { id: "scene", label: "Scene" },
+  { id: "observation", label: "Observation" },
+  { id: "first-judgement", label: "First judgement" },
+  { id: "core-learning", label: "Core learning" },
+  { id: "evidence", label: "Evidence" },
+  { id: "applied-case", label: "Applied case" },
+  { id: "revised-judgement", label: "Revised judgement" },
+  { id: "care-plan", label: "Care plan" },
+  { id: "chapter-check", label: "Chapter Check" },
+];
+---
+
+<CaptureLayout
+  capture={String(content.chapter).padStart(2, "0")}
+  title={chapter.title}
+  description={chapter.question}
+  context={`${chapter.partTitle} · Milo is ${chapter.momoAge.toLowerCase()}.`}
+  steps={steps}
+>
+  <CapturePhase id="scene" number="01" label="Scene" title={content.sceneTitle}>
+    <div class="capture-scene-copy">
+      {content.scene.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <CaptureScenePlaceholder
+      title={content.sceneTitle}
+      description={content.scene.join(" ")}
+      caption={content.sceneCaption}
+    />
+    <aside class="withheld-note">
+      <strong>What remains uncertain</strong>
+      <p>{content.withheld}</p>
+    </aside>
+  </CapturePhase>
+
+  <CapturePhase
+    id="observation"
+    number="02"
+    label="Observation"
+    title="What can the moment actually tell you?"
+    description="Keep the visible detail separate from the explanation that first comes to mind."
+    tone="tint"
+  >
+    <CaptureNotebook
+      storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-observation`}
+      label="Field note"
+      prompt={content.observationPrompt}
+    />
+    <details class="observation-reveal">
+      <summary>Compare with the observable record</summary>
+      <ul>{content.observations.map((item) => <li>{item}</li>)}</ul>
+    </details>
+  </CapturePhase>
+
+  <CapturePhase id="first-judgement" number="03" label="First judgement" title="Decide before the consultation">
+    <JudgementQuestion
+      id={`ch${content.chapter}-initial`}
+      phase="initial"
+      prompt={content.initialDecision.prompt}
+      options={content.initialDecision.options}
+      bestOption={content.initialDecision.bestOption}
+      storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-initial-judgement`}
+    />
+  </CapturePhase>
+
+  <CapturePhase
+    id="core-learning"
+    number="04"
+    label="Consultation"
+    title={content.learningTitle}
+    description={content.learningIntro}
+  >
+    <div class="capture-learning-threads">
+      {content.learningThreads.map((thread, index) => (
+        <article class="capture-learning-thread">
+          <header><span>{String(index + 1).padStart(2, "0")}</span><p>{thread.label}</p></header>
+          <div>
+            <h3>{thread.title}</h3>
+            {thread.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            <p class="claim-list">{thread.claimIds.join(" · ")} · {thread.support}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </CapturePhase>
+
+  <CapturePhase
+    id="evidence"
+    number="05"
+    label="Evidence"
+    title="Read the boundary as carefully as the claim"
+    description="The sources establish what can be said. Synthesis is disclosed where the course connects those claims."
+    tone="dark"
+  >
+    <div class="capture-evidence-stack">
+      {content.evidenceNotes.map((note) => (
+        <CaptureEvidenceNote {...note}><p>{note.body}</p></CaptureEvidenceNote>
+      ))}
+    </div>
+    <ol class="capture-guided-reading">
+      {content.readings.map((reading) => (
+        <li>
+          <span>{reading.time}</span>
+          <div><h3>{reading.title}</h3><p>{reading.prompt}</p><a href={reading.href}>{reading.linkLabel}</a></div>
+        </li>
+      ))}
+    </ol>
+  </CapturePhase>
+
+  <CapturePhase
+    id="applied-case"
+    number="06"
+    label="Applied case"
+    title={content.appliedTitle}
+    description={content.appliedIntro}
+    tone="tint"
+  >
+    <JudgementQuestion
+      id={`ch${content.chapter}-transfer`}
+      phase="transfer"
+      prompt={content.appliedDecision.prompt}
+      options={content.appliedDecision.options}
+      bestOption={content.appliedDecision.bestOption}
+      storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-transfer-judgement`}
+    />
+    <CaptureWorkbook
+      storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-practice`}
+      prompts={content.practicePrompts}
+    />
+  </CapturePhase>
+
+  <CapturePhase id="revised-judgement" number="07" label="Return to Milo" title={content.returnTitle}>
+    <div class="capture-return-copy">{content.returnScene.map((paragraph) => <p>{paragraph}</p>)}</div>
+    <JudgementQuestion
+      id={`ch${content.chapter}-revised`}
+      phase="revised"
+      prompt={content.revisedDecision.prompt}
+      options={content.revisedDecision.options}
+      bestOption={content.revisedDecision.bestOption}
+      storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-revised-judgement`}
+    />
+  </CapturePhase>
+
+  <CapturePhase
+    id="care-plan"
+    number="08"
+    label="Care plan / transfer"
+    title={`A safer next step for ${chapter.title.toLowerCase()}`}
+    description={content.transferNote}
+    tone="dark"
+  >
+    <CarePlan items={content.carePlan} />
+  </CapturePhase>
+
+  <CapturePhase
+    id="chapter-check"
+    number="09"
+    label="Chapter Check"
+    title="Test the judgement, not just the vocabulary"
+    tone="tint"
+  >
+    <ChapterCheck check={check} />
+    <aside class="capture-workload" aria-label="Chapter learning workload">
+      <div><p class="eyebrow">Learning depth</p><h3>{content.workloadTotal}</h3></div>
+      <dl>{content.workload.map((item) => <div><dt>{item.label}</dt><dd>{item.time}</dd></div>)}</dl>
+    </aside>
+  </CapturePhase>
+</CaptureLayout>

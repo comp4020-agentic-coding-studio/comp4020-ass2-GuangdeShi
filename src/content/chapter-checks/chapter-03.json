@@ -1,0 +1,78 @@
+{
+  "chapter": 3,
+  "title": "Reading the First Warning Signs",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch03-q01", "type": "core-concept",
+      "prompt": "Which litter setup best matches the registered guidance for one cat?",
+      "options": [
+        { "id": "a", "text": "One compact box beside the bowls so every resource is easy to find.", "feedback": "The arrangement is convenient for the owner but provides too few boxes and removes the physical separation between toileting and eating." },
+        { "id": "b", "text": "Two suitably large boxes with unscented litter, separated from food and water.", "feedback": "This is the best answer: one box per cat plus one extra, appropriate size and litter, and physical separation of resources." },
+        { "id": "c", "text": "Several small scented boxes moved regularly so Milo does not form a rigid preference.", "feedback": "More boxes alone do not solve unsuitable size, scented substrate, or unstable placement. Reliable use supports keeping a location stable." }
+      ],
+      "bestOption": "b", "claimIds": ["CH3-01"]
+    },
+    {
+      "id": "ch03-q02", "type": "core-concept",
+      "prompt": "Which observation most strongly suggests marking rather than a full toileting event?",
+      "options": [
+        { "id": "a", "text": "A small volume on a vertical surface while Milo stands with her tail raised.", "feedback": "This is the best answer. Small-volume vertical placement and standing tail posture fit the registered marking pattern." },
+        { "id": "b", "text": "A full-volume elimination on a horizontal surface beside the litter tray.", "feedback": "This more closely resembles toileting outside the box. Volume, posture, and surface matter to the distinction." },
+        { "id": "c", "text": "Any urine outside the box, regardless of volume, posture, or continued box use.", "feedback": "Treating every event as one category discards the observations needed to distinguish marking, toileting, and location preference." }
+      ],
+      "bestOption": "a", "claimIds": ["CH3-02"]
+    },
+    {
+      "id": "ch03-q03", "type": "core-concept",
+      "prompt": "Why should an owner avoid deciding that house-soiling is either medical or behavioural at home?",
+      "options": [
+        { "id": "a", "text": "The categories can coexist, and treating one factor may not remove a learned aversion.", "feedback": "This is the best answer. Medical and environmental factors can overlap, so professional assessment and careful observation both matter." },
+        { "id": "b", "text": "Behavioural causes are only considered after every possible disease has been permanently excluded.", "feedback": "Medical causes must not be assumed away, but the guideline does not require pretending environmental or learned factors cannot coexist." },
+        { "id": "c", "text": "The distinction is unnecessary because every case is managed by changing the litter setup first.", "feedback": "A setup change may be relevant in some cases, but using it as the universal first answer can delay attention to a medical cause." }
+      ],
+      "bestOption": "a", "claimIds": ["CH3-03"]
+    },
+    {
+      "id": "ch03-q04", "type": "core-concept",
+      "prompt": "Which observed pattern should override a general wait-and-record approach?",
+      "options": [
+        { "id": "a", "text": "One quiet afternoon after an unusually active morning, with normal eating and elimination.", "feedback": "This belongs in the record but does not match the narrow urgent urinary signature or another concrete warning sign by itself." },
+        { "id": "b", "text": "Repeated attempts to urinate with no output and crying during the attempts.", "feedback": "This is the best answer. The observable pattern warrants immediate same-day or emergency veterinary care without waiting to identify the cause." },
+        { "id": "c", "text": "A preference for one of two clean boxes while both remain regularly used.", "feedback": "A preference can inform setup decisions, but it does not resemble repeated unproductive straining or inability to pass urine." }
+      ],
+      "bestOption": "b", "claimIds": ["CH3-06"]
+    },
+    {
+      "id": "ch03-q05", "type": "scenario",
+      "prompt": "Milo has not eaten for more than 24 hours and is unusually tired, but urinates normally. What should the owner do?",
+      "options": [
+        { "id": "a", "text": "Contact the vet today and compare the appetite and energy changes with Milo's baseline.", "feedback": "This is the best response. Appetite loss and lethargy are registered warning signs even without the urgent urinary presentation." },
+        { "id": "b", "text": "Wait because normal urination proves the change is behavioural rather than medical.", "feedback": "Normal urination removes one presentation, not every health concern. It does not explain or cancel the appetite and energy changes." },
+        { "id": "c", "text": "Offer a favourite food and only contact the vet if Milo refuses it twice.", "feedback": "A food offer can add observation, but an invented two-refusal threshold should not delay contact after more than 24 hours without eating." }
+      ],
+      "bestOption": "a", "claimIds": ["CH3-05"]
+    },
+    {
+      "id": "ch03-q06", "type": "scenario",
+      "prompt": "Milo urinates outside the box after noisy repairs begin. Which first response is safest?",
+      "options": [
+        { "id": "a", "text": "Punish the location once so Milo understands the box rule remains in force.", "feedback": "Punishment does not address medical, environmental, or learned causes and may add stress to a problem already associated with household disruption." },
+        { "id": "b", "text": "Record volume, posture, location, and other signs; keep boxes accessible and seek veterinary advice if warning signs are present.", "feedback": "This is the best response because it preserves medical-first reasoning while still noticing the real environmental change." },
+        { "id": "c", "text": "Assume the repairs explain the event and wait until they finish before recording or contacting anyone.", "feedback": "Noise is a plausible factor, but a plausible explanation is not evidence that no medical issue exists. The pattern still needs observation." }
+      ],
+      "bestOption": "b", "claimIds": ["CH3-02", "CH3-03", "CH3-04", "CH3-05"]
+    },
+    {
+      "id": "ch03-q07", "type": "synthesis",
+      "prompt": "Milo eats less, drinks more, hides, and shows slight effort in the box but produces a normal amount. Repairs are noisy. What is the strongest judgement?",
+      "options": [
+        { "id": "a", "text": "Attribute the cluster to repair stress because normal urine output rules out concern.", "feedback": "The environmental explanation is plausible, but reduced appetite and increased thirst remain independently listed warning signs worth professional discussion." },
+        { "id": "b", "text": "Log the specifics and contact the vet today for guidance without labelling the case an obstruction emergency.", "feedback": "This is the best synthesis: it acts on the warning-sign cluster while respecting that the narrow no-output emergency signature is absent." },
+        { "id": "c", "text": "Treat it as confirmed obstruction and attempt emergency relief at home before travelling.", "feedback": "The chapter teaches recognition and escalation, not diagnosis or treatment. Normal output also means the narrowly defined obstruction signature is not established." }
+      ],
+      "bestOption": "b", "claimIds": ["CH3-05", "CH3-06"]
+    }
+  ]
+}

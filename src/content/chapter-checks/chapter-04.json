@@ -1,0 +1,78 @@
+{
+  "chapter": 4,
+  "title": "The Full Vocabulary",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch04-q01", "type": "core-concept",
+      "prompt": "What is the most accurate way to use the three broad vocal categories?",
+      "options": [
+        { "id": "a", "text": "As a dictionary that assigns one reliable meaning to each sound family.", "feedback": "The categories describe broad sound forms and typical contexts. They do not turn a particular meow or purr into a fixed translation." },
+        { "id": "b", "text": "As vocabulary to combine with body language, location, routine, and recent events.", "feedback": "This is the best answer because it preserves the information in the sound while keeping interpretation dependent on other available channels." },
+        { "id": "c", "text": "Only hostile sounds carry usable information; murmurs and meows should be ignored.", "feedback": "All three categories carry communication information. The limitation concerns exact interpretation from an isolated cue, not whether the cue exists." }
+      ],
+      "bestOption": "b", "claimIds": ["CH4-01", "CH4-04"]
+    },
+    {
+      "id": "ch04-q02", "type": "core-concept",
+      "prompt": "Why is scratching relevant to a chapter about communication?",
+      "options": [
+        { "id": "a", "text": "It leaves both a visible mark and a chemical mark from paw glands along travelled routes.", "feedback": "This is the best answer. Scratching has a dual visual and scent-marking function and belongs in the communication picture." },
+        { "id": "b", "text": "It is mainly a deliberate warning directed at whichever person owns the marked furniture.", "feedback": "The evidence does not support a spiteful person-directed message. The marking behaviour is species-typical and tied to place and identity." },
+        { "id": "c", "text": "It has no communication role unless urine marking occurs in the same location.", "feedback": "Scratching carries its own visible and chemical information. It does not require a second marking channel to become meaningful." }
+      ],
+      "bestOption": "a", "claimIds": ["CH4-02"]
+    },
+    {
+      "id": "ch04-q03", "type": "core-concept",
+      "prompt": "What did the registered meow study show about human listeners?",
+      "options": [
+        { "id": "a", "text": "Experienced owners could identify each meow's exact context with high reliability.", "feedback": "Owners were only modestly more accurate in some contexts, and specific context classification did not rise meaningfully above chance overall." },
+        { "id": "b", "text": "Specific context was difficult to identify from sound alone, though broad emotional valence was sometimes sensed.", "feedback": "This is the best answer and keeps the distinction between exact context classification and broad positive or negative valence." },
+        { "id": "c", "text": "Meows carry no information and should not influence an owner's observation.", "feedback": "The study removed context and did not show that meows are meaningless. It supports combining the sound with information available in real life." }
+      ],
+      "bestOption": "b", "claimIds": ["CH4-03"]
+    },
+    {
+      "id": "ch04-q04", "type": "core-concept",
+      "prompt": "Which statement accurately represents the source limitation for the meow study?",
+      "options": [
+        { "id": "a", "text": "It tested ten Maine Coon cats and deliberately removed situational and visual context.", "feedback": "This is the best answer. The small single-breed sample and listener-only design narrow what can responsibly be concluded." },
+        { "id": "b", "text": "It studied every major breed in normal homes while owners watched body language.", "feedback": "That would be a very different design. The registered study used a small single-breed sample and isolated recordings." },
+        { "id": "c", "text": "Its main limitation is that participants were all people who had never lived with cats.", "feedback": "The sample included owners and non-owners. Ownership produced only a modest advantage in some contexts, not an absent comparison group." }
+      ],
+      "bestOption": "a", "claimIds": ["CH4-03"]
+    },
+    {
+      "id": "ch04-q05", "type": "scenario",
+      "prompt": "Milo yowls at the door near dinner time. Which first action uses the combined-reading method?",
+      "options": [
+        { "id": "a", "text": "Open the door because the location gives the yowl a specific meaning.", "feedback": "Location is one useful fact, but acting immediately still lets a single interpretation outrun body language, routine, and what Milo does next." },
+        { "id": "b", "text": "Check her orientation, ears, tail, feeding routine, recent events, and next movement.", "feedback": "This is the best action because it combines the vocal cue with body language and situational evidence before choosing a response." },
+        { "id": "c", "text": "Ignore the yowl so Milo does not learn that sound controls household decisions.", "feedback": "This removes a real channel instead of interpreting it carefully. Uncertainty calls for more observation, not automatic dismissal." }
+      ],
+      "bestOption": "b", "claimIds": ["CH4-01", "CH4-03", "CH4-04"]
+    },
+    {
+      "id": "ch04-q06", "type": "scenario",
+      "prompt": "A housemate missed Milo's pacing episode. What information best supports a retrospective judgement?",
+      "options": [
+        { "id": "a", "text": "Whichever eyewitness gives the most confident and detailed interpretation.", "feedback": "Detail can help, but confidence is not accuracy. The missing channels should be reconstructed from observations rather than personality." },
+        { "id": "b", "text": "The shared log's time and routine details plus specific questions about Milo's body language.", "feedback": "This is the best response because it restores recorded context and separates observable details from competing explanations." },
+        { "id": "c", "text": "No information, because an event that cannot be watched live can no longer be interpreted responsibly.", "feedback": "The conclusion may remain limited, but a dated observation record exists precisely to preserve context after the moment has passed." }
+      ],
+      "bestOption": "b", "claimIds": ["CH4-04", "CH1-09"]
+    },
+    {
+      "id": "ch04-q07", "type": "synthesis",
+      "prompt": "A sound, posture, and context point in different directions. What is the most responsible conclusion?",
+      "options": [
+        { "id": "a", "text": "Choose the loudest or most dramatic cue because it is least likely to be accidental.", "feedback": "Salience does not establish meaning. A dramatic sound can still be ambiguous when the other channels and situation do not agree." },
+        { "id": "b", "text": "Keep the interpretation provisional, gather another observation, and avoid a high-consequence action meanwhile.", "feedback": "This is the best synthesis. Combined reading improves judgement but is allowed to end in uncertainty rather than manufactured confidence." },
+        { "id": "c", "text": "Average the cues into a neutral interpretation and assume no response is ever needed.", "feedback": "The method is not numerical averaging, and uncertainty does not always mean inaction. It means matching the next step to the evidence and stakes." }
+      ],
+      "bestOption": "b", "claimIds": ["CH4-03", "CH4-04"]
+    }
+  ]
+}

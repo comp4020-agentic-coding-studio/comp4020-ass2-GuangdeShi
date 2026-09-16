@@ -1,0 +1,78 @@
+{
+  "chapter": 2,
+  "title": "Learning Her on Her Terms",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch02-q01", "type": "core-concept",
+      "prompt": "Milo approached for contact but freezes after several strokes. Which reading is most defensible?",
+      "options": [
+        { "id": "a", "text": "Her approach remains permission to continue until she actively leaves.", "feedback": "An approach describes the beginning of contact. Freezing can be inhibition, so waiting for a larger refusal ignores the changed signal." },
+        { "id": "b", "text": "Pause contact and see whether Milo chooses to lean in, remain still, or move away.", "feedback": "This is the best judgement because it treats consent as continuous and lets Milo's next observable action guide what follows." },
+        { "id": "c", "text": "Hold her still briefly so the freeze does not become an avoidance habit.", "feedback": "Restraint adds pressure to an inhibited cat and invents a training problem instead of responding to the signal already present." }
+      ],
+      "bestOption": "b", "claimIds": ["CH2-05", "CH2-06"]
+    },
+    {
+      "id": "ch02-q02", "type": "core-concept",
+      "prompt": "Which group contains an inhibition signal rather than an obvious repelling signal?",
+      "options": [
+        { "id": "a", "text": "Freezing, half-shut eyes, and ears rotating backwards.", "feedback": "This is the best answer. Inhibition can look quiet and is easy to misread as calm if the owner waits only for active resistance." },
+        { "id": "b", "text": "Growling, hissing, swatting, and biting.", "feedback": "These are repelling signals. They are important, but the chapter asks owners to notice quieter inhibition before interaction reaches this point." },
+        { "id": "c", "text": "Tail up, rubbing, moving closer, and relaxed posture.", "feedback": "These belong to the positive or engaging family. They support contact only while the rest of Milo's signals remain consistent." }
+      ],
+      "bestOption": "a", "claimIds": ["CH2-05"]
+    },
+    {
+      "id": "ch02-q03", "type": "core-concept",
+      "prompt": "What does Milo's age near the classic sensitive-period boundary mean for handling?",
+      "options": [
+        { "id": "a", "text": "Her personality is now fixed, so new positive experiences have little value.", "feedback": "The sources do not support a fixed-personality conclusion. Later learning remains possible even though the classic window may be closing." },
+        { "id": "b", "text": "Interactions should be frequent, brief, positive, and easy for Milo to leave.", "feedback": "This is the best answer. The timing raises the value of careful positive experience without justifying force or rushed exposure." },
+        { "id": "c", "text": "She should meet every likely visitor quickly before the window closes completely.", "feedback": "This confuses deliberate exposure with maximum exposure. A rushed or negative first experience can be more harmful than a slower introduction." }
+      ],
+      "bestOption": "b", "claimIds": ["CH2-01", "CH2-02", "CH2-03"]
+    },
+    {
+      "id": "ch02-q04", "type": "core-concept",
+      "prompt": "Milo grabs a hand during play. Which response best shapes the future interaction?",
+      "options": [
+        { "id": "a", "text": "Keep playing because kitten bites are too small to establish a lasting pattern.", "feedback": "The present bite may be small, but continuing pairs hands with the play sequence and allows the handling pattern to become established." },
+        { "id": "b", "text": "Redirect the movement onto a wand or other toy and keep hands out of the play target.", "feedback": "This is the best response because it preserves appropriate play while preventing skin from becoming the object Milo practises catching." },
+        { "id": "c", "text": "End all play immediately whenever teeth appear so Milo learns play is unsafe.", "feedback": "Stopping pressure may be useful, but removing play entirely misses the constructive option: redirect the same motivation onto an appropriate toy." }
+      ],
+      "bestOption": "b", "claimIds": ["CH2-07"]
+    },
+    {
+      "id": "ch02-q05", "type": "scenario",
+      "prompt": "A gentle visitor wants to pick Milo up on their first meeting. What plan best protects Milo's choice?",
+      "options": [
+        { "id": "a", "text": "Allow it because gentleness makes an unfamiliar person's contact low risk.", "feedback": "Good intention does not transfer the owner's rapport. Milo still needs to approach, engage, and remain able to end contact with this person." },
+        { "id": "b", "text": "Have the visitor sit, let Milo approach, and stop if inhibition or avoidance appears.", "feedback": "This is the best plan because it gives the visitor a usable consent-check and keeps the interaction responsive to Milo's current signals." },
+        { "id": "c", "text": "Keep Milo separated throughout every visit until she is fully grown.", "feedback": "This prevents forcing but turns temporary caution into blanket isolation. Gradual, cat-led introduction remains possible and useful." }
+      ],
+      "bestOption": "b", "claimIds": ["CH2-04", "CH2-05", "CH2-06"]
+    },
+    {
+      "id": "ch02-q06", "type": "scenario",
+      "prompt": "A child moves quickly toward Milo while a parent is present. What is the strongest owner-level response?",
+      "options": [
+        { "id": "a", "text": "Ask the parent to enforce one rule: if Milo moves away, contact stops and nobody follows.", "feedback": "This is the best judgement. It turns the principles into a simple enforceable boundary and keeps responsibility with the supervising adult." },
+        { "id": "b", "text": "Let the child try once so the adults can see whether Milo is naturally good with children.", "feedback": "This uses Milo as the test and waits for a negative response. A predictable rule should exist before fast movement or reaching begins." },
+        { "id": "c", "text": "State that children and cats should never share a room because subtle signals are too difficult.", "feedback": "This over-corrects and is not supported by the sources. Supervision and a concrete stop rule can manage the relevant interaction variables." }
+      ],
+      "bestOption": "a", "claimIds": ["CH2-04", "CH2-05", "CH2-06"]
+    },
+    {
+      "id": "ch02-q07", "type": "synthesis",
+      "prompt": "Which weekly plan best combines socialisation timing, consent, play, and cooperative care?",
+      "options": [
+        { "id": "a", "text": "Schedule long daily handling sessions so Milo becomes accustomed before the sensitive window closes.", "feedback": "The timing concern is real, but long compulsory handling removes the choice and positive pairing that make an experience useful." },
+        { "id": "b", "text": "Use brief positive sessions: Milo may approach or leave, play moves to toys, and carrier steps are paired with rewards.", "feedback": "This is the best synthesis because it joins timing with cat-led interaction, appropriate play, and gradual cooperative-care practice." },
+        { "id": "c", "text": "Avoid planned interaction and wait for Milo to invent every useful handling and carrier experience herself.", "feedback": "Choice matters, but owners still design safe opportunities. Passive waiting does not create the gradual reward-paired practice future care requires." }
+      ],
+      "bestOption": "b", "claimIds": ["CH2-02", "CH2-04", "CH2-06", "CH2-07", "CH2-08"]
+    }
+  ]
+}

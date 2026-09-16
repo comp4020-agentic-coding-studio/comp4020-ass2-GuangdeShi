@@ -12,7 +12,7 @@ const { title, support, claimIds, sourceIds = [] } = Astro.props;
 <aside
   class="capture-source-note"
   data-support={support.toLowerCase()}
-  aria-label={`${support} evidence note`}
+  aria-label={`${support} evidence note: ${title}`}
 >
   <header>
     <span>{support} evidence</span>

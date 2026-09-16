@@ -1,0 +1,49 @@
+---
+interface Props {
+  storageKey: string;
+  label: string;
+  prompt: string;
+  rows?: number;
+  buttonLabel?: string;
+}
+
+const { storageKey, label, prompt, rows = 5, buttonLabel = "Save field note" } = Astro.props;
+---
+
+<form class="capture-notebook" data-capture-notebook data-storage-key={storageKey}>
+  <label>
+    <span>{label}</span>
+    <textarea rows={rows} placeholder={prompt}></textarea>
+  </label>
+  <div class="capture-notebook__actions">
+    <button type="submit">{buttonLabel}</button>
+    <p data-notebook-status aria-live="polite"></p>
+  </div>
+</form>
+
+<script>
+  function setupCaptureNotebooks() {
+    for (const form of document.querySelectorAll<HTMLFormElement>("[data-capture-notebook]")) {
+      if (form.dataset.initialized === "true") continue;
+      form.dataset.initialized = "true";
+      const key = form.dataset.storageKey ?? "";
+      const field = form.querySelector<HTMLTextAreaElement>("textarea")!;
+      const status = form.querySelector<HTMLElement>("[data-notebook-status]")!;
+      field.value = localStorage.getItem(key) ?? "";
+      if (field.value) status.textContent = "Your note is restored on this device.";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!field.value.trim()) {
+          status.textContent = "Write a concrete observation before saving.";
+          field.focus();
+          return;
+        }
+        localStorage.setItem(key, field.value);
+        status.textContent = "Field note saved locally.";
+      });
+    }
+  }
+
+  setupCaptureNotebooks();
+  document.addEventListener("astro:page-load", setupCaptureNotebooks);
+</script>

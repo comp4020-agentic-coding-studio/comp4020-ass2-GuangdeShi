@@ -1,3 +1,17 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  caption?: string;
+}
+
+const {
+  title = "Milo in a familiar room",
+  description = "An editorial illustration of Milo beside a window, with a field notebook in the foreground.",
+  caption = "The same home, read at a different moment in Milo's life.",
+} = Astro.props;
+---
+
 <figure class="capture-scene-placeholder">
   <svg
     viewBox="0 0 1200 620"
@@ -5,10 +19,8 @@
     aria-labelledby="capture-scene-title capture-scene-description"
     preserveAspectRatio="xMidYMid slice"
   >
-    <title id="capture-scene-title">A quiet room awaiting a Capture scene</title>
-    <desc id="capture-scene-description">
-      An editorial illustration of Milo beside a window, with a field notebook in the foreground.
-    </desc>
+    <title id="capture-scene-title">{title}</title>
+    <desc id="capture-scene-description">{description}</desc>
     <defs>
       <linearGradient id="capture-wall" x1="0" x2="1" y1="0" y2="1">
         <stop offset="0" stop-color="#f2eadc" />
@@ -55,5 +67,5 @@
       <path d="M31 167h113M223 167h121" stroke="#617873" stroke-linecap="round" stroke-width="6" opacity="0.55" />
     </g>
   </svg>
-  <figcaption>Scene placeholder · replace only after the chapter scene is approved.</figcaption>
+  <figcaption>{caption}</figcaption>
 </figure>

@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import CaptureChapter from "../../components/CaptureChapter.astro";
+import { captureContents } from "../../data/captures";
+import CourseLayout from "../../layouts/CourseLayout.astro";
+
+export function getStaticPaths() {
+  return Object.values(captureContents).map((content) => ({
+    params: { slug: content.slug },
+    props: { content },
+  }));
+}
+
+const { content } = Astro.props;
+const checks = await getCollection("chapterChecks");
+const check = checks.find((entry) => entry.data.chapter === content.chapter)?.data;
+if (!check) throw new Error(`Missing Chapter Check for chapter ${content.chapter}`);
+---
+
+<CourseLayout
+  title={`Chapter ${content.chapter}: ${check.title}`}
+  description={`Capture ${String(content.chapter).padStart(2, "0")} in Milo's life.`}
+  pageClass="capture-page consultation-page"
+>
+  <CaptureChapter content={content} check={check} />
+</CourseLayout>
