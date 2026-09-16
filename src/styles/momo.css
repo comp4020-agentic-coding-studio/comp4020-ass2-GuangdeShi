@@ -144,11 +144,28 @@
   }
 
   .interactive-home {
+    --life-progress: 0%;
     min-height: calc(100svh - var(--at-nav-height));
     overflow: hidden;
     color: var(--momo-ink);
     background: var(--momo-paper);
     scroll-margin-top: var(--at-nav-height);
+  }
+
+  .interactive-home[data-stage="young-adult"] {
+    --life-progress: 20%;
+  }
+
+  .interactive-home[data-stage="mature"] {
+    --life-progress: 40%;
+  }
+
+  .interactive-home[data-stage="senior"] {
+    --life-progress: 60%;
+  }
+
+  .interactive-home[data-stage="very-old"] {
+    --life-progress: 80%;
   }
 
   .home-section-intro,
@@ -249,8 +266,20 @@
     content: "";
   }
 
+  .life-timeline ol::after {
+    position: absolute;
+    top: 1.25rem;
+    left: 10%;
+    width: var(--life-progress);
+    height: 2px;
+    background: var(--momo-coral);
+    content: "";
+    transition: width 220ms ease;
+  }
+
   .life-timeline li {
     position: relative;
+    z-index: 1;
     min-width: 0;
   }
 
@@ -838,6 +867,15 @@
     font-family: var(--at-font-mono);
     font-size: 0.7rem;
     text-transform: uppercase;
+  }
+
+  .editorial-room-scene svg {
+    background: #e9ddc9;
+  }
+
+  .editorial-room-scene .milo-figure {
+    transform-box: fill-box;
+    transform-origin: center bottom;
   }
 
   .capture-notebook,
@@ -3041,6 +3079,10 @@
       aspect-ratio: 4 / 3;
     }
 
+    .editorial-room-scene.capture-scene-placeholder svg {
+      aspect-ratio: auto;
+    }
+
     .capture-notebook,
     .capture-reflection {
       padding-inline-start: 1rem;
@@ -3203,6 +3245,12 @@
       width: 130%;
       max-width: none;
       transform: translateX(-15%);
+    }
+
+    .editorial-room-scene.scenario-scene svg {
+      width: 100%;
+      max-width: 100%;
+      transform: none;
     }
 
     .observation-note,
@@ -3375,6 +3423,7 @@
     }
 
     .home-hotspot,
+    .life-timeline ol::after,
     .life-timeline__dot,
     .primary-action {
       transition: none;

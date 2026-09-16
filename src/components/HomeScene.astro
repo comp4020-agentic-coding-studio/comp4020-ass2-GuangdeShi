@@ -1,3 +1,7 @@
+---
+import MiloFigure from "./MiloFigure.astro";
+---
+
 <svg
   class="home-room"
   viewBox="0 0 1200 720"
@@ -28,11 +32,6 @@
       <stop offset="0" stop-color="#a9ced0" />
       <stop offset="0.66" stop-color="#d8e1c6" />
       <stop offset="1" stop-color="#78956c" />
-    </linearGradient>
-    <linearGradient id="tabby-fur" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#9b9182" />
-      <stop offset="0.55" stop-color="#756d64" />
-      <stop offset="1" stop-color="#4d4c49" />
     </linearGradient>
     <filter id="room-shadow" x="-30%" y="-30%" width="160%" height="180%">
       <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#263b39" flood-opacity="0.2" />
@@ -110,18 +109,8 @@
   </g>
 
   <g data-room-stage="kitten">
-    <g transform="translate(700 538)" filter="url(#soft-shadow)">
-      <ellipse cx="0" cy="41" rx="58" ry="35" fill="url(#tabby-fur)" />
-      <circle cx="-47" cy="20" r="31" fill="url(#tabby-fur)" />
-      <path d="M-72 3-67-30-43-7M-38-6l23-24 2 38" fill="#6d6760" stroke="#4e4b47" stroke-linejoin="round" stroke-width="4" />
-      <path d="M-64-15-61-4M-27-15-34-3M-53 0l5 11 6-11" fill="none" stroke="#3f4140" stroke-linecap="round" stroke-width="4" />
-      <ellipse cx="-48" cy="29" rx="17" ry="12" fill="#b4a699" />
-      <path d="M-51 25h6m-3 1v6" stroke="#564a49" stroke-linecap="round" stroke-width="3" />
-      <ellipse cx="-59" cy="16" rx="4" ry="6" fill="#bdc879" />
-      <ellipse cx="-36" cy="16" rx="4" ry="6" fill="#bdc879" />
-      <path d="M45 41c47 7 63-20 46-46" fill="none" stroke="#57534f" stroke-linecap="round" stroke-width="15" />
-      <path d="M-18 39c17 9 30 10 46 2M-4 23c12 8 25 10 39 5" fill="none" stroke="#3f4140" stroke-linecap="round" stroke-width="5" opacity="0.75" />
-      <path d="M-57 31-91 27M-56 36-90 39M-39 33-8 28M-39 38-7 44" stroke="#eee7da" stroke-linecap="round" stroke-width="2" />
+    <g filter="url(#soft-shadow)">
+      <MiloFigure stage="kitten" pose="cautious" x={712} y={612} scale={0.58} idPrefix="home-kitten" />
     </g>
     <g transform="translate(89 370)" filter="url(#soft-shadow)">
       <path d="M0 77h137v94H0z" fill="#d9bd82" stroke="#405955" stroke-width="7" />
@@ -131,15 +120,8 @@
   </g>
 
   <g data-room-stage="young-adult" style="display:none">
-    <g transform="translate(700 498)" filter="url(#soft-shadow)">
-      <ellipse cx="4" cy="76" rx="49" ry="73" fill="url(#tabby-fur)" transform="rotate(-8)" />
-      <circle cx="-21" cy="13" r="37" fill="url(#tabby-fur)" />
-      <path d="M-50-8-43-51-13-19M-7-19l34-34-1 49" fill="#6f6961" stroke="#4a4946" stroke-linejoin="round" stroke-width="5" />
-      <path d="M-37 0c10-7 22-7 32 0M-32 28c9 5 18 5 26 0" fill="none" stroke="#454542" stroke-linecap="round" stroke-width="4" />
-      <ellipse cx="-33" cy="11" rx="5" ry="7" fill="#bdc879" />
-      <ellipse cx="-8" cy="11" rx="5" ry="7" fill="#bdc879" />
-      <path d="M44 75c77 1 82-57 49-88" fill="none" stroke="#595651" stroke-linecap="round" stroke-width="19" />
-      <path d="M-18 61c17 8 34 8 52 0M-18 82c18 7 34 7 50 0" fill="none" stroke="#424442" stroke-linecap="round" stroke-width="6" opacity="0.7" />
+    <g filter="url(#soft-shadow)">
+      <MiloFigure stage="young-adult" pose="standing" x={710} y={622} scale={0.62} idPrefix="home-young-adult" />
     </g>
     <g filter="url(#soft-shadow)">
       <path d="M119 515h112" stroke="#405955" stroke-linecap="round" stroke-width="18" />
@@ -152,12 +134,8 @@
   </g>
 
   <g data-room-stage="mature" style="display:none">
-    <g transform="translate(404 397)" filter="url(#soft-shadow)">
-      <ellipse cx="35" cy="45" rx="93" ry="48" fill="url(#tabby-fur)" transform="rotate(3)" />
-      <circle cx="-48" cy="25" r="35" fill="url(#tabby-fur)" />
-      <path d="M-73 4-67-33-42-6M-36-4-6-34-5 8" fill="#6d6760" stroke="#4a4946" stroke-linejoin="round" stroke-width="5" />
-      <path d="M88 44c74 22 103-12 81-48" fill="none" stroke="#55524e" stroke-linecap="round" stroke-width="18" />
-      <path d="M-28 22c11 3 21 3 30-2M17 25c16 9 33 11 49 4M25 47c17 8 34 8 51 0" fill="none" stroke="#404240" stroke-linecap="round" stroke-width="6" opacity="0.72" />
+    <g filter="url(#soft-shadow)">
+      <MiloFigure stage="mature" pose="resting" x={404} y={463} scale={0.62} idPrefix="home-mature" />
     </g>
     <path d="M849 416c28-18 59-18 88 0" fill="none" stroke="#bd654e" stroke-linecap="round" stroke-width="7" />
   </g>
@@ -165,14 +143,8 @@
   <g data-room-stage="senior" style="display:none">
     <path d="M233 548h390l94 109H341z" fill="#d8c39d" stroke="#405955" stroke-linejoin="round" stroke-width="8" filter="url(#soft-shadow)" />
     <path d="M330 579h320M363 614h319" stroke="#a5784e" stroke-width="6" />
-    <g transform="translate(737 503)" filter="url(#soft-shadow)">
-      <ellipse cx="2" cy="72" rx="51" ry="68" fill="url(#tabby-fur)" transform="rotate(5)" />
-      <circle cx="-17" cy="15" r="36" fill="url(#tabby-fur)" />
-      <path d="M-45-4-39-41-12-14M-4-13l30-31 1 43" fill="#77716a" stroke="#4c4b48" stroke-linejoin="round" stroke-width="5" />
-      <ellipse cx="-29" cy="13" rx="4" ry="6" fill="#b6c57b" />
-      <ellipse cx="-6" cy="13" rx="4" ry="6" fill="#b6c57b" />
-      <path d="M43 72c55 8 67-28 45-53" fill="none" stroke="#63605b" stroke-linecap="round" stroke-width="17" />
-      <path d="M-16 56c17 7 33 7 49 0M-15 77c17 6 33 6 48-1" fill="none" stroke="#454643" stroke-linecap="round" stroke-width="6" opacity="0.62" />
+    <g filter="url(#soft-shadow)">
+      <MiloFigure stage="senior" pose="slow" x={760} y={623} scale={0.66} idPrefix="home-senior" />
     </g>
     <g transform="translate(123 280)" filter="url(#soft-shadow)">
       <path d="M0 62h86" stroke="#405955" stroke-linecap="round" stroke-width="9" />
@@ -185,12 +157,8 @@
   <g data-room-stage="very-old" style="display:none">
     <path d="M602 514h212l-99 117H478z" fill="#dbc7a2" stroke="#405955" stroke-linejoin="round" stroke-width="8" filter="url(#soft-shadow)" />
     <path d="M515 589h229" stroke="#a5784e" stroke-width="6" />
-    <g transform="translate(675 549)" filter="url(#soft-shadow)">
-      <ellipse cx="21" cy="39" rx="81" ry="39" fill="#897f75" />
-      <circle cx="-48" cy="28" r="32" fill="#8f857a" />
-      <path d="M-70 10-65-22-42 4M-36 5-11-23-10 15" fill="#81776e" stroke="#575450" stroke-linejoin="round" stroke-width="4" />
-      <path d="M90 41c47 11 65-10 53-39" fill="none" stroke="#777069" stroke-linecap="round" stroke-width="16" />
-      <path d="M-30 22c8 3 16 3 23 0M-30 39c10 4 19 4 27 0" fill="none" stroke="#555653" stroke-linecap="round" stroke-width="4" />
+    <g filter="url(#soft-shadow)">
+      <MiloFigure stage="very-old" pose="curled" x={683} y={607} scale={0.72} idPrefix="home-very-old" />
     </g>
     <g transform="translate(956 462)" filter="url(#soft-shadow)">
       <rect width="130" height="82" rx="6" fill="#fffaf0" stroke="#405955" stroke-width="7" />

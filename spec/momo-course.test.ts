@@ -55,6 +55,30 @@ describe("Milo course shell", () => {
     expect(homepage).not.toContain("momo-home-stage");
   });
 
+  it("builds the Stage A illustration anchors from one lifecycle system", () => {
+    const homepage = readFileSync(resolve("dist/index.html"), "utf8");
+    for (const stage of lifecycleStageIds) {
+      expect(homepage).toContain(`data-milo-stage="${stage}"`);
+    }
+
+    const anchors = [
+      ["the-first-72-hours", "arrival"],
+      ["needs-not-naughtiness", "scratching"],
+      ["the-aging-cat", "aging"],
+      ["deciding-together", "together"],
+    ] as const;
+    for (const [slug, moment] of anchors) {
+      const page = readFileSync(resolve(`dist/chapters/${slug}/index.html`), "utf8");
+      expect(page).toContain(`data-visual-moment="${moment}"`);
+    }
+
+    const nonAnchor = readFileSync(
+      resolve("dist/chapters/learning-her-on-her-terms/index.html"),
+      "utf8",
+    );
+    expect(nonAnchor).not.toContain("data-visual-moment");
+  });
+
   it("uses the approved five-item student navigation", () => {
     expect(siteConfig.links?.map((link) => link.text)).toEqual([
       "Home",

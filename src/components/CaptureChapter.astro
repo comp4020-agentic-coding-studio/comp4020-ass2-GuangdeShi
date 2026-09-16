@@ -21,6 +21,13 @@ const { content, check } = Astro.props;
 const chapter = getChapter(content.slug);
 if (!chapter) throw new Error(`Missing chapter metadata for ${content.slug}`);
 
+const anchorVisuals = {
+  5: "scratching",
+  10: "aging",
+  12: "together",
+} as const;
+const anchorVisual = anchorVisuals[content.chapter as keyof typeof anchorVisuals];
+
 const steps = [
   { id: "scene", label: "Scene" },
   { id: "observation", label: "Observation" },
@@ -49,6 +56,7 @@ const steps = [
       title={content.sceneTitle}
       description={content.scene.join(" ")}
       caption={content.sceneCaption}
+      visual={anchorVisual}
     />
     <aside class="withheld-note">
       <strong>What remains uncertain</strong>

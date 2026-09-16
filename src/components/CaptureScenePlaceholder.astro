@@ -1,17 +1,29 @@
 ---
+import EditorialRoomScene, { type VisualMoment } from "./EditorialRoomScene.astro";
+
 interface Props {
   title?: string;
   description?: string;
   caption?: string;
+  visual?: VisualMoment;
 }
 
 const {
   title = "Milo in a familiar room",
   description = "An editorial illustration of Milo beside a window, with a field notebook in the foreground.",
   caption = "The same home, read at a different moment in Milo's life.",
+  visual,
 } = Astro.props;
 ---
 
+{visual ? (
+  <EditorialRoomScene
+    moment={visual}
+    title={title}
+    description={description}
+    caption={caption}
+  />
+) : (
 <figure class="capture-scene-placeholder">
   <svg
     viewBox="0 0 1200 620"
@@ -69,3 +81,4 @@ const {
   </svg>
   <figcaption>{caption}</figcaption>
 </figure>
+)}
