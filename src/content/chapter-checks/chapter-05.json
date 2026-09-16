@@ -1,0 +1,71 @@
+{
+  "chapter": 5,
+  "title": "Needs, Not Naughtiness",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch05-q01", "type": "core-concept", "prompt": "Why is Milo's repeated sofa scratching useful evidence rather than proof of spite?",
+      "options": [
+        { "id": "a", "text": "Its repeated site and vertical stretch reveal a location, surface, and orientation preference.", "feedback": "This is the best answer. Scratching is normal marking behaviour, and the chosen site helps the household design an alternative that can genuinely compete." },
+        { "id": "b", "text": "Repeating the act means she understands the rule and is testing whether punishment will follow.", "feedback": "Repetition does not establish a spiteful intention. Punishment fails to meet the scratching need and can add stress without creating the intended association." },
+        { "id": "c", "text": "The damage matters, but the place and body position do not influence the response.", "feedback": "Those details are central. An outlet that fails to match the observed surface, orientation, and location may exist without being useful to Milo." }
+      ],
+      "bestOption": "a", "claimIds": ["CH5-01"]
+    },
+    {
+      "id": "ch05-q02", "type": "core-concept", "prompt": "Which response best supports a cat's predatory-play need?",
+      "options": [
+        { "id": "a", "text": "Use hands as prey so the cat receives realistic close-range feedback.", "feedback": "Hands and feet should stay out of the prey role. Rehearsing attacks on people makes the outlet less safe and less sustainable." },
+        { "id": "b", "text": "Use wand-led stalk, chase, and capture opportunities, plus safe foraging and toy rotation.", "feedback": "This is the best answer because it provides a species-typical sequence and safe endpoint rather than trying to suppress the underlying drive." },
+        { "id": "c", "text": "Offer more food whenever pouncing begins because hunting is always a sign of hunger.", "feedback": "Predatory motivation persists even in a well-fed cat. Food alone does not replace the behavioural sequence the cat is trying to perform." }
+      ],
+      "bestOption": "b", "claimIds": ["CH5-02"]
+    },
+    {
+      "id": "ch05-q03", "type": "core-concept", "prompt": "What is the correct first interpretation of a new raw bald patch caused by repeated licking?",
+      "options": [
+        { "id": "a", "text": "It is probably boredom, so add play before considering another cause.", "feedback": "Enrichment may matter later, but a new raw patch first requires a veterinarian to rule out physical and medical causes." },
+        { "id": "b", "text": "It is an observation to report for veterinary rule-out before labelling the behaviour stress-related.", "feedback": "This is the best answer. Location and extent are useful owner observations, while determining pain, itch, or another cause remains clinical work." },
+        { "id": "c", "text": "It confirms a local pain source because localised licking has only one possible cause.", "feedback": "A localised pattern can inform the report but cannot confirm a diagnosis. The source supports medical-first elimination, not owner diagnosis." }
+      ],
+      "bestOption": "b", "claimIds": ["CH5-03"]
+    },
+    {
+      "id": "ch05-q04", "type": "core-concept", "prompt": "What does the chapter's 'needs, not naughtiness' synthesis require?",
+      "options": [
+        { "id": "a", "text": "Apply enrichment to every unwanted behaviour because all problems are unmet needs.", "feedback": "The synthesis includes a medical-first branch. Treating every problem as enrichment would be especially unsafe for overgrooming or an urgent elimination pattern." },
+        { "id": "b", "text": "Identify whether the case needs environmental redirect, play redirect, medical rule-out, or urgent escalation before responding.", "feedback": "This is the best answer. The shared question organises triage but preserves the distinct response each observed behaviour requires." },
+        { "id": "c", "text": "Avoid intervention entirely because species-typical behaviour should never be redirected.", "feedback": "Normal needs can be given safer, acceptable outlets. Understanding function does not require accepting harm to the cat, people, or home." }
+      ],
+      "bestOption": "b", "claimIds": ["CH5-04", "CH3-06"]
+    },
+    {
+      "id": "ch05-q05", "type": "scenario", "prompt": "Milo pounces on feet moving under a blanket, then crouches toward a wand toy with forward attention and no distance-increasing signals. What is the best response?",
+      "options": [
+        { "id": "a", "text": "Redirect the sequence to the wand toy and allow a safe capture away from hands and feet.", "feedback": "This is the best response because the combined cues support predatory play and the alternative preserves the sequence without rehearsing people as prey." },
+        { "id": "b", "text": "Continue moving feet because play between a cat and household members is harmless if nobody is injured yet.", "feedback": "This keeps feet in the prey role and strengthens the pattern the household is trying to redirect, even if the immediate interaction seems playful." },
+        { "id": "c", "text": "Spray Milo because pouncing is deliberate aggression and must have an immediate consequence.", "feedback": "The described signals fit a predatory-play reading more strongly than deliberate aggression. Punishment does not supply a safe outlet and may add stress." }
+      ],
+      "bestOption": "a", "claimIds": ["CH5-02", "CH4-04"]
+    },
+    {
+      "id": "ch05-q06", "type": "scenario", "prompt": "A household cannot afford a commercial cat tree, and Milo scratches a vertical doorframe. Which plan best applies the evidence?",
+      "options": [
+        { "id": "a", "text": "Use a stable low-cost vertical material that matches the surface near the doorframe, while recognising the specific DIY form as a course application.", "feedback": "This is the best answer. The direct principle is matching orientation, surface, stability, and location; an inexpensive implementation can still satisfy it." },
+        { "id": "b", "text": "Consider declawing because the one-time cost may be lower than replacing furniture and posts.", "feedback": "Cost does not make an invasive amputation-equivalent procedure a proportionate first response to normal scratching behaviour." },
+        { "id": "c", "text": "Buy the cheapest horizontal pad and put it in another room because any scratching object should work.", "feedback": "Price alone is not the issue. A horizontal, distant outlet ignores the vertical and location preferences revealed by the doorframe." }
+      ],
+      "bestOption": "a", "claimIds": ["CH5-01"]
+    },
+    {
+      "id": "ch05-q07", "type": "synthesis", "prompt": "In one week Milo scratches furniture, pounces on feet, and develops a raw licked patch. Why is 'more toys for everything' an incomplete plan?",
+      "options": [
+        { "id": "a", "text": "Toys are never useful for cats once scratching and grooming occur together.", "feedback": "Toy-led play may be useful for the pouncing. The problem is treating one potentially helpful tool as the answer to every different mechanism." },
+        { "id": "b", "text": "Each behaviour needs separate triage, and the raw patch cannot safely wait behind a general enrichment experiment.", "feedback": "This is the best synthesis. It matches the scratching environment, redirects play, and preserves medical-first reasoning for visible skin change." },
+        { "id": "c", "text": "Three behaviours at once prove that Milo has a single stress disorder requiring medication.", "feedback": "The household cannot diagnose a single cause from co-occurrence, and medication remains veterinarian-led after appropriate rule-out." }
+      ],
+      "bestOption": "b", "claimIds": ["CH5-01", "CH5-02", "CH5-03", "CH5-04"]
+    }
+  ]
+}

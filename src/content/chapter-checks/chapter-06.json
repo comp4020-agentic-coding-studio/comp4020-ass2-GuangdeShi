@@ -1,0 +1,71 @@
+{
+  "chapter": 6,
+  "title": "Noticing What Changed",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch06-q01", "type": "core-concept", "prompt": "What is the first step when a housemate says Milo is 'acting strange'?",
+      "options": [
+        { "id": "a", "text": "Choose the most likely explanation before the details become confusing.", "feedback": "An early explanation can hide the observation. The method begins with Milo's personal baseline and a specific account of what differs." },
+        { "id": "b", "text": "Return to the recorded baseline and specify frequency, intensity, duration, a new behaviour, or a missing usual one.", "feedback": "This is the best answer because it converts an impression into a comparison that can be checked again and communicated clearly." },
+        { "id": "c", "text": "Compare Milo with an average cat of the same age rather than with her own history.", "feedback": "General expectations can inform context, but this method is built around what is normal for this individual cat." }
+      ],
+      "bestOption": "b", "claimIds": ["CH6-01", "CH1-09"]
+    },
+    {
+      "id": "ch06-q02", "type": "core-concept", "prompt": "Why does the method check urgent signatures before testing a benign explanation?",
+      "options": [
+        { "id": "a", "text": "A plausible household change must not delay help for an already recognised time-sensitive pattern.", "feedback": "This is the best answer. An urgent signature changes the action even when a visitor, schedule shift, or other story appears to fit." },
+        { "id": "b", "text": "Every changed behaviour is urgent until a veterinarian proves otherwise.", "feedback": "That collapses the method into over-escalation. Urgency depends on the observed pattern, not the mere existence of variation." },
+        { "id": "c", "text": "Household explanations are never useful because only clinical causes affect behaviour.", "feedback": "Environmental explanations can be useful when timing fits and the behaviour resolves, but they come after the urgent-pattern check." }
+      ],
+      "bestOption": "a", "claimIds": ["CH6-01", "CH3-06"]
+    },
+    {
+      "id": "ch06-q03", "type": "core-concept", "prompt": "What is normalisation drift?",
+      "options": [
+        { "id": "a", "text": "A gradual real change is absorbed into memory until the household says Milo has always been that way.", "feedback": "This is the best answer. Dated comparisons protect against familiarity quietly moving the definition of normal." },
+        { "id": "b", "text": "A harmless one-day variation is documented without arranging an emergency visit.", "feedback": "Proportionate observation is not drift. Drift occurs when a sustained change disappears from judgement because the baseline shifts with it." },
+        { "id": "c", "text": "A veterinarian updates clinical guidance as new research becomes available.", "feedback": "That may be appropriate revision, but it is unrelated to the course's named failure mode in personal baseline comparison." }
+      ],
+      "bestOption": "a", "claimIds": ["CH6-02"]
+    },
+    {
+      "id": "ch06-q04", "type": "core-concept", "prompt": "When does a non-urgent change belong in a veterinary conversation?",
+      "options": [
+        { "id": "a", "text": "Only when it becomes dramatic enough that every housemate agrees.", "feedback": "Waiting for drama invites normalisation drift. A persistent or worsening unexplained change can matter before it becomes visually striking." },
+        { "id": "b", "text": "When no benign explanation fits, or the change persists or worsens instead of resolving.", "feedback": "This is the best answer. It distinguishes immediate emergency action from a prompt professional conversation and from explained observation." },
+        { "id": "c", "text": "Never, unless it matches the exact obstruction signature learned in Chapter 3.", "feedback": "That signature requires immediate escalation, but it is not the only reason to contact a vet. Persistent unexplained change also deserves discussion." }
+      ],
+      "bestOption": "b", "claimIds": ["CH6-01"]
+    },
+    {
+      "id": "ch06-q05", "type": "scenario", "prompt": "Milo scratches more during a houseguest's stay and returns to baseline after the guest leaves. No urgent sign appears. What is the best response?",
+      "options": [
+        { "id": "a", "text": "Log the timed, explained, resolved change and continue ordinary observation.", "feedback": "This is the best response because all four steps were completed and the return to baseline supports the proposed explanation." },
+        { "id": "b", "text": "Erase it from the log because explained behaviour cannot inform future care.", "feedback": "The event shows how Milo responds to disruption and may improve future preparation. Explained does not mean irrelevant." },
+        { "id": "c", "text": "Treat the two-week duration as an emergency even after the pattern resolves.", "feedback": "Duration should be recorded, but this case lacks an urgent signature and includes a fitting cause plus documented resolution." }
+      ],
+      "bestOption": "a", "claimIds": ["CH6-01", "CH6-02"]
+    },
+    {
+      "id": "ch06-q06", "type": "scenario", "prompt": "Two housemates disagree about Milo's appetite, but only one has kept notes. What is the safest use of the method?",
+      "options": [
+        { "id": "a", "text": "Accept the note-keeper's interpretation because written records make their causal explanation correct.", "feedback": "The notes may strengthen the observation, but they do not automatically prove its cause. Observation and interpretation remain separate." },
+        { "id": "b", "text": "Reconstruct the supported baseline from notes and both accounts, state the gap, and use lower confidence going forward.", "feedback": "This is the best answer. Incomplete data changes confidence; it does not justify either certainty or abandonment of the method." },
+        { "id": "c", "text": "Average the two memories and treat the midpoint as Milo's objective baseline.", "feedback": "Memories are not numerical measurements, and averaging incompatible accounts hides rather than resolves the evidence gap." }
+      ],
+      "bestOption": "b", "claimIds": ["CH6-01"]
+    },
+    {
+      "id": "ch06-q07", "type": "synthesis", "prompt": "Milo drinks more for a week, there is no household explanation, and no known emergency signature appears. Which conclusion best balances the two failure modes?",
+      "options": [
+        { "id": "a", "text": "Keep waiting because the absence of an emergency proves the change is harmless.", "feedback": "This confuses non-urgent with insignificant and risks normalisation drift when an unexplained pattern persists." },
+        { "id": "b", "text": "Record the specific trend and raise it with the vet, without claiming a diagnosis or treating it as an emergency by default.", "feedback": "This is the best synthesis: it neither explains away the persistent change nor inflates it beyond the evidence." },
+        { "id": "c", "text": "Select the most likely disease online so the vet conversation starts with a firm diagnosis.", "feedback": "The owner-level method supports observation and escalation, not diagnosis. A guessed disease adds certainty the available evidence cannot carry." }
+      ],
+      "bestOption": "b", "claimIds": ["CH6-01", "CH6-02"]
+    }
+  ]
+}

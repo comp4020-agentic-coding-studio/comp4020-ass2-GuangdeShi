@@ -138,7 +138,7 @@ export const chapters: Chapter[] = [
     momoAge: "5 to 6 months",
     homeCue: "The same sofa corner is scratched every evening.",
     hotspot: { x: 38, y: 64 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 6,
@@ -153,7 +153,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 9 months",
     homeCue: "Breakfast is unfinished. The observation log gives that detail a baseline.",
     hotspot: { x: 58, y: 53 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 7,
@@ -168,7 +168,7 @@ export const chapters: Chapter[] = [
     momoAge: "About 14 months",
     homeCue: "Bowls, play, weight, and prevention become one routine rather than four chores.",
     hotspot: { x: 70, y: 78 },
-    implemented: false,
+    implemented: true,
   },
   {
     number: 8,

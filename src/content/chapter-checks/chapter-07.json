@@ -1,0 +1,71 @@
+{
+  "chapter": 7,
+  "title": "Designing a Healthy Routine",
+  "status": "final",
+  "formative": true,
+  "questions": [
+    {
+      "id": "ch07-q01", "type": "core-concept", "prompt": "Why must Body Condition Score and Muscle Condition Score be considered separately?",
+      "options": [
+        { "id": "a", "text": "BCS describes fat covering while MCS describes muscle, and excess fat can coexist with muscle loss.", "feedback": "This is the best answer. The two tools answer different questions, so one cannot safely stand in for the other." },
+        { "id": "b", "text": "BCS is for young cats and MCS replaces it completely once a cat becomes senior.", "feedback": "Age can increase the importance of noticing muscle loss, but the assessments remain separate and useful rather than replacing one another." },
+        { "id": "c", "text": "MCS is simply a more precise name for body weight measured on a veterinary scale.", "feedback": "Muscle condition is a descriptive physical assessment, not another label for the number on a scale." }
+      ],
+      "bestOption": "a", "claimIds": ["CH7-01"]
+    },
+    {
+      "id": "ch07-q02", "type": "core-concept", "prompt": "Which feeding change is supported by the registered consensus statement?",
+      "options": [
+        { "id": "a", "text": "Choose one commercial brand because behavioural feeding only works with a specialised formula.", "feedback": "The statement does not recommend a commercial brand. This Capture uses it for feeding pattern, foraging, and access rather than product selection." },
+        { "id": "b", "text": "Offer small feeding opportunities, safe foraging or puzzle use, and separated access in multi-cat homes.", "feedback": "This is the best answer because it treats feeding as behavioural opportunity and protects access without turning the guidance into a diet prescription." },
+        { "id": "c", "text": "Keep all bowls together near litter resources so the household can monitor every resource at once.", "feedback": "The guidance supports visually separated feeding stations kept away from litter boxes, especially where one cat may avoid shared access." }
+      ],
+      "bestOption": "b", "claimIds": ["CH7-02"]
+    },
+    {
+      "id": "ch07-q03", "type": "core-concept", "prompt": "What makes vaccination planning individual rather than a fixed checklist?",
+      "options": [
+        { "id": "a", "text": "Risk factors such as life stage, environment, lifestyle, animal contact, travel, and boarding.", "feedback": "This is the best answer. The guidance organises decisions around the individual cat's exposure rather than one permanent schedule for everyone." },
+        { "id": "b", "text": "The owner's preference for the smallest or largest possible number of vaccines.", "feedback": "Preference alone is not a clinical risk assessment. Accurate lifestyle information supports a vet-led decision." },
+        { "id": "c", "text": "Whether a previous household used a particular schedule with another cat.", "feedback": "Another cat's protocol does not establish Milo's current risk. Life stage and circumstances must be assessed for this individual." }
+      ],
+      "bestOption": "a", "claimIds": ["CH7-03"]
+    },
+    {
+      "id": "ch07-q04", "type": "core-concept", "prompt": "Why does this Capture avoid giving exact cat-only parasite-testing numbers from S23?",
+      "options": [
+        { "id": "a", "text": "The source contains no recurring-prevention principle at all.", "feedback": "The source does support recurring testing and year-round prevention. The limitation concerns the captured tab and exact cat-specific wording." },
+        { "id": "b", "text": "The captured page defaulted to a dog tab, and the parallel cat wording was not independently spot-checked.", "feedback": "This is the best answer. The course retains the supported principle while refusing to convert an unresolved source detail into cat-specific owner instruction." },
+        { "id": "c", "text": "Owners are never allowed to know that preventive care occurs on a cadence.", "feedback": "Owners can discuss cadence and risk. The boundary is against presenting unverified numbers or self-selected products as settled clinical instruction." }
+      ],
+      "bestOption": "b", "claimIds": ["CH7-05"]
+    },
+    {
+      "id": "ch07-q05", "type": "scenario", "prompt": "Three monthly weights rise gradually and Milo's ribs are harder to feel, with no known feeding change. The next visit is ten weeks away. What should happen?",
+      "options": [
+        { "id": "a", "text": "Contact the vet with the trend and condition observations without beginning an unsupervised restriction plan.", "feedback": "This is the best answer. The household reports a persistent unexplained trend and leaves diet and clinical decisions with the professional team." },
+        { "id": "b", "text": "Wait because gradual change cannot matter while Milo remains energetic.", "feedback": "Gradual change is exactly where normalisation drift operates. Unchanged energy does not erase the body-condition trend." },
+        { "id": "c", "text": "Cut food sharply until the first weight returns, then mention it at the scheduled visit.", "feedback": "That converts observation into unsupervised treatment and may hide useful evidence before the veterinary conversation." }
+      ],
+      "bestOption": "a", "claimIds": ["CH7-06", "CH6-02"]
+    },
+    {
+      "id": "ch07-q06", "type": "scenario", "prompt": "A housemate prepares a vaccine list but omits that Milo spends weekends near another cat. What is the most useful correction?",
+      "options": [
+        { "id": "a", "text": "Keep the list and omit the contact because the cats do not share a permanent home.", "feedback": "Intermittent contact is still part of Milo's real exposure context. Withholding it weakens the individual risk assessment." },
+        { "id": "b", "text": "Report the weekend contact and other lifestyle facts, then ask the vet to determine the appropriate protocol.", "feedback": "This is the best answer because it gives the clinician relevant risk evidence while keeping selection and timing within clinical scope." },
+        { "id": "c", "text": "Request every available vaccine because any animal contact makes maximum coverage automatically correct.", "feedback": "That substitutes a blanket owner rule for an individualised professional assessment, repeating the checklist misconception in a different form." }
+      ],
+      "bestOption": "b", "claimIds": ["CH7-03", "CH7-04"]
+    },
+    {
+      "id": "ch07-q07", "type": "synthesis", "prompt": "Which routine best connects Chapters 1, 6, and 7 without turning the owner into a clinician?",
+      "options": [
+        { "id": "a", "text": "Record comparable weight, BCS, MCS, feeding access, and lifestyle change; raise unexplained trends and let the vet make clinical choices.", "feedback": "This is the best synthesis. It extends the personal baseline, applies the comparison method, and preserves the boundary between household evidence and clinical judgement." },
+        { "id": "b", "text": "Use one ideal weight from the internet as a permanent target and adjust food whenever Milo differs from it.", "feedback": "A generic target ignores individual assessment, separates weight from body and muscle condition, and encourages unsupervised treatment." },
+        { "id": "c", "text": "Stop home observation once preventive visits begin because professional examinations replace owner evidence.", "feedback": "The clinic snapshot and household longitudinal record contribute different information. Preventive care is strongest when both are available." }
+      ],
+      "bestOption": "a", "claimIds": ["CH7-01", "CH7-04", "CH7-06", "CH6-01"]
+    }
+  ]
+}
