@@ -5,6 +5,12 @@ import { courseMeta } from "../src/course-config";
 import { captureContents } from "../src/data/captures";
 import { chapters, lifecycleStageIds, teachingWeekLabel } from "../src/data/chapters";
 import { siteConfig } from "../src/site-config";
+import {
+  chapterCheckBestPosition,
+  consultationBestPosition,
+  placeBestOption,
+  type JudgementPhase,
+} from "../src/utils/answer-order";
 
 interface CheckData {
   chapter: number;
@@ -162,8 +168,11 @@ describe("Milo course shell", () => {
     expect(deck).toContain("SLOP6251 · Capture 01");
     expect(deck).toContain("The First 72 Hours");
     expect(deck).toContain("CH1-09");
+    expect(deck.match(/<aside class="notes"/g)).toHaveLength(10);
+    expect(deck).toContain("chapter01-hazards");
     expect(index).toContain(deckUrl);
     expect(chapter).toContain(deckUrl);
+    expect(chapter).toContain("Open Chapter Briefing");
   });
 
   it("preserves the starter's four core content collections", () => {
@@ -258,6 +267,44 @@ describe("Milo course shell", () => {
         }
       }
     }
+  });
+
+  it("prevents correct-answer positions from collapsing onto one letter", () => {
+    const consultationCounts = [0, 0, 0];
+    const phases: JudgementPhase[] = ["initial", "transfer", "revised"];
+    for (const chapter of chapters) {
+      for (const phase of phases) {
+        consultationCounts[consultationBestPosition(chapter.number, phase)] += 1;
+      }
+    }
+
+    const checkCounts = [0, 0, 0];
+    for (const chapter of chapters) {
+      const number = String(chapter.number).padStart(2, "0");
+      const check = JSON.parse(
+        readFileSync(resolve(`src/content/chapter-checks/chapter-${number}.json`), "utf8"),
+      ) as CheckData;
+
+      check.questions.forEach((question, questionIndex) => {
+        const ordered = placeBestOption(
+          question.options,
+          question.bestOption,
+          chapterCheckBestPosition(chapter.number, questionIndex),
+        );
+        checkCounts[ordered.findIndex((option) => option.id === question.bestOption)] += 1;
+      });
+    }
+
+    const expectDistributed = (counts: number[]) => {
+      const total = counts.reduce((sum, count) => sum + count, 0);
+      for (const count of counts) {
+        expect(count / total).toBeGreaterThanOrEqual(0.25);
+        expect(count / total).toBeLessThanOrEqual(0.42);
+      }
+    };
+
+    expectDistributed(consultationCounts);
+    expectDistributed(checkCounts);
   });
 
   it("keeps every data-driven Capture claim and source in the registered evidence set", () => {

@@ -100,6 +100,7 @@ const steps = [
       prompt={content.initialDecision.prompt}
       options={content.initialDecision.options}
       bestOption={content.initialDecision.bestOption}
+      chapter={content.chapter}
       storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-initial-judgement`}
     />
   </CapturePhase>
@@ -162,6 +163,7 @@ const steps = [
       prompt={content.appliedDecision.prompt}
       options={content.appliedDecision.options}
       bestOption={content.appliedDecision.bestOption}
+      chapter={content.chapter}
       storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-transfer-judgement`}
     />
     <CaptureWorkbook
@@ -178,6 +180,7 @@ const steps = [
       prompt={content.revisedDecision.prompt}
       options={content.revisedDecision.options}
       bestOption={content.revisedDecision.bestOption}
+      chapter={content.chapter}
       storageKey={`milo-ch${String(content.chapter).padStart(2, "0")}-revised-judgement`}
     />
   </CapturePhase>

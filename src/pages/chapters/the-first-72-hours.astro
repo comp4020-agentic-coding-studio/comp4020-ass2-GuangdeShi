@@ -106,8 +106,8 @@ const carePlan = [
       </div>
       <ScenarioScene />
       <p class="briefing-deck-link">
-        <a href={withBase("/decks/capture-01-briefing/")}>Open briefing deck</a>
-        <span>10 slides · an optional orientation to this consultation</span>
+        <a href={withBase("/decks/capture-01-briefing/")}>Open Chapter Briefing</a>
+        <span>10 visual slides · optional orientation before the full consultation</span>
       </p>
       <aside class="withheld-note">
         <strong>What you do not know yet</strong>
@@ -158,6 +158,7 @@ const carePlan = [
         prompt="Milo will not come out from under the bed. What should you do?"
         options={arrivalOptions}
         bestOption="b"
+        chapter={chapter.number}
       />
     </section>
 
@@ -291,6 +292,7 @@ const carePlan = [
                   { id: "c", text: "Cancel all future visits until Milo is completely comfortable with every part of the home.", feedback: "This begins with caution but turns temporary low-pressure care into indefinite avoidance. Later, gradual and cat-directed contact can still be appropriate." },
                 ]}
                 bestOption="b"
+                chapter={chapter.number}
               />
             </div>
           </div>
@@ -462,6 +464,7 @@ const carePlan = [
           prompt="With the evidence now in view, what should you do next?"
           options={arrivalOptions}
           bestOption="b"
+          chapter={chapter.number}
         />
       </div>
     </section>

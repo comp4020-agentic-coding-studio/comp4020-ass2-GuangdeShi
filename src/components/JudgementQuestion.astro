@@ -1,4 +1,6 @@
 ---
+import { consultationBestPosition, placeBestOption } from "../utils/answer-order";
+
 interface Option {
   id: string;
   text: string;
@@ -11,11 +13,15 @@ interface Props {
   prompt: string;
   options: Option[];
   bestOption: string;
+  chapter?: number;
   storageKey?: string;
 }
 
-const { id, phase, prompt, options, bestOption, storageKey: suppliedStorageKey } = Astro.props;
+const { id, phase, prompt, options, bestOption, chapter, storageKey: suppliedStorageKey } = Astro.props;
 const isRevised = phase === "revised";
+const orderedOptions = chapter
+  ? placeBestOption(options, bestOption, consultationBestPosition(chapter, phase))
+  : options;
 const storageKey = suppliedStorageKey ?? (id === "arrival-initial"
   ? "momo-ch01-initial-judgement"
   : id === "arrival-revised"
@@ -32,11 +38,11 @@ const storageKey = suppliedStorageKey ?? (id === "arrival-initial"
   <fieldset>
     <legend>{prompt}</legend>
     <div class="judgement-options">
-      {options.map((option) => (
+      {orderedOptions.map((option, index) => (
         <label>
           <input type="radio" name={id} value={option.id} required />
           <span>
-            <span><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+            <span><strong>{String.fromCharCode(65 + index)}</strong>{option.text}</span>
             {option.feedback && <small class="judgement-option__feedback" data-judgement-feedback hidden>{option.feedback}</small>}
           </span>
         </label>

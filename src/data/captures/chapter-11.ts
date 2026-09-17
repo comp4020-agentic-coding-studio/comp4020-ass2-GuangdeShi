@@ -47,7 +47,7 @@ export const chapter11 = {
     ], claimIds: ["CH11-04", "CH10-02"], support: "SYNTHESIS" },
     { label: "Failure modes", title: "Neither 'just old' nor 'definitely cognitive' is careful", paragraphs: [
       "Normalisation drift dismisses gradual behavioural change indefinitely as age. Cognitive-specific over-escalation jumps from a sign list to a diagnosis, medication request, or supplement purchase before clinical rule-out.",
-      "The middle is active rather than passive: record the timeline, gather the full pattern, check known urgency, contact the vet, and remain willing to revise the explanation.",
+      "Use Chapter 6's comparison discipline and Chapter 3's medical-first boundary, then move directly to this chapter's new task: assembling cognitive-associated signs and credible alternatives for veterinary rule-out.",
     ], claimIds: ["CH11-05", "CH6-02"], support: "SYNTHESIS" },
   ],
   evidenceNotes: [

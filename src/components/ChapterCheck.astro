@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { chapterCheckBestPosition, placeBestOption } from "../utils/answer-order";
 
 interface Props {
   check: CollectionEntry<"chapterChecks">["data"];
@@ -29,11 +30,15 @@ const { check } = Astro.props;
           {question.prompt}
         </legend>
         <div class="check-options">
-          {question.options.map((option) => (
+          {placeBestOption(
+            question.options,
+            question.bestOption,
+            chapterCheckBestPosition(check.chapter, index),
+          ).map((option, optionIndex) => (
             <label data-check-option data-option={option.id}>
               <input type="radio" name={question.id} value={option.id} />
               <span class="check-option__body">
-                <span class="check-option__text"><strong>{option.id.toUpperCase()}</strong>{option.text}</span>
+                <span class="check-option__text"><strong>{String.fromCharCode(65 + optionIndex)}</strong>{option.text}</span>
                 <span class="check-option__feedback" data-option-feedback hidden>{option.feedback}</span>
               </span>
             </label>

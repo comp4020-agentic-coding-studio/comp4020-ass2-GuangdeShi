@@ -46,7 +46,7 @@ export const chapter09 = {
       "Definitive dental diagnosis requires general anesthesia with probing, charting, and full-mouth x-rays as the standard of care. Home observation can prompt assessment; it cannot reproduce that examination.",
     ], claimIds: ["CH9-04", "CH9-08"], support: "DIRECT" },
     { label: "Combined method", title: "One sign, its context, and the pattern around it", paragraphs: [
-      "Add facial and mouth observations to the same sustainable log already holding routine and body-condition information. Then reuse the four steps: personal baseline, specific change, urgent signature, and benign explanation or persistence.",
+      "Add facial and mouth observations to the same sustainable log already holding routine and body-condition information. Use the baseline method from Chapter 6 rather than rebuilding it here; this chapter's new work is reading how quiet facial and mouth signs combine across context and time.",
       "A brief squint during a nail trim that resolves immediately has an identifiable context. A squint, tense muzzle, slower one-sided eating, and breath change persisting together does not. Combined signals and time prevent both normalisation drift and panic over one moment.",
     ], claimIds: ["CH9-06", "CH9-07", "CH4-04", "CH6-01"], support: "SYNTHESIS" },
   ],

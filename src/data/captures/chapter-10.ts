@@ -41,8 +41,8 @@ export const chapter10 = {
       "Low-sided litter boxes, ramps, softer resting surfaces, adjusted feeding access, and easier routes can reduce unnecessary difficulty. Which changes come first should follow Milo's observed use and the household's budgets rather than a fixed list every home must complete.",
       "Chapter 8's controlled garden visits were designed for a confident mobile young adult. Senior Milo may need shorter sessions, easier routes, a different transport setup, or an indoor-only plan. Reassessment uses the same cat-and-household weighing process; an earlier good decision is not a permanent contract.",
     ], claimIds: ["CH10-03", "CH8-01", "CH8-03"], support: "SYNTHESIS" },
-    { label: "Slow baseline", title: "The same four steps operate on a longer clock", paragraphs: [
-      "Compare current movement, resource use, weight, BCS, and MCS with earlier records. Specify the direction and duration, check urgent signatures, then ask whether a benign explanation fits. Aging change may unfold slowly enough that normalisation drift is the larger danger.",
+    { label: "Slow baseline", title: "Use the Chapter 6 method on a longer clock", paragraphs: [
+      "Apply the established baseline comparison to movement, resource use, weight, BCS, and MCS. The new difficulty is timescale: aging change may unfold slowly enough that normalisation drift becomes the larger danger.",
       "A single ordinary-looking day does not contradict a four-month loss of jumping. Periodic comparable observations make that long slope visible and give the veterinary conversation something more precise than 'she seems old.'",
     ], claimIds: ["CH10-04", "CH6-01", "CH6-02", "CH7-01"], support: "SYNTHESIS" },
     { label: "Use the right pain channel", title: "A calm face does not rule out chronic discomfort", paragraphs: [

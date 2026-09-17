@@ -27,7 +27,7 @@ export const chapter08 = {
     bestOption: "b",
   },
   learningTitle: "Choose the life that fits, then do the work it requires",
-  learningIntro: "There is no universally correct lifestyle. The consultation replaces indoor-versus-outdoor slogans with a repeatable household-matching decision.",
+  learningIntro: "Chapter 7 made daily care observable and repeatable. This consultation scales that work into a larger lifestyle decision; Chapter 9 will then ask how to notice quiet change inside the life chosen here.",
   learningThreads: [
     { label: "Decision frame", title: "No lane is right for every cat", paragraphs: [
       "Indoor-only, controlled indoor/outdoor access, and specific managed outdoor arrangements each carry risks and benefits. Fit depends on the individual cat's history and temperament alongside the household's actual environment and capacity.",
@@ -35,8 +35,8 @@ export const chapter08 = {
     ], claimIds: ["CH8-01"], support: "DIRECT" },
     { label: "Indoor commitment", title: "A closed door is not a complete care plan", paragraphs: [
       "Indoor-only living requires deliberate provision of food, water, clean toileting, resting and hiding space, vertical territory, play, and hunting or foraging opportunities. Without that work, reduced external risk can be exchanged for anxiety and stress-related welfare problems.",
-      "The course makes this concrete by returning to Chapter 1's five pillars: safe place; separated key resources; predatory-play and foraging outlets; predictable, consent-aware social contact; and familiar scent and objects. This connection is a disclosed synthesis between S24 and S1.",
-    ], claimIds: ["CH8-02", "CH8-06", "CH1-02", "CH1-03", "CH5-02"], support: "MIXED" },
+      "The course makes this concrete through work accumulated across earlier consultations: Chapter 1 established safe territory and separated resources; Chapter 2 sharpened predictable, consent-aware contact; Chapter 5 developed play, foraging, scratching, and placement as environmental responses. Together they make the five-pillar commitment usable in an ordinary home. This connection is a disclosed synthesis between S24 and S1.",
+    ], claimIds: ["CH8-02", "CH8-06", "CH1-02", "CH1-03", "CH2-05", "CH5-02"], support: "MIXED" },
     { label: "Controlled access", title: "Outdoor does not have to mean free-roaming", paragraphs: [
       "When outdoor access is chosen, safety comes first. Secure enclosures, cat-safe fencing, and harness-and-leash walking create options between permanent confinement and unrestricted roaming. Young cats and male cats warrant closer injury monitoring, and nighttime confinement is recommended.",
       "A balcony is controlled only if it is actually secured; supervision and good intentions do not change the physical risk of an open edge or escape route. The chosen setting must be evaluated, not merely labelled outdoor or supervised.",
@@ -52,12 +52,12 @@ export const chapter08 = {
   ],
   evidenceNotes: [
     { title: "Lifestyle trade-offs and controlled access", support: "DIRECT", claimIds: ["CH8-01", "CH8-02", "CH8-03", "CH8-04", "CH8-05"], sourceIds: ["S24"], body: "The full FelineVMA position statement was read directly. It supports the individual decision frame, complete indoor needs, controlled-access options, narrow outdoor exceptions, and universal identification recommendation. It is a position statement, not a step-by-step training manual." },
-    { title: "Indoor living as the five-pillar commitment", support: "SYNTHESIS", claimIds: ["CH8-06"], sourceIds: ["S24", "S1"], body: "S24 requires indoor needs to be met; the course maps that requirement onto the five pillars already taught from S1. The exact cross-chapter formulation is the course's construction." },
+    { title: "Indoor living as an accumulated commitment", support: "SYNTHESIS", claimIds: ["CH8-06"], sourceIds: ["S24", "S1"], body: "S24 requires indoor needs to be met; the course maps that requirement onto the five-pillar framework from S1 and the practical capabilities built across Chapters 1, 2, and 5. The exact cross-chapter formulation is the course's construction." },
     { title: "Gradual harness and enclosure acclimation", support: "SYNTHESIS", claimIds: ["CH8-07"], sourceIds: ["S2", "S3", "S24"], body: "S24 does not provide training steps. The course deliberately extends the gradual, reward-paired, no-force carrier and handling method from Chapter 2 and labels that extension as synthesis." },
   ],
   readings: [
     { time: "25 min", title: "Indoor / outdoor lifestyle position statement", prompt: "Build a three-column risk-and-benefit table, then mark which factors depend on the cat and which depend on the household.", href: "https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/", linkLabel: "Open the FelineVMA statement" },
-    { time: "20 min", title: "Revisit the five environmental pillars", prompt: "Turn each pillar into one observable commitment an indoor household can verify in its own rooms.", href: "../the-first-72-hours/", linkLabel: "Revisit Capture 01" },
+    { time: "20 min", title: "Trace the environmental foundation", prompt: "Start with Chapter 1's room, then name how Chapters 2 and 5 made its social and behavioural commitments more usable.", href: "../the-first-72-hours/", linkLabel: "Revisit Capture 01" },
     { time: "15 min", title: "Revisit gradual consent-aware training", prompt: "Translate the carrier sequence into harness steps while naming where the extension becomes course synthesis.", href: "../learning-her-on-her-terms/", linkLabel: "Revisit Capture 02" },
   ],
   appliedTitle: "A small apartment does not erase every controlled option",
