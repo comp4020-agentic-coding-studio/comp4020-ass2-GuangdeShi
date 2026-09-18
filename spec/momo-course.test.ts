@@ -118,24 +118,44 @@ describe("Milo course shell", () => {
     ]);
   });
 
-  it("builds the reusable Capture rhythm without Chapter 1 teaching", () => {
-    const capture = readFileSync(
+  it("publishes a finished Capture field guide and retires the prototype route", () => {
+    const index = readFileSync(resolve("dist/lectures/index.html"), "utf8");
+    const guide = readFileSync(resolve("dist/lectures/capture-field-guide/index.html"), "utf8");
+    const retiredTemplate = readFileSync(
       resolve("dist/lectures/capture-template/index.html"),
       "utf8",
     );
+
+    expect(index).toContain("Read the Capture field guide");
+    expect(index).toContain("/comp4020-ass2-GuangdeShi/lectures/capture-field-guide/");
+    expect(index).not.toContain("Review the reusable Capture template");
+
     for (const phase of [
-      "scene",
-      "observation",
-      "knowledge",
-      "evidence",
-      "decision",
-      "reflection",
-      "quiz",
+      "Scene",
+      "Observation",
+      "Judgement",
+      "Evidence",
+      "Practice",
+      "Reflection",
+      "Care Plan",
+      "Chapter Check",
     ]) {
-      expect(capture).toContain(`id="${phase}"`);
+      expect(guide).toContain(phase);
     }
-    expect(capture).toContain("A warm field notebook following one cat across a lifetime.");
-    expect(capture).not.toContain("The First 72 Hours");
+    expect(guide).toContain("Course field guide");
+    for (const residue of [
+      "Capture 00",
+      "Structural prototype",
+      "Quiz placeholder",
+      "chapter-specific scenario",
+      "future chapter material",
+    ]) {
+      expect(guide).not.toContain(residue);
+    }
+
+    expect(retiredTemplate).toContain(
+      "/comp4020-ass2-GuangdeShi/lectures/capture-field-guide/",
+    );
   });
 
   it("opens the complete first Capture from the Capture index", () => {

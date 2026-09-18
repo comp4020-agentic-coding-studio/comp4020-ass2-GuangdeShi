@@ -7,9 +7,9 @@
 **Audited commit:** `2521d6f51377bc141f7ea571e5da824ea08a2acf`
 
 **Starting state:** local HEAD matched `origin/codex-implementation`; ahead/behind was `0/0`; working tree was clean.
-**Verdict:** **CONDITIONALLY ACCEPTABLE — HUMAN REVIEW REQUIRED**. The core course is complete and usable, with no blocker. One student-facing prototype route remains exposed and should be resolved before final submission. Four non-blocking issues are also recorded below. No product code was changed during this pass.
+**Verdict:** **ACCEPTABLE WITH MINOR ISSUES**. The core course is complete and usable, with no blocker. The sole MAJOR found in this pass has been resolved; four non-blocking issues remain recorded below.
 
-**Issue count:** `0 BLOCKER` · `1 MAJOR` · `4 MINOR`
+**Issue count:** `0 BLOCKER` · `0 OPEN MAJOR` (`1 RESOLVED`) · `4 MINOR`
 
 ## Automated Validation
 
@@ -23,7 +23,7 @@
 | Broken links | PASS — 28 HTML pages, none detected |
 | GitHub Pages base-path audit | PASS — all internal links respect `/comp4020-ass2-GuangdeShi/` |
 | Deck structural audit | PASS — 1 deck, no structural violations |
-| `pnpm check:evidence` | PASS — all 6 PROCESS commit citations resolve |
+| `pnpm check:evidence` | PASS — all 8 PROCESS commit citations resolve |
 | `git diff --check` | PASS |
 
 This baseline was rerun for this QA pass rather than copied from an earlier report.
@@ -35,7 +35,7 @@ The build contains 27 student-facing routes plus the generated 404 page. Every l
 | Area | Route | Status |
 | --- | --- | --- |
 | Home | `/` | PASS |
-| Capture index | `/lectures/` | PASS, but links to the exposed template route below |
+| Capture index | `/lectures/` | PASS — field guide is clearly presented as an auxiliary resource |
 | Accessible course journey | `/chapters/` | PASS |
 | Chapter 01 | `/chapters/the-first-72-hours/` | PASS with deck-related minor issues |
 | Chapter 02 | `/chapters/learning-her-on-her-terms/` | PASS |
@@ -58,12 +58,12 @@ The build contains 27 student-facing routes plus the generated 404 page. Every l
 | People | `/people/` | PASS |
 | Convenor profile | `/people/mara-bell/` | PASS |
 | Capture field guide | `/lectures/capture-field-guide/` | PASS |
-| Capture template | `/lectures/capture-template/` | **MAJOR — exposed development/prototype content** |
+| Retired template route | `/lectures/capture-template/` | **RESOLVED — redirects to the completed field guide** |
 | Policies | `/policies/` | PASS |
 | Standalone deck | `/decks/capture-01-briefing/` | PASS |
 | 404 | invalid course URL | PASS |
 
-`/lectures/capture-template/` is not dead: the Capture index explicitly links to it as “Review the reusable Capture template.” It presents `Capture 00`, “structure only” copy, future-material language and a quiz placeholder. This is the only accidental development/prototype route found.
+The Capture index now links directly to the completed field guide and labels it as an auxiliary resource rather than a teaching week. The former template URL remains only as a base-path-safe redirect, preserving old links without exposing duplicate or unfinished content.
 
 ## Functional QA
 
@@ -114,13 +114,13 @@ PASS. Astro derives `site` and `base` through the existing deployment helper. Th
 
 The ten-minute path Home → Chapter 01 → Chapter 05 → Chapter 10 → Chapter 12 → Assignments → Deck → Consultation communicates the course thesis quickly: care improves when an owner observes before explaining and revises decisions across one cat’s lifetime. Non-adjacent weeks show real progression: arrival-room observation becomes needs-based behaviour interpretation, then age-aware environmental adaptation, then a shared quality-of-life conversation. The repeated nine-phase Capture grammar is visible, but the scenario, reasoning task, evidence and Care Plan change enough that it reads as a course method rather than twelve duplicated articles.
 
-The assessments feel native to this course because they ask for an observation record, an unfamiliar-case consultation and a longitudinal care dossier rather than generic recall. The ten-slide Chapter 01 deck is real teaching material, visually aligned with the site and secondary to the fuller Capture. People and Policies contain course-specific material rather than starter copy. The main unfinished signal is the publicly linked Capture template; a marker can reach it directly from the primary Capture index.
+The assessments feel native to this course because they ask for an observation record, an unfamiliar-case consultation and a longitudinal care dossier rather than generic recall. The ten-slide Chapter 01 deck is real teaching material, visually aligned with the site and secondary to the fuller Capture. People and Policies contain course-specific material rather than starter copy. The Capture field guide now explains the shared learning rhythm without presenting itself as another dated week.
 
 ## Issues
 
-### MAJOR-01 — Student-facing Capture template exposes unfinished prototype content
+### RESOLVED MAJOR-01 — Student-facing Capture template exposed unfinished prototype content
 
-`/lectures/capture-template/` is linked from the primary Capture index and presents `Capture 00`, “structure only” instructions, future-chapter copy, placeholder prompts and a quiz placeholder. This conflicts with the otherwise finished twelve-week course and is likely to read as starter/development residue. Human Review should decide whether the route is removed from student navigation, hidden while preserving architecture, or converted into a legitimate student guide. No change was made in this QA pass.
+The Capture index now links to the existing `How to Read a Capture` collection entry, which has been completed as a concise student-facing field guide and identified as auxiliary to the twelve dated weeks. `/lectures/capture-template/` redirects to that canonical route. Scoped build, route, responsive, link, collection and generated-API checks passed; no unfinished `Capture 00` content remains student-facing.
 
 ### MINOR-01 — Chapter 01 logs an uncaught MutationObserver error
 

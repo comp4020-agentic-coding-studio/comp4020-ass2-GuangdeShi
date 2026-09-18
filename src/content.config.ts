@@ -128,6 +128,7 @@ export const collections = {
         week: weekSchema,
         date: z.coerce.date(),
         teachers: teacherRefs.optional(),
+        auxiliary: z.coerce.boolean().default(false),
         slides: z
           .string()
           .regex(/^\/decks\/[a-z0-9-]+\/$/)
