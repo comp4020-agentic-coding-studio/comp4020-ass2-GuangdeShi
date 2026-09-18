@@ -1,6 +1,6 @@
 # Chapter 05 — Needs, Not Naughtiness
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

@@ -1,6 +1,6 @@
 # Chapter 06 — Noticing What Changed
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

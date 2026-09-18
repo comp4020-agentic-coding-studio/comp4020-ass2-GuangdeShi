@@ -1,15 +1,13 @@
 # Chapter 01 — The First 72 Hours
 
-**Status: PROPOSED REVISION — supersedes the prior "APPROVED WORKING
-DIRECTION" draft; awaits fresh human review as part of the Part I content
-audit.** The prior draft was flagged by the human as too thin to carry
+**Status: CONTENT ACCEPTED / IMPLEMENTED.** The prior draft was flagged by the human as too thin to carry
 4+ hours of genuine student learning. This revision keeps everything the
 prior draft got right (the arrival scenario, the three core teaching
 claims CH1-01–CH1-06) and adds three new content clusters (pre-arrival
 hazard-proofing, post-arrival veterinary screening, and the start of a
-daily observation habit) that were missing. Everything marked `PROPOSED`
-below is a draft for human review, not yet authoritative (see `CLAUDE.md`
-§16). This file's structure has also grown beyond the original template
+daily observation habit) that were missing. Historical `PROPOSED` and
+`QUESTION FOR HUMAN` labels below record the production process; the current
+implemented Capture has passed Human Review. This file's structure has also grown beyond the original template
 (see new sections below) to satisfy the content-design phase's A–M
 per-chapter specification; `docs/chapters/README.md` has been updated to
 match.
@@ -23,7 +21,7 @@ match.
 | Part | I — A New Life |
 | Working title | The First 72 Hours |
 | Momo age/life stage | Kitten, approximately 10 weeks old; first days in a new home |
-| Status | PROPOSED REVISION — pending Part I review |
+| Status | CONTENT ACCEPTED / IMPLEMENTED |
 | Learning outcome | By the end of Chapter 1, the student can prepare a home for a new cat's arrival, design a low-stress first-72-hours plan once she is there, and start a simple daily observation habit — and can explain why each part of the plan exists. |
 
 ## Teaching purpose

@@ -1,10 +1,11 @@
 # Course Curriculum — Source of Truth
 
-Status: **BACKBONE APPROVED / LOCKED** (2026-09-05). The twelve-chapter
-structure below — Part membership, chapter order, working title, core
-question, and new capability for every chapter — is human-approved and
-structurally locked. See `docs/process/curriculum-skeleton-v1-proposed.md`
-for the proposal and decision record that produced this lock, and
+Status: **BACKBONE APPROVED / CONTENT ACCEPTED / IMPLEMENTED** (2026-09-18).
+The twelve-chapter structure below — Part membership, chapter order, working
+title, core question, and new capability for every chapter — is human-approved
+and structurally locked. All twelve learner-facing Captures have also passed
+Human Review. See `docs/process/curriculum-skeleton-v1-proposed.md` for the
+proposal and decision record that produced the structural lock, and
 `CLAUDE.md` §16 for the authority rules governing changes to this file.
 
 **What "locked" means.** The agent may freely enrich supporting concepts,
@@ -16,11 +17,11 @@ course thesis, or change the final learner transformation. Any such change
 must be proposed and flagged `PROPOSED STRUCTURAL CHANGE — HUMAN REVIEW`
 rather than made directly.
 
-Chapters 1–3 carry full detailed content (see their chapter documents).
-Chapters 4–12 currently carry only their locked structural fields (Part,
-working title, core question, new capability, dependency, key sources);
-their full content is produced during the autonomous production stage that
-follows this lock, without needing further structural approval.
+All twelve chapter documents carry full detailed content, and all twelve
+learner-facing Captures implement that content. Historical `PROPOSED` and
+`QUESTION FOR HUMAN` labels retained in chapter planning files record the
+production process; they do not supersede the later Human Review of the
+implemented course.
 
 Chapter 9 carried one open condition inherited from the decision gate: its
 pain-recognition evidence gap had to be resolved via `CLAUDE.md` §21 before
@@ -35,7 +36,7 @@ requirement" note below and `docs/SOURCES.md` (`S30`, `S32`).
 | Working thesis | A cat is not a pet you acquire. It is a life you agree to understand as it changes. |
 | Central question | How does an owner's relationship with one cat need to change, again and again, over a whole life? |
 | Target student | A prospective or current student considering (or already sharing a home with) a cat, who wants to move beyond generic care instructions. **Broad public audience** — not assumed to be young, tech-confident, living alone, financially unconstrained, or already cat-experienced (see `CLAUDE.md` §18). Scenarios should draw on varied real households (children, older adults, families, couples, housemates, single- and multi-cat homes, varying time/money/mobility) where a variation is pedagogically real, not tokenistic. |
-| Final student capability | `TBD` — to be defined via backward design once more of the curriculum is approved (see `CLAUDE.md` §3, Backward design) |
+| Final student capability | Observe a cat's changing behaviour and circumstances, recognise and interpret meaningful patterns, make safe owner-level care decisions, adapt the home and routine across a lifetime, and know when to seek professional help without attempting diagnosis or treatment. |
 
 ## Course progression
 
@@ -66,19 +67,15 @@ the agent.
 - **PART III — KEEP HER WELL**
 - **PART IV — CHANGE WITH HER**
 
-Each part will eventually contain three chapters (twelve chapters total).
-Part contents beyond Chapter 1 are `TBD`.
+Each part contains three chapters (twelve chapters total).
 
 ## Twelve-chapter curriculum table
 
-Chapters 1–3 are fully populated from their chapter documents. Chapters 4–12
-have their **structural fields locked** (Part, Working Title, Core Question,
-New Student Capability, Key Sources/Status) per the 2026-09-05 decision gate;
-their remaining fields (Momo Life Stage/Age, Concrete Knowledge, Opening
-Scenario, Final Case Check) are `TBD` and are filled in during autonomous
-content production, without requiring further structural approval.
+The table records the complete, human-reviewed curriculum implemented by the
+twelve learner-facing Captures. Structural fields remain locked under the
+2026-09-05 decision gate.
 
-| Chapter | Teaching Week | Part | Working Title | Momo Life Stage / Age | Core Question | Concrete Knowledge | New Student Capability | Opening Scenario | Final Case Check | Key Sources | Status |
+| Chapter | Teaching Week | Part | Working Title | Momo Life Stage / Age | Core Question | Concrete Knowledge | New Student Capability | Opening Scenario | Final Case Check | Key Sources | Production record (historical) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 01 | 1 | I — A New Life | The First 72 Hours | Kitten, ~10 weeks | Why does a newly arrived cat hide, and what does she need instead of forced reassurance? | See `docs/chapters/chapter-01.md` — now also covers pre-arrival hazard-proofing, the post-arrival vet screening visit, and starting the daily observation log | Design a low-stress first-72-hours arrival plan (hazard-proofed home, vet-checked cat, and a running observation log), and explain why each part exists | Momo hides under the bed on day one | Friends want to visit Momo on the first evening | S1, S2, S5, S6 (see `docs/SOURCES.md`) | **PROPOSED REVISION** — supersedes the prior "APPROVED (working direction)" status; awaits fresh human review as part of the Part I content audit (see `docs/chapters/chapter-01.md`) |
 | 02 | 2 | I — A New Life | Learning Her on Her Terms | Kitten, ~11 weeks | Why isn't "she came to me once" the same as ongoing consent, and why does this specific window close? | See `docs/chapters/chapter-02.md` | Read body-language signals for welcome vs. withdrawal, run a consent-check, and judge a proposed interaction against feline-friendly handling principles | Momo headbutts the student's hand, then her tail flicks and ears rotate back mid-pet | Grandma visits and wants to hold Momo | S2, S3 (see `docs/SOURCES.md`) | PROPOSED (new chapter) — pending Part I review |
@@ -108,8 +105,8 @@ reserved for Chapter 10. No `CHAPTER 9 EVIDENCE BLOCK` was needed.
 The "Part" column for chapters 2–12 above follows mechanically from the
 already-approved "three chapters per part" structure (weeks 1–3 = Part I,
 4–6 = Part II, 7–9 = Part III, 10–12 = Part IV) — this is arithmetic from an
-approved structural rule, not an invented curriculum decision. The *content*
-of chapters 2–12 is entirely `TBD`.
+approved structural rule, not an invented curriculum decision. All chapter
+content is now documented, implemented, and Human-reviewed.
 
 ## Curriculum quality rule
 

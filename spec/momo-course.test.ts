@@ -314,6 +314,13 @@ describe("Milo course shell", () => {
 
   it("keeps every data-driven Capture claim and source in the registered evidence set", () => {
     const sourceRegister = readFileSync(resolve("docs/SOURCES.md"), "utf8");
+    const claimSources = new Map<string, string[]>();
+    for (const line of sourceRegister.split("\n")) {
+      if (!line.startsWith("| CH")) continue;
+      const cells = line.split("|").map((cell) => cell.trim());
+      if (!/^CH\d+-\d{2}$/.test(cells[1] ?? "")) continue;
+      claimSources.set(cells[1], cells[4]?.match(/S\d+/g) ?? []);
+    }
 
     for (const content of Object.values(captureContents)) {
       const claimIds = [
@@ -330,6 +337,23 @@ describe("Milo course shell", () => {
         expect(sourceRegister, `${sourceId} is absent from the source register`).toMatch(
           new RegExp(`(?:\\| ${sourceId} \\||### ${sourceId} )`),
         );
+      }
+
+      const nativeClaims = new Set(
+        content.learningThreads
+          .flatMap((thread) => thread.claimIds)
+          .filter((claimId) => claimId.startsWith(`CH${content.chapter}-`)),
+      );
+      for (const claimId of nativeClaims) {
+        const notes = content.evidenceNotes.filter((note) => note.claimIds.includes(claimId));
+        expect(notes.length, `${claimId} has no learner-facing evidence note`).toBeGreaterThan(0);
+        const displayedSources = new Set(notes.flatMap((note) => note.sourceIds));
+        for (const sourceId of claimSources.get(claimId) ?? []) {
+          expect(
+            displayedSources.has(sourceId),
+            `${claimId} omits registered source ${sourceId} from its evidence note`,
+          ).toBe(true);
+        }
       }
     }
   });

@@ -1,8 +1,8 @@
 # Chapter 03 — Reading the First Warning Signs
 
-**Status: PROPOSED (new chapter, drafted during the Chapters 1–3 stage) —
-awaits human review as part of the Part I content audit.** Everything
-marked `PROPOSED` is a draft, not yet authoritative (see `CLAUDE.md` §16).
+**Status: CONTENT ACCEPTED / IMPLEMENTED.** Historical `PROPOSED` and
+`QUESTION FOR HUMAN` labels below record the production process; the current
+implemented Capture has passed Human Review.
 Follows the expanded template introduced in the Chapter 1 revision (see
 `docs/chapters/README.md`).
 
@@ -15,7 +15,7 @@ Follows the expanded template introduced in the Chapter 1 revision (see
 | Part | I — A New Life |
 | Working title | Reading the First Warning Signs |
 | Momo age/life stage | Kitten, ~12–13 weeks old; two to three weeks into her new home |
-| Status | PROPOSED — pending Part I review |
+| Status | CONTENT ACCEPTED / IMPLEMENTED |
 | Learning outcome | By the end of Chapter 3, the student can set up a litter box correctly, reason about a house-soiling problem without assuming it's either purely medical or purely behavioural, and — critically — distinguish "she's still settling in" from "this needs a vet today," using her own baseline log as the reference point. |
 
 ## Teaching purpose

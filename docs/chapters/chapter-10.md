@@ -1,6 +1,6 @@
 # Chapter 10 — The Aging Cat
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

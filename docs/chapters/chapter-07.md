@@ -1,6 +1,6 @@
 # Chapter 07 — Designing a Healthy Routine
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

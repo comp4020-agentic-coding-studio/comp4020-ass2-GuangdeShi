@@ -1,6 +1,6 @@
 # Chapter 09 — The Signs Easy to Miss
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

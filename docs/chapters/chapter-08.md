@@ -1,6 +1,6 @@
 # Chapter 08 — The Indoor/Outdoor Decision
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

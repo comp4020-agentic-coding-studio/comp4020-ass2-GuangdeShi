@@ -1,6 +1,6 @@
 # Chapter 11 — When Her Mind Changes
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

@@ -1,8 +1,8 @@
 # Chapter 02 — Learning Her on Her Terms
 
-**Status: PROPOSED (new chapter, drafted during the Chapters 1–3 stage) —
-awaits human review as part of the Part I content audit.** Everything
-marked `PROPOSED` is a draft, not yet authoritative (see `CLAUDE.md` §16).
+**Status: CONTENT ACCEPTED / IMPLEMENTED.** Historical `PROPOSED` and
+`QUESTION FOR HUMAN` labels below record the production process; the current
+implemented Capture has passed Human Review.
 Follows the expanded template introduced in the Chapter 1 revision (see
 `docs/chapters/README.md`).
 
@@ -15,7 +15,7 @@ Follows the expanded template introduced in the Chapter 1 revision (see
 | Part | I — A New Life |
 | Working title | Learning Her on Her Terms |
 | Momo age/life stage | Kitten, ~10–11 weeks old; several days to a week into her new home |
-| Status | PROPOSED — pending Part I review |
+| Status | CONTENT ACCEPTED / IMPLEMENTED |
 | Learning outcome | By the end of Chapter 2, the student can read a cat's body language to judge whether she currently welcomes contact, run a simple consent-check before and during handling, and evaluate a proposed interaction (a visitor, a child, a play session) against feline-friendly handling principles — and can explain why the next few weeks matter more than they will again. |
 
 ## Teaching purpose

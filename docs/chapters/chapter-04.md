@@ -1,10 +1,9 @@
 # Chapter 04 — The Full Vocabulary
 
-**Status: PROPOSED (new chapter, drafted during the autonomous Part II
-production stage) — structural fields locked per the 2026-09-05 decision
-gate (see `docs/CURRICULUM.md`); content below is a first draft and awaits
-the whole-course content-audit sign-off.** Everything marked `PROPOSED` is
-a draft, not yet authoritative (see `CLAUDE.md` §16). Follows the expanded
+**Status: CONTENT ACCEPTED / IMPLEMENTED.** Structural fields remain locked
+per the 2026-09-05 decision gate (see `docs/CURRICULUM.md`). Historical
+`PROPOSED` and `QUESTION FOR HUMAN` labels below record the production
+process; the current implemented Capture has passed Human Review. Follows the expanded
 template introduced in the Chapter 1 revision (see
 `docs/chapters/README.md`).
 
@@ -17,7 +16,7 @@ template introduced in the Chapter 1 revision (see
 | Part | II — Learn to Read Her |
 | Working title | The Full Vocabulary |
 | Momo age/life stage | Kitten, ~16 weeks old; several weeks settled into her new home |
-| Status | PROPOSED — pending whole-course content audit |
+| Status | CONTENT ACCEPTED / IMPLEMENTED |
 | Learning outcome | By the end of Chapter 4, the student can identify the broad categories of feline vocal and scent communication, explain why a single vocal or scent cue heard in isolation is unreliable to interpret on its own, and combine vocal, scent, body-language, and situational information into one judgement about what a cat is communicating — rather than treating any one signal as a fixed, one-to-one translation. |
 
 ## Teaching purpose

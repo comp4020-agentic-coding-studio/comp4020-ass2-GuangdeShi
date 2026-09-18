@@ -1,6 +1,6 @@
 # Chapter 12 — Deciding Together
 
-Status: PROPOSED
+Status: CONTENT ACCEPTED / IMPLEMENTED
 
 ## Chapter metadata
 

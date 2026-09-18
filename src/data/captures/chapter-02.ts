@@ -68,7 +68,7 @@ export const chapter02 = {
   ],
   evidenceNotes: [
     { title: "Life-stage and introduction guidance", support: "DIRECT", claimIds: ["CH2-01", "CH2-02", "CH2-04", "CH2-08"], sourceIds: ["S2"], body: "The life-stage guideline supports the sensitive-period range, the importance of positive early experience, cat-led introductions, and gradual reward-paired carrier and travel practice." },
-    { title: "Signal reading and consent-checking", support: "DIRECT", claimIds: ["CH2-05", "CH2-06", "CH2-07"], sourceIds: ["S3"], body: "S3 is written for veterinary interaction. This chapter uses only its general body-language, cooperative-care, and positive-handling principles in the home; clinic logistics are not transferred." },
+    { title: "Signal reading and consent-checking", support: "DIRECT", claimIds: ["CH2-05", "CH2-06", "CH2-07", "CH2-08"], sourceIds: ["S3"], body: "S3 is written for veterinary interaction. This chapter uses only its general body-language, cooperative-care, and positive-handling principles in the home; clinic logistics are not transferred." },
     { title: "Milo at the edge of the window", support: "SYNTHESIS", claimIds: ["CH2-03"], sourceIds: ["S2"], body: "S2 does not define ten-week-old adopted kittens as a special category. The course combines Milo's stated age with the registered sensitive-period range and discloses that application as synthesis." },
   ],
   readings: [
