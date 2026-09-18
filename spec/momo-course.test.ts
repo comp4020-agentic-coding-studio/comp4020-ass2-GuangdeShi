@@ -172,7 +172,12 @@ describe("Milo course shell", () => {
     expect(deck).toContain("chapter01-hazards");
     expect(index).toContain(deckUrl);
     expect(chapter).toContain(deckUrl);
-    expect(chapter).toContain("Open Chapter Briefing");
+    expect(chapter).toContain('title="Chapter 01 briefing deck"');
+    expect(chapter).toContain("Chapter Briefing");
+    expect(chapter).toContain("Open full deck");
+    expect(chapter).toContain("Continue the Capture");
+    expect(chapter).toContain('aria-label="Briefing slide controls"');
+    expect(chapter).toContain('data-deck-next');
   });
 
   it("preserves the starter's four core content collections", () => {

@@ -631,8 +631,7 @@
     margin: 0;
   }
 
-  .capture-index__actions > a:last-child,
-  .briefing-deck-link a {
+  .capture-index__actions > a:last-child {
     color: var(--momo-green-dark);
     font-weight: 800;
     text-decoration-thickness: 2px;
@@ -775,21 +774,118 @@
     line-height: 1.5;
   }
 
-  .briefing-deck-link {
-    display: flex;
-    gap: 1rem;
-    align-items: baseline;
-    justify-content: space-between;
-    margin: 0;
-    padding-block: 0.85rem;
-    border-block-end: 1px solid var(--momo-line);
+  .chapter-briefing {
+    width: min(var(--consultation-width), calc(100% - 3rem));
+    margin: 0 auto 5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--momo-line);
+    background: var(--momo-white);
+    box-shadow: 0 1.2rem 2.8rem rgb(53 75 72 / 10%);
   }
 
-  .briefing-deck-link span {
+  .chapter-briefing__heading {
+    display: flex;
+    gap: 2rem;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0.3rem 0.2rem 1rem;
+  }
+
+  .chapter-briefing__heading h2 {
+    margin: 0;
+    color: var(--momo-green-dark);
+    font-size: 2rem;
+  }
+
+  .chapter-briefing__heading > p {
+    max-width: 28rem;
+    margin: 0;
+    color: #68736f;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: end;
+  }
+
+  .chapter-briefing__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--momo-green-dark);
+  }
+
+  .chapter-briefing__frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .chapter-briefing__actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 1rem 2rem;
+    align-items: center;
+    padding: 1rem 0.2rem 0.2rem;
+  }
+
+  .chapter-briefing__actions a {
+    min-height: 2.75rem;
+    text-underline-offset: 0.22em;
+  }
+
+  .chapter-briefing__full-link {
+    display: inline-flex;
+    gap: 0.35rem;
+    align-items: center;
+    color: var(--momo-green-dark);
+    font-weight: 750;
+  }
+
+  .chapter-briefing__controls {
+    display: flex;
+    gap: 0.65rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chapter-briefing__controls button {
+    display: inline-grid;
+    width: 2.75rem;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1px solid var(--momo-green-dark);
+    color: var(--momo-green-dark);
+    background: transparent;
+    font-size: 1.25rem;
+    place-items: center;
+  }
+
+  .chapter-briefing__controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+  }
+
+  .chapter-briefing__controls span {
+    min-width: 6.6rem;
     color: #68736f;
     font-family: var(--at-font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
     text-transform: uppercase;
+  }
+
+  .chapter-briefing__continue {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 0.9rem;
+    color: var(--momo-white);
+    background: var(--momo-green-dark);
+    font-weight: 800;
+    justify-self: end;
+    text-decoration: none;
   }
 
   .capture-prototype-note {
@@ -3078,10 +3174,52 @@
       border-inline-start: 1px solid var(--momo-line);
     }
 
-    .briefing-deck-link {
+    .chapter-briefing {
+      width: min(100% - 2rem, var(--consultation-width));
+      margin-block-end: 3.5rem;
+      padding: 0.65rem;
+    }
+
+    .chapter-briefing__heading,
+    .chapter-briefing__actions {
       align-items: flex-start;
       flex-direction: column;
-      gap: 0.35rem;
+    }
+
+    .chapter-briefing__actions {
+      display: flex;
+    }
+
+    .chapter-briefing__heading {
+      gap: 0.45rem;
+      padding: 0.5rem 0.35rem 0.85rem;
+    }
+
+    .chapter-briefing__heading h2 {
+      font-size: 1.65rem;
+    }
+
+    .chapter-briefing__heading > p {
+      font-size: 0.92rem;
+      text-align: start;
+    }
+
+    .chapter-briefing__actions {
+      gap: 0.6rem;
+      padding: 0.85rem 0.35rem 0.35rem;
+    }
+
+    .chapter-briefing__actions a {
+      width: 100%;
+    }
+
+    .chapter-briefing__controls {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .chapter-briefing__continue {
+      justify-content: center;
     }
 
     .capture-header {
