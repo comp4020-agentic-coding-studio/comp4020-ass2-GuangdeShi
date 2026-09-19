@@ -4,6 +4,7 @@ description: A short field guide to the recurring observation, evidence, judgeme
 week: 1
 date: 2027-02-22
 auxiliary: true
+slides: /decks/capture-01-briefing/
 teachers:
   - mara-bell
 related:
